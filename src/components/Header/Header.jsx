@@ -14,12 +14,11 @@ class Header extends Component{
                 <span className="notification">5</span>
             </div>
         );
-        const brand = this.props.header.substring(1,this.props.header.length-5);
         return (
             <Navbar collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="#">{brand.charAt(0).toUpperCase() + brand.slice(1)}</a>
+                        <a href="#">{this.props.location.pathname.charAt(1).toUpperCase() + this.props.location.pathname.slice(2)}</a>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>

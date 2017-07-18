@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Route,
   Switch,
+  Redirect
 } from 'react-router-dom';
 
 import Dashboard from 'containers/Dashboard/Dashboard';
@@ -22,30 +23,30 @@ import Sidebar from 'components/Sidebar/Sidebar';
 class App extends Component {
     render() {
         return (
-            <Router>
+
                 <div className="wrapper">
                     <div id="sidebar">
-                        <Sidebar />
+                        <Sidebar {...this.props}/>
                     </div>
                         <div id="main-panel" className="main-panel">
-                            <Header header={window.location.pathname}/>
+                            <Header {...this.props}/>
 
-                            <Switch>
-
-                                <Route path="/dashboard.html" component={Dashboard}/>
-                                <Route path="/user.html" component={UserProfile}/>
-                                <Route path="/table.html" component={TableList}/>
-                                <Route path="/typography.html" component={Typography}/>
-                                <Route path="/icons.html" component={Icons}/>
-                                <Route path="/maps.html" component={Maps}/>
-                                <Route path="/notifications.html" component={Notifications}/>
-                                <Route path="/upgrade.html" component={UpgradeToPro}/>
-                            </Switch>
+                                <Switch>
+                                    <Route path="/dashboard" component={Dashboard}/>
+                                    <Route path="/user" component={UserProfile}/>
+                                    <Route path="/table" component={TableList}/>
+                                    <Route path="/typography" component={Typography}/>
+                                    <Route path="/icons" component={Icons}/>
+                                    <Route path="/maps" component={Maps}/>
+                                    <Route path="/notifications" component={Notifications}/>
+                                    <Route path="/upgrade" component={UpgradeToPro}/>
+                                    <Redirect from="/" to="/dashboard"/>
+                                </Switch>
 
                             <Footer />
                         </div>
                 </div>
-            </Router>
+
         );
     }
 }
