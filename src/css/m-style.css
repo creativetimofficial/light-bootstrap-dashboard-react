@@ -1,3 +1,12 @@
 #basic-nav-dropdown span.caret{
     display: none;
 }
+table{
+    line-height: 1.42857143;
+    font-weight: 400;
+    text-align: inherit;
+    white-space: inherit;
+    font-size: 14px;
+    font-style: inherit;
+    color: inherit;
+}

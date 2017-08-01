@@ -25,9 +25,7 @@ class App extends Component {
         return (
 
                 <div className="wrapper">
-                    <div id="sidebar">
                         <Sidebar {...this.props}/>
-                    </div>
                         <div id="main-panel" className="main-panel">
                             <Header {...this.props}/>
 
@@ -46,7 +44,7 @@ class App extends Component {
                             <Footer />
                         </div>
                 </div>
-                
+
 
         );
     }

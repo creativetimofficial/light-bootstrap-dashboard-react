@@ -2,9 +2,15 @@ import React, {Component} from 'react';
 import cx from 'classnames';
 import { Navbar, NavItem, Nav, NavDropdown, MenuItem, Dropdown } from 'react-bootstrap';
 
+import Sidebar from 'components/Sidebar/Sidebar.jsx';
+
 class Header extends Component{
     constructor(props){
         super(props);
+        this.mobileSidebarToggle = this.mobileSidebarToggle.bind(this);
+        this.state = {
+          sidebarExists: false
+        };
     }
     mobileSidebarToggle(e){
         e.preventDefault();
@@ -16,6 +22,25 @@ class Header extends Component{
             document.documentElement.classList.toggle('nav-open');
         };
         document.body.appendChild(node);
+        if(this.state.sidebarExists == false){
+            this.setState({
+                sidebarExists : true
+            });
+            var sidebar = document.getElementById('sidebar').cloneNode(true);
+            var navbar = document.getElementsByTagName('nav')[0];
+            // alert(sidebar.getElementsByClassName('logo').length);
+            var div = document.createElement('div');
+            div.className = "collapse navbar-collapse has-image";
+            div.appendChild(sidebar.getElementsByClassName('logo')[0]);
+            sidebar = sidebar.getElementsByClassName('nav')[0];
+            sidebar.innerHTML += navbar.innerHTML;
+            // sidebar.innerHTML += navbar.getElementsByTagName('ul')[1].innerHTML;
+            div.appendChild(sidebar);
+
+
+            // div.dataColor = "purple";
+            document.body.appendChild(div);
+        }
     }
     render(){
         const notification = (
