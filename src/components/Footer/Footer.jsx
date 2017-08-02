@@ -9,22 +9,22 @@ class Footer extends Component {
                     <nav className="pull-left">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="#pablo">
                                     Home
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#pablo">
                                     Company
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#pablo">
                                     Portfolio
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#pablo">
                                    Blog
                                 </a>
                             </li>
