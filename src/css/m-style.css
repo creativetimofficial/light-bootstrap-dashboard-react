@@ -10,3 +10,6 @@ table{
     font-style: inherit;
     color: inherit;
 }
+.notifications-tl *{
+    display: inline-block;
+}
