@@ -16,14 +16,12 @@ export class Tasks extends Component{
         var tasks = [];
         var number;
         for (var i = 0; i < tasks_title.length; i++) {
-            var checked = false;
-            i > 0 && i < 3 ? checked = true : checked = false;
             number = "checkbox"+i;
             tasks.push(
                 <tr key={i}>
                     <td>
                         <div className="checkbox">
-                            <input id={number} type="checkbox" checked={checked}/>
+                            <input id={number} type="checkbox"/>
                             <label htmlFor={number}>
                             </label>
                         </div>
