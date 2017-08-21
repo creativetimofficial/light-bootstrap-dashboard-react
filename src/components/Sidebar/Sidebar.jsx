@@ -65,12 +65,6 @@ class Sidebar extends Component{
                                 <p>Notifications</p>
                             </NavLink>
                         </li>
-                        <li className="active-pro">
-                            <NavLink to={'/upgrade'} className="nav-link" activeClassName="active">
-                                <i className="pe-7s-rocket"></i>
-                                <p>Upgrade to PRO</p>
-                            </NavLink>
-                        </li>
                     </ul>
                 </div>
             </div>

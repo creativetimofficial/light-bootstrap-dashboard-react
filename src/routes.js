@@ -6,8 +6,7 @@ const routes = {
     '/typography.html' : 'Typography',
     '/icons.html' : 'Icons',
     '/maps.html' : 'Maps',
-    '/notifications.html' : 'Notifications',
-    '/upgrade' : 'UpgradeToPro'
+    '/notifications.html' : 'Notifications'
 }
 
 export default routes;
