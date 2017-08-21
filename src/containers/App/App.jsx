@@ -6,14 +6,13 @@ import {
   Redirect
 } from 'react-router-dom';
 
-import Dashboard from 'containers/Dashboard/Dashboard';
-import UserProfile from 'containers/UserProfile/UserProfile';
-import TableList from 'containers/TableList/TableList';
-import Typography from 'containers/Typography/Typography';
-import Icons from 'containers/Icons/Icons';
-import Maps from 'containers/Maps/Maps';
-import Notifications from 'containers/Notifications/Notifications';
-import UpgradeToPro from 'containers/UpgradeToPro/UpgradeToPro'
+import Dashboard from 'views/Dashboard/Dashboard';
+import UserProfile from 'views/UserProfile/UserProfile';
+import TableList from 'views/TableList/TableList';
+import Typography from 'views/Typography/Typography';
+import Icons from 'views/Icons/Icons';
+import Maps from 'views/Maps/Maps';
+import Notifications from 'views/Notifications/Notifications';
 
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
@@ -37,7 +36,6 @@ class App extends Component {
                                     <Route path="/icons" component={Icons}/>
                                     <Route path="/maps" component={Maps}/>
                                     <Route path="/notifications" component={Notifications}/>
-                                    <Route path="/upgrade" component={UpgradeToPro}/>
                                     <Redirect from="/" to="/dashboard"/>
                                 </Switch>
 
