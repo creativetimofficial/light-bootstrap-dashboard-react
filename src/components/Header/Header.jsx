@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import cx from 'classnames';
 import { Navbar, NavItem, Nav, NavDropdown, MenuItem, Dropdown } from 'react-bootstrap';
 
@@ -13,34 +14,22 @@ class Header extends Component{
         };
     }
     mobileSidebarToggle(e){
+        // document.getElementById("collapseSidebar").style.display = "";
+        if(this.state.sidebarExists == false){
+            this.setState({
+                sidebarExists : true
+            });
+        }
         e.preventDefault();
         document.documentElement.classList.toggle('nav-open');
         var node = document.createElement('div');
+        var node2 = React.createElement(Navbar);
         node.id = 'bodyClick';
         node.onclick = function(){
             this.parentElement.removeChild(this);
             document.documentElement.classList.toggle('nav-open');
         };
         document.body.appendChild(node);
-        if(this.state.sidebarExists == false){
-            this.setState({
-                sidebarExists : true
-            });
-            var sidebar = document.getElementById('sidebar').cloneNode(true);
-            var navbar = document.getElementsByTagName('nav')[0];
-            // alert(sidebar.getElementsByClassName('logo').length);
-            var div = document.createElement('div');
-            div.className = "collapse navbar-collapse has-image";
-            div.appendChild(sidebar.getElementsByClassName('logo')[0]);
-            sidebar = sidebar.getElementsByClassName('nav')[0];
-            sidebar.innerHTML += navbar.innerHTML;
-            // sidebar.innerHTML += navbar.getElementsByTagName('ul')[1].innerHTML;
-            div.appendChild(sidebar);
-
-
-            // div.dataColor = "purple";
-            document.body.appendChild(div);
-        }
     }
     render(){
         const notification = (
@@ -58,7 +47,7 @@ class Header extends Component{
                     </Navbar.Brand>
                     <Navbar.Toggle onClick={this.mobileSidebarToggle}/>
                 </Navbar.Header>
-                <Navbar.Collapse>
+                <Navbar.Collapse id="header_navbar">
                     <Nav>
                         <NavItem eventKey={1} href="#">
                             <i className="fa fa-dashboard"></i>

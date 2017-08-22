@@ -9,6 +9,7 @@ class Sidebar extends Component{
       return this.props.location.pathname.indexOf(routeName) > -1 ? 'active' : '';
     }
     render(){
+        // console.log(this.imageExists('img/sidebar-5.jpg'));
         const sidebarBackground = {
             backgroundImage: 'url(' + imagine + ')'
         };

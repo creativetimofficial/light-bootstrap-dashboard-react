@@ -13,3 +13,8 @@ table{
 .notifications-tl *{
     display: inline-block;
 }
+@media (min-width: 992px){
+    #collapseSidebar{
+        display: none!important;
+    }
+}
