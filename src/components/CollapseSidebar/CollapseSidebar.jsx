@@ -3,6 +3,7 @@ import { NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 import imagine from 'img/sidebar-5.jpg';
+import logo from 'img/reactlogo.png';
 
 class CollapseSidebar extends Component{
     activeRoute(routeName) {
@@ -21,10 +22,10 @@ class CollapseSidebar extends Component{
             </div>
         );
         return (
-            <div className="collapse navbar-collapse has-image" data-color="purple" style={sidebarBackground} id="collapseSidebar">
+            <div className="collapse navbar-collapse has-image" data-color="blue" style={sidebarBackground} id="collapseSidebar">
                 <div className="logo">
                     <a href="http://www.creative-tim.com" className="simple-text">
-                        Creative Tim
+                        <img src={logo} alt="logo_image" width="40" height="28.25"/> Creative Tim
                     </a>
                 </div>
                 <ul className="nav navbar-nav">

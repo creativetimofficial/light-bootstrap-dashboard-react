@@ -3,6 +3,7 @@ import {} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom'
 
 import imagine from 'img/sidebar-5.jpg';
+import logo from 'img/reactlogo.png';
 
 class Sidebar extends Component{
     activeRoute(routeName) {
@@ -19,7 +20,7 @@ class Sidebar extends Component{
                 <div className="sidebar-wrapper">
                     <div className="logo">
                         <a href="http://www.creative-tim.com" className="simple-text">
-                            Creative Tim
+                            <img src={logo} alt="logo_image" width="40" height="28.25"/> Creative Tim
                         </a>
                     </div>
 
