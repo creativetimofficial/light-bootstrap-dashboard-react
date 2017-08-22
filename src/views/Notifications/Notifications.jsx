@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Grid, Alert } from 'react-bootstrap';
+import { Alert } from 'react-bootstrap';
 import NotificationSystem from 'react-notification-system';
-import { Alert as ChadAlert } from 'react-bs-notifier';
 
 
 class Notifications extends Component {
@@ -43,7 +42,6 @@ class Notifications extends Component {
             position: position,
             autoDismiss: 15,
         });
-
     }
 
     componentDidMount(){
@@ -57,7 +55,6 @@ class Notifications extends Component {
             Wrapper: {},
             Containers: {
                 DefaultStyle: {
-                    fontFamily: 'inherit',
                     position: 'fixed',
                     width: defaultWidth,
                     padding: '10px 10px 10px 20px',
@@ -214,8 +211,6 @@ class Notifications extends Component {
                     fontFamily: 'inherit',
                     fontSize: '21px',
                     color: '#000',
-                    fontWeight: 'bold',
-                    textAlign: 'center',
                     float: 'right',
                     position: 'absolute',
                     right: '10px',
@@ -306,7 +301,7 @@ class Notifications extends Component {
                     <div className="card">
                         <div className="header">
                             <h4 className="title">Notifications</h4>
-                            <p className="category">Handcrafted by our friend <a target="_blank" href="https://github.com/mouse0270">Robert McIntosh</a>. Please checkout the <a href="http://bootstrap-notify.remabledesigns.com/" target="_blank">full documentation.</a></p>
+                            <p className="category">Handcrafted by our friend <a target="_blank" rel="noopener noreferrer" href="https://github.com/mouse0270">Robert McIntosh</a>. Please checkout the <a href="http://bootstrap-notify.remabledesigns.com/" rel="noopener noreferrer" target="_blank">full documentation.</a></p>
 
                         </div>
                         <div className="content">

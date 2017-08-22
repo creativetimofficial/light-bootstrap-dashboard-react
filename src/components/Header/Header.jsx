@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import cx from 'classnames';
-import { Navbar, NavItem, Nav, NavDropdown, MenuItem, Dropdown } from 'react-bootstrap';
+import { Navbar, NavItem, Nav, NavDropdown, MenuItem } from 'react-bootstrap';
 
-import Sidebar from 'components/Sidebar/Sidebar.jsx';
 
 class Header extends Component{
     constructor(props){
@@ -15,16 +12,15 @@ class Header extends Component{
     }
     mobileSidebarToggle(e){
         // document.getElementById("collapseSidebar").style.display = "";
-        if(this.state.sidebarExists == false){
+        if(this.state.sidebarExists === false){
             this.setState({
                 sidebarExists : true
             });
-            
+
         }
         e.preventDefault();
         document.documentElement.classList.toggle('nav-open');
         var node = document.createElement('div');
-        var node2 = React.createElement(Navbar);
         node.id = 'bodyClick';
         node.onclick = function(){
             this.parentElement.removeChild(this);
@@ -44,7 +40,7 @@ class Header extends Component{
             <Navbar fluid>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="#">{this.props.location.pathname.charAt(1).toUpperCase() + this.props.location.pathname.slice(2)}</a>
+                        <a href="#pablo">{this.props.location.pathname.charAt(1).toUpperCase() + this.props.location.pathname.slice(2)}</a>
                     </Navbar.Brand>
                     <Navbar.Toggle onClick={this.mobileSidebarToggle}/>
                 </Navbar.Header>

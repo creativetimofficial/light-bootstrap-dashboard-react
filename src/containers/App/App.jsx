@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  HashRouter,
   Route,
   Switch,
   Redirect

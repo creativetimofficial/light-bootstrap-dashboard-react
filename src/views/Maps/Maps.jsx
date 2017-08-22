@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 
 class Maps extends Component{
-    constructor(props){
-        super(props);
-    }
     render() {
         return (
             <div id="map">

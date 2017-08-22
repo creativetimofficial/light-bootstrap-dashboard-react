@@ -220,7 +220,7 @@ class Icons extends Component {
                                 contentClass="all-icons"
                                 category={
                                     <span>
-                                        Handcrafted by our friends from <a target="_blank" href="http://themes-pixeden.com/font-demos/7-stroke/index.html">Pixeden</a>
+                                        Handcrafted by our friends from <a target="_blank" rel="noopener noreferrer" href="http://themes-pixeden.com/font-demos/7-stroke/index.html">Pixeden</a>
                                     </span>
                                 }
                                 content={

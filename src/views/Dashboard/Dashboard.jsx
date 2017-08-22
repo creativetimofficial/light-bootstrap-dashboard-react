@@ -23,7 +23,6 @@ class Dashboard extends Component {
           ]
         };
         var optionsSales = {
-          lineSmooth: true,
           low: 0,
           high: 800,
           showArea: false,
