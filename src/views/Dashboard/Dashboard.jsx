@@ -23,10 +23,10 @@ class Dashboard extends Component {
           ]
         };
         var optionsSales = {
-          lineSmooth: false,
+          lineSmooth: true,
           low: 0,
           high: 800,
-          showArea: true,
+          showArea: false,
           height: "245px",
           axisX: {
             showGrid: false,
@@ -34,8 +34,8 @@ class Dashboard extends Component {
           lineSmooth: Chartist.Interpolation.simple({
             divisor: 3
           }),
-          showLine: false,
-          showPoint: false,
+          showLine: true,
+          showPoint: true,
         };
         var responsiveSales = [
           ['screen and (max-width: 640px)', {

@@ -201,10 +201,11 @@ class Notifications extends Component {
 
             MessageWrapper: {
                 DefaultStyle: {
-                    marginLeft: '57px',
+                    marginLeft: '55px',
+                    marginRight: '30px',
                     padding: '0 12px 0 0',
                     color: '#FFFFFF',
-                    maxWidth: '89%'
+                    maxWidthwidth: '89%'
                 }
             },
 
