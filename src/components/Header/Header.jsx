@@ -19,8 +19,7 @@ class Header extends Component{
             this.setState({
                 sidebarExists : true
             });
-            var sidebar = document.getElementById("collapseSidebar");
-            document.body.appendChild(sidebar);
+            
         }
         e.preventDefault();
         document.documentElement.classList.toggle('nav-open');
