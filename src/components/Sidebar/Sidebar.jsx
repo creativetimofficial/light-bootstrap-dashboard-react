@@ -14,7 +14,7 @@ class Sidebar extends Component{
             backgroundImage: 'url(' + imagine + ')'
         };
         return (
-            <div id="sidebar" className="sidebar" data-color="purple" data-image={imagine}>
+            <div id="sidebar" className="sidebar" data-color="blue" data-image={imagine}>
                 <div className="sidebar-background" style={sidebarBackground}></div>
                 <div className="sidebar-wrapper">
                     <div className="logo">
