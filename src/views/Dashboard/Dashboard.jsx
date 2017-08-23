@@ -54,7 +54,7 @@ class Dashboard extends Component {
                                         data={dataSales}
                                         type="Line"
                                         options={optionsSales}
-                                        responsive-options={responsiveSales}/>
+                                        responsiveOptions={responsiveSales}/>
                                     }
                                 legend={
                                     <div className="legend">
@@ -81,7 +81,7 @@ class Dashboard extends Component {
                                         data={dataBar}
                                         type="Bar"
                                         options={optionsBar}
-                                        responsive-options={responsiveBar}
+                                        responsiveOptions={responsiveBar}
                                     />
                                 }
                                 legend={
