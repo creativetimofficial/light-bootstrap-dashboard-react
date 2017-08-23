@@ -20,7 +20,7 @@ class Sidebar extends Component{
                 <div className="sidebar-wrapper">
                     <div className="logo">
                         <a href="http://www.creative-tim.com" className="simple-text">
-                            <img src={logo} alt="logo_image" width="40" height="28.25"/> Creative Tim
+                            <img src={logo} alt="logo_image" width="40" height="28.25"/>Creative Tim
                         </a>
                     </div>
 

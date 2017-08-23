@@ -25,7 +25,7 @@ class CollapseSidebar extends Component{
             <div className="collapse navbar-collapse has-image" data-color="blue" style={sidebarBackground} id="collapseSidebar">
                 <div className="logo">
                     <a href="http://www.creative-tim.com" className="simple-text">
-                        <img src={logo} alt="logo_image" width="40" height="28.25"/> Creative Tim
+                        <img src={logo} alt="logo_image" width="40" height="28.25"/>Creative Tim
                     </a>
                 </div>
                 <ul className="nav navbar-nav">
