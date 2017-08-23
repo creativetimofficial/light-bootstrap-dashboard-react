@@ -5,7 +5,6 @@ import Card from 'components/Card/Card.jsx'
 
 class Typography extends Component {
     render() {
-        // alert(new Array(6));
         return (
             <div className="content">
                 <div className="container-fluid">

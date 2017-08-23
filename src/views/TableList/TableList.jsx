@@ -2,20 +2,11 @@ import React, { Component } from 'react';
 import {Table} from 'react-bootstrap';
 
 import Card from 'components/Card/Card.jsx';
-
+import {thArray, tdArray} from 'variables/Variables.jsx';
 
 class TableList extends Component {
 
     render() {
-        const thArray = ["ID","Name","Salary","Country","City"];
-        const tdArray = [
-            [ "1" , "Dakota Rice" , "$36,738" , "Niger" , "Oud-Turnhout" ] ,
-            [ "2" , "Minerva Hooper" , "$23,789" , "Curaçao" , "Sinaai-Waas" ] ,
-            [ "3" , "Sage Rodriguez" , "$56,142" , "Netherlands" , "Baileux" ] ,
-            [ "4" , "Philip Chaney" , "$38,735" , "Korea, South" , "Overland Park" ] ,
-            [ "5" , "Doris Greene" , "$63,542" , "Malawi" , "Feldkirchen in Kärnten" ] ,
-            [ "6" , "Mason Porter" , "$78,615" , "Chile" , "Gloucester" ]
-        ];
         return (
             <div className="content">
                 <div className="container-fluid">

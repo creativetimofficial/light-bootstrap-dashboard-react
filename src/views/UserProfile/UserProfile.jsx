@@ -3,6 +3,7 @@ import {FormGroup,ControlLabel,FormControl} from 'react-bootstrap';
 
 import {Card} from 'components/Card/Card.jsx';
 import {FormInputs} from 'components/FormInputs/FormInputs.jsx';
+import {UserCard} from 'components/UserCard/UserCard.jsx';
 
 class UserProfile extends Component {
     render() {
@@ -114,36 +115,28 @@ class UserProfile extends Component {
                             />
                         </div>
                         <div className="col-md-4">
-                            <div className="card card-user">
-                                <div className="image">
-                                    <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..."/>
-                                </div>
-                                <div className="content">
-                                    <div className="author">
-                                         <a href="#pablo">
-                                        <img className="avatar border-gray" src="assets/img/faces/face-3.jpg" alt="..."/>
-
-                                          <h4 className="title">Mike Andrew<br />
-                                             <small>michael24</small>
-                                          </h4>
-                                        </a>
-                                    </div>
-                                    <p className="description text-center">
+                            <UserCard
+                                bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
+                                avatar="assets/img/faces/face-3.jpg"
+                                name="Mike Andrew"
+                                userName="michael24"
+                                description={
+                                    <span>
                                         "Lamborghini Mercy
                                         <br />
                                         Your chick she so thirsty
                                         <br />
                                         I'm in that two seat Lambo"
-                                    </p>
-                                </div>
-                                <hr />
-                                <div className="text-center">
-                                    <button href="#pablo" className="btn btn-simple"><i className="fa fa-facebook-square"></i></button>
-                                    <button href="#pablo" className="btn btn-simple"><i className="fa fa-twitter"></i></button>
-                                    <button href="#pablo" className="btn btn-simple"><i className="fa fa-google-plus-square"></i></button>
-
-                                </div>
-                            </div>
+                                    </span>
+                                }
+                                socials={
+                                    <div>
+                                        <button href="#pablo" className="btn btn-simple"><i className="fa fa-facebook-square"></i></button>
+                                        <button href="#pablo" className="btn btn-simple"><i className="fa fa-twitter"></i></button>
+                                        <button href="#pablo" className="btn btn-simple"><i className="fa fa-google-plus-square"></i></button>
+                                    </div>
+                                }
+                            />
                         </div>
 
                     </div>
