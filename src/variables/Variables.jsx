@@ -502,6 +502,10 @@ var optionsSales = {
   lineSmooth: true,
   showLine: true,
   showPoint: true,
+  fullWidth: true,
+  chartPadding: {
+    right: 50
+  }
 };
 var responsiveSales = [
   ['screen and (max-width: 640px)', {
