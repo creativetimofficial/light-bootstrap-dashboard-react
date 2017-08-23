@@ -5,13 +5,9 @@ import { createBrowserHistory } from 'history';
 import {
   HashRouter,
   Route,
-  Switch,
-  Redirect
+  Switch
 } from 'react-router-dom';
 
-import Header from './components/Header/Header.jsx';
-import Footer from './components/Footer/Footer.jsx';
-import Sidebar from './components/Sidebar/Sidebar.jsx';
 import App from 'containers/App/App.jsx';
 
 //
