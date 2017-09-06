@@ -6,15 +6,32 @@ import {Card} from 'components/Card/Card.jsx';
 import {Tasks} from 'components/Tasks/Tasks.jsx';
 import {
     dataPie,
+    legendPie,
     dataSales,
     optionsSales,
     responsiveSales,
+    legendSales,
     dataBar,
     optionsBar,
-    responsiveBar
+    responsiveBar,
+    legendBar
 } from 'variables/Variables.jsx';
 
 class Dashboard extends Component {
+    createLegend(json){
+        var legend = [];
+        for(var i = 0; i < json["names"].length; i++){
+            var type = "fa fa-circle text-"+json["types"][i];
+            legend.push(
+                <i className={type}></i>
+            );
+            legend.push(" ");
+            legend.push(
+                json["names"][i]
+            );
+        }
+        return legend;
+    }
     render() {
         return (
             <div className="content">
@@ -33,9 +50,7 @@ class Dashboard extends Component {
                                 }
                                 legend={
                                     <div className="legend">
-                                        <i className="fa fa-circle text-info"></i> Open
-                                        <i className="fa fa-circle text-danger"></i> Bounce
-                                        <i className="fa fa-circle text-warning"></i> Unsubscribe
+                                        {this.createLegend(legendPie)}
                                     </div>
                                 }
                             />
@@ -58,9 +73,7 @@ class Dashboard extends Component {
                                     }
                                 legend={
                                     <div className="legend">
-                                        <i className="fa fa-circle text-info"></i> Open
-                                        <i className="fa fa-circle text-danger"></i> Click
-                                        <i className="fa fa-circle text-warning"></i> Click Second Time
+                                        {this.createLegend(legendSales)}
                                     </div>
                                 }
                             />
@@ -86,8 +99,7 @@ class Dashboard extends Component {
                                 }
                                 legend={
                                     <div className="legend">
-                                        <i className="fa fa-circle text-info"></i> Tesla Model S
-                                        <i className="fa fa-circle text-danger"></i> BMW 5 Series
+                                        {this.createLegend(legendBar)}
                                     </div>
                                 }
                             />

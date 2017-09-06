@@ -481,6 +481,10 @@ var dataPie = {
     labels: ['62%','32%','6%'],
     series: [62, 32, 6]
 };
+var legendPie = {
+    names: ["Open","Bounce","Unsubscribe"],
+    types: ["info","danger","warning"]
+};
 
 // Data for Line Chart
 var dataSales = {
@@ -516,6 +520,10 @@ var responsiveSales = [
     }
   }]
 ];
+var legendSales = {
+    names: ["Open","Click","Click Second Time"],
+    types: ["info","danger","warning"]
+};
 
 // Data for Bar Chart
 var dataBar = {
@@ -542,10 +550,14 @@ var responsiveBar = [
     }
   }]
 ];
+var legendBar = {
+    names: ["Tesla Model","S BMW 5 Series"],
+    types: ["info","danger"]
+};
 
 module.exports = {
     style, // For notifications (App container and Notifications view)
     thArray, tdArray, // For tables (TableList view)
     iconsArray, // For icons (Icons view)
-    dataPie, dataSales, optionsSales, responsiveSales, dataBar, optionsBar, responsiveBar // For charts (Dashboard view)
+    dataPie, legendPie, dataSales, optionsSales, responsiveSales, legendSales, dataBar, optionsBar, responsiveBar, legendBar // For charts (Dashboard view)
 };
