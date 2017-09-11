@@ -9,17 +9,7 @@ import {
 } from 'react-router-dom';
 
 import App from 'containers/App/App.jsx';
-
-//
-// <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-// <link href="assets/css/animate.min.css" rel="stylesheet"/>
-// <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
-// <link href="assets/css/demo.css" rel="stylesheet" />
-//
-//
-// <!--     Fonts and icons     -->
-//
-// <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+import Components from 'containers/Components/Components.jsx';
 
 import './css/bootstrap.min.css';
 import './css/animate.min.css';
@@ -29,15 +19,14 @@ import './css/pe-icon-7-stroke.css';
 import './css/m-style.css';
 
 
-// import registerServiceWorker from './registerServiceWorker';
 
 const history = createBrowserHistory();
 
 ReactDOM.render((
-  <HashRouter history={history}>
-    <Switch>
-      <Route path="/" name="Home" component={App}/>
-    </Switch>
-  </HashRouter>
+    <HashRouter history={history}>
+        <Switch>
+            <Route path="/components" name="Components" component={Components}/>
+            <Route path="/" name="Home" component={App}/>
+        </Switch>
+    </HashRouter>
 ),document.getElementById('root'));
-// registerServiceWorker();

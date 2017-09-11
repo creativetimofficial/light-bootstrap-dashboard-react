@@ -23,7 +23,7 @@ class Dashboard extends Component {
         for(var i = 0; i < json["names"].length; i++){
             var type = "fa fa-circle text-"+json["types"][i];
             legend.push(
-                <i className={type}></i>
+                <i className={type} key={i}></i>
             );
             legend.push(" ");
             legend.push(
