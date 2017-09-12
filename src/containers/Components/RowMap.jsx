@@ -28,7 +28,7 @@ const codeExample = `class Maps extends Component{
 }
 
 export default GoogleApiWrapper({
-  apiKey: "here goes yout API KEY"
+  apiKey: "YOUR_KEY_HERE"
 })(Maps)`;
 
 
