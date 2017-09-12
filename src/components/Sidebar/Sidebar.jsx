@@ -67,6 +67,12 @@ class Sidebar extends Component{
                                 <p>Notifications</p>
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink to={'/components'} className="nav-link" activeClassName="active">
+                                <i className="pe-7s-copy-file"></i>
+                                <p>Documentation</p>
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </div>

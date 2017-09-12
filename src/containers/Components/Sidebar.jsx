@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import {Affix} from 'react-overlays';
 
 class Sidebar extends Component {
 
     render() {
         return (
-            <ul>
+            <Affix>
+            <ul className="nav nav-pills nav-stacked">
                 <li>
                     <a href="#buttons-row">Buttons</a>
                 </li>
@@ -42,6 +44,7 @@ class Sidebar extends Component {
                     <a href="#maps-row">Maps</a>
                 </li>
             </ul>
+        </Affix>
         );
     }
 }
