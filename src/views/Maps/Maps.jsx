@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 
@@ -15,6 +14,7 @@ class Maps extends Component{
                       lng: -73.9856644
                     }}
                     zoom={13}
+                    clickableIcons={false}
                 >
                     <Marker onClick={this.onMarkerClick}
                         name={'Current location'}
