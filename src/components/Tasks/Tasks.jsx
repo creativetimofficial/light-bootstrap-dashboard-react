@@ -42,8 +42,9 @@ export class Tasks extends Component{
                                 simple
                                 type="button"
                                 bsSize="xs"
-                                text={<i className="fa fa-edit"></i>}
-                            />
+                            >
+                                <i className="fa fa-edit"></i>
+                            </Button>
                         </OverlayTrigger>
 
                         <OverlayTrigger placement="top" overlay={remove}>
@@ -52,8 +53,9 @@ export class Tasks extends Component{
                                 simple
                                 type="button"
                                 bsSize="xs"
-                                text={<i className="fa fa-times"></i>}
-                            />
+                            >
+                                <i className="fa fa-times"></i>
+                            </Button>
                         </OverlayTrigger>
 
                     </td>

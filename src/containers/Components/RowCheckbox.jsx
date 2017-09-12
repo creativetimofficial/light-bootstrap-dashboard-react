@@ -4,8 +4,7 @@ import Checkbox from 'elements/CustomCheckbox/CustomCheckbox';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/styles';
 
-const codeColors = `
-<Checkbox
+const codeColors = `<Checkbox
     number="1"
     isChecked="true"
     label="Checked"

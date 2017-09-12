@@ -21,8 +21,8 @@ const codeSizes = `<Button bsStyle="primary" bsSize="lg">Large</Button>
 const codeStyles = `<Button bsStyle="primary">Default</Button>
 <Button bsStyle="primary" fill>Fill</Button>
 <Button bsStyle="primary" simple>Simple</Button>
-<Button bsStyle="primary" block>Block</Button>
-<Button bsStyle="primary" pullRight>Pull Right</Button>`;
+<Button bsStyle="primary" pullRight>Pull Right</Button>
+<Button bsStyle="primary" block>Block</Button>`;
 
 class RowButtons extends Component {
   render() {
@@ -74,15 +74,16 @@ class RowButtons extends Component {
         <h4>Styles</h4>
         <p>
           We added extra classes that can help you better customise the look.
-          You can use regular buttons, filled buttons or plain simple link like
+          You can use regular buttons, filled buttons, right-pulled buttons,
+          buttons that span over the entire given space or plain simple link like
           buttons. Let's see some examples:
         </p>
         <p>
             <Button bsStyle="primary">Default</Button>
             <Button bsStyle="primary" fill>Fill</Button>
             <Button bsStyle="primary" simple>Simple</Button>
-            <Button bsStyle="primary" block>Block</Button>
             <Button bsStyle="primary" pullRight>Pull Right</Button>
+            <Button bsStyle="primary" block>Block</Button>
         </p>
         <SyntaxHighlighter language="html" style={monokaiSublime}>
           {codeStyles}

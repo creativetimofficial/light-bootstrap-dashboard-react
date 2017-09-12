@@ -46,7 +46,6 @@ class Notifications extends Component {
     }
 
     componentDidMount(){
-        // this.state._notificationSystem = this.refs.notificationSystem;
         this.setState({_notificationSystem: this.refs.notificationSystem})
     }
 
