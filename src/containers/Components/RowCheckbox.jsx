@@ -4,16 +4,18 @@ import Checkbox from 'elements/CustomCheckbox/CustomCheckbox';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/styles';
 
-const codeColors = `<Checkbox
-    number="1"
-    isChecked="true"
-    label="Checked"
-/>
-<Checkbox
-    number="2"
-    label="Unchecked"
-/>
-`;
+const codeColors = `<div>
+    <Checkbox
+        number="1"
+        isChecked={true}
+        label="Checked"
+    />
+    <Checkbox
+        number="2"
+        isChecked={false}
+        label="Unchecked"
+    />
+</div>`;
 
 class RowCheckbox extends Component {
   render() {
@@ -30,11 +32,12 @@ class RowCheckbox extends Component {
         <div>
             <Checkbox
                 number="1"
-                isChecked="true"
+                isChecked={true}
                 label="Checked"
             />
             <Checkbox
                 number="2"
+                isChecked={false}
                 label="Unchecked"
             />
         </div>

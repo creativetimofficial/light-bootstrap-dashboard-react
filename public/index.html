@@ -48,8 +48,10 @@
   </body>
     <script>
         (function() {
-            var sidebar = document.getElementById("collapseSidebar");
-            document.body.appendChild(sidebar);
+            if(document.getElementById("collapseSidebar")){
+                var sidebar = document.getElementById("collapseSidebar");
+                document.body.appendChild(sidebar);
+            }
         })();
     </script>
 </html>
