@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history';
 
 import {
+  HashRouter,
   Router,
   Route,
   Switch
@@ -23,10 +24,10 @@ import './css/m-style.css';
 const history = createBrowserHistory();
 
 ReactDOM.render((
-    <Router history={history}>
+    <HashRouter history={history}>
         <Switch>
             <Route path="/components" name="Components" component={Components}/>
             <Route path="/" name="Home" component={App}/>
         </Switch>
-    </Router>
+    </HashRouter>
 ),document.getElementById('root'));
