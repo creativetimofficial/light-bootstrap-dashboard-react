@@ -12,35 +12,9 @@ const codeSidebar = `<li className={this.activeRoute("/table")}>
     </NavLink>
 </li>`;
 const codeSidebarApp = `<Route path="/table" component={TableList}/>`;
-const codeSidebarComponent = `import TableList from 'views/TableList/TableList';`;
 const codeSidebarImages = `import imagine from 'img/sidebar-5.jpg';
 import logo from 'img/reactlogo.png';`;
 
-const codeHeader = `<Navbar collapseOnSelect>
-    <Navbar.Header>
-        <Navbar.Brand>
-            <a href="#">React-Bootstrap</a>
-        </Navbar.Brand>
-        <Navbar.Toggle />
-    </Navbar.Header>
-    <Navbar.Collapse>
-        <Nav>
-            <NavItem eventKey={1} href="#">Link</NavItem>
-            <NavItem eventKey={2} href="#">Link</NavItem>
-            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-                <MenuItem eventKey={3.1}>Action</MenuItem>
-                <MenuItem eventKey={3.2}>Another action</MenuItem>
-                <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                <MenuItem divider />
-                <MenuItem eventKey={3.3}>Separated link</MenuItem>
-            </NavDropdown>
-        </Nav>
-        <Nav pullRight>
-            <NavItem eventKey={1} href="#">Link Right</NavItem>
-            <NavItem eventKey={2} href="#">Link Right</NavItem>
-        </Nav>
-    </Navbar.Collapse>
-</Navbar>`;
 
 
 class RowNavigation extends Component {
@@ -102,6 +76,7 @@ class RowNavigation extends Component {
         <SyntaxHighlighter language="javascript" style={monokaiSublime}>
           {`import Header from 'components/Header/Header';`}
         </SyntaxHighlighter>
+
         <p>
             You can change it's elements in <code>src/components/Header/Header.jsx</code>.
         </p>

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Table, Navbar, NavItem, Nav, NavDropdown, MenuItem } from 'react-bootstrap';
+import { NavDropdown, MenuItem } from 'react-bootstrap';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/styles';
 
-import {FormInputs} from 'components/FormInputs/FormInputs.jsx';
 
 const codeIconForIconExample = `const icon = (
     <div>
