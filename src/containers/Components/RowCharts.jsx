@@ -80,23 +80,22 @@ var responsiveBar = [
 ];`;
 
 const codeExample = `<div className="row">
-<div className="col-md-4" style={{maxHeight:"320px"}}>
-    <ChartistGraph data={dataPie} type="Pie"/>
-</div>
-<div className="col-md-8" style={{maxHeight:"320px"}}>
-    <ChartistGraph
-        data={dataSales}
-        type="Line"
-        options={optionsSales}
-        responsiveOptions={responsiveSales}/>
+    <div className="col-md-4" style={{maxHeight:"320px"}}>
+        <ChartistGraph data={dataPie} type="Pie"/>
+    </div>
+    <div className="col-md-8" style={{maxHeight:"320px"}}>
+        <ChartistGraph
+            data={dataSales}
+            type="Line"
+            options={optionsSales}
+            responsiveOptions={responsiveSales}/>
     </div>
     <div className="col-md-8" style={{maxHeight:"320px"}}>
         <ChartistGraph
             data={dataBar}
             type="Bar"
             options={optionsBar}
-            responsiveOptions={responsiveBar}
-        />
+            responsiveOptions={responsiveBar}/>
     </div>
 </div>`;
 

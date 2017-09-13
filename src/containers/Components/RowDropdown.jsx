@@ -14,20 +14,20 @@ const codeIconForIconExample = `const icon = (
 `;
 
 const codeIconExample = `<NavDropdown eventKey={1} title={icon} id="basic-nav-dropdown">
-<MenuItem eventKey={1.1}>Notification 1</MenuItem>
-<MenuItem eventKey={1.2}>Notification 2</MenuItem>
-<MenuItem eventKey={1.3}>Notification 3</MenuItem>
-<MenuItem eventKey={1.4}>Notification 4</MenuItem>
-<MenuItem eventKey={1.5}>Another notifications</MenuItem>
+    <MenuItem eventKey={1.1}>Notification 1</MenuItem>
+    <MenuItem eventKey={1.2}>Notification 2</MenuItem>
+    <MenuItem eventKey={1.3}>Notification 3</MenuItem>
+    <MenuItem eventKey={1.4}>Notification 4</MenuItem>
+    <MenuItem eventKey={1.5}>Another notifications</MenuItem>
 </NavDropdown>
 `;
 
 const codeTextExample = `<NavDropdown eventKey={1} title="This is a dropdown" id="basic-nav-dropdown">
-<MenuItem eventKey={1.1}>Notification 1</MenuItem>
-<MenuItem eventKey={1.2}>Notification 2</MenuItem>
-<MenuItem eventKey={1.3}>Notification 3</MenuItem>
-<MenuItem eventKey={1.4}>Notification 4</MenuItem>
-<MenuItem eventKey={1.5}>Another notifications</MenuItem>
+    <MenuItem eventKey={1.1}>Notification 1</MenuItem>
+    <MenuItem eventKey={1.2}>Notification 2</MenuItem>
+    <MenuItem eventKey={1.3}>Notification 3</MenuItem>
+    <MenuItem eventKey={1.4}>Notification 4</MenuItem>
+    <MenuItem eventKey={1.5}>Another notifications</MenuItem>
 </NavDropdown>`;
 
 const icon = (

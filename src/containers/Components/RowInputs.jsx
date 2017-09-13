@@ -7,30 +7,30 @@ import {FormInputs} from 'components/FormInputs/FormInputs.jsx';
 
 
 const codeExample = `<FormInputs
-ncols = {["col-md-5" , "col-md-3" , "col-md-4"]}
-proprieties = {[
-    {
-        label : "Company (disabled)",
-        type : "text",
-        bsClass : "form-control",
-        placeholder : "Company",
-        defaultValue : "Creative Code Inc.",
-        disabled : true
-    },
-    {
-        label : "Username",
-        type : "text",
-        bsClass : "form-control",
-        placeholder : "Username",
-        defaultValue : "michael23"
-    },
-    {
-        label : "Email address",
-        type : "email",
-        bsClass : "form-control",
-        placeholder : "Email"
-    }
-]}
+    ncols = {["col-md-5" , "col-md-3" , "col-md-4"]}
+    proprieties = {[
+        {
+            label : "Company (disabled)",
+            type : "text",
+            bsClass : "form-control",
+            placeholder : "Company",
+            defaultValue : "Creative Code Inc.",
+            disabled : true
+        },
+        {
+            label : "Username",
+            type : "text",
+            bsClass : "form-control",
+            placeholder : "Username",
+            defaultValue : "michael23"
+        },
+        {
+            label : "Email address",
+            type : "email",
+            bsClass : "form-control",
+            placeholder : "Email"
+        }
+    ]}
 />`;
 
 

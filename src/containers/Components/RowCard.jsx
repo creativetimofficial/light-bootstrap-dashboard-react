@@ -63,63 +63,63 @@ var responsiveBar = [
 ];`;
 
 const codeExamplePlainCard = `<div className="row">
-<div className="col-md-6">
-    <Card
-        id="chartActivity"
-        classes="ct-chart"
-        title="2014 Sales"
-        category="All products including Taxes"
-        stats="Data information certified"
-        statsIcon="fa fa-check"
-        content={
-            <ChartistGraph
-                data={dataBar}
-                type="Bar"
-                options={optionsBar}
-                responsiveOptions={responsiveBar}
-            />
-        }
-        legend={
-            <div className="legend">
-                <i className="fa fa-circle text-info"></i> Tesla Model S
-                <i className="fa fa-circle text-danger"></i> BMW 5 Series
-            </div>
-        }
-    />
-</div>
+    <div className="col-md-6">
+        <Card
+            id="chartActivity"
+            classes="ct-chart"
+            title="2014 Sales"
+            category="All products including Taxes"
+            stats="Data information certified"
+            statsIcon="fa fa-check"
+            content={
+                <ChartistGraph
+                    data={dataBar}
+                    type="Bar"
+                    options={optionsBar}
+                    responsiveOptions={responsiveBar}
+                />
+            }
+            legend={
+                <div className="legend">
+                    <i className="fa fa-circle text-info"></i> Tesla Model S
+                    <i className="fa fa-circle text-danger"></i> BMW 5 Series
+                </div>
+            }
+        />
+    </div>
 </div>`;
 
 const codeExampleUserCard = `<div className="row">
-<div className="col-md-4">
-    <UserCard
-        bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
-        avatar="assets/img/faces/face-3.jpg"
-        name="Mike Andrew"
-        userName="michael24"
-        description={
-            <span>
-                "Lamborghini Mercy
-                <br />
-                Your chick she so thirsty
-                <br />
-                I'm in that two seat Lambo"
-            </span>
-        }
-        socials={
-            <div>
-                <Button simple>
-                    <i className="fa fa-facebook-square"></i>
-                </Button>
-                <Button simple>
-                    <i className="fa fa-twitter"></i>
-                </Button>
-                <Button simple>
-                    <i className="fa fa-google-plus-square"></i>
-                </Button>
-            </div>
-        }
-    />
-</div>
+    <div className="col-md-4">
+        <UserCard
+            bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
+            avatar="assets/img/faces/face-3.jpg"
+            name="Mike Andrew"
+            userName="michael24"
+            description={
+                <span>
+                    "Lamborghini Mercy
+                    <br />
+                    Your chick she so thirsty
+                    <br />
+                    I'm in that two seat Lambo"
+                </span>
+            }
+            socials={
+                <div>
+                    <Button simple>
+                        <i className="fa fa-facebook-square"></i>
+                    </Button>
+                    <Button simple>
+                        <i className="fa fa-twitter"></i>
+                    </Button>
+                    <Button simple>
+                        <i className="fa fa-google-plus-square"></i>
+                    </Button>
+                </div>
+            }
+        />
+    </div>
 </div>`;
 
 class RowCard extends Component {

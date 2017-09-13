@@ -5,16 +5,16 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/styles';
 
 const codeColors = `<div>
-<Checkbox
-    number="1"
-    isChecked={true}
-    label="Checked"
-/>
-<Checkbox
-    number="2"
-    isChecked={false}
-    label="Unchecked"
-/>
+    <Checkbox
+        number="1"
+        isChecked={true}
+        label="Checked"
+    />
+    <Checkbox
+        number="2"
+        isChecked={false}
+        label="Unchecked"
+    />
 </div>`;
 
 class RowCheckbox extends Component {
