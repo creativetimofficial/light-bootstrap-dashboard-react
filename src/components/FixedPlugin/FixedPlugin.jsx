@@ -9,7 +9,7 @@ class FixedPlugin extends Component{
     constructor(props){
         super(props);
         this.state = {
-            classes: "dropdown",
+            classes: "dropdown show-dropdown open",
             is_checked: true
         };
         this.handleClick = this.handleClick.bind(this);
@@ -25,8 +25,10 @@ class FixedPlugin extends Component{
     render(){
         return (
             <div className="fixed-plugin">
-                <div className={this.state["classes"]} onClick={this.handleClick}>
-                        <i className="fa fa-cog fa-2x"> </i>
+                <div className={this.state["classes"]}>
+                        <div onClick={this.handleClick}>
+                            <i className="fa fa-cog fa-2x"></i>
+                        </div>
                     <ul className="dropdown-menu">
                         <li className="header-title">Sidebar Style</li>
                         <li className="adjustments-line">
