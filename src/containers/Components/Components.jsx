@@ -16,7 +16,18 @@ import RowCard from './RowCard.jsx';
 import RowMap from './RowMap.jsx';
 
 class Components extends Component {
-
+    componentDidMount() {
+        window.location.hash = window.decodeURIComponent(window.location.hash);
+        const scrollToAnchor = () => {
+            const hashParts = window.location.hash.split('#');
+            if (hashParts.length > 2) {
+                const hash = hashParts.slice(-1)[0];
+                document.querySelector(`#${hash}`).scrollIntoView();
+            }
+        };
+        scrollToAnchor();
+        window.onhashchange = scrollToAnchor;
+    }
     render() {
         return (
             <Grid fluid style={{marginBottom:"50px"}}>

@@ -5,11 +5,11 @@ import Button from 'elements/CustomButton/CustomButton.jsx';
 
 export class Tasks extends Component{
     handleCheckbox = event => {
-      const target = event.target;
-      console.log(event.target);
-      this.setState({
-        [target.name]: target.checked
-      });
+        const target = event.target;
+        console.log(event.target);
+        this.setState({
+            [target.name]: target.checked
+        });
     };
     render(){
         const edit = (<Tooltip id="edit_tooltip">Edit Task</Tooltip>);
