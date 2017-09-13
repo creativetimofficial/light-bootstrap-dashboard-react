@@ -1,4 +1,5 @@
 {
+  "homepage" : "https://lbd-react.herokuapp.com",
   "name": "light-bootstrap-dashboard-react",
   "version": "0.1.0",
   "private": true,
