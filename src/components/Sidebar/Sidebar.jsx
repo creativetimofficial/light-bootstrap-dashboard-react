@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {} from 'react-bootstrap';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 import imagine from 'img/sidebar-5.jpg';
 import logo from 'img/reactlogo.png';

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Affix} from 'react-overlays';
+import { Link } from 'react-router-dom';
 
 class Sidebar extends Component {
 
@@ -8,40 +9,40 @@ class Sidebar extends Component {
             <Affix>
             <ul className="nav nav-pills nav-stacked">
                 <li>
-                    <a href="#buttons-row">Buttons</a>
+                    <Link to='#buttons-row' className="nav-link">Buttons</Link>
                 </li>
                 <li>
-                    <a href="#checkbox-row">Checkbox</a>
+                    <Link to='#checkbox-row' className="nav-link">Checkbox</Link>
                 </li>
                 <li>
-                    <a href="#inputs-row">Inputs</a>
+                    <Link to='#inputs-row' className="nav-link">Inputs</Link>
                 </li>
                 <li>
-                    <a href="#dropdown-row">Dropdown</a>
+                    <Link to='#dropdown-row' className="nav-link">Dropdown</Link>
                 </li>
                 <li>
-                    <a href="#navbar-row">Navigation</a>
+                    <Link to='#navbar-row' className="nav-link">Navigation</Link>
                 </li>
                 <li>
-                    <a href="#tables-row">Tables</a>
+                    <Link to='#tables-row' className="nav-link">Tables</Link>
                 </li>
                 <li>
-                    <a href="#tooltip-row">Tooltips</a>
+                    <Link to='#tooltip-row' className="nav-link">Tooltips</Link>
                 </li>
                 <li>
-                    <a href="#icons-row">Icons</a>
+                    <Link to='#icons-row' className="nav-link">Icons</Link>
                 </li>
                 <li>
-                    <a href="#notification-row">Notifications</a>
+                    <Link to='#notification-row' className="nav-link">Notifications</Link>
                 </li>
                 <li>
-                    <a href="#charts-row">Charts</a>
+                    <Link to='#charts-row' className="nav-link">Charts</Link>
                 </li>
                 <li>
-                    <a href="#card-row">Card/User-Card</a>
+                    <Link to='#card-row' className="nav-link">Card/User-Card</Link>
                 </li>
                 <li>
-                    <a href="#maps-row">Maps</a>
+                    <Link to='#maps-row' className="nav-link">Maps</Link>
                 </li>
             </ul>
         </Affix>
