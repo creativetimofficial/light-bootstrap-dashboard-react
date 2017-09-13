@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history';
 
 import {
-  HashRouter,
-  Route,
-  Switch
+    HashRouter,
+    Route,
+    Switch
 } from 'react-router-dom';
 
 import App from 'containers/App/App.jsx';

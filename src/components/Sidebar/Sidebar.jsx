@@ -7,10 +7,9 @@ import logo from 'img/reactlogo.png';
 
 class Sidebar extends Component{
     activeRoute(routeName) {
-      return this.props.location.pathname.indexOf(routeName) > -1 ? 'active' : '';
+        return this.props.location.pathname.indexOf(routeName) > -1 ? 'active' : '';
     }
     render(){
-        // console.log(this.imageExists('img/sidebar-5.jpg'));
         const sidebarBackground = {
             backgroundImage: 'url(' + imagine + ')'
         };
