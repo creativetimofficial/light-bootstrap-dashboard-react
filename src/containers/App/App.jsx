@@ -27,24 +27,7 @@ import imagine from "img/sidebar-5.jpg";
 class App extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            image: imagine,
-            color: "azure",
-            hasImage: true
-        };
         this.componentDidMount = this.componentDidMount.bind(this);
-        this.handleImageClick = this.handleImageClick.bind(this);
-        this.handleColorClick = this.handleColorClick.bind(this);
-        this.handleHasImage = this.handleImageClick.bind(this);
-    }
-    handleImageClick(image){
-        this.setState({image: image});
-    }
-    handleColorClick(color){
-        this.setState({color: color});
-    }
-    handleHasImage(hasImage){
-        this.setState({color: hasImage});
     }
     componentDidMount(){
         var _notificationSystem = this.refs.notificationSystem;
@@ -83,12 +66,7 @@ class App extends Component {
 
                 <div className="wrapper">
                     <NotificationSystem ref="notificationSystem" style={style}/>
-                    <Sidebar
-                        bgImage={this.state["image"]}
-                        dataColor={this.state["color"]}
-                        hasImage={this.state["hasImage"]}
-                        {...this.props}
-                    />
+                    <Sidebar {...this.props} />
                     <div id="main-panel" className="main-panel">
                         <Header {...this.props}/>
 
@@ -106,12 +84,6 @@ class App extends Component {
                         <Footer />
                     </div>
                     <CollapseSidebar {...this.props}/>
-                    <FixedPlugin
-                        handleImageClick={this.handleImageClick}
-                        handleColorClick={this.handleColorClick}
-                        handleHasImage={this.handleHasImage}
-                        bgColor={this.state["color"]}
-                        bgImage={this.state["image"]}/>
                 </div>
 
 

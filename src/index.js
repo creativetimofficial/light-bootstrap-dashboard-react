@@ -9,7 +9,6 @@ import {
 } from 'react-router-dom';
 
 import App from 'containers/App/App.jsx';
-import Components from 'containers/Components/Components.jsx';
 
 import './css/bootstrap.min.css';
 import './css/animate.min.css';
@@ -25,7 +24,6 @@ const history = createBrowserHistory();
 ReactDOM.render((
     <HashRouter history={history}>
         <Switch>
-            <Route path="/components" name="Components" component={Components}/>
             <Route path="/" name="Home" component={App}/>
         </Switch>
     </HashRouter>
