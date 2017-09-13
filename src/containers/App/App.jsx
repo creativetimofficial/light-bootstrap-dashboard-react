@@ -18,11 +18,9 @@ import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import Sidebar from 'components/Sidebar/Sidebar';
 import CollapseSidebar from 'components/CollapseSidebar/CollapseSidebar';
-import FixedPlugin from 'components/FixedPlugin/FixedPlugin.jsx';
 
 import {style} from "variables/Variables.jsx";
 
-import imagine from "img/sidebar-5.jpg";
 
 class App extends Component {
     constructor(props){
