@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history';
 
 import {
-  Router,
+  BrowserRouter,
   Route,
   Switch
 } from 'react-router-dom';
@@ -23,10 +23,10 @@ import './css/m-style.css';
 const history = createBrowserHistory();
 
 ReactDOM.render((
-    <Router history={history}>
+    <BrowserRouter history={history}>
         <Switch>
             <Route path="/components" name="Components" component={Components}/>
             <Route path="/" name="Home" component={App}/>
         </Switch>
-    </Router>
+    </BrowserRouter>
 ),document.getElementById('root'));
