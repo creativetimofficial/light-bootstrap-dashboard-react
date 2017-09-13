@@ -23,7 +23,7 @@ import './css/m-style.css';
 const history = createBrowserHistory();
 
 ReactDOM.render((
-    <BrowserRouter history={history}>
+    <BrowserRouter>
         <Switch>
             <Route path="/components" name="Components" component={Components}/>
             <Route path="/" name="Home" component={App}/>
