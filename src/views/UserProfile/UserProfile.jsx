@@ -4,6 +4,7 @@ import {FormGroup,ControlLabel,FormControl} from 'react-bootstrap';
 import {Card} from 'components/Card/Card.jsx';
 import {FormInputs} from 'components/FormInputs/FormInputs.jsx';
 import {UserCard} from 'components/UserCard/UserCard.jsx';
+import Button from 'elements/CustomButton/CustomButton.jsx';
 
 class UserProfile extends Component {
     render() {
@@ -107,8 +108,14 @@ class UserProfile extends Component {
                                                 </FormGroup>
                                             </div>
                                         </div>
-
-                                        <button type="submit" className="btn btn-info btn-fill pull-right">Update Profile</button>
+                                        <Button
+                                            bsStyle="info"
+                                            pullRight
+                                            fill
+                                            type="submit"
+                                        >
+                                            Update Profile
+                                        </Button>
                                         <div className="clearfix"></div>
                                     </form>
                                 }

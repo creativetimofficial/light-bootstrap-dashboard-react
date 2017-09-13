@@ -11,7 +11,6 @@ class Header extends Component{
         };
     }
     mobileSidebarToggle(e){
-        // document.getElementById("collapseSidebar").style.display = "";
         if(this.state.sidebarExists === false){
             this.setState({
                 sidebarExists : true
