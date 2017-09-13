@@ -92,19 +92,19 @@ class Notifications extends Component {
                                     <h5>Notification states</h5>
                                     <Alert bsStyle="info">
                                         <button type="button" aria-hidden="true" className="close">×</button>
-                                        <span><b> Info - </b> This is a regular notification made with ".alert-info"</span>
+                                        <span><b> Info - </b> This is a regular notification made with bsStyle="info"</span>
                                     </Alert>
                                     <Alert bsStyle="success">
                                         <button type="button" aria-hidden="true" className="close">×</button>
-                                        <span><b> Success - </b> This is a regular notification made with ".alert-success"</span>
+                                        <span><b> Success - </b> This is a regular notification made with bsStyle="success"</span>
                                     </Alert>
                                     <Alert bsStyle="warning">
                                         <button type="button" aria-hidden="true" className="close">×</button>
-                                        <span><b> Warning - </b> This is a regular notification made with ".alert-warning"</span>
+                                        <span><b> Warning - </b> This is a regular notification made with bsStyle="warning"</span>
                                     </Alert>
                                     <Alert bsStyle="danger">
                                         <button type="button" aria-hidden="true" className="close">×</button>
-                                        <span><b> Danger - </b> This is a regular notification made with ".alert-danger"</span>
+                                        <span><b> Danger - </b> This is a regular notification made with bsStyle="danger"</span>
                                     </Alert>
                                 </div>
                             </div>
