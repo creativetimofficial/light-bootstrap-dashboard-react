@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
-import imagine from 'img/sidebar-5.jpg';
+// import imagine from 'img/sidebar-5.jpg';
 import logo from 'img/reactlogo.png';
 
 class Sidebar extends Component{
@@ -11,11 +11,11 @@ class Sidebar extends Component{
     }
     render(){
         const sidebarBackground = {
-            backgroundImage: 'url(' + imagine + ')'
+            backgroundImage: 'url(' + this.props.bgImage + ')'
         };
         return (
-            <div id="sidebar" className="sidebar" data-color="blue" data-image={imagine}>
-                <div className="sidebar-background" style={sidebarBackground}></div>
+            <div id="sidebar" className="sidebar" data-color={this.props.dataColor} data-image={this.props.bgImage}>
+                {this.props.hasImage === true ? (<div className="sidebar-background" style={sidebarBackground}></div>):""}
                 <div className="sidebar-wrapper">
                     <div className="logo">
                         <a href="http://www.creative-tim.com" className="simple-text">
