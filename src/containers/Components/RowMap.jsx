@@ -34,8 +34,9 @@ export default GoogleApiWrapper({
 class RowMap extends Component {
     render() {
         return (
-            <div id="maps-row">
+            <div id="maps-row" className="tim-row">
                 <h2>Map</h2>
+                <legend></legend>
                 <p>
                     For maps we've used some components from a react library <code>google-maps-react</code>.
                 </p>

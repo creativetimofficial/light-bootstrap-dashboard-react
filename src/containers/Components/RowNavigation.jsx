@@ -20,8 +20,9 @@ import logo from 'img/reactlogo.png';`;
 class RowNavigation extends Component {
     render() {
         return (
-            <div id="navbar-row">
+            <div id="navbar-row" className="tim-row">
                 <h2>Navigation</h2>
+                <legend></legend>
                 <p>
                     For navigation there are three main components <code>Sidebar</code>, <code>Header</code> and <code>Footer</code>.
                 </p>

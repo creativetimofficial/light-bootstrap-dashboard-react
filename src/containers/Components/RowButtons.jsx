@@ -27,8 +27,9 @@ const codeStyles = `<Button bsStyle="primary">Default</Button>
 class RowButtons extends Component {
     render() {
         return (
-            <div id="buttons-row">
+            <div id="buttons-row" className="tim-row">
                 <h2>Buttons</h2>
+                <legend></legend>
                 <p>
                     To use the custom buttons you need to import the custom made component:
                 </p>

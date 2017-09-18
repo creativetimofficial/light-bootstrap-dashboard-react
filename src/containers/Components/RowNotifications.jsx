@@ -154,9 +154,10 @@ class RowNotifications extends Component {
     }
     render() {
         return (
-            <div id="notification-row">
+            <div id="notification-row" className="tim-row">
                 <NotificationSystem ref="notificationSystem" style={style}/>
                 <h2>Notifications</h2>
+                <legend></legend>
                 <p>
                     We restyled the classic Bootstrap Alert and gave it a more attractive look.
                 </p>

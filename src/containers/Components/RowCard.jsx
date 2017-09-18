@@ -125,8 +125,9 @@ const codeExampleUserCard = `<div className="row">
 class RowCard extends Component {
     render() {
         return (
-            <div id="card-row">
+            <div id="card-row" className="tim-row">
                 <h2>Cards</h2>
+                <legend></legend>
                 <p>
                     We've created two types of cards, one is for simple use and one is for creating user cards.
                     They have to be imported where you use them like this:

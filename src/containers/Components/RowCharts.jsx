@@ -103,8 +103,9 @@ const codeExample = `<div className="row">
 class RowNotifications extends Component {
     render() {
         return (
-            <div id="charts-row">
+            <div id="charts-row" className="tim-row">
                 <h2>Charts</h2>
+                <legend></legend>
                 <p>
                     For the charts part we used a react component.
                 </p>

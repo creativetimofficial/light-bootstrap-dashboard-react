@@ -22,6 +22,7 @@ class RowCheckbox extends Component {
         return (
             <div className="tim-row" id="checkbox-row">
                 <h2>Checkboxes</h2>
+                <legend></legend>
                 <p>
                     To use the custom checkbox controls you need to import the custom made
                     component:

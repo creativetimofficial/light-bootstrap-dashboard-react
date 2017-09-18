@@ -14,8 +14,9 @@ const codeExmaple = `<div className="row all-icons">
 class RowIcons extends Component {
     render() {
         return (
-            <div id="icons-row">
+            <div id="icons-row" className="tim-row">
                 <h2>Icons</h2>
+                <legend></legend>
                 <p>
                     We used the default icons from <a target="_blank" rel="noopener noreferrer" href="http://themes-pixeden.com/font-demos/7-stroke/index.html">Pixeden</a>.
                 </p>

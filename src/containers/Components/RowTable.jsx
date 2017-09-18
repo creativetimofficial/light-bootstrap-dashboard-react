@@ -77,8 +77,9 @@ const codeExample = `<Table hover>
 class RowTable extends Component {
     render() {
         return (
-            <div id="tables-row">
+            <div id="tables-row" className="tim-row">
                 <h2>Tables</h2>
+                <legend></legend>
                 <h4>Example code</h4>
                 <Table striped hover>
                     <thead>

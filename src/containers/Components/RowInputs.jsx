@@ -37,8 +37,9 @@ const codeExample = `<FormInputs
 class RowInputs extends Component {
     render() {
         return (
-            <div id="inputs-row">
+            <div id="inputs-row" className="tim-row">
                 <h2>Inputs</h2>
+                <legend></legend>
                 <p>
                     For a better way to render form inputs we've created a special component <code>FormInputs</code>.
                     We use this component to create a whole row of inputs.

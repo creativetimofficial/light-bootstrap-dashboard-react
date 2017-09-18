@@ -42,8 +42,9 @@ const icon = (
 class RowDropdown extends Component {
     render() {
         return (
-            <div id="dropdown-row">
+            <div id="dropdown-row" className="tim-row">
                 <h2>Dropdowns</h2>
+                <legend></legend>
                 <h4>Example code of Dropdown with Icon</h4>
                 <NavDropdown eventKey={1} title={icon} id="basic-nav-dropdown">
                     <MenuItem eventKey={1.1}>Notification 1</MenuItem>

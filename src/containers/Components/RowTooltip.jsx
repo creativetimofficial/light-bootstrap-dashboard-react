@@ -35,8 +35,9 @@ const codeExmaple = `<OverlayTrigger placement="top" overlay={edit}>
 class RowTooltip extends Component {
     render() {
         return (
-            <div id="tooltip-row">
+            <div id="tooltip-row" className="tim-row">
                 <h2>Tooltip</h2>
+                <legend></legend>
                 <p>
                     To use this component you need to import it from react-bootstrap like this:
                 </p>
