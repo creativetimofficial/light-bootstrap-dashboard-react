@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import imagine1 from 'img/sidebar-1.jpg';
-import imagine2 from 'img/sidebar-3.jpg';
-import imagine3 from 'img/sidebar-4.jpg';
-import imagine4 from 'img/sidebar-5.jpg';
+import imagine1 from 'assets/img/sidebar-1.jpg';
+import imagine2 from 'assets/img/sidebar-3.jpg';
+import imagine3 from 'assets/img/sidebar-4.jpg';
+import imagine4 from 'assets/img/sidebar-5.jpg';
 
 class FixedPlugin extends Component{
     constructor(props){

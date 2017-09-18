@@ -3,7 +3,7 @@ import {} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 // import imagine from 'img/sidebar-5.jpg';
-import logo from 'img/reactlogo.png';
+import logo from 'assets/img/reactlogo.png';
 
 class Sidebar extends Component{
     activeRoute(routeName) {
