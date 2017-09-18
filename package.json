@@ -9,6 +9,8 @@
     "google-maps-react": "^1.1.0",
     "history": "^4.6.3",
     "jquery": "^3.2.1",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.1",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
     "react-bs-notifier": "^4.3.2",
@@ -24,8 +26,11 @@
     "react-syntax-highlighter": "^5.6.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

@@ -10,12 +10,12 @@ import {
 
 import App from 'containers/App/App.jsx';
 
-import './css/bootstrap.min.css';
-import './css/animate.min.css';
-import './css/light-bootstrap-dashboard.css';
-import './css/demo.css';
-import './css/pe-icon-7-stroke.css';
-import './css/m-style.css';
+import './assets/css/bootstrap.min.css';
+import './assets/css/animate.min.css';
+import './assets/sass/light-bootstrap-dashboard.css';
+import './assets/css/demo.css';
+import './assets/css/pe-icon-7-stroke.css';
+import './assets/css/m-style.css';
 
 
 
