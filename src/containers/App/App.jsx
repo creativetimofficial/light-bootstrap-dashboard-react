@@ -17,7 +17,6 @@ import Notifications from 'views/Notifications/Notifications';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import Sidebar from 'components/Sidebar/Sidebar';
-import CollapseSidebar from 'components/CollapseSidebar/CollapseSidebar';
 
 import {style} from "variables/Variables.jsx";
 
@@ -81,7 +80,6 @@ class App extends Component {
 
                         <Footer />
                     </div>
-                    <CollapseSidebar {...this.props}/>
                 </div>
 
 
