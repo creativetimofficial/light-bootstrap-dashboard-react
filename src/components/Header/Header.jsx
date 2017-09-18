@@ -11,21 +11,21 @@ class Header extends Component{
         };
     }
     mobileSidebarToggle(e){
-        if(this.state.sidebarExists === false){
-            this.setState({
-                sidebarExists : true
-            });
-
-        }
-        e.preventDefault();
-        document.documentElement.classList.toggle('nav-open');
-        var node = document.createElement('div');
-        node.id = 'bodyClick';
-        node.onclick = function(){
-            this.parentElement.removeChild(this);
-            document.documentElement.classList.toggle('nav-open');
-        };
-        document.body.appendChild(node);
+        // if(this.state.sidebarExists === false){
+        //     this.setState({
+        //         sidebarExists : true
+        //     });
+        //
+        // }
+        // e.preventDefault();
+        // document.documentElement.classList.toggle('nav-open');
+        // var node = document.createElement('div');
+        // node.id = 'bodyClick';
+        // node.onclick = function(){
+        //     this.parentElement.removeChild(this);
+        //     document.documentElement.classList.toggle('nav-open');
+        // };
+        // document.body.appendChild(node);
     }
     render(){
         const notification = (
@@ -41,14 +41,14 @@ class Header extends Component{
                     <Navbar.Brand>
                         <a href="#pablo">{this.props.location.pathname.charAt(1).toUpperCase() + this.props.location.pathname.slice(2)}</a>
                     </Navbar.Brand>
-                    <Navbar.Toggle onClick={this.mobileSidebarToggle}/>
+                    <Navbar.Toggle />
                 </Navbar.Header>
                 <Navbar.Collapse id="header_navbar">
                     <Nav>
                         <NavItem eventKey={1} href="#">
                             <i className="fa fa-dashboard"></i>
                         </NavItem>
-                        <NavDropdown eventKey={2} title={notification} id="basic-nav-dropdown">
+                        <NavDropdown eventKey={2} title={notification} className="removeDefaultCarret" id="basic-nav-dropdown">
                             <MenuItem eventKey={2.1}>Notification 1</MenuItem>
                             <MenuItem eventKey={2.2}>Notification 2</MenuItem>
                             <MenuItem eventKey={2.3}>Notification 3</MenuItem>
