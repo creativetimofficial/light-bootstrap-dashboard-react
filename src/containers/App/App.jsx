@@ -43,7 +43,7 @@ class App extends Component {
         this.setState({color: color});
     }
     handleHasImage(hasImage){
-        this.setState({color: hasImage});
+        this.setState({hasImage: hasImage});
     }
     componentDidMount(){
         var _notificationSystem = this.refs.notificationSystem;

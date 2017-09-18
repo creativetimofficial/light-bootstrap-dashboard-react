@@ -23,7 +23,8 @@
     "react-scripts": "1.0.10",
     "react-simple-pie-chart": "^0.4.1",
     "react-svg-chart": "^4.0.0",
-    "react-syntax-highlighter": "^5.6.2"
+    "react-syntax-highlighter": "^5.6.2",
+    "react-toggle": "^4.0.1"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
