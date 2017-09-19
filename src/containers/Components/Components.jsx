@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 import Sidebar from './Sidebar.jsx';
@@ -26,6 +27,22 @@ const headerBackground = {
 
 
 class Components extends Component {
+    constructor(props){
+        super(props);
+        this.handleScroll = this.handleScroll.bind(this);
+    }
+    handleScroll(){
+        const windowsScrollTop  = window.pageYOffset;
+        var navbar = ReactDOM.findDOMNode(this.refs.navbarColorOnScroll);
+        var title = ReactDOM.findDOMNode(this.refs.navbarTitle);
+        if(windowsScrollTop > 381){
+            navbar.classList.remove("navbar-transparent");
+            title.classList.remove("hidden");
+        } else {
+            navbar.classList.add("navbar-transparent");
+            title.classList.add("hidden");
+        }
+    }
     componentDidMount() {
         window.location.hash = window.decodeURIComponent(window.location.hash);
         const scrollToAnchor = () => {
@@ -33,16 +50,22 @@ class Components extends Component {
             if (hashParts.length > 2) {
                 const hash = hashParts.slice(-1)[0];
                 document.querySelector(`#${hash}`).scrollIntoView();
+                const windowsScrollTop  = window.pageYOffset;
+                if(windowsScrollTop > 381){
+                    window.scrollTo(0,windowsScrollTop-100);
+                    console.log("cacat in sa;lkdnkljashfkjla");
+                }
             }
         };
         scrollToAnchor();
         window.onhashchange = scrollToAnchor;
+        window.addEventListener('scroll', this.handleScroll);
     }
     render() {
         return (
-            <div>
+            <div className="components">
                 <div className="header-wrapper">
-                	<nav className="navbar navbar-default navbar-transparent navbar-fixed-top navbar-color-on-scroll">
+                	<nav className="navbar navbar-default navbar-transparent navbar-fixed-top navbar-color-on-scroll" ref="navbarColorOnScroll">
                 		<div className="container">
                 			<div className="navbar-header">
                 				<button id="menu-toggle" type="button" className="navbar-toggle">
@@ -66,10 +89,10 @@ class Components extends Component {
                 			<div className="collapse navbar-collapse text-center">
                 				<ul className="nav navbar-nav navbar-center">
                 					<li>
-                						<div className="navbar-title hidden text-center">
+                						<div className="navbar-title hidden text-center" ref="navbarTitle">
                 							<h4>
                 								<div className="image-container">
-                									<img src="assets/img/angular-red.png" alt="React Logo" />
+                									<img src={reactLogo} alt="React Logo" />
                 								</div>
                 								LBD React Free
                 							</h4>
@@ -102,32 +125,34 @@ class Components extends Component {
                 		</div>
                 	</div>
                 </div>
-                <div className="section">
-        			<div className="container">
-        				<div className="row">
-                            <Grid fluid style={{marginBottom:"50px"}}>
-                                <Row>
-                                    <Col md={2}>
-                                        <Sidebar />
-                                    </Col>
-                                    <Col md={8} offset={1}>
-                                        <RowLicense />
-                                        <RowGettingStarted />
-                                        <RowButtons />
-                                        <RowCheckbox />
-                                        <RowInputs />
-                                        <RowDropdown />
-                                        <RowNavigation />
-                                        <RowTable />
-                                        <RowTooltip />
-                                        <RowIcons />
-                                        <RowNotifications />
-                                        <RowCharts />
-                                        <RowCard />
-                                        <RowMap />
-                                    </Col>
-                                </Row>
-                            </Grid>
+                <div className="main">
+                    <div className="section">
+            			<div className="container">
+            				<div className="row">
+                                <Grid fluid style={{marginBottom:"50px"}}>
+                                    <Row>
+                                        <Col md={2}>
+                                            <Sidebar />
+                                        </Col>
+                                        <Col md={8} offset={1}>
+                                            <RowLicense />
+                                            <RowGettingStarted />
+                                            <RowButtons />
+                                            <RowCheckbox />
+                                            <RowInputs />
+                                            <RowDropdown />
+                                            <RowNavigation />
+                                            <RowTable />
+                                            <RowTooltip />
+                                            <RowIcons />
+                                            <RowNotifications />
+                                            <RowCharts />
+                                            <RowCard />
+                                            <RowMap />
+                                        </Col>
+                                    </Row>
+                                </Grid>
+                            </div>
                         </div>
                     </div>
                 </div>

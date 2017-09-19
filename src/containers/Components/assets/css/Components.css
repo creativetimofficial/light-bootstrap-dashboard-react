@@ -1,275 +1,277 @@
-.navbar{
-    -webkit-transition: all 150ms linear;
-    -moz-transition: all 150ms linear;
-    -o-transition: all 150ms linear;
-    -ms-transition: all 150ms linear;
-    transition: all 150ms linear;
+.components .navbar{
+    -webkit-transition: all 150ms linear !important;
+    -moz-transition: all 150ms linear !important;
+    -o-transition: all 150ms linear !important;
+    -ms-transition: all 150ms linear !important;
+    transition: all 150ms linear !important;
+    max-height: 70px !important;
 }
-.navbar-title{
-    height: 100%;
+.components .navbar-title{
+    height: 100% !important;
 }
-.navbar-title h4{
-    line-height: 12px;
-    margin-top: 16px;
-    margin-bottom: 5px;
+.components .navbar-title h4{
+    line-height: 12px !important;
+    margin-top: 16px !important;
+    margin-bottom: 5px !important;
 }
 
-.navbar-title img{
+.components .navbar-title img{
     width: 100%
 }
 
-.header-wrapper .navbar-default{
-    box-shadow: 0 14px 20px -12px rgba(0, 0, 0, 0.2);
-    color: #444;
-    background-color: white;
+.components .header-wrapper .navbar-default{
+    box-shadow: 0 14px 20px -12px rgba(0, 0, 0, 0.2) !important;
+    color: #444 !important;
+    background-color: white !important;
 }
-.header-wrapper .navbar-default .btn{
-    color: #444;
+.components .header-wrapper .navbar-default .btn{
+    color: #444 !important;
 }
-.navbar-center{
-    float: none;
-    display: inline-block;
+.components .navbar-center{
+    float: none !important;
+    display: inline-block !important;
 }
-.navbar-title .image-container{
-    height: 40px;
-    width: 40px;
-    display: inline-block;
-    top: -3px;
-    position: relative;
+.components .navbar-title .image-container{
+    height: 40px !important;
+    width: 40px !important;
+    display: inline-block !important;
+    top: -3px !important;
+    position: relative !important;
 }
 
-.tim-row{
-    margin-bottom: 40px;
+.components .tim-row{
+    margin-bottom: 40px !important;
 }
-.tim-row h2{
+.components .tim-row h2{
     margin-top: 90px
 }
 
-pre.prettyprint{
-    background-color: #eee;
-    border: 0px;
-    margin-bottom: 0;
-    margin-top: 20px;
-    padding: 20px !important;
-    text-align: left;
-    border: 1px solid #ccc !important;
+.components pre.prettyprint{
+    background-color: #eee !important;
+    border: 0px !important;
+    margin-bottom: 0 !important;
+    margin-top: 20px !important;
+    padding: 20px !important !important;
+    text-align: left !important;
+    border: 1px solid #ccc !important !important;
 }
-.tim-row:last-child pre{
-    position: relative;
-    top: -45px;
-    width: 100%;
+.components .tim-row:last-child pre{
+    position: relative !important;
+    top: -45px !important;
+    width: 100% !important;
 }
-.atv, .str{
-    color: #05AE0E;
+.components .atv, .components  .str{
+    color: #05AE0E !important;
 }
-.tag, .pln, .kwd{
-    color: #3472F7;
+.components .tag, .components .pln, .components .kwd{
+    color: #3472F7 !important;
 }
-.atn{
-    color: #2C93FF;
+.components .atn{
+    color: #2C93FF !important;
 }
-.pln{
-    color: #333;
+.components .pln{
+    color: #333 !important;
 }
-.com{
-    color: #999;
+.components .com{
+    color: #999 !important;
 }
-.space-top{
-    margin-top: 50px;
+.components .space-top{
+    margin-top: 50px !important;
 }
-.btn-primary .caret{
-    border-top-color: #3472F7;
-    color: #3472F7;
+.components .btn-primary .caret{
+    border-top-color: #3472F7 !important;
+    color: #3472F7 !important;
 }
-.area-line{
-    border: 1px solid #999;
-    border-left: 0;
-    border-right: 0;
-    color: #666;
-    display: block;
-    margin-top: 20px;
-    padding: 8px 0;
-    text-align: center;
+.components .area-line{
+    border: 1px solid #999 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    color: #666 !important;
+    display: block !important;
+    margin-top: 20px !important;
+    padding: 8px 0 !important;
+    text-align: center !important;
 }
-.area-line a{
-    color: #666;
+.components .area-line a{
+    color: #666 !important;
 }
-.container-fluid{
-    padding-right: 15px;
-    padding-left: 15px;
+.components .container-fluid{
+    padding-right: 15px !important;
+    padding-left: 15px !important;
 }
-.logo-container .logo{
-    overflow: hidden;
-    border-radius: 50%;
-    border: 1px solid #333333;
-    width: 50px;
-    float: left;
+.components .logo-container .logo{
+    overflow: hidden !important;
+    border-radius: 50% !important;
+    border: 1px solid #333333 !important;
+    width: 50px !important;
+    float: left !important;
 }
-.header-wrapper {
-    position: relative;
-    height: 500px;
-}
-
-.header-wrapper .header {
-    background-position: center center;
-    background-size: cover;
-    height: 450px;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-}
-.header-wrapper .header .filter::after {
-    background: -moz-linear-gradient(top, #1DC7EA 0%, rgba(5, 143, 170, 0.6) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1DC7EA), color-stop(100%, rgba(5, 143, 170, 0.6)));
-    background: -webkit-linear-gradient(top, #1DC7EA 0%, rgba(5, 143, 170, 0.6) 100%);
-    background: -o-linear-gradient(top, #1DC7EA 0%, rgba(5, 143, 170, 0.6) 100%);
-    background: -ms-linear-gradient(top, #1DC7EA 0%, rgba(5, 143, 170, 0.6) 100%);
-    background: linear-gradient(to bottom, #1DC7EA 0%, rgba(5, 143, 170, 0.6) 100%);    content: "";
-    display: block;
-    height: 450px;
-    left: 0;
-    opacity: 0.77;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-}
-.header-wrapper .title-container{
-    color: #fff;
-    position: relative;
-    top: 85px;
-    z-index: 3;
-
+.components .header-wrapper {
+    position: relative !important;
+    height: 500px !important;
 }
 
-.title-container img{
-    width: 100px;
-    height: auto;
+.components .header-wrapper .header {
+    background-position: center center !important;
+    background-size: cover !important;
+    height: 450px !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    width: 100% !important;
+    z-index: 1 !important;
 }
-.logo-container .brand{
-    font-size: 18px;
-    color: #FFFFFF;
-    line-height: 20px;
-    float: left;
-    margin-left: 10px;
-    margin-top: 5px;
-    width: 50px;
-    height: 50px;
+.components .header-wrapper .header .filter::after {
+    background: -moz-linear-gradient(top, #1DC7EA 0%, rgba(5, 143, 170, 0.6) 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1DC7EA), color-stop(100%, rgba(5, 143, 170, 0.6))) !important;
+    background: -webkit-linear-gradient(top, #1DC7EA 0%, rgba(5, 143, 170, 0.6) 100%) !important;
+    background: -o-linear-gradient(top, #1DC7EA 0%, rgba(5, 143, 170, 0.6) 100%) !important;
+    background: -ms-linear-gradient(top, #1DC7EA 0%, rgba(5, 143, 170, 0.6) 100%) !important;
+    background: linear-gradient(to bottom, #1DC7EA 0%, rgba(5, 143, 170, 0.6) 100%) !important;
+    content: "" !important;
+    display: block !important;
+    height: 450px !important;
+    left: 0 !important;
+    opacity: 0.77 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 2 !important;
 }
-.navbar-default .logo-container .brand{
-    color: #444;
-}
-.navbar-default.navbar-transparent .logo-container .brand{
-    color: #FFFFFF;
-}
-.navbar-default.navbar-transparent .navbar-nav>li>a{
-    color: #FFFFFF;
-}
-.logo-container{
-    margin-top: 10px;
-}
-.logo-container .logo img{
-    width: 100%;
-}
-.navbar-small .logo-container .brand{
-    color: #333333;
+.components .header-wrapper .title-container{
+    color: #fff !important;
+    position: relative !important;
+    top: 85px !important;
+    z-index: 3 !important;
+
 }
 
-.navbar.navbar-transparent{
-    background-color: transparent;
-    box-shadow: none;
-    color: #fff;
-    border: 0;
-    padding-top: 0px;
+.components .title-container img{
+    width: 100px !important;
+    height: auto !important;
+}
+.components .logo-container .brand{
+    font-size: 18px !important;
+    color: #FFFFFF !important;
+    line-height: 20px !important;
+    float: left !important;
+    margin-left: 10px !important;
+    margin-top: 5px !important;
+    width: 50px !important;
+    height: 50px !important;
+}
+.components .navbar-default .logo-container .brand{
+    color: #444 !important;
+}
+.components .navbar-default.navbar-transparent .logo-container .brand{
+    color: #FFFFFF !important;
+}
+.components .navbar-default.navbar-transparent .navbar-nav>li>a{
+    color: #FFFFFF !important;
+}
+.components .logo-container{
+    margin-top: 10px !important;
+}
+.components .logo-container .logo img{
+    width: 100% !important;
+}
+.components .navbar-small .logo-container .brand{
+    color: #333333 !important;
 }
 
-.fixed-section{
-    max-height: 80vh;
-    overflow: scroll;
-    top: 110px;
-}
-.fixed-section ul li{
-    list-style: none;
-}
-.fixed-section li a{
-    font-size: 14px;
-    padding: 2px;
-    display: block;
-    color: #666666;
-}
-.fixed-section li a.active{
-    color: #00bbff;
-}
-.fixed-section.float{
-    position: fixed;
-    top: 100px;
-    width: 200px;
-    margin-top: 0;
-}
-.copyright {
-    color: #777777;
-    padding: 10px 15px;
-    font-size: 14px;
-    margin: 15px 3px;
-    line-height: 20px;
-    text-align: center;
+.components .navbar.navbar-transparent{
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    border: 0 !important;
+    padding-top: 0px !important;
 }
 
-.table-bigboy .img-container{
-    width: 130px;
-    height: 85px;
+.components .fixed-section{
+    max-height: 80vh !important;
+    overflow: scroll !important;
+    top: 110px !important;
+}
+.components .fixed-section ul li{
+    list-style: none !important;
+}
+.components .fixed-section li a{
+    font-size: 14px !important;
+    padding: 2px !important;
+    display: block !important;
+    color: #666666 !important;
+}
+.components .fixed-section li a.active{
+    color: #00bbff !important;
+}
+.components .fixed-section.float{
+    position: fixed !important;
+    top: 100px !important;
+    width: 200px !important;
+    margin-top: 0 !important;
+}
+.components .copyright {
+    color: #777777 !important;
+    padding: 10px 15px !important;
+    font-size: 14px !important;
+    margin: 15px 3px !important;
+    line-height: 20px !important;
+    text-align: center !important;
 }
 
-.table-bigboy .td-name{
-    min-width: 170px;
+.components .table-bigboy .img-container{
+    width: 130px !important;
+    height: 85px !important;
 }
 
-.navbar .navbar-nav > li > a.btn{
-    padding: 8px 8px;
+.components .table-bigboy .td-name{
+    min-width: 170px !important;
+}
+
+.components .navbar .navbar-nav > li > a.btn{
+    padding: 8px 8px !important;
 }
 
 @media (max-width: 991px) {
-    .fixed-section.affix {
-        position: relative;
-        margin-bottom: 100px;
+    .components .fixed-section.affix {
+        position: relative !important;
+        margin-bottom: 100px !important;
     }
 
-    .tim-row .nav.nav-pills{
-        margin-bottom: 25px;
+    .components .tim-row .nav.nav-pills{
+        margin-bottom: 25px !important;
     }
 
-    .nav-mobile-menu .navbar-title{
-        display: none;
+    .components .nav-mobile-menu .navbar-title{
+        display: none !important;
     }
 
 }
 
 @media (max-width: 1199px) {
 
-  .navbar .navbar-brand {
-    height: 50px;
-    padding: 10px 15px;
+  .components .navbar .navbar-brand {
+    height: 50px !important;
+    padding: 10px 15px !important;
   }
 
 }
 
 @media (max-width: 768px) {
-  .footer .copyright {
-    display: inline-block;
-    text-align: center;
-    padding: 10px 0;
+  .components .footer .copyright {
+    display: inline-block !important;
+    text-align: center !important;
+    padding: 10px 0 !important;
     float: none !important;
-    width: 100%;
+    width: 100% !important;
   }
 }
 
 @media (max-width: 830px){
-    .main-raised{
-        margin-left: 10px;
-        margin-right: 10px;
+    .components .main-raised{
+        margin-left: 10px !important;
+        margin-right: 10px !important;
     }
 }
-.nav.nav-pills.nav-stacked{
-    top: 100px;
+.components .nav.nav-pills.nav-stacked{
+    top: 100px !important;
 }
