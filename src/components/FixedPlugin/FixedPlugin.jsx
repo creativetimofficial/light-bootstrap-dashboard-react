@@ -2,18 +2,22 @@ import React, { Component } from 'react';
 import Toggle from 'react-toggle';
 import { NavLink } from 'react-router-dom';
 import {
-  ShareButtons
+  ShareButtons,
+  generateShareIcon
 } from 'react-share';
-const {
-  FacebookShareButton,
-  TwitterShareButton
-} = ShareButtons;
+
 
 import imagine1 from 'assets/img/sidebar-1.jpg';
 import imagine2 from 'assets/img/sidebar-3.jpg';
 import imagine3 from 'assets/img/sidebar-4.jpg';
 import imagine4 from 'assets/img/sidebar-5.jpg';
 
+const {
+  FacebookShareButton,
+  TwitterShareButton
+} = ShareButtons;
+const FacebookIcon = generateShareIcon('facebook');
+const TwitterIcon = generateShareIcon('twitter');
 
 class FixedPlugin extends Component{
     constructor(props){
@@ -105,8 +109,8 @@ class FixedPlugin extends Component{
             			<li className="header-title" id="sharrreTitle">Thank you for sharing!</li>
 
                         <li className="button-container">
-            				<button id="twitter" className="btn btn-social btn-twitter btn-round"><i className="fa fa-twitter"></i> &middot; 256</button>
-                            <button id="facebook" className="btn btn-social btn-facebook btn-round"><i className="fa fa-facebook-square"> &middot; 426</i></button>
+                            <FacebookShareButton url="http://lbd-react.creative-tim.com"><FacebookIcon size={32} round={true}/></FacebookShareButton>
+                            <TwitterShareButton url="http://lbd-react.creative-tim.com"><TwitterIcon size={32} round={true}/></TwitterShareButton>
                         </li>
 
                     </ul>
