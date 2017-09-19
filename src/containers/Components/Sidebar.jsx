@@ -7,7 +7,7 @@ class Sidebar extends Component {
     render() {
         return (
             <Affix offsetTop={400}>
-            <ul className="nav nav-pills nav-stacked">
+            <ul className="nav nav-pills nav-stacked fixed-section">
                 <li>
                     <Link to='#license-row' className="nav-link">License</Link>
                 </li>

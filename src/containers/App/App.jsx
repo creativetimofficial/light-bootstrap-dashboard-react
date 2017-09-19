@@ -23,11 +23,6 @@ import {style} from "variables/Variables.jsx";
 
 import imagine from "assets/img/sidebar-5.jpg";
 
-import 'assets/css/bootstrap.min.css';
-import 'assets/css/animate.min.css';
-import 'assets/sass/light-bootstrap-dashboard.css';
-import 'assets/css/demo.css';
-import 'assets/css/pe-icon-7-stroke.css';
 
 class App extends Component {
     constructor(props){

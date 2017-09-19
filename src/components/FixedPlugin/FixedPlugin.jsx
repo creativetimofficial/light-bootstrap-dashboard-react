@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Toggle from 'react-toggle';
+import { NavLink } from 'react-router-dom';
 
 import imagine1 from 'assets/img/sidebar-1.jpg';
 import imagine2 from 'assets/img/sidebar-3.jpg';
@@ -47,21 +48,6 @@ class FixedPlugin extends Component{
                                     onChange={this.onChangeClick} />
                             </div>
                         </li>
-                        {/* <li className="adjustments-line">
-                            <a  className="switch-trigger">
-                                <p>Background Image</p>
-                                <div className="switch"
-                                    data-on-label="ON"
-                                    data-off-label="OFF">
-                                    <input
-                                        type="checkbox"
-                                        checked={this.state.is_checked}
-                                        onChange={this.onChangeClick}
-                                    />
-                                </div>
-                                <div className="clearfix"></div>
-                            </a>
-                        </li> */}
                         <li className="adjustments-line">
                             <a  className="switch-trigger">
                                 <p>Filters</p>
@@ -102,6 +88,11 @@ class FixedPlugin extends Component{
                             <div className="">
                                 <a href="http://www.creative-tim.com" target="_blank" rel="noopener noreferrer" className="btn btn-info btn-block btn-fill">Download, it's free!</a>
                             </div>
+                        </li>
+                        <li className="button-container">
+                            <NavLink to={'/components'} className="btn btn-fill btn-warning" activeClassName="active">
+                                Documentation
+                            </NavLink>
                         </li>
 
                         {/* <li className="header-title pro-title">Want more components?</li>

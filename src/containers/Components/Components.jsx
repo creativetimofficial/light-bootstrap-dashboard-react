@@ -18,7 +18,7 @@ import RowMap from './RowMap.jsx';
 import RowGettingStarted from './RowGettingStarted.jsx';
 import RowLicense from './RowLicense.jsx';
 
-import './assets/css/Components.css';
+
 import imagine from './assets/img/full-image-1.jpg';
 import reactLogo from './assets/img/reactlogo.png';
 const headerBackground = {
