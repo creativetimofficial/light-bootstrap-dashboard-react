@@ -125,7 +125,8 @@ h1 .subtitle {
 body,
 .wrapper {
   min-height: 100vh;
-  position: relative; }
+  position: relative;
+  background-color: white; }
 
 a {
   color: #1DC7EA; }
@@ -201,11 +202,11 @@ input:focus {
   background-position: center center; }
   .sidebar .sidebar-wrapper {
     position: relative;
-    max-height: none;
-    min-height: 100%;
-    overflow: hidden;
+    height: calc(100vh - 75px);
+    overflow: auto;
     width: 260px;
-    z-index: 4; }
+    z-index: 4;
+    padding-bottom: 30px; }
   .sidebar .sidebar-background {
     position: absolute;
     z-index: 1;
@@ -218,7 +219,9 @@ input:focus {
     background-position: center center; }
   .sidebar .logo {
     padding: 10px 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 4; }
     .sidebar .logo p {
       float: left;
       font-size: 20px;
@@ -2471,8 +2474,6 @@ body > .navbar-collapse[data-color="purple"]:after {
 
 /*          Changes for small display      */
 @media (max-width: 991px) {
-  .sidebar {
-    display: none; }
   .main-panel {
     width: 100%; }
   .navbar-transparent {
@@ -2480,7 +2481,7 @@ body > .navbar-collapse[data-color="purple"]:after {
     background-color: rgba(0, 0, 0, 0.45); }
   body {
     position: relative; }
-  .wrapper {
+  .main-panel {
     -webkit-transform: translate3d(0px, 0, 0);
     -moz-transform: translate3d(0px, 0, 0);
     -o-transform: translate3d(0px, 0, 0);
@@ -2491,8 +2492,7 @@ body > .navbar-collapse[data-color="purple"]:after {
     -o-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -ms-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    left: 0;
-    background-color: white; }
+    left: 0; }
   .navbar .container {
     left: 0;
     width: 100%;
@@ -2510,13 +2510,14 @@ body > .navbar-collapse[data-color="purple"]:after {
     float: none;
     position: relative;
     display: block; }
-  body > .navbar-collapse {
+  .sidebar {
     position: fixed;
     display: block;
     top: 0;
     height: 100%;
     width: 250px;
     right: 0;
+    left: auto;
     z-index: 1032;
     visibility: visible;
     background-color: #999;
@@ -2534,15 +2535,13 @@ body > .navbar-collapse[data-color="purple"]:after {
     -o-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -ms-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1); }
-    body > .navbar-collapse > ul {
+    .sidebar > ul {
       position: relative;
       z-index: 4;
       overflow-y: scroll;
       height: calc(100vh - 61px);
       width: 100%; }
-    body > .navbar-collapse .nav > li > a {
-      padding: 30px 25px; }
-    body > .navbar-collapse::before {
+    .sidebar::before {
       top: 0;
       left: 0;
       height: 100%;
@@ -2552,24 +2551,23 @@ body > .navbar-collapse[data-color="purple"]:after {
       display: block;
       content: "";
       z-index: 1; }
-    body > .navbar-collapse .logo {
-      position: relative;
-      z-index: 4; }
-  .nav-open .navbar-collapse {
+    .sidebar .sidebar-wrapper > .nav > div .nav {
+      float: none !important; }
+  .nav-open .sidebar {
     -webkit-transform: translate3d(0px, 0, 0);
     -moz-transform: translate3d(0px, 0, 0);
     -o-transform: translate3d(0px, 0, 0);
     -ms-transform: translate3d(0px, 0, 0);
     transform: translate3d(0px, 0, 0); }
   .nav-open .navbar .container {
-    left: -250px; }
-  .nav-open .wrapper {
+    left: -260px; }
+  .nav-open .main-panel {
     left: 0;
-    -webkit-transform: translate3d(-250px, 0, 0);
-    -moz-transform: translate3d(-250px, 0, 0);
-    -o-transform: translate3d(-250px, 0, 0);
-    -ms-transform: translate3d(-250px, 0, 0);
-    transform: translate3d(-250px, 0, 0); }
+    -webkit-transform: translate3d(-260px, 0, 0);
+    -moz-transform: translate3d(-260px, 0, 0);
+    -o-transform: translate3d(-260px, 0, 0);
+    -ms-transform: translate3d(-260px, 0, 0);
+    transform: translate3d(-260px, 0, 0); }
   .navbar-toggle .icon-bar {
     display: block;
     position: relative;

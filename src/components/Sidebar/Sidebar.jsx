@@ -18,7 +18,6 @@ class Sidebar extends Component{
         return (
             <div id="sidebar" className="sidebar" data-color="azure" data-image={imagine}>
                 <div className="sidebar-background" style={sidebarBackground}></div>
-                <div className="sidebar-wrapper">
                     <div className="logo">
                         <a href="http://www.creative-tim.com" className="simple-text logo-mini">
                             <img src={logo} alt="logo_image" width="40" height="28.25"/>
@@ -27,7 +26,7 @@ class Sidebar extends Component{
                             Creative Tim
                         </a>
                     </div>
-                    
+                <div className="sidebar-wrapper">
                     <ul className="nav">
                         { window.innerWidth <= 991 ? (<HeaderLinks />):null }
                         <li className={this.activeRoute("/dashboard")}>

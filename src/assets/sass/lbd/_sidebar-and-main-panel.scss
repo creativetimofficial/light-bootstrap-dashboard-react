@@ -13,11 +13,11 @@
 
     .sidebar-wrapper{
         position: relative;
-        max-height: none;
-        min-height: 100%;
-        overflow: hidden;
+        height: calc(100vh - 75px);
+        overflow: auto;
         width: 260px;
         z-index: 4;
+        padding-bottom: 30px;
     }
 
     .sidebar-background{
@@ -35,6 +35,8 @@
     .logo{
         padding: 10px 30px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        z-index: 4;
 
         p{
             float: left;
