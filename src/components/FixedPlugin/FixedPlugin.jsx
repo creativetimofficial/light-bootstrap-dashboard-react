@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import Toggle from 'react-toggle';
 import { NavLink } from 'react-router-dom';
+import {
+  ShareButtons
+} from 'react-share';
+const {
+  FacebookShareButton,
+  TwitterShareButton
+} = ShareButtons;
 
 import imagine1 from 'assets/img/sidebar-1.jpg';
 import imagine2 from 'assets/img/sidebar-3.jpg';
@@ -94,13 +101,6 @@ class FixedPlugin extends Component{
                                 Documentation
                             </NavLink>
                         </li>
-
-                        {/* <li className="header-title pro-title">Want more components?</li>
-                        <li className="button-container">
-                            <div className="">
-                                <a href="http://www.creative-tim.com/product/light-bootstrap-dashboard-pro" target="_blank" className="btn btn-warning btn-block btn-fill">Get The PRO Version!</a>
-                            </div>
-                        </li> */}
 
             			<li className="header-title" id="sharrreTitle">Thank you for sharing!</li>
 
