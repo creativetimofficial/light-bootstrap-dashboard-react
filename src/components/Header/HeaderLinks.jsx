@@ -32,8 +32,8 @@ class HeaderLinks extends Component{
                     </NavItem>
                 </Nav>
                 <Nav pullRight>
-                    <NavItem eventKey={1} href="#"><p>Account</p></NavItem>
-                    <NavDropdown eventKey={2} title={<p>Dropdown</p>} id="basic-nav-dropdown-right">
+                    <NavItem eventKey={1} href="#">Account</NavItem>
+                    <NavDropdown eventKey={2} title="Dropdown" id="basic-nav-dropdown-right">
                         <MenuItem eventKey={2.1}>Action</MenuItem>
                         <MenuItem eventKey={2.2}>Another action</MenuItem>
                         <MenuItem eventKey={2.3}>Something</MenuItem>
@@ -42,7 +42,7 @@ class HeaderLinks extends Component{
                         <MenuItem divider />
                         <MenuItem eventKey={2.5}>Separated link</MenuItem>
                     </NavDropdown>
-                    <NavItem eventKey={3} href="#"><p>Log out</p></NavItem>
+                    <NavItem eventKey={3} href="#">Log out</NavItem>
                 </Nav>
             </div>
         );
