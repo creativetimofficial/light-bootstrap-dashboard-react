@@ -257,7 +257,10 @@ input:focus {
       margin: 5px 15px;
       opacity: .86;
       border-radius: 4px; }
-    .sidebar .nav li:hover > a {
+    .sidebar .nav li:hover > a,
+    .sidebar .nav li.open > a,
+    .sidebar .nav li.open > a:focus,
+    .sidebar .nav li.open > a:hover {
       background: rgba(255, 255, 255, 0.13);
       opacity: 1; }
     .sidebar .nav li.active > a {
@@ -270,6 +273,10 @@ input:focus {
       font-size: 12px;
       font-weight: 600;
       text-transform: uppercase; }
+    .sidebar .nav .caret {
+      top: 24px;
+      position: absolute;
+      right: 15px; }
     .sidebar .nav i {
       font-size: 28px;
       float: left;
@@ -2515,7 +2522,7 @@ body > .navbar-collapse[data-color="purple"]:after {
     display: block;
     top: 0;
     height: 100%;
-    width: 250px;
+    width: 260px;
     right: 0;
     left: auto;
     z-index: 1032;
@@ -2525,11 +2532,11 @@ body > .navbar-collapse[data-color="purple"]:after {
     border-top: none;
     text-align: left;
     padding: 0;
-    -webkit-transform: translate3d(250px, 0, 0);
-    -moz-transform: translate3d(250px, 0, 0);
-    -o-transform: translate3d(250px, 0, 0);
-    -ms-transform: translate3d(250px, 0, 0);
-    transform: translate3d(250px, 0, 0);
+    -webkit-transform: translate3d(260px, 0, 0);
+    -moz-transform: translate3d(260px, 0, 0);
+    -o-transform: translate3d(260px, 0, 0);
+    -ms-transform: translate3d(260px, 0, 0);
+    transform: translate3d(260px, 0, 0);
     -webkit-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -moz-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -o-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -2551,8 +2558,29 @@ body > .navbar-collapse[data-color="purple"]:after {
       display: block;
       content: "";
       z-index: 1; }
+    .sidebar .sidebar-wrapper .dropdown-menu > li:first-child > a,
+    .sidebar .sidebar-wrapper .dropdown-menu > li:last-child > a {
+      border-radius: 4px; }
+    .sidebar .sidebar-wrapper .dropdown-menu > li > a:hover,
+    .sidebar .sidebar-wrapper .dropdown-menu > li > a:focus {
+      color: white; }
     .sidebar .sidebar-wrapper > .nav > div .nav {
+      margin-top: 10px;
       float: none !important; }
+    .sidebar .sidebar-wrapper > .nav > div .notification {
+      float: left;
+      line-height: 30px;
+      margin-right: 8px;
+      font-weight: 600; }
+    .sidebar .open .dropdown-menu {
+      position: static;
+      float: none;
+      width: auto;
+      margin-top: 0;
+      background-color: transparent;
+      border: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
   .nav-open .sidebar {
     -webkit-transform: translate3d(0px, 0, 0);
     -moz-transform: translate3d(0px, 0, 0);

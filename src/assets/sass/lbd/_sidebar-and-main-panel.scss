@@ -90,7 +90,10 @@
                 border-radius: 4px;
             }
 
-            &:hover > a{
+            &:hover > a,
+            &.open > a,
+            &.open > a:focus,
+            &.open > a:hover{
                 background: rgba(255,255,255,0.13);
                 opacity: 1;
             }
@@ -109,6 +112,12 @@
             font-size: 12px;
             font-weight: 600;
             text-transform: uppercase;
+        }
+
+        .caret{
+            top: 24px;
+            position: absolute;
+            right: 15px;
         }
 
         i{
