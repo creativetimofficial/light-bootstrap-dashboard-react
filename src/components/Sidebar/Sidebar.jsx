@@ -20,11 +20,14 @@ class Sidebar extends Component{
                 <div className="sidebar-background" style={sidebarBackground}></div>
                 <div className="sidebar-wrapper">
                     <div className="logo">
-                        <a href="http://www.creative-tim.com" className="simple-text">
-                            <img src={logo} alt="logo_image" width="40" height="28.25"/>Creative Tim
+                        <a href="http://www.creative-tim.com" className="simple-text logo-mini">
+                            <img src={logo} alt="logo_image" width="40" height="28.25"/>
+                        </a>
+                        <a href="http://www.creative-tim.com" className="simple-text logo-normal">
+                            Creative Tim
                         </a>
                     </div>
-
+                    
                     <ul className="nav">
                         { window.innerWidth <= 991 ? (<HeaderLinks />):null }
                         <li className={this.activeRoute("/dashboard")}>

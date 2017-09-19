@@ -188,7 +188,7 @@ input:focus {
   height: 100vh; }
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -217,7 +217,7 @@ input:focus {
     background-size: cover;
     background-position: center center; }
   .sidebar .logo {
-    padding: 10px 15px;
+    padding: 10px 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
     .sidebar .logo p {
       float: left;
@@ -226,15 +226,16 @@ input:focus {
       color: #FFFFFF;
       line-height: 20px;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-    .sidebar .logo .simple-text {
-      text-transform: uppercase;
-      padding: 5px 0px;
-      display: block;
-      font-size: 18px;
-      color: #FFFFFF;
+    .sidebar .logo a.logo-mini {
+      float: left;
       text-align: center;
-      font-weight: 400;
-      line-height: 30px; }
+      width: 30px;
+      margin-right: 15px; }
+      .sidebar .logo a.logo-mini img {
+        position: relative;
+        left: -5px; }
+    .sidebar .logo a.logo-normal {
+      display: block; }
   .sidebar .logo-tim {
     border-radius: 50%;
     border: 1px solid #333;
@@ -276,7 +277,7 @@ input:focus {
 
 .sidebar .logo,
 body > .navbar-collapse .logo {
-  padding: 10px 15px;
+  padding: 10px 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
   .sidebar .logo p,
   body > .navbar-collapse .logo p {
@@ -293,7 +294,6 @@ body > .navbar-collapse .logo {
     display: block;
     font-size: 18px;
     color: #FFFFFF;
-    text-align: center;
     font-weight: 400;
     line-height: 30px; }
 
@@ -415,10 +415,8 @@ body > .navbar-collapse[data-color="purple"]:after {
 .main-panel {
   background: rgba(203, 203, 210, 0.15);
   position: relative;
-  z-index: 2;
   float: right;
-  width: calc(100% - 260px);
-  min-height: 100%; }
+  width: calc(100% - 260px); }
   .main-panel > .content {
     padding: 30px 15px;
     min-height: calc(100% - 123px); }
@@ -429,9 +427,6 @@ body > .navbar-collapse[data-color="purple"]:after {
 
 .sidebar,
 .main-panel {
-  overflow: auto;
-  max-height: 100%;
-  height: 100%;
   -webkit-transition-property: top,bottom;
   transition-property: top,bottom;
   -webkit-transition-duration: .2s,.2s;
