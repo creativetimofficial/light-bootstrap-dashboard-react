@@ -5,6 +5,7 @@ import {
   ShareButtons,
   generateShareIcon
 } from 'react-share';
+import GitHubButton from 'react-github-button';
 
 
 import imagine1 from 'assets/img/sidebar-1.jpg';
@@ -111,6 +112,15 @@ class FixedPlugin extends Component{
                         <li className="button-container">
                             <FacebookShareButton url="http://lbd-react.creative-tim.com"><FacebookIcon size={32} round={true}/></FacebookShareButton>
                             <TwitterShareButton url="http://lbd-react.creative-tim.com"><TwitterIcon size={32} round={true}/></TwitterShareButton>
+                        </li>
+                        <li className="button-container">
+                            {/* <div classNam */}
+                                <GitHubButton type="stargazers"
+                                    namespace="creativetimofficial" repo="light-bootstrap-dashboard-react"
+                                />
+                                <GitHubButton type="forks"
+                                    namespace="creativetimofficial" repo="light-bootstrap-dashboard-react"
+                                />
                         </li>
 
                     </ul>
