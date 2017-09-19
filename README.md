@@ -37,14 +37,7 @@ Within the download you'll find the following directories and files:
 Light Bootstrap Dashboard React
 ├── Documentation
 │   ├── css
-│   │   ├── demo.css
-│   │   ├── documentation.css
-│   │   └── light-bootstrap-dashboard.css
 │   ├── img
-│   │   ├── apple-icon.png
-│   │   ├── back.jpg
-│   │   ├── favicon.png
-│   │   └── tim-logo.png
 │   └── tutorial-components.html
 ├── README.md
 ├── package-lock.json
