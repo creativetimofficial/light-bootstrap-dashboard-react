@@ -12,11 +12,11 @@ class CustomRadio extends Component {
         this.setState({is_checked: !this.state.is_checked});
     }
     render() {
-        const { isChecked, number, label, option,...rest } = this.props;
+        const { isChecked, number, label, option, name,...rest } = this.props;
 
         return (
             <div className="radio">
-                <input id={number} name={number} onChange={this.handleClick} checked={this.state.is_checked} {...rest} type="radio" value={option} />
+                <input id={number} name={name} onChange={this.handleClick} checked={this.state.is_checked} {...rest} type="radio" value={option} />
                 <label htmlFor={number}>
                     {label}
                 </label>
