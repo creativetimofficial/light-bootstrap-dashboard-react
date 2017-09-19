@@ -79,7 +79,7 @@ class RowNavigation extends Component {
                 </SyntaxHighlighter>
 
                 <p>
-                    You can change it's elements in <code>src/components/Header/Header.jsx</code>.
+                    You can change it's elements in <code>src/components/Header/HeaderLinks.jsx</code>.
                 </p>
                 <p>
                     This component was made using react-bootstrap components.
