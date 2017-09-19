@@ -31,13 +31,15 @@ class Sidebar extends Component{
         return (
             <div id="sidebar" className="sidebar" data-color="azure" data-image={imagine}>
                 <div className="sidebar-background" style={sidebarBackground}></div>
-                <div className="sidebar-wrapper">
                     <div className="logo">
-                        <a href="http://www.creative-tim.com" className="simple-text">
-                            <img src={logo} alt="logo_image" width="40" height="28.25"/>Creative Tim
+                        <a href="http://www.creative-tim.com" className="simple-text logo-mini">
+                            <img src={logo} alt="logo_image" width="40" height="28.25"/>
+                        </a>
+                        <a href="http://www.creative-tim.com" className="simple-text logo-normal">
+                            Creative Tim
                         </a>
                     </div>
-
+                <div className="sidebar-wrapper">
                     <ul className="nav">
                         { this.state.width <= 991 ? (<HeaderLinks />):null }
                         <li className={this.activeRoute("/dashboard")}>
