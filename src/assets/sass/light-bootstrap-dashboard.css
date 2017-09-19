@@ -1020,7 +1020,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   content: "";
   text-align: center;
   opacity: 1;
-  left: -1px;
+  left: 1px;
   color: #DDDDDD; }
 
 .checkbox input[type="checkbox"],
@@ -2567,6 +2567,13 @@ body > .navbar-collapse[data-color="purple"]:after {
     .sidebar .sidebar-wrapper > .nav > div .nav {
       margin-top: 10px;
       float: none !important; }
+      .sidebar .sidebar-wrapper > .nav > div .nav > li > a {
+        margin: 0;
+        line-height: 30px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 5px 15px; }
     .sidebar .sidebar-wrapper > .nav > div .notification {
       float: left;
       line-height: 30px;

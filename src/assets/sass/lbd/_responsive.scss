@@ -165,6 +165,15 @@
                 .nav{
                     margin-top: 10px;
                     float: none !important;
+
+                    & > li > a{
+                        margin: 0;
+                        line-height: 30px;
+                        font-size: 12px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        margin: 5px 15px;
+                    }
                 }
 
                 .notification{
