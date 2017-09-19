@@ -9,8 +9,6 @@ The product represents a big suite of front-end developer tools that can help yo
 
 It comes with 6 filter colors for the sidebar (“black”, “azure”,”green”,”orange”,”red”,”purple”) and an option to have a background image.
 
-Special thanks go to: Robert McIntosh for the notification system Chartist for the wonderful charts We are very excited to share this dashboard with you and we look forward to hearing your feedback!
-
 ## Links:
 
 + [Live Preview](http://lbd-react.creative-tim.com/)
@@ -36,101 +34,81 @@ Quick start options:
 
 Within the download you'll find the following directories and files:
 ```
-light-bootstrap-dashboard-angular-cli
-├── README.md
-├── angular-cli.json
-├── documentation
+Light Bootstrap Dashboard React
+├── Documentation
 │   ├── css
-│   ├── js
-│   └── tutorial-lbd-angular2.html
-├── e2e
-├── karma.conf.js
+│   │   ├── demo.css
+│   │   ├── documentation.css
+│   │   └── light-bootstrap-dashboard.css
+│   ├── img
+│   │   ├── apple-icon.png
+│   │   ├── back.jpg
+│   │   ├── favicon.png
+│   │   └── tim-logo.png
+│   └── tutorial-components.html
+├── README.md
+├── package-lock.json
 ├── package.json
-├── protractor.conf.js
-├── src
-│   ├── app
-│   │   ├── app.component.css
-│   │   ├── app.component.html
-│   │   ├── app.component.spec.ts
-│   │   ├── app.component.ts
-│   │   ├── app.module.ts
-│   │   ├── app.routing.ts
-│   │   ├── home
-│   │   │   ├── home.component.css
-│   │   │   ├── home.component.html
-│   │   │   ├── home.component.spec.ts
-│   │   │   └── home.component.ts
-│   │   ├── icons
-│   │   │   ├── icons.component.css
-│   │   │   ├── icons.component.html
-│   │   │   ├── icons.component.spec.ts
-│   │   │   └── icons.component.ts
-│   │   ├── lbd
-│   │   │   ├── lbd-chart
-│   │   │   │   ├── lbd-chart.component.html
-│   │   │   │   └── lbd-chart.component.ts
-│   │   │   └── lbd.module.ts
-│   │   ├── maps
-│   │   │   ├── maps.component.css
-│   │   │   ├── maps.component.html
-│   │   │   ├── maps.component.spec.ts
-│   │   │   └── maps.component.ts
-│   │   ├── notifications
-│   │   │   ├── notifications.component.css
-│   │   │   ├── notifications.component.html
-│   │   │   ├── notifications.component.spec.ts
-│   │   │   └── notifications.component.ts
-│   │   ├── shared
-│   │   │   ├── footer
-│   │   │   │   ├── footer.component.html
-│   │   │   │   ├── footer.component.ts
-│   │   │   │   └── footer.module.ts
-│   │   │   └── navbar
-│   │   │       ├── navbar.component.html
-│   │   │       ├── navbar.component.ts
-│   │   │       └── navbar.module.ts
-│   │   ├── sidebar
-│   │   │   ├── sidebar.component.html
-│   │   │   ├── sidebar.component.ts
-│   │   │   └── sidebar.module.ts
-│   │   ├── tables
-│   │   │   ├── tables.component.css
-│   │   │   ├── tables.component.html
-│   │   │   ├── tables.component.spec.ts
-│   │   │   └── tables.component.ts
-│   │   ├── typography
-│   │   │   ├── typography.component.css
-│   │   │   ├── typography.component.html
-│   │   │   ├── typography.component.spec.ts
-│   │   │   └── typography.component.ts
-│   │   ├── upgrade
-│   │   │   ├── upgrade.component.css
-│   │   │   ├── upgrade.component.html
-│   │   │   ├── upgrade.component.spec.ts
-│   │   │   └── upgrade.component.ts
-│   │   └── user
-│   │       ├── user.component.css
-│   │       ├── user.component.html
-│   │       ├── user.component.spec.ts
-│   │       └── user.component.ts
+├── public
 │   ├── assets
-│   │   ├── css
-│   │   ├── fonts
-│   │   ├── img
-│   │   └── sass
-│   │       ├── lbd
-│   │       └── light-bootstrap-dashboard.scss
-│   ├── environments
+│   │   └── img
+│   │       └── faces
 │   ├── favicon.ico
 │   ├── index.html
-│   ├── main.ts
-│   ├── polyfills.ts
-│   ├── styles.css
-│   ├── test.ts
-│   └── tsconfig.json
-├── tslint.json
-└── typings.json
-
+│   └── manifest.json
+└── src
+    ├── assets
+    │   ├── css
+    │   ├── fonts
+    │   ├── img
+    │   │   └── faces
+    │   └── sass
+    │       ├── lbd
+    │       └── light-bootstrap-dashboard.scss
+    ├── components
+    │   ├── Card
+    │   │   └── Card.jsx
+    │   ├── Footer
+    │   │   └── Footer.jsx
+    │   ├── FormInputs
+    │   │   └── FormInputs.jsx
+    │   ├── Header
+    │   │   ├── Header.jsx
+    │   │   └── HeaderLinks.jsx
+    │   ├── Sidebar
+    │   │   └── Sidebar.jsx
+    │   ├── Tasks
+    │   │   └── Tasks.jsx
+    │   └── UserCard
+    │       └── UserCard.jsx
+    ├── containers
+    │   └── App
+    │       └── App.jsx
+    ├── elements
+    │   ├── CustomButton
+    │   │   └── CustomButton.jsx
+    │   ├── CustomCheckbox
+    │   │   └── CustomCheckbox.jsx
+    │   └── CustomRadio
+    │       └── CustomRadio.jsx
+    ├── index.js
+    ├── variables
+    │   └── Variables.jsx
+    └── views
+        ├── Dashboard
+        │   └── Dashboard.jsx
+        ├── Icons
+        │   └── Icons.jsx
+        ├── Maps
+        │   └── Maps.jsx
+        ├── Notifications
+        │   └── Notifications.jsx
+        ├── TableList
+        │   └── TableList.jsx
+        ├── Typography
+        │   └── Typography.jsx
+        └── UserProfile
+            └── UserProfile.jsx
 ```
 ## Useful Links
 
