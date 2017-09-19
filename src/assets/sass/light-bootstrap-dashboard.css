@@ -905,7 +905,8 @@ body > .navbar-collapse[data-color="purple"]:after {
     display: block;
     border-radius: 50%;
     opacity: .4;
-    line-height: 11px;
+    line-height: 20px;
+    font-size: 12px;
     width: 25px;
     height: 25px;
     outline: 0 !important;
