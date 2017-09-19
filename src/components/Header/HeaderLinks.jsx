@@ -9,6 +9,7 @@ class HeaderLinks extends Component{
                 <i className="fa fa-globe"></i>
                 <b className="caret"></b>
                 <span className="notification">5</span>
+                <p className="hidden-lg hidden-md">Notification</p>
             </div>
         );
         return (
@@ -16,7 +17,7 @@ class HeaderLinks extends Component{
                 <Nav>
                     <NavItem eventKey={1} href="#">
                         <i className="fa fa-dashboard"></i>
-                        <p className="hidden-lg"></p>
+                        <p className="hidden-lg hidden-md">Dashboard</p>
                     </NavItem>
                     <NavDropdown eventKey={2} title={notification} noCaret id="basic-nav-dropdown">
                         <MenuItem eventKey={2.1}>Notification 1</MenuItem>
@@ -27,7 +28,7 @@ class HeaderLinks extends Component{
                     </NavDropdown>
                     <NavItem eventKey={3} href="#">
                         <i className="fa fa-search"></i>
-                        <p className="hidden-lg"></p>
+                        <p className="hidden-lg hidden-md">Search</p>
                     </NavItem>
                 </Nav>
                 <Nav pullRight>
