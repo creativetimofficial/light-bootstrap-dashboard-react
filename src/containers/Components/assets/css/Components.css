@@ -57,7 +57,6 @@
 }
 .components .tim-row:last-child pre{
     position: relative !important;
-    top: -45px !important;
     width: 100% !important;
 }
 .components .atv, .components  .str{
@@ -274,4 +273,7 @@
 }
 .components .nav.nav-pills.nav-stacked{
     top: 100px !important;
+}
+.components h2:first-of-type {
+    margin-top: 0px;
 }

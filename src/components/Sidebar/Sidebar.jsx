@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {} from 'react-bootstrap';
+import { } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
-// import imagine from 'img/sidebar-5.jpg';
+import HeaderLinks from '../Header/HeaderLinks.jsx';
+
 import logo from 'assets/img/reactlogo.png';
 
 class Sidebar extends Component{
@@ -24,6 +25,7 @@ class Sidebar extends Component{
                     </div>
 
                     <ul className="nav">
+                        { window.innerWidth <= 991 ? (<HeaderLinks />):null }
                         <li className={this.activeRoute("/dashboard")}>
                             <NavLink to={'/dashboard'} className="nav-link" activeClassName="active">
                                 <i className="pe-7s-graph"></i>
