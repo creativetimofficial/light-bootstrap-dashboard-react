@@ -48,7 +48,7 @@ class Header extends Component{
                         <NavItem eventKey={1} href="#">
                             <i className="fa fa-dashboard"></i>
                         </NavItem>
-                        <NavDropdown eventKey={2} title={notification} className="removeDefaultCarret" id="basic-nav-dropdown">
+                        <NavDropdown eventKey={2} title={notification} noCaret id="basic-nav-dropdown">
                             <MenuItem eventKey={2.1}>Notification 1</MenuItem>
                             <MenuItem eventKey={2.2}>Notification 2</MenuItem>
                             <MenuItem eventKey={2.3}>Notification 3</MenuItem>
