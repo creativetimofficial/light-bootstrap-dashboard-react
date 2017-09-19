@@ -2,6 +2,74 @@ import React, { Component } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/styles';
 
+const fileStructure = `Light Bootstrap Dashboard React
+├── Documentation
+│   ├── css
+│   ├── img
+│   └── tutorial-components.html
+├── README.md
+├── package-lock.json
+├── package.json
+├── public
+│   ├── assets
+│   │   └── img
+│   │       └── faces
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── assets
+    │   ├── css
+    │   ├── fonts
+    │   ├── img
+    │   │   └── faces
+    │   └── sass
+    │       ├── lbd
+    │       └── light-bootstrap-dashboard.scss
+    ├── components
+    │   ├── Card
+    │   │   └── Card.jsx
+    │   ├── Footer
+    │   │   └── Footer.jsx
+    │   ├── FormInputs
+    │   │   └── FormInputs.jsx
+    │   ├── Header
+    │   │   ├── Header.jsx
+    │   │   └── HeaderLinks.jsx
+    │   ├── Sidebar
+    │   │   └── Sidebar.jsx
+    │   ├── Tasks
+    │   │   └── Tasks.jsx
+    │   └── UserCard
+    │       └── UserCard.jsx
+    ├── containers
+    │   └── App
+    │       └── App.jsx
+    ├── elements
+    │   ├── CustomButton
+    │   │   └── CustomButton.jsx
+    │   ├── CustomCheckbox
+    │   │   └── CustomCheckbox.jsx
+    │   └── CustomRadio
+    │       └── CustomRadio.jsx
+    ├── index.js
+    ├── variables
+    │   └── Variables.jsx
+    └── views
+        ├── Dashboard
+        │   └── Dashboard.jsx
+        ├── Icons
+        │   └── Icons.jsx
+        ├── Maps
+        │   └── Maps.jsx
+        ├── Notifications
+        │   └── Notifications.jsx
+        ├── TableList
+        │   └── TableList.jsx
+        ├── Typography
+        │   └── Typography.jsx
+        └── UserProfile
+            └── UserProfile.jsx`;
 
 class RowGettingStarted extends Component {
     render() {
@@ -60,7 +128,11 @@ class RowGettingStarted extends Component {
                             Create React App documentation
                         </a>.
                 </p>
-                </div>
+                <h3>File structure</h3>
+                <SyntaxHighlighter language="javascript" style={monokaiSublime}>
+                    {fileStructure}
+                </SyntaxHighlighter>
+            </div>
 
             );
         }
