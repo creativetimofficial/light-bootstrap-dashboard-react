@@ -17,6 +17,7 @@ import RowCard from './RowCard.jsx';
 import RowMap from './RowMap.jsx';
 import RowGettingStarted from './RowGettingStarted.jsx';
 import RowLicense from './RowLicense.jsx';
+import RowRadio from './RowRadio.jsx';
 
 
 import imagine from './assets/img/full-image-1.jpg';
@@ -138,6 +139,7 @@ class Components extends Component {
                                             <RowGettingStarted />
                                             <RowButtons />
                                             <RowCheckbox />
+                                            <RowRadio />
                                             <RowInputs />
                                             <RowDropdown />
                                             <RowNavigation />

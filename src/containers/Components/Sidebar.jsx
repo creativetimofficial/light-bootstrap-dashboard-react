@@ -21,6 +21,9 @@ class Sidebar extends Component {
                     <Link to='#checkbox-row' className="nav-link">Checkbox</Link>
                 </li>
                 <li>
+                    <Link to='#radio-row' className="nav-link">RadioButton</Link>
+                </li>
+                <li>
                     <Link to='#inputs-row' className="nav-link">Inputs</Link>
                 </li>
                 <li>
