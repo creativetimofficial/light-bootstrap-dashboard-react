@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 import HeaderLinks from '../Header/HeaderLinks.jsx';
 
+import imagine from 'assets/img/sidebar-5.jpg';
 import logo from 'assets/img/reactlogo.png';
 
 class Sidebar extends Component{
@@ -12,11 +13,11 @@ class Sidebar extends Component{
     }
     render(){
         const sidebarBackground = {
-            backgroundImage: 'url(' + this.props.bgImage + ')'
+            backgroundImage: 'url(' + imagine + ')'
         };
         return (
-            <div id="sidebar" className="sidebar" data-color={this.props.dataColor} data-image={this.props.bgImage}>
-                {this.props.hasImage === true ? (<div className="sidebar-background" style={sidebarBackground}></div>):""}
+            <div id="sidebar" className="sidebar" data-color="azure" data-image={imagine}>
+                <div className="sidebar-background" style={sidebarBackground}></div>
                 <div className="sidebar-wrapper">
                     <div className="logo">
                         <a href="http://www.creative-tim.com" className="simple-text">
@@ -66,12 +67,6 @@ class Sidebar extends Component{
                             <NavLink to={'/notifications'} className="nav-link" activeClassName="active">
                                 <i className="pe-7s-bell"></i>
                                 <p>Notifications</p>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={'/components'} className="nav-link" activeClassName="active">
-                                <i className="pe-7s-copy-file"></i>
-                                <p>Documentation</p>
                             </NavLink>
                         </li>
                     </ul>
