@@ -105,13 +105,14 @@ class App extends Component {
                             </Switch>
 
                         <Footer />
+                        <FixedPlugin
+                            handleImageClick={this.handleImageClick}
+                            handleColorClick={this.handleColorClick}
+                            handleHasImage={this.handleHasImage}
+                            bgColor={this.state["color"]}
+                            bgImage={this.state["image"]}/>
                     </div>
-                    <FixedPlugin
-                        handleImageClick={this.handleImageClick}
-                        handleColorClick={this.handleColorClick}
-                        handleHasImage={this.handleHasImage}
-                        bgColor={this.state["color"]}
-                        bgImage={this.state["image"]}/>
+
                 </div>
 
 
