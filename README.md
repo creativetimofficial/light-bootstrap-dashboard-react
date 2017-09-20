@@ -1,7 +1,7 @@
 # [Light Bootstrap Dashboard React](http://lbd-react.creative-tim.com/)
 [![version][version-badge]][CHANGELOG] [![license][license-badge]][LICENSE]
 
-![alt text](src/assets/img/lbd-react-thumbnail.png)
+![alt text](http://s3.amazonaws.com/creativetim_bucket/products/64/opt_lbdr_thumbnail.jpg)
 
 **[Light Bootstrap Dashboard React](http://lbd-react.creative-tim.com/)** is an admin dashboard template designed to be beautiful and simple. It is built on top of [React Bootstrap](https://react-bootstrap.github.io/), using [Light Bootstrap Dashboard](https://www.creative-tim.com/product/light-bootstrap) and it is fully responsive. It comes with a big collections of elements that will offer you multiple possibilities to create the app that best fits your needs. It can be used to create admin panels, project management systems, web applications backend, CMS or CRM.
 
