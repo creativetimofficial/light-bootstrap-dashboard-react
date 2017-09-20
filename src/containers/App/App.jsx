@@ -30,7 +30,7 @@ class App extends Component {
         super(props);
         this.state = {
             image: imagine,
-            color: "azure",
+            color: "black",
             hasImage: true
         };
         this.componentDidMount = this.componentDidMount.bind(this);
