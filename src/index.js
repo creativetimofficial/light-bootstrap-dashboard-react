@@ -22,13 +22,16 @@ import 'containers/Components/assets/css/Components.css';
 const history = createBrowserHistory();
 
 ReactGA.initialize('UA-46172202-11');
-function logPageView() {
-  ReactGA.set({ page: window.location.pathname + window.location.search });
-  ReactGA.pageview(window.location.pathname + window.location.search);
-}
+ReactGA.set({ page: window.location.pathname + window.location.search });
+ReactGA.pageview(window.location.pathname + window.location.search);
+
+history.listen( location =>  {
+    ReactGA.set({ page: window.location.pathname + window.location.search });
+    ReactGA.pageview(window.location.pathname + window.location.search);
+});
 
 ReactDOM.render((
-    <HashRouter history={history} onUpdate={logPageView}>
+    <HashRouter history={history}>
         <Switch>
             <Route path="/components" name="Components" component={Components}/>
             <Route path="/" name="Home" component={App}/>
