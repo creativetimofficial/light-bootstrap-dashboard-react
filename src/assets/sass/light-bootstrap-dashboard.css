@@ -1810,6 +1810,19 @@ body > .navbar-collapse[data-color="purple"]:after {
   .card-plain .image {
     border-radius: 4px; }
 
+.card-stats .icon-big {
+  font-size: 3em;
+  min-height: 64px; }
+  .card-stats .icon-big i {
+    font-weight: bold;
+    line-height: 59px; }
+
+.card-stats .numbers {
+  font-size: 2em;
+  text-align: right; }
+  .card-stats .numbers p {
+    margin: 0; }
+
 .ct-label {
   fill: rgba(0, 0, 0, 0.4);
   color: rgba(0, 0, 0, 0.4);
