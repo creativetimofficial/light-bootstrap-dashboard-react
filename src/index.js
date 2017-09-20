@@ -20,8 +20,8 @@ import 'assets/css/pe-icon-7-stroke.css';
 import 'containers/Components/assets/css/Components.css';
 
 const history = createBrowserHistory();
-ReactGA.initialize('UA-000000-01');
 
+ReactGA.initialize('UA-46172202-11');
 function logPageView() {
   ReactGA.set({ page: window.location.pathname + window.location.search });
   ReactGA.pageview(window.location.pathname + window.location.search);
