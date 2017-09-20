@@ -54,13 +54,26 @@
             margin-right: 15px;
 
             img{
-                position: relative;
-                left: -5px;
+                width: 40px;
+                margin-left: -3px;
+                display: block;
+                margin-top: 2px;
             }
         }
 
         a.logo-normal{
             display: block;
+        }
+
+        .logo-img{
+            width: 34px;
+            display: inline-block;
+            height: 34px;
+            margin-left: -2px;
+            margin-top: -2px;
+            margin-right: 10px;
+            border-radius: 30px;
+            text-align: center;
         }
     }
 
