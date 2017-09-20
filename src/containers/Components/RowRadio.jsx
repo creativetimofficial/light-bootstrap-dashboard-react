@@ -7,19 +7,47 @@ import { monokaiSublime } from 'react-syntax-highlighter/dist/styles';
 const codeExample = `<Radio
     number="3"
     option="1"
-    name="hey"
-    isChecked={true}
+    name="radio"
+    onChange={this.handleRadio}
+    checked={this.state.radio === "1"}
     label="Checked"
 />
 <Radio
     number="4"
     option="2"
-    name="hey"
-    isChecked={false}
+    name="radio"
+    onChange={this.handleRadio}
+    checked={this.state.radio === "2"}
     label="Unchecked"
 />`;
+const codeExampleDependecies = `constructor(props) {
+    super(props);
+    this.state = {
+        radio: "1"
+    };
+}
+
+handleRadio = event => {
+    const target = event.target;
+    this.setState({
+        [target.name]: target.value
+    });
+};`;
 
 class RowCheckbox extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            radio: "1"
+        };
+    }
+
+    handleRadio = event => {
+        const target = event.target;
+        this.setState({
+            [target.name]: target.value
+        });
+    };
     render() {
         return (
             <div className="tim-row" id="radio-row">
@@ -36,21 +64,27 @@ class RowCheckbox extends Component {
                     <Radio
                         number="3"
                         option="1"
-                        name="hey"
-                        isChecked={true}
+                        name="radio"
+                        onChange={this.handleRadio}
+                        checked={this.state.radio === "1"}
                         label="Checked"
                     />
                     <Radio
                         number="4"
                         option="2"
-                        name="hey"
-                        isChecked={false}
+                        name="radio"
+                        onChange={this.handleRadio}
+                        checked={this.state.radio === "2"}
                         label="Unchecked"
                     />
                 </div>
 
                 <SyntaxHighlighter language="html" style={monokaiSublime}>
                     {codeExample}
+                </SyntaxHighlighter>
+
+                <SyntaxHighlighter language="javascript" style={monokaiSublime}>
+                    {codeExampleDependecies}
                 </SyntaxHighlighter>
 
                 <h4>Props</h4>
@@ -74,24 +108,6 @@ class RowCheckbox extends Component {
                         </tr>
                         <tr>
                             <td>
-                                <code>isChecked</code>
-                            </td>
-                            <td>boolean</td>
-                            <td>false</td>
-                            <td>Use this flag to create a checked / unchecked checkbox.</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <code>label</code>
-                            </td>
-                            <td>string</td>
-                            <td>null</td>
-                            <td>
-                                Use this flag to add text to the checkbox.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
                                 <code>option</code>
                             </td>
                             <td>string</td>
@@ -108,6 +124,36 @@ class RowCheckbox extends Component {
                             <td>null</td>
                             <td>
                                 Use this flag to add the name of the radio group.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>label</code>
+                            </td>
+                            <td>string</td>
+                            <td>null</td>
+                            <td>
+                                Use this flag to add text to the checkbox.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>onChange</code>
+                            </td>
+                            <td>function</td>
+                            <td>null</td>
+                            <td>
+                                This is the prop that changes the default checked radio.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>checked</code>
+                            </td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>
+                                This is the prop to make one radio checked by default. If you set this porp you need to set onChange prop too.
                             </td>
                         </tr>
                     </tbody>
