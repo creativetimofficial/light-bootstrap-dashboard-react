@@ -1,0 +1,37 @@
+{
+  "name": "light-bootstrap-dashboard-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "chart.js": "^2.6.0",
+    "chartist": "^0.10.1",
+    "create-react-app": "^1.3.3",
+    "google-maps-react": "^1.1.0",
+    "history": "^4.6.3",
+    "jquery": "^3.2.1",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.1",
+    "react": "^15.6.1",
+    "react-bootstrap": "^0.31.1",
+    "react-bs-notifier": "^4.3.2",
+    "react-chartist": "^0.13.0",
+    "react-chartjs-2": "^2.5.1",
+    "react-dom": "^15.6.1",
+    "react-notification-system": "^0.2.15",
+    "react-router": "^4.1.2",
+    "react-router-dom": "^4.1.2",
+    "react-scripts": "1.0.10",
+    "react-simple-pie-chart": "^0.4.1",
+    "react-svg-chart": "^4.0.0",
+    "react-syntax-highlighter": "^5.6.2"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
