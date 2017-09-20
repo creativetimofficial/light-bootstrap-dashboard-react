@@ -935,6 +935,9 @@ body > .navbar-collapse[data-color="purple"]:after {
     border-radius: 4px; }
   .alert.alert-with-icon {
     padding-left: 65px; }
+  .alert a, .alert a:hover, .alert a:focus {
+    text-decoration: underline;
+    color: white; }
 
 .alert-info {
   background-color: #63d8f1; }
@@ -1821,6 +1824,19 @@ body > .navbar-collapse[data-color="purple"]:after {
   border-radius: 0; }
   .card-plain .image {
     border-radius: 4px; }
+
+.card-stats .icon-big {
+  font-size: 3em;
+  min-height: 64px; }
+  .card-stats .icon-big i {
+    font-weight: bold;
+    line-height: 59px; }
+
+.card-stats .numbers {
+  font-size: 2em;
+  text-align: right; }
+  .card-stats .numbers p {
+    margin: 0; }
 
 .ct-label {
   fill: rgba(0, 0, 0, 0.4);
