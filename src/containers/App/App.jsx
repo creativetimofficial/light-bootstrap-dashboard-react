@@ -22,7 +22,7 @@ import FixedPlugin from 'components/FixedPlugin/FixedPlugin.jsx';
 
 import {style} from "variables/Variables.jsx";
 
-import imagine from "assets/img/sidebar-5.jpg";
+import imagine from "assets/img/sidebar-3.jpg";
 
 
 class App extends Component {
