@@ -98,7 +98,7 @@ class FixedPlugin extends Component{
 
                         <li className="button-container">
                             <div className="">
-                                <a href="http://www.creative-tim.com" target="_blank" rel="noopener noreferrer" className="btn btn-info btn-block btn-fill">Download, it's free!</a>
+                                <a href="https://www.creative-tim.com/product/light-bootstrap-dashboard-react" target="_blank" className="btn btn-info btn-block btn-fill">Download, it's free!</a>
                             </div>
                         </li>
                         <li className="button-container">
@@ -111,7 +111,7 @@ class FixedPlugin extends Component{
 
                         <li className="button-container">
                             <FacebookShareButton url="http://lbd-react.creative-tim.com"><FacebookIcon size={32} round={true}/></FacebookShareButton>
-                            <TwitterShareButton url="http://lbd-react.creative-tim.com"><TwitterIcon size={32} round={true}/></TwitterShareButton>
+                            <TwitterShareButton url="http://lbd-react.creative-tim.com" title="Light Bootstrap Dashboard React - Free Bootstrap Admin Template" hashtags={["react","bootstrap"]} via="creativetim"><TwitterIcon size={32} round={true}/></TwitterShareButton>
                         </li>
                         <li className="button-container">
                             {/* <div classNam */}
