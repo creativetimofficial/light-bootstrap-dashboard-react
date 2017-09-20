@@ -924,6 +924,9 @@ body > .navbar-collapse[data-color="purple"]:after {
     border-radius: 4px; }
   .alert.alert-with-icon {
     padding-left: 65px; }
+  .alert a, .alert a:hover, .alert a:focus {
+    text-decoration: underline;
+    color: white; }
 
 .alert-info {
   background-color: #63d8f1; }
