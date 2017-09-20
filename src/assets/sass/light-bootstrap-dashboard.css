@@ -1,17 +1,18 @@
 /*!
-    
+
  =========================================================
- * Light Bootstrap Dashboard - v1.3.1.0
+ * Light Bootstrap Dashboard React - v1.0.0
+ * Based on Light Bootstrap Dashboard - v1.3.0
  =========================================================
- 
- * Product Page: http://www.creative-tim.com/product/light-bootstrap-dashboard
+
+ * Product Page: http://www.creative-tim.com/product/light-bootstrap-dashboard-react
  * Copyright 2017 Creative Tim (http://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE.md)
- 
+ * Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
+
  =========================================================
- 
+
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- 
+
  */
 /*      light colors         */
 @keyframes spin {
@@ -235,10 +236,21 @@ input:focus {
       width: 30px;
       margin-right: 15px; }
       .sidebar .logo a.logo-mini img {
-        position: relative;
-        left: -5px; }
+        width: 40px;
+        margin-left: -3px;
+        display: block;
+        margin-top: 2px; }
     .sidebar .logo a.logo-normal {
       display: block; }
+    .sidebar .logo .logo-img {
+      width: 34px;
+      display: inline-block;
+      height: 34px;
+      margin-left: -2px;
+      margin-top: -2px;
+      margin-right: 10px;
+      border-radius: 30px;
+      text-align: center; }
   .sidebar .logo-tim {
     border-radius: 50%;
     border: 1px solid #333;
@@ -340,13 +352,13 @@ body > .navbar-collapse:before {
 
 .sidebar:after,
 body > .navbar-collapse:after {
-  background: #787878;
-  background: -moz-linear-gradient(top, #787878 0%, #343434 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #787878), color-stop(100%, #343434));
-  background: -webkit-linear-gradient(top, #787878 0%, #343434 100%);
-  background: -o-linear-gradient(top, #787878 0%, #343434 100%);
-  background: -ms-linear-gradient(top, #787878 0%, #343434 100%);
-  background: linear-gradient(to bottom, #787878 0%, #343434 100%);
+  background: #282828;
+  background: -moz-linear-gradient(top, #282828 0%, #111 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #282828), color-stop(100%, #111));
+  background: -webkit-linear-gradient(top, #282828 0%, #111 100%);
+  background: -o-linear-gradient(top, #282828 0%, #111 100%);
+  background: -ms-linear-gradient(top, #282828 0%, #111 100%);
+  background: linear-gradient(to bottom, #282828 0%, #111 100%);
   background-size: 150% 150%;
   z-index: 3;
   opacity: 1; }
@@ -358,13 +370,13 @@ body > .navbar-collapse.has-image:after {
 
 .sidebar[data-color="blue"]:after,
 body > .navbar-collapse[data-color="blue"]:after {
-  background: #1F77D0;
-  background: -moz-linear-gradient(top, #1F77D0 0%, #533ce1 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1F77D0), color-stop(100%, #533ce1));
-  background: -webkit-linear-gradient(top, #1F77D0 0%, #533ce1 100%);
-  background: -o-linear-gradient(top, #1F77D0 0%, #533ce1 100%);
-  background: -ms-linear-gradient(top, #1F77D0 0%, #533ce1 100%);
-  background: linear-gradient(to bottom, #1F77D0 0%, #533ce1 100%);
+  background: #1b8dff;
+  background: -moz-linear-gradient(top, #1b8dff 0%, #2632c1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1b8dff), color-stop(100%, #2632c1));
+  background: -webkit-linear-gradient(top, #1b8dff 0%, #2632c1 100%);
+  background: -o-linear-gradient(top, #1b8dff 0%, #2632c1 100%);
+  background: -ms-linear-gradient(top, #1b8dff 0%, #2632c1 100%);
+  background: linear-gradient(to bottom, #1b8dff 0%, #2632c1 100%);
   background-size: 150% 150%; }
 
 .sidebar[data-color="azure"]:after,
@@ -923,6 +935,9 @@ body > .navbar-collapse[data-color="purple"]:after {
     border-radius: 4px; }
   .alert.alert-with-icon {
     padding-left: 65px; }
+  .alert a, .alert a:hover, .alert a:focus {
+    text-decoration: underline;
+    color: white; }
 
 .alert-info {
   background-color: #63d8f1; }
@@ -1468,7 +1483,7 @@ body > .navbar-collapse[data-color="purple"]:after {
     border-bottom: 1px solid rgba(255, 255, 255, 0.6); }
 
 .navbar-ct-blue {
-  background-color: #4091e2; }
+  background-color: #4ea7ff; }
 
 .navbar-ct-azure {
   background-color: #63d8f1; }
@@ -1810,6 +1825,19 @@ body > .navbar-collapse[data-color="purple"]:after {
   .card-plain .image {
     border-radius: 4px; }
 
+.card-stats .icon-big {
+  font-size: 3em;
+  min-height: 64px; }
+  .card-stats .icon-big i {
+    font-weight: bold;
+    line-height: 59px; }
+
+.card-stats .numbers {
+  font-size: 2em;
+  text-align: right; }
+  .card-stats .numbers p {
+    margin: 0; }
+
 .ct-label {
   fill: rgba(0, 0, 0, 0.4);
   color: rgba(0, 0, 0, 0.4);
@@ -2001,10 +2029,10 @@ body > .navbar-collapse[data-color="purple"]:after {
   fill: #87CB16; }
 
 .ct-series-f .ct-point, .ct-series-f .ct-line, .ct-series-f .ct-bar, .ct-series-f .ct-slice-donut {
-  stroke: #1F77D0; }
+  stroke: #1b8dff; }
 
 .ct-series-f .ct-slice-pie, .ct-series-f .ct-area {
-  fill: #1F77D0; }
+  fill: #1b8dff; }
 
 .ct-series-g .ct-point, .ct-series-g .ct-line, .ct-series-g .ct-bar, .ct-series-g .ct-slice-donut {
   stroke: #5e5e5e; }
