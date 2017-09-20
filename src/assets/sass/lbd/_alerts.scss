@@ -68,6 +68,10 @@
     &.alert-with-icon{
         padding-left: 65px;
     }
+    a, a:hover, a:focus{
+        text-decoration: underline;
+        color: white;
+    }
 }
 .alert-info{
      background-color: $azure-navbar;
