@@ -48,7 +48,7 @@ class Sidebar extends Component {
                     <Link to='#charts-row' className="nav-link">Charts</Link>
                 </li>
                 <li>
-                    <Link to='#card-row' className="nav-link">Card/User-Card</Link>
+                    <Link to='#card-row' className="nav-link">Cards</Link>
                 </li>
                 <li>
                     <Link to='#maps-row' className="nav-link">Maps</Link>

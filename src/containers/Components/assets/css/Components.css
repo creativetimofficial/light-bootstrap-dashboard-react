@@ -283,3 +283,6 @@
     display: block;
     color: #666;
 }
+.components .btn{
+    margin: 2px;
+}

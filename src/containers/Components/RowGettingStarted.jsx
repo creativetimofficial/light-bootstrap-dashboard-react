@@ -8,7 +8,6 @@ const fileStructure = `Light Bootstrap Dashboard React
 │   ├── img
 │   └── tutorial-components.html
 ├── README.md
-├── package-lock.json
 ├── package.json
 ├── public
 │   ├── assets

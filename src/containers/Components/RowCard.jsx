@@ -6,11 +6,13 @@ import ChartistGraph from 'react-chartist';
 
 import {Card} from 'components/Card/Card.jsx';
 import {UserCard} from 'components/UserCard/UserCard.jsx';
+import {StatsCard} from 'components/StatsCard/StatsCard.jsx';
 
 import Button from 'elements/CustomButton/CustomButton.jsx'
 
 const codeExampleImport = `import {Card} from 'components/Card/Card.jsx';
-import {UserCard} from 'components/UserCard/UserCard.jsx';`;
+import {UserCard} from 'components/UserCard/UserCard.jsx';
+import {StatsCard} from 'components/StatsCard/StatsCard.jsx';`;
 
 var dataBar = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -122,6 +124,20 @@ const codeExampleUserCard = `<div className="row">
     </div>
 </div>`;
 
+const statsCardExample = `<div className="container-fluid">
+    <div className="row">
+        <div className="col-lg-4 col-sm-8">
+            <StatsCard
+                bigIcon={<i className="pe-7s-wallet text-success"></i>}
+                statsText="Revenue"
+                statsValue="$1,345"
+                statsIcon={<i className="fa fa-calendar-o"></i>}
+                statsIconText="Last day"
+            />
+        </div>
+    </div>
+</div>`;
+
 class RowCard extends Component {
     render() {
         return (
@@ -129,7 +145,7 @@ class RowCard extends Component {
                 <h2>Cards</h2>
                 <legend></legend>
                 <p>
-                    We've created two types of cards, one is for simple use and one is for creating user cards.
+                    We've created three types of cards, one is for simple use, one is for creating user cards and the last one is for creating stats cards.
                     They have to be imported where you use them like this:
                 </p>
                 <SyntaxHighlighter language="javascript" style={monokaiSublime}>
@@ -355,6 +371,76 @@ class RowCard extends Component {
                             <td>html components</td>
                             <td>null</td>
                             <td>Use this flag to set user's socials.</td>
+                        </tr>
+                    </tbody>
+                </Table>
+                <h3>Stats Card example</h3>
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-lg-4 col-sm-8">
+                            <StatsCard
+                                bigIcon={<i className="pe-7s-wallet text-success"></i>}
+                                statsText="Revenue"
+                                statsValue="$1,345"
+                                statsIcon={<i className="fa fa-calendar-o"></i>}
+                                statsIconText="Last day"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <SyntaxHighlighter language="html" style={monokaiSublime}>
+                    {statsCardExample}
+                </SyntaxHighlighter>
+                <h4>Props</h4>
+                <Table striped bordered condensed hover>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <code>bigIcon</code>
+                            </td>
+                            <td>html component</td>
+                            <td>null</td>
+                            <td>Use this flag to set the main stats card image.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>statsText</code>
+                            </td>
+                            <td>string</td>
+                            <td>null</td>
+                            <td>Use this flag to set the main stats card text.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>statsValue</code>
+                            </td>
+                            <td>string</td>
+                            <td>null</td>
+                            <td>Use this flag to set the main stats card value.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>statsIcon</code>
+                            </td>
+                            <td>string</td>
+                            <td>null</td>
+                            <td>Use this flag to set the footers card icon.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>statsIconText</code>
+                            </td>
+                            <td>string</td>
+                            <td>null</td>
+                            <td>Use this flag to set the footers card text.</td>
                         </tr>
                     </tbody>
                 </Table>
