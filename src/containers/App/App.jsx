@@ -17,6 +17,7 @@ import Notifications from 'views/Notifications/Notifications';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import Sidebar from 'components/Sidebar/Sidebar';
+
 import FixedPlugin from 'components/FixedPlugin/FixedPlugin.jsx';
 
 import {style} from "variables/Variables.jsx";
