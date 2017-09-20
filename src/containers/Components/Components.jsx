@@ -101,12 +101,12 @@ class Components extends Component {
                 				</ul>
                 				<ul  className="nav navbar-nav navbar-right">
                 					<li>
-                						<a href="https://github.com/creativetimofficial/#" target="_blank" rel="noopener noreferrer" className="btn btn-simple btn-default">
+                						<a href="https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues" target="_blank" rel="noopener noreferrer" className="btn btn-simple btn-default">
                 							<p>Report issue</p>
                 						</a>
                 					</li>
                 					<li>
-                						<a href="https://github.com/creativetimofficial/" target="_blank" rel="noopener noreferrer" className="btn btn-default btn-simple">
+                						<a href="https://github.com/creativetimofficial/light-bootstrap-dashboard-react" target="_blank" rel="noopener noreferrer" className="btn btn-default btn-simple">
                 							<i className="fa fa-github"></i> <p>Contribute</p>
                 						</a>
                 					</li>
