@@ -8,7 +8,9 @@ import {Card} from 'components/Card/Card.jsx';
 import {UserCard} from 'components/UserCard/UserCard.jsx';
 import {StatsCard} from 'components/StatsCard/StatsCard.jsx';
 
-import Button from 'elements/CustomButton/CustomButton.jsx'
+import Button from 'elements/CustomButton/CustomButton.jsx';
+
+import avatar from "assets/img/faces/face-3.jpg";
 
 const codeExampleImport = `import {Card} from 'components/Card/Card.jsx';
 import {UserCard} from 'components/UserCard/UserCard.jsx';
@@ -91,11 +93,13 @@ const codeExamplePlainCard = `<div className="row">
     </div>
 </div>`;
 
+const codeExampleUserCardAvatar = `import avatar from "assets/img/faces/face-3.jpg";`;
+
 const codeExampleUserCard = `<div className="row">
     <div className="col-md-4">
         <UserCard
             bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
-            avatar="assets/img/faces/face-3.jpg"
+            avatar={avatar}
             name="Mike Andrew"
             userName="michael24"
             description={
@@ -282,7 +286,7 @@ class RowCard extends Component {
                     <div className="col-md-4">
                         <UserCard
                             bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
-                            avatar="assets/img/faces/face-3.jpg"
+                            avatar={avatar}
                             name="Mike Andrew"
                             userName="michael24"
                             description={
@@ -310,6 +314,9 @@ class RowCard extends Component {
                         />
                     </div>
                 </div>
+                <SyntaxHighlighter language="javascript" style={monokaiSublime}>
+                    {codeExampleUserCardAvatar}
+                </SyntaxHighlighter>
                 <SyntaxHighlighter language="html" style={monokaiSublime}>
                     {codeExampleUserCard}
                 </SyntaxHighlighter>
@@ -336,9 +343,9 @@ class RowCard extends Component {
                             <td>
                                 <code>avatar</code>
                             </td>
-                            <td>string</td>
+                            <td>string / react element</td>
                             <td>null</td>
-                            <td>Use this flag to set the avatar of the card.</td>
+                            <td>Use this flag to set the avatar of the card. (if you use the string method, the image has to be in public folder, if you use the react import method, the image has to be in src folder)</td>
                         </tr>
                         <tr>
                             <td>

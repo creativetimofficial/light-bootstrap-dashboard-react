@@ -83,6 +83,8 @@ const codeExample = `<div className="row">
     <div className="col-md-4" style={{maxHeight:"320px"}}>
         <ChartistGraph data={dataPie} type="Pie"/>
     </div>
+</div>
+<div className="row">
     <div className="col-md-8" style={{maxHeight:"320px"}}>
         <ChartistGraph
             data={dataSales}
@@ -90,12 +92,15 @@ const codeExample = `<div className="row">
             options={optionsSales}
             responsiveOptions={responsiveSales}/>
     </div>
+</div>
+<div className="row">
     <div className="col-md-8" style={{maxHeight:"320px"}}>
         <ChartistGraph
             data={dataBar}
             type="Bar"
             options={optionsBar}
-            responsiveOptions={responsiveBar}/>
+            responsiveOptions={responsiveBar}
+        />
     </div>
 </div>`;
 
@@ -112,27 +117,31 @@ class RowNotifications extends Component {
                 <SyntaxHighlighter language="javascript" style={monokaiSublime}>
                     {`import ChartistGraph from 'react-chartist';`}
                 </SyntaxHighlighter>
-                <h4>Notification Style</h4>
+                <h4>Code example</h4>
                 <div className="row">
                     <div className="col-md-4" style={{maxHeight:"320px"}}>
                         <ChartistGraph data={dataPie} type="Pie"/>
                     </div>
+                </div>
+                <div className="row">
                     <div className="col-md-8" style={{maxHeight:"320px"}}>
                         <ChartistGraph
                             data={dataSales}
                             type="Line"
                             options={optionsSales}
                             responsiveOptions={responsiveSales}/>
-                        </div>
-                        <div className="col-md-8" style={{maxHeight:"320px"}}>
-                            <ChartistGraph
-                                data={dataBar}
-                                type="Bar"
-                                options={optionsBar}
-                                responsiveOptions={responsiveBar}
-                            />
-                        </div>
                     </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-8" style={{maxHeight:"320px"}}>
+                        <ChartistGraph
+                            data={dataBar}
+                            type="Bar"
+                            options={optionsBar}
+                            responsiveOptions={responsiveBar}
+                        />
+                    </div>
+                </div>
                     <SyntaxHighlighter language="html" style={monokaiSublime}>
                         {codeExample}
                     </SyntaxHighlighter>
