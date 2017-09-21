@@ -63,7 +63,7 @@ class Notifications extends Component {
                     <div className="card">
                         <div className="header">
                             <h4 className="title">Notifications</h4>
-                            <p className="category">Handcrafted by <a target="_blank" rel="noopener noreferrer" href="https://github.com/igorprado">Igor Prado.</a>. Please checkout the <a href="http://igorprado.com/react-notification-system/" rel="noopener noreferrer" target="_blank">full documentation.</a></p>
+                            <p className="category">Handcrafted by <a target="_blank" rel="noopener noreferrer" href="https://github.com/igorprado">Igor Prado</a>. Please checkout the <a href="http://igorprado.com/react-notification-system/" rel="noopener noreferrer" target="_blank">full documentation.</a></p>
 
                         </div>
                         <div className="content">
