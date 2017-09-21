@@ -6,6 +6,8 @@ import {FormInputs} from 'components/FormInputs/FormInputs.jsx';
 import {UserCard} from 'components/UserCard/UserCard.jsx';
 import Button from 'elements/CustomButton/CustomButton.jsx';
 
+import avatar from "assets/img/faces/face-3.jpg";
+
 class UserProfile extends Component {
     render() {
         return (
@@ -124,7 +126,7 @@ class UserProfile extends Component {
                         <div className="col-md-4">
                             <UserCard
                                 bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
-                                avatar="assets/img/faces/face-3.jpg"
+                                avatar={avatar}
                                 name="Mike Andrew"
                                 userName="michael24"
                                 description={
