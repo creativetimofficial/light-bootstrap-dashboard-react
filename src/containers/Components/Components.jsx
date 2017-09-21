@@ -19,7 +19,7 @@ import RowGettingStarted from './RowGettingStarted.jsx';
 import RowLicense from './RowLicense.jsx';
 import RowRadio from './RowRadio.jsx';
 
-
+import ctLogo from './assets/img/new_logo.png';
 import imagine from './assets/img/full-image-1.jpg';
 import reactLogo from './assets/img/reactlogo.png';
 const headerBackground = {
@@ -77,7 +77,7 @@ class Components extends Component {
                 				<a href="http://www.creative-tim.com" target="_blank" rel="noopener noreferrer">
                 					<div className="logo-container">
                 						<div className="logo">
-                							<img src="assets/img/new_logo.png" alt="Creative Tim Logo" />
+                							<img src={ctLogo} alt="Creative Tim Logo" />
                 						</div>
                 						<div className="brand">
                 							Creative Tim
