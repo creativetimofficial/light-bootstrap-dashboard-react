@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import {FormGroup,ControlLabel,FormControl} from 'react-bootstrap';
+import {
+    Grid, Row, Col,
+    FormGroup, ControlLabel, FormControl
+} from 'react-bootstrap';
 
 import {Card} from 'components/Card/Card.jsx';
 import {FormInputs} from 'components/FormInputs/FormInputs.jsx';
@@ -12,9 +15,9 @@ class UserProfile extends Component {
     render() {
         return (
             <div className="content">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-md-8">
+                <Grid fluid>
+                    <Row>
+                        <Col md={8}>
                             <Card
                                 title="Edit Profile"
                                 content={
@@ -94,7 +97,7 @@ class UserProfile extends Component {
                                                     defaultValue : "Andrew"
                                                 },
                                                 {
-                                                    label : "Pastal Code",
+                                                    label : "Postal Code",
                                                     type : "number",
                                                     bsClass : "form-control",
                                                     placeholder : "ZIP Code"
@@ -102,14 +105,14 @@ class UserProfile extends Component {
                                             ]}
                                         />
 
-                                        <div className="row">
-                                            <div className="col-md-12">
+                                        <Row>
+                                            <Col md={12}>
                                                 <FormGroup controlId="formControlsTextarea">
                                                     <ControlLabel>About Me</ControlLabel>
                                                     <FormControl rows="5" componentClass="textarea" bsClass="form-control" placeholder="Here can be your description" defaultValue="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."/>
                                                 </FormGroup>
-                                            </div>
-                                        </div>
+                                            </Col>
+                                        </Row>
                                         <Button
                                             bsStyle="info"
                                             pullRight
@@ -122,8 +125,8 @@ class UserProfile extends Component {
                                     </form>
                                 }
                             />
-                        </div>
-                        <div className="col-md-4">
+                        </Col>
+                        <Col md={4}>
                             <UserCard
                                 bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
                                 avatar={avatar}
@@ -146,10 +149,10 @@ class UserProfile extends Component {
                                     </div>
                                 }
                             />
-                        </div>
+                        </Col>
 
-                    </div>
-                </div>
+                    </Row>
+                </Grid>>
             </div>
         );
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Table} from 'react-bootstrap';
+import { Grid, Row, Col, Table } from 'react-bootstrap';
 
 import Card from 'components/Card/Card.jsx';
 import {thArray, tdArray} from 'variables/Variables.jsx';
@@ -9,13 +9,13 @@ class TableList extends Component {
     render() {
         return (
             <div className="content">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-md-12">
+                <Grid fluid>
+                    <Row>
+                        <Col md={12}>
                             <Card
                                 title="Striped Table with Hover"
                                 category="Here is a subtitle for this table"
-                                contentClass="table-responsive table-full-width"
+                                ctTableFullWidth ctTableResponsive
                                 content={
                                     <Table striped hover>
                                         <thead>
@@ -47,15 +47,15 @@ class TableList extends Component {
                                     </Table>
                                 }
                             />
-                        </div>
+                        </Col>
 
 
-                        <div className="col-md-12">
+                        <Col md={12}>
                             <Card
-                                cardClass="card-plain"
+                                plain
                                 title="Striped Table with Hover"
                                 category="Here is a subtitle for this table"
-                                contentClass="table-responsive table-full-width"
+                                ctTableFullWidth ctTableResponsive
                                 content={
                                     <Table hover>
                                         <thead>
@@ -87,10 +87,10 @@ class TableList extends Component {
                                     </Table>
                                 }
                             />
-                        </div>
+                        </Col>
 
-                    </div>
-                </div>
+                    </Row>
+                </Grid>
             </div>
         );
     }
