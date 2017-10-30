@@ -20,6 +20,7 @@ const codeSizes = `<Button bsStyle="primary" bsSize="lg">Large</Button>
 
 const codeStyles = `<Button bsStyle="primary">Default</Button>
 <Button bsStyle="primary" fill>Fill</Button>
+<Button bsStyle="primary" round>Rounded</Button>
 <Button bsStyle="primary" simple>Simple</Button>
 <Button bsStyle="primary" pullRight>Pull Right</Button>
 <Button bsStyle="primary" block>Block</Button>`;
@@ -74,6 +75,7 @@ class RowButtons extends Component {
                 <p>
                     <Button bsStyle="primary">Default</Button>
                     <Button bsStyle="primary" fill>Fill</Button>
+                    <Button bsStyle="primary" round>Rounded</Button>
                     <Button bsStyle="primary" simple>Simple</Button>
                     <Button bsStyle="primary" pullRight>Pull Right</Button>
                     <Button bsStyle="primary" block>Block</Button>
@@ -115,6 +117,12 @@ class RowButtons extends Component {
                             <td>boolean</td>
                             <td>false</td>
                             <td>Use this to pull right the button.</td>
+                        </tr>
+                        <tr>
+                            <td><code>round</code></td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Use this to make the buttons corners rounded.</td>
                         </tr>
                     </tbody>
                 </Table>

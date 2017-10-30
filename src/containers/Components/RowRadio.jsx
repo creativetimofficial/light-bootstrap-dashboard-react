@@ -130,10 +130,10 @@ class RowCheckbox extends Component {
                             <td>
                                 <code>label</code>
                             </td>
-                            <td>string</td>
+                            <td>string / node</td>
                             <td>null</td>
                             <td>
-                                Use this flag to add text to the checkbox.
+                                Use this flag to add text or a node as a label to the checkbox.
                             </td>
                         </tr>
                         <tr>

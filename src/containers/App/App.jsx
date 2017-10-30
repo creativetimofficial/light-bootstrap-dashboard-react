@@ -23,12 +23,14 @@ class App extends Component {
         this.state = {
             image: imagine,
             color: "black",
-            hasImage: true
+            hasImage: true,
+            _notificationSystem: null
         };
         this.componentDidMount = this.componentDidMount.bind(this);
         this.handleImageClick = this.handleImageClick.bind(this);
         this.handleColorClick = this.handleColorClick.bind(this);
         this.handleHasImage = this.handleHasImage.bind(this);
+        this.handleNotificationClick = this.handleNotificationClick.bind(this);
     }
     handleImageClick(image){
         this.setState({image: image});
@@ -38,10 +40,6 @@ class App extends Component {
     }
     handleHasImage(hasImage){
         this.setState({hasImage: hasImage});
-        this.handleNotificationClick = this.handleNotificationClick.bind(this);
-        this.state = {
-            _notificationSystem: null
-        };
     }
     handleNotificationClick(position){
         var color = Math.floor((Math.random() * 4) + 1);

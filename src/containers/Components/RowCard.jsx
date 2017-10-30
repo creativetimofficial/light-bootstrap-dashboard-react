@@ -69,19 +69,19 @@ var responsiveBar = [
 const codeExamplePlainCard = `<div className="row">
     <div className="col-md-6">
         <Card
-            id="chartActivity"
-            classes="ct-chart"
             title="2014 Sales"
             category="All products including Taxes"
             stats="Data information certified"
             statsIcon="fa fa-check"
             content={
-                <ChartistGraph
-                    data={dataBar}
-                    type="Bar"
-                    options={optionsBar}
-                    responsiveOptions={responsiveBar}
-                />
+                <div id="chartActivity" className="ct-chart">
+                    <ChartistGraph
+                        data={dataBar}
+                        type="Bar"
+                        options={optionsBar}
+                        responsiveOptions={responsiveBar}
+                    />
+                </div>
             }
             legend={
                 <div className="legend">
@@ -159,19 +159,19 @@ class RowCard extends Component {
                 <div className="row">
                     <div className="col-md-6">
                         <Card
-                            id="chartActivity"
-                            classes="ct-chart"
                             title="2014 Sales"
                             category="All products including Taxes"
                             stats="Data information certified"
                             statsIcon="fa fa-check"
                             content={
-                                <ChartistGraph
-                                    data={dataBar}
-                                    type="Bar"
-                                    options={optionsBar}
-                                    responsiveOptions={responsiveBar}
-                                />
+                                <div id="chartActivity" className="ct-chart">
+                                    <ChartistGraph
+                                        data={dataBar}
+                                        type="Bar"
+                                        options={optionsBar}
+                                        responsiveOptions={responsiveBar}
+                                    />
+                                </div>
                             }
                             legend={
                                 <div className="legend">
@@ -201,17 +201,17 @@ class RowCard extends Component {
                     <tbody>
                         <tr>
                             <td>
-                                <code>cardClass</code>
+                                <code>plain</code>
                             </td>
                             <td>string</td>
                             <td>null</td>
-                            <td>Use this flag to set on the card <code>div</code> new classes.</td>
+                            <td>Use this flag to make the card plain (no <code>background</code>).</td>
                         </tr>
                         <tr>
                             <td>
                                 <code>title</code>
                             </td>
-                            <td>string</td>
+                            <td>string / node</td>
                             <td>null</td>
                             <td>Use this flag to set the title of the card.</td>
                         </tr>
@@ -219,33 +219,49 @@ class RowCard extends Component {
                             <td>
                                 <code>category</code>
                             </td>
-                            <td>string</td>
+                            <td>string / node</td>
                             <td>null</td>
                             <td>Use this flag to set the category of the card.</td>
                         </tr>
                         <tr>
                             <td>
-                                <code>contentClass</code>
+                                <code>ctAllIcons</code>
                             </td>
-                            <td>string</td>
-                            <td>null</td>
-                            <td>Use this flag to set new classes on the content <code>div</code>.</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Use this flag to add <code>className</code> <code>all-icons</code> to the content of the card.</td>
                         </tr>
                         <tr>
                             <td>
-                                <code>id</code>
+                                <code>ctTableFullWidth</code>
                             </td>
-                            <td>string</td>
-                            <td>null</td>
-                            <td>Use this flag to set the id of the inner <code>div</code> of the content.</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Use this flag to add <code>className</code> <code>table-full-width</code> to the content of the card.</td>
                         </tr>
                         <tr>
                             <td>
-                                <code>classes</code>
+                                <code>ctTableResponsive</code>
+                            </td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Use this flag to add <code>className</code> <code>table-responsive</code> to the content of the card.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>ctTableUpgrade</code>
+                            </td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Use this flag to add <code>className</code> <code>table-upgrade</code> to the content of the card.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>hCenter</code>
                             </td>
                             <td>string</td>
                             <td>null</td>
-                            <td>Use this flag to set new classes to the inner <code>div</code> of the content.</td>
+                            <td>Use this flag to add <code>className</code> <code>text-center</code> to the header of the card.</td>
                         </tr>
                         <tr>
                             <td>

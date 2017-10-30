@@ -100,6 +100,12 @@ class RowGettingStarted extends Component {
                     <li>
                         Navigate to <a href="http://localhost:3000">http://localhost:3000</a>
                     </li>
+                    <li>
+                        If you don't have cross-env installed globally then run in terminal
+                        <SyntaxHighlighter language="javascript" style={monokaiSublime}>
+                            {`npm i -g cross-env`}
+                        </SyntaxHighlighter>
+                    </li>
                 </ul>
                 <p>You can additionaly use these commands:</p>
                 <ul>

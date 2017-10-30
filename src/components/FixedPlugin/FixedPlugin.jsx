@@ -37,11 +37,7 @@ class FixedPlugin extends Component{
     }
     onChangeClick(){
         this.setState({is_checked: !this.state.is_checked});
-        this.props.handleHasImage(this.state.is_checked);
-        if(this.state.is_checked === false)
-            this.props.handleImageClick(this.state.bgImage);
-        else
-            this.props.handleImageClick("");
+        this.props.handleHasImage(!this.state.is_checked);
     }
     render(){
         return (
