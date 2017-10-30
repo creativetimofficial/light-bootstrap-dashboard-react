@@ -34,6 +34,7 @@ Other Products:
 4. Run in terminal: ```npm install```
 5. Then: ```npm start```
 6. Navigate to `http://localhost:3000/`
+7. (optional) Run in terminal `npm i -g cross-env`
 
 ### What's included
 
