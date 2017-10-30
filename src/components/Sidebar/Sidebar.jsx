@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 
 import HeaderLinks from '../Header/HeaderLinks.jsx';
 
-import imagine from 'assets/img/sidebar-3.jpg';
 import logo from 'assets/img/reactlogo.png';
 
 class Sidebar extends Component{
@@ -26,22 +25,21 @@ class Sidebar extends Component{
     }
     render(){
         const sidebarBackground = {
-            backgroundImage: 'url(' + imagine + ')'
+            backgroundImage: 'url(' + this.props.bgImage + ')'
         };
         return (
-            <div id="sidebar" className="sidebar" data-color="black" data-image={imagine}>
-                <div className="sidebar-background" style={sidebarBackground}></div>
-                    <div className="logo">
-                        <a href="https://www.creative-tim.com" className="simple-text logo-mini">
-                            <div className="logo-img">
-                                <img src={logo} alt="logo_image"/>
-                            </div>
-
-                        </a>
-                        <a href="https://www.creative-tim.com" className="simple-text logo-normal">
-                            Creative Tim
-                        </a>
-                    </div>
+            <div id="sidebar" className="sidebar" data-color={this.props.dataColor} data-image={this.props.bgImage}>
+                {this.props.hasImage === true ? (<div className="sidebar-background" style={sidebarBackground}></div>):""}
+                <div className="logo">
+                    <a href="https://www.creative-tim.com" className="simple-text logo-mini">
+                        <div className="logo-img">
+                            <img src={logo} alt="Something"/>
+                        </div>
+                    </a>
+                    <a href="https://www.creative-tim.com" className="simple-text logo-normal">
+                        Creative Tim
+                    </a>
+                </div>
                 <div className="sidebar-wrapper">
                     <ul className="nav">
                         { this.state.width <= 991 ? (<HeaderLinks />):null }

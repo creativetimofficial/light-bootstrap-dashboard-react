@@ -18,13 +18,33 @@ import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import Sidebar from 'components/Sidebar/Sidebar';
 
+import FixedPlugin from 'components/FixedPlugin/FixedPlugin.jsx';
+
 import {style} from "variables/Variables.jsx";
 
+import imagine from "assets/img/sidebar-3.jpg";
 
 class App extends Component {
     constructor(props){
         super(props);
+        this.state = {
+            image: imagine,
+            color: "black",
+            hasImage: true
+        };
         this.componentDidMount = this.componentDidMount.bind(this);
+        this.handleImageClick = this.handleImageClick.bind(this);
+        this.handleColorClick = this.handleColorClick.bind(this);
+        this.handleHasImage = this.handleHasImage.bind(this);
+    }
+    handleImageClick(image){
+        this.setState({image: image});
+    }
+    handleColorClick(color){
+        this.setState({color: color});
+    }
+    handleHasImage(hasImage){
+        this.setState({hasImage: hasImage});
     }
     componentDidMount(){
         var _notificationSystem = this.refs.notificationSystem;
@@ -63,10 +83,14 @@ class App extends Component {
 
                 <div className="wrapper">
                     <NotificationSystem ref="notificationSystem" style={style}/>
-                    <Sidebar {...this.props} />
+                    <Sidebar
+                        bgImage={this.state["image"]}
+                        dataColor={this.state["color"]}
+                        hasImage={this.state["hasImage"]}
+                        {...this.props}
+                    />
                     <div id="main-panel" className="main-panel">
                         <Header {...this.props}/>
-
                             <Switch>
                                 <Route path="/dashboard" component={Dashboard}/>
                                 <Route path="/user" component={UserProfile}/>
@@ -77,8 +101,13 @@ class App extends Component {
                                 <Route path="/notifications" component={Notifications}/>
                                 <Redirect from="/" to="/dashboard"/>
                             </Switch>
-
                         <Footer />
+                        <FixedPlugin
+                            handleImageClick={this.handleImageClick}
+                            handleColorClick={this.handleColorClick}
+                            handleHasImage={this.handleHasImage}
+                            bgColor={this.state["color"]}
+                            bgImage={this.state["image"]}/>
                     </div>
                 </div>
 
