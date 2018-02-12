@@ -5,7 +5,7 @@ class Footer extends Component {
 	render() {
 		return (
             <footer className="footer">
-                <Grid>
+                <Grid fluid>
                     <nav className="pull-left">
                         <ul>
                             <li>
