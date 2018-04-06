@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/styles';
 
-import Button from 'elements/CustomButton/CustomButton';
+import Button from 'components/CustomButton/CustomButton';
 
 
 const codeColors = `<Button>Default</Button>
@@ -35,7 +35,7 @@ class RowButtons extends Component {
                     To use the custom buttons you need to import the custom made component:
                 </p>
                 <SyntaxHighlighter language="javascript" style={monokaiSublime}>
-                    {`import Button from 'elements/CustomButton/CustomButton';`}
+                    {`import Button from 'components/CustomButton/CustomButton';`}
                 </SyntaxHighlighter>
                 <h4>Colors</h4>
                 <p>

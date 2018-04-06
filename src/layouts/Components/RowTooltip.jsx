@@ -3,7 +3,7 @@ import {Tooltip,OverlayTrigger} from 'react-bootstrap';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/styles';
 
-import Button from 'elements/CustomButton/CustomButton.jsx';
+import Button from 'components/CustomButton/CustomButton.jsx';
 
 const edit = (<Tooltip id="edit_tooltip">Edit Task</Tooltip>);
 const remove = (<Tooltip id="remove_tooltip">Remove</Tooltip>);

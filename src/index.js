@@ -8,13 +8,11 @@ import {
 } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
+import indexRoutes from "routes/index.jsx";
 
-import App from 'containers/App/App.jsx';
-import Components from 'containers/Components/Components.jsx';
-
-import 'assets/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import 'assets/css/animate.min.css';
-import 'assets/sass/light-bootstrap-dashboard.css';
+import "./assets/sass/light-bootstrap-dashboard.css?v=1.2.0";
 import 'assets/css/demo.css';
 import 'assets/css/pe-icon-7-stroke.css';
 import 'containers/Components/assets/css/Components.css';
@@ -31,10 +29,11 @@ history.listen( location =>  {
 });
 
 ReactDOM.render((
-    <HashRouter history={history}>
+    <HashRouter>
         <Switch>
-            <Route path="/components" name="Components" component={Components}/>
-            <Route path="/" name="Home" component={App}/>
+          {indexRoutes.map((prop, key) => {
+            return <Route to={prop.path} component={prop.component} key={key} />;
+          })}
         </Switch>
     </HashRouter>
 ),document.getElementById('root'));

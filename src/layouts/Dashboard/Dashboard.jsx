@@ -15,9 +15,9 @@ import FixedPlugin from 'components/FixedPlugin/FixedPlugin.jsx';
 import {style} from "variables/Variables.jsx";
 
 import imagine from "assets/img/sidebar-3.jpg";
-import appRoutes from 'routes/app.jsx';
+import dashboardRoutes from 'routes/dashboard.jsx';
 
-class App extends Component {
+class Dashboard extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -109,6 +109,11 @@ class App extends Component {
         if(window.innerWidth < 993 && e.history.location.pathname !== e.location.pathname && document.documentElement.className.indexOf('nav-open') !== -1){
             document.documentElement.classList.toggle('nav-open');
         }
+        if (e.history.action === "PUSH") {
+          document.documentElement.scrollTop = 0;
+          document.scrollingElement.scrollTop = 0;
+          this.refs.mainPanel.scrollTop = 0;
+        }
     }
     render() {
         return (
@@ -125,7 +130,7 @@ class App extends Component {
                         <Header {...this.props}/>
                             <Switch>
                                 {
-                                    appRoutes.map((prop,key) => {
+                                    dashboardRoutes.map((prop,key) => {
                                         if(prop.name === "Notifications")
                                             return (
                                                 <Route
@@ -161,4 +166,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Dashboard;

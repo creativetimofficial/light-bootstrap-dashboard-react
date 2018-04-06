@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
-import Checkbox from 'elements/CustomCheckbox/CustomCheckbox';
+import Checkbox from 'components/CustomCheckbox/CustomCheckbox';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/styles';
 
@@ -28,7 +28,7 @@ class RowCheckbox extends Component {
                     component:
                 </p>
                 <SyntaxHighlighter language="javascript" style={monokaiSublime}>
-                    {`import Checkbox from 'elements/CustomCheckbox/CustomCheckbox';`}
+                    {`import Checkbox from 'components/CustomCheckbox/CustomCheckbox';`}
                 </SyntaxHighlighter>
                 <div>
                     <Checkbox

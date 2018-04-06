@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
-import Radio from 'elements/CustomRadio/CustomRadio';
+import Radio from 'components/CustomRadio/CustomRadio';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/styles';
 
@@ -58,7 +58,7 @@ class RowCheckbox extends Component {
                     component:
                 </p>
                 <SyntaxHighlighter language="javascript" style={monokaiSublime}>
-                    {`import Radio from 'elements/CustomRadio/CustomRadio';`}
+                    {`import Radio from 'components/CustomRadio/CustomRadio';`}
                 </SyntaxHighlighter>
                 <div>
                     <Radio
