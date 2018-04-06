@@ -1,27 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import {
-    HashRouter,
-    Route,
-    Switch
-} from 'react-router-dom';
+import { HashRouter, Route, Switch } from "react-router-dom";
 
-import App from 'containers/App/App.jsx';
+import indexRoutes from "routes/index.jsx";
 
-import './assets/css/bootstrap.min.css';
-import './assets/css/animate.min.css';
-import './assets/sass/light-bootstrap-dashboard.css';
-import './assets/css/demo.css';
-import './assets/css/pe-icon-7-stroke.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./assets/css/animate.min.css";
+import "./assets/sass/light-bootstrap-dashboard.css?v=1.2.0";
+import "./assets/css/demo.css";
+import "./assets/css/pe-icon-7-stroke.css";
 
-
-
-
-ReactDOM.render((
-    <HashRouter>
-        <Switch>
-            <Route path="/" name="Home" component={App}/>
-        </Switch>
-    </HashRouter>
-),document.getElementById('root'));
+ReactDOM.render(
+  <HashRouter>
+    <Switch>
+      {indexRoutes.map((prop, key) => {
+        return <Route to={prop.path} component={prop.component} key={key} />;
+      })}
+    </Switch>
+  </HashRouter>,
+  document.getElementById("root")
+);

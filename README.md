@@ -41,20 +41,22 @@ Other Products:
 Within the download you'll find the following directories and files:
 ```
 Light Bootstrap Dashboard React
+├── CHANGELOG.md
+├── LICENSE.md
+├── README.md
+├── package.json
 ├── Documentation
 │   ├── css
 │   ├── img
 │   └── tutorial-components.html
-├── README.md
-├── package.json
 ├── public
-│   ├── assets
-│   │   └── img
-│   │       └── faces
+│   ├── apple-icon.png
 │   ├── favicon.ico
 │   ├── index.html
-│   └── manifest.json
+│   ├── manifest.json
+│   └── sidebar-5.jpg
 └── src
+    ├── index.js
     ├── assets
     │   ├── css
     │   ├── fonts
@@ -62,10 +64,18 @@ Light Bootstrap Dashboard React
     │   │   └── faces
     │   └── sass
     │       ├── lbd
+    │       │   └── mixins
+    │       ├── light-bootstrap-dashboard.css
     │       └── light-bootstrap-dashboard.scss
     ├── components
     │   ├── Card
     │   │   └── Card.jsx
+    │   ├── CustomButton
+    │   │   └── CustomButton.jsx
+    │   ├── CustomCheckbox
+    │   │   └── CustomCheckbox.jsx
+    │   ├── CustomRadio
+    │   │   └── CustomRadio.jsx
     │   ├── Footer
     │   │   └── Footer.jsx
     │   ├── FormInputs
@@ -75,21 +85,18 @@ Light Bootstrap Dashboard React
     │   │   └── HeaderLinks.jsx
     │   ├── Sidebar
     │   │   └── Sidebar.jsx
+    │   ├── StatsCard
+    │   │   └── StatsCard.jsx
     │   ├── Tasks
     │   │   └── Tasks.jsx
     │   └── UserCard
     │       └── UserCard.jsx
-    ├── containers
-    │   └── App
-    │       └── App.jsx
-    ├── elements
-    │   ├── CustomButton
-    │   │   └── CustomButton.jsx
-    │   ├── CustomCheckbox
-    │   │   └── CustomCheckbox.jsx
-    │   └── CustomRadio
-    │       └── CustomRadio.jsx
-    ├── index.js
+    ├── layouts
+    │   └── Dashboard
+    │       └── Dashboard.jsx
+    ├── routes
+    │   ├── dashboard.jsx
+    │   └── index.jsx
     ├── variables
     │   └── Variables.jsx
     └── views
@@ -105,6 +112,8 @@ Light Bootstrap Dashboard React
         │   └── TableList.jsx
         ├── Typography
         │   └── Typography.jsx
+        ├── Upgrade
+        │   └── Upgrade.jsx
         └── UserProfile
             └── UserProfile.jsx
 ```
@@ -133,5 +142,5 @@ Instagram: <https://instagram.com/creativetimofficial>
 [CHANGELOG]: ./CHANGELOG.md
 
 [LICENSE]: ./LICENSE.md
-[version-badge]: https://img.shields.io/badge/version-1.1.0-blue.svg
+[version-badge]: https://img.shields.io/badge/version-1.2.0-blue.svg
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
