@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { monokaiSublime } from 'react-syntax-highlighter/dist/styles';
-import ChartistGraph from 'react-chartist';
+import React, { Component } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter/prism";
+import { prism } from "react-syntax-highlighter/styles/prism";
+import ChartistGraph from "react-chartist";
 
 import {
-    dataPie,
-    dataSales,
-    optionsSales,
-    responsiveSales,
-    dataBar,
-    optionsBar,
-    responsiveBar
-} from 'variables/Variables.jsx';
+  dataPie,
+  dataSales,
+  optionsSales,
+  responsiveSales,
+  dataBar,
+  optionsBar,
+  responsiveBar
+} from "variables/Variables.jsx";
 
 const codeExampleData = `var dataPie = {
     labels: ['62%','32%','6%'],
@@ -104,64 +104,64 @@ const codeExample = `<div className="row">
     </div>
 </div>`;
 
-
 class RowNotifications extends Component {
-    render() {
-        return (
-            <div id="charts-row" className="tim-row">
-                <h2>Charts</h2>
-                <legend></legend>
-                <p>
-                    For the charts part we used a react component.
-                </p>
-                <SyntaxHighlighter language="javascript" style={monokaiSublime}>
-                    {`import ChartistGraph from 'react-chartist';`}
-                </SyntaxHighlighter>
-                <h4>Code example</h4>
-                <div className="row">
-                    <div className="col-md-4" style={{maxHeight:"320px"}}>
-                        <ChartistGraph data={dataPie} type="Pie"/>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-8" style={{maxHeight:"320px"}}>
-                        <ChartistGraph
-                            data={dataSales}
-                            type="Line"
-                            options={optionsSales}
-                            responsiveOptions={responsiveSales}/>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-8" style={{maxHeight:"320px"}}>
-                        <ChartistGraph
-                            data={dataBar}
-                            type="Bar"
-                            options={optionsBar}
-                            responsiveOptions={responsiveBar}
-                        />
-                    </div>
-                </div>
-                    <SyntaxHighlighter language="html" style={monokaiSublime}>
-                        {codeExample}
-                    </SyntaxHighlighter>
-                    <SyntaxHighlighter language="javascript" style={monokaiSublime}>
-                        {codeExampleData}
-                    </SyntaxHighlighter>
-                    <h4>Details and Props</h4>
-                    <p>
-                        For details and props, please refer to{' '}
-                        <a
-                            href="https://github.com/fraserxu/react-chartist"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >
-                                react-chartist documentation
-                            </a>.
-                        </p>
-                    </div>
-                );
-            }
-        }
+  render() {
+    return (
+      <div id="charts-row" className="tim-row">
+        <h2>
+          React Chartist v0.13.1, react wrapper component for Chartist v0.10.1
+        </h2>
+        <legend />
+        <p>For the charts part we used a react component.</p>
+        <SyntaxHighlighter language="jsx" style={prism}>
+          {`import ChartistGraph from 'react-chartist';`}
+        </SyntaxHighlighter>
+        <h4>Code example</h4>
+        <div className="row">
+          <div className="col-md-4" style={{ maxHeight: "320px" }}>
+            <ChartistGraph data={dataPie} type="Pie" />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-8" style={{ maxHeight: "320px" }}>
+            <ChartistGraph
+              data={dataSales}
+              type="Line"
+              options={optionsSales}
+              responsiveOptions={responsiveSales}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-8" style={{ maxHeight: "320px" }}>
+            <ChartistGraph
+              data={dataBar}
+              type="Bar"
+              options={optionsBar}
+              responsiveOptions={responsiveBar}
+            />
+          </div>
+        </div>
+        <SyntaxHighlighter language="jsx" style={prism}>
+          {codeExample}
+        </SyntaxHighlighter>
+        <SyntaxHighlighter language="jsx" style={prism}>
+          {codeExampleData}
+        </SyntaxHighlighter>
+        <h4>Details and Props</h4>
+        <p>
+          For details and props, please refer to{" "}
+          <a
+            href="https://github.com/fraserxu/react-chartist"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            react-chartist documentation
+          </a>.
+        </p>
+      </div>
+    );
+  }
+}
 
-        export default RowNotifications;
+export default RowNotifications;

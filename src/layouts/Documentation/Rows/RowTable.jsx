@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { Table } from 'react-bootstrap';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { monokaiSublime } from 'react-syntax-highlighter/dist/styles';
+import React, { Component } from "react";
+import { Table } from "react-bootstrap";
+import SyntaxHighlighter from "react-syntax-highlighter/prism";
+import { prism } from "react-syntax-highlighter/styles/prism";
 
-import {thArray, tdArray} from 'variables/Variables.jsx';
+import { thArray, tdArray } from "variables/Variables.jsx";
 
 const codeExamplethArray = `const thArray = ["ID","Name","Salary","Country","City"];`;
 const codeExampletdArray = `const tdArray = [
@@ -73,98 +73,81 @@ const codeExample = `<Table hover>
     </tbody>
 </Table>`;
 
-
 class RowTable extends Component {
-    render() {
-        return (
-            <div id="tables-row" className="tim-row">
-                <h2>Tables</h2>
-                <legend></legend>
-                <h4>Example code</h4>
-                <Table striped hover>
-                    <thead>
-                        <tr>
-                            {
-                                thArray.map((prop, key) => {
-                                    return (
-                                        <th  key={key}>{prop}</th>
-                                    );
-                                })
-                            }
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            tdArray.map((prop,key) => {
-                                return (
-                                    <tr key={key}>{
-                                        prop.map((prop,key)=> {
-                                            return (
-                                                <td  key={key}>{prop}</td>
-                                            );
-                                        })
-                                    }</tr>
-                                )
-                            })
-                        }
-                    </tbody>
-                </Table>
-                <SyntaxHighlighter language="html" style={monokaiSublime}>
-                    {codeExampleStriped}
-                </SyntaxHighlighter>
-                <Table hover>
-                    <thead>
-                        <tr>
-                            {
-                                thArray.map((prop, key) => {
-                                    return (
-                                        <th  key={key}>{prop}</th>
-                                    );
-                                })
-                            }
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            tdArray.map((prop,key) => {
-                                return (
-                                    <tr key={key}>{
-                                        prop.map((prop,key)=> {
-                                            return (
-                                                <td  key={key}>{prop}</td>
-                                            );
-                                        })
-                                    }</tr>
-                                )
-                            })
-                        }
-                    </tbody>
-                </Table>
-                <SyntaxHighlighter language="html" style={monokaiSublime}>
-                    {codeExample}
-                </SyntaxHighlighter>
-                <SyntaxHighlighter language="javascript" style={monokaiSublime}>
-                    {codeExamplethArray}
-                </SyntaxHighlighter>
-                <SyntaxHighlighter language="javascript" style={monokaiSublime}>
-                    {codeExampletdArray}
-                </SyntaxHighlighter>
-                <h4>Details</h4>
-                <p>
-                    For tables we've used the map function to make the data in them more dynamically. They
-                    are simple <code>Table</code> elements from react-bootstrap. For more information on them
-                    you can refer to{' '}
-                    <a
-                        href="https://react-bootstrap.github.io/components.html#tables"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >
-                            react-bootstrap documentation
-                        </a>.
-                    </p>
-                </div>
-        );
-    }
+  render() {
+    return (
+      <div id="tables-row" className="tim-row">
+        <h2>Tables</h2>
+        <legend />
+        <h4>Example code</h4>
+        <Table striped hover>
+          <thead>
+            <tr>
+              {thArray.map((prop, key) => {
+                return <th key={key}>{prop}</th>;
+              })}
+            </tr>
+          </thead>
+          <tbody>
+            {tdArray.map((prop, key) => {
+              return (
+                <tr key={key}>
+                  {prop.map((prop, key) => {
+                    return <td key={key}>{prop}</td>;
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+        <SyntaxHighlighter language="jsx" style={prism}>
+          {codeExampleStriped}
+        </SyntaxHighlighter>
+        <Table hover>
+          <thead>
+            <tr>
+              {thArray.map((prop, key) => {
+                return <th key={key}>{prop}</th>;
+              })}
+            </tr>
+          </thead>
+          <tbody>
+            {tdArray.map((prop, key) => {
+              return (
+                <tr key={key}>
+                  {prop.map((prop, key) => {
+                    return <td key={key}>{prop}</td>;
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+        <SyntaxHighlighter language="jsx" style={prism}>
+          {codeExample}
+        </SyntaxHighlighter>
+        <SyntaxHighlighter language="jsx" style={prism}>
+          {codeExamplethArray}
+        </SyntaxHighlighter>
+        <SyntaxHighlighter language="jsx" style={prism}>
+          {codeExampletdArray}
+        </SyntaxHighlighter>
+        <h4>Details</h4>
+        <p>
+          For tables we've used the map function to make the data in them more
+          dynamically. They are simple <code>Table</code> elements from
+          react-bootstrap. For more information on them you can refer to{" "}
+          <a
+            href="https://react-bootstrap.github.io/components/table/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            react-bootstrap documentation
+          </a>.
+        </p>
+      </div>
+    );
+  }
 }
 
 export default RowTable;

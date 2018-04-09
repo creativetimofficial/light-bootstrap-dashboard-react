@@ -12,10 +12,16 @@
     "react-bootstrap": "0.32.1",
     "react-chartist": "0.13.1",
     "react-dom": "16.2.0",
+    "react-facebook-pixel": "0.1.1",
+    "react-ga": "2.4.1",
+    "react-github-button": "0.1.11",
     "react-google-maps": "9.4.5",
     "react-notification-system": "0.2.17",
     "react-router-dom": "4.2.2",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "react-share": "2.1.0",
+    "react-syntax-highlighter": "7.0.2",
+    "react-toggle": "4.0.2"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
