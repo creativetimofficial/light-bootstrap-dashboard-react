@@ -9,8 +9,8 @@ import {
 import ReactGA from 'react-ga';
 
 
-import App from 'containers/App/App.jsx';
-import Components from 'containers/Components/Components.jsx';
+import Dashboard from 'layouts/Dashboard/Dashboard.jsx';
+import Components from 'layouts/Components/Components.jsx';
 
 import 'assets/css/bootstrap.min.css';
 import 'assets/css/animate.min.css';
@@ -18,6 +18,10 @@ import 'assets/sass/light-bootstrap-dashboard.css';
 import 'assets/css/demo.css';
 import 'assets/css/pe-icon-7-stroke.css';
 import 'containers/Components/assets/css/Components.css';
+
+import indexRoutes from "routes/index.jsx";
+
+console.log(indexRoutes);
 
 const history = createBrowserHistory();
 
@@ -33,8 +37,13 @@ history.listen( location =>  {
 ReactDOM.render((
     <HashRouter history={history}>
         <Switch>
-            <Route path="/components" name="Components" component={Components}/>
-            <Route path="/" name="Home" component={App}/>
+            {/* <Route path="/components" name="Components" component={Components}/>
+            <Route path="/" name="Home" component={App}/> */}
+            {
+              indexRoutes.map((prop,key) => {
+                return (<Route path={prop.path} name={prop.name} component={prop.component} key={key}/>);
+              })
+            }
         </Switch>
     </HashRouter>
 ),document.getElementById('root'));
