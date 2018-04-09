@@ -3,7 +3,7 @@ import { Navbar } from 'react-bootstrap';
 
 import HeaderLinks from './HeaderLinks.jsx';
 
-import appRoutes from 'routes/app.jsx';
+import dashboardRoutes from 'routes/dashboard.jsx';
 
 class Header extends Component{
     constructor(props){
@@ -32,7 +32,7 @@ class Header extends Component{
     }
     getBrand(){
         var name;
-        appRoutes.map((prop,key) => {
+        dashboardRoutes.map((prop,key) => {
             if(prop.collapse){
                  prop.views.map((prop,key) => {
                     if(prop.path === this.props.location.pathname){

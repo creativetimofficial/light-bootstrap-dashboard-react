@@ -94,11 +94,13 @@ class FixedPlugin extends Component{
 
                         <li className="button-container">
                             <div className="">
-                                <a href="https://www.creative-tim.com/product/light-bootstrap-dashboard-react" target="_blank" className="btn btn-info btn-block btn-fill">Download, it's free!</a>
+                                {
+                                  // eslint-disable-next-line
+                                }<a href="https://www.creative-tim.com/product/light-bootstrap-dashboard-react" target="_blank" className="btn btn-info btn-block btn-fill">Download, it's free!</a>
                             </div>
                         </li>
                         <li className="button-container">
-                            <NavLink to={'/components'} className="btn btn-fill btn-warning" activeClassName="active">
+                            <NavLink to={'/documentation'} className="btn btn-fill btn-warning" activeClassName="active">
                                 Documentation
                             </NavLink>
                         </li>

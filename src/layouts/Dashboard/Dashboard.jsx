@@ -15,9 +15,9 @@ import FixedPlugin from 'components/FixedPlugin/FixedPlugin.jsx';
 import {style} from "variables/Variables.jsx";
 
 import imagine from "assets/img/sidebar-3.jpg";
-import appRoutes from 'routes/app.jsx';
+import dashboardRoutes from 'routes/dashboard.jsx';
 
-class App extends Component {
+class Dashboard extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -125,7 +125,7 @@ class App extends Component {
                         <Header {...this.props}/>
                             <Switch>
                                 {
-                                    appRoutes.map((prop,key) => {
+                                    dashboardRoutes.map((prop,key) => {
                                         if(prop.name === "Notifications")
                                             return (
                                                 <Route
@@ -161,4 +161,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Dashboard;

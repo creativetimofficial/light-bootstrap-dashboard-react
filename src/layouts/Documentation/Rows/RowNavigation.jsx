@@ -38,7 +38,7 @@ class RowNavigation extends Component {
                 </p>
                 <p>
                     For it to work, it has two main components. The first one you will find it in <code>src/components/Sidebar/Sidebar.jsx</code>.
-                    This is the component from the <code>Sidebar</code> component itself. We've decided to create a variable for the routes, these are found in <code>src/routes/app.jsx</code>.
+                    This is the component from the <code>Sidebar</code> component itself. We've decided to create a variable for the routes, these are found in <code>src/routes/dashboard.jsx</code>.
                     We import them in this componente (<code>Sidebar</code>) and create a navigation link to each one. These navigation links took like this:
                 </p>
                 <SyntaxHighlighter language="html" style={monokaiSublime}>

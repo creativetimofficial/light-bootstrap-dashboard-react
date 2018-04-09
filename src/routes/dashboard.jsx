@@ -7,7 +7,7 @@ import Maps from 'views/Maps/Maps';
 import Notifications from 'views/Notifications/Notifications';
 import Upgrade from 'views/Upgrade/Upgrade';
 
-const appRoutes = [
+const dashboardRoutes = [
     { path: "/dashboard", name: "Dashboard", icon: "pe-7s-graph", component: Dashboard },
     { path: "/user", name: "User Profile", icon: "pe-7s-user", component: UserProfile },
     { path: "/table", name: "Table List", icon: "pe-7s-note2", component: TableList },
@@ -19,4 +19,4 @@ const appRoutes = [
     { redirect: true, path:"/", to:"/dashboard", name: "Dashboard" }
 ];
 
-export default appRoutes;
+export default dashboardRoutes;

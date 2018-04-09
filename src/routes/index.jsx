@@ -1,8 +1,8 @@
 import Dashboard from 'layouts/Dashboard/Dashboard.jsx';
-import Components from 'layouts/Components/Components.jsx';
+import Documentation from 'layouts/Documentation/Documentation.jsx';
 
 const indexRoutes = [
-  { path: "/components", name: "Components", component: Components },
+  { path: "/documentation", name: "Components", component: Documentation },
   { path: "/", name: "Home", component: Dashboard },
 ]
 

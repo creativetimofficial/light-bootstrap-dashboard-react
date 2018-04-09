@@ -1,23 +1,16 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import {
+  Link,
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
 
-import Sidebar from './Sidebar.jsx';
-import RowButtons from './RowButtons.jsx';
-import RowCheckbox from './RowCheckbox.jsx';
-import RowInputs from './RowInputs.jsx';
-import RowDropdown from './RowDropdown.jsx';
-import RowNavigation from './RowNavigation.jsx';
-import RowTable from './RowTable.jsx';
-import RowTooltip from './RowTooltip.jsx';
-import RowIcons from './RowIcons.jsx';
-import RowNotifications from './RowNotifications.jsx';
-import RowCharts from './RowCharts.jsx';
-import RowCard from './RowCard.jsx';
-import RowMap from './RowMap.jsx';
-import RowGettingStarted from './RowGettingStarted.jsx';
-import RowLicense from './RowLicense.jsx';
-import RowRadio from './RowRadio.jsx';
+import Sidebar from './Components/Sidebar.jsx';
+
+import documentationRoutes from "routes/documentation.jsx";
 
 import ctLogo from './assets/img/new_logo.png';
 import imagine from './assets/img/full-image-1.jpg';
@@ -27,7 +20,7 @@ const headerBackground = {
 };
 
 
-class Components extends Component {
+class Documentation extends Component {
     constructor(props){
         super(props);
         this.handleScroll = this.handleScroll.bind(this);
@@ -45,21 +38,10 @@ class Components extends Component {
         }
     }
     componentDidMount() {
-        window.location.hash = window.decodeURIComponent(window.location.hash);
-        const scrollToAnchor = () => {
-            const hashParts = window.location.hash.split('#');
-            if (hashParts.length > 2) {
-                const hash = hashParts.slice(-1)[0];
-                document.querySelector(`#${hash}`).scrollIntoView();
-                const windowsScrollTop  = window.pageYOffset;
-                if(windowsScrollTop > 381){
-                    window.scrollTo(0,windowsScrollTop-100);
-                }
-            }
-        };
-        scrollToAnchor();
-        window.onhashchange = scrollToAnchor;
         window.addEventListener('scroll', this.handleScroll);
+    }
+    componentWillUnmount(){
+      window.removeEventListener('scroll', this.handleScroll);
     }
     render() {
         return (
@@ -100,6 +82,11 @@ class Components extends Component {
                 					</li>
                 				</ul>
                 				<ul  className="nav navbar-nav navbar-right">
+                          <li>
+                            <Link to='/' className="btn btn-simple btn-default">
+                              <i className="fa fa-list"></i> Back to dashboard
+                            </Link>
+                					</li>
                 					<li>
                 						<a href="https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues" target="_blank" rel="noopener noreferrer" className="btn btn-simple btn-default">
                 							<i className="fa fa-bug"></i> Report bug
@@ -135,21 +122,19 @@ class Components extends Component {
                                             <Sidebar />
                                         </Col>
                                         <Col md={8} offset={1}>
-                                            <RowLicense />
-                                            <RowGettingStarted />
-                                            <RowButtons />
-                                            <RowCheckbox />
-                                            <RowRadio />
-                                            <RowInputs />
-                                            <RowDropdown />
-                                            <RowNavigation />
-                                            <RowTable />
-                                            <RowTooltip />
-                                            <RowIcons />
-                                            <RowNotifications />
-                                            <RowCharts />
-                                            <RowCard />
-                                            <RowMap />
+                                            <Switch>
+                                                {
+                                                    documentationRoutes.map((prop,key) => {
+                                                        if(prop.redirect)
+                                                            return (
+                                                                <Redirect from={prop.path} to={prop.to} key={key}/>
+                                                            );
+                                                        return (
+                                                            <Route path={prop.path} component={prop.component} key={key}/>
+                                                        );
+                                                    })
+                                                }
+                                            </Switch>
                                         </Col>
                                     </Row>
                                 </Grid>
@@ -162,4 +147,4 @@ class Components extends Component {
     }
 }
 
-export default Components;
+export default Documentation;
