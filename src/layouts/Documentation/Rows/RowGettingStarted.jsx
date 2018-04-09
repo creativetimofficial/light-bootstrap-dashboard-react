@@ -3,70 +3,79 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/styles';
 
 const fileStructure = `Light Bootstrap Dashboard React
-├── Documentation
-│   ├── css
-│   ├── img
-│   └── tutorial-components.html
+├── CHANGELOG.md
+├── LICENSE.md
 ├── README.md
 ├── package.json
+├── Documentation
+│   ├── css
+│   ├── img
+│   └── tutorial-components.html
 ├── public
-│   ├── assets
-│   │   └── img
-│   │       └── faces
-│   ├── favicon.ico
-│   ├── index.html
-│   └── manifest.json
+│   ├── apple-icon.png
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── manifest.json
+│   └── sidebar-5.jpg
 └── src
-    ├── assets
-    │   ├── css
-    │   ├── fonts
-    │   ├── img
-    │   │   └── faces
-    │   └── sass
-    │       ├── lbd
-    │       └── light-bootstrap-dashboard.scss
-    ├── components
-    │   ├── Card
-    │   │   └── Card.jsx
-    │   ├── Footer
-    │   │   └── Footer.jsx
-    │   ├── FormInputs
-    │   │   └── FormInputs.jsx
-    │   ├── Header
-    │   │   ├── Header.jsx
-    │   │   └── HeaderLinks.jsx
-    │   ├── Sidebar
-    │   │   └── Sidebar.jsx
-    │   ├── Tasks
-    │   │   └── Tasks.jsx
-    │   └── UserCard
-    │       └── UserCard.jsx
-    ├── containers
-    │   └── App
-    │       └── App.jsx
-    ├── elements
-    │   ├── CustomButton
-    │   │   └── CustomButton.jsx
-    │   ├── CustomCheckbox
-    │   │   └── CustomCheckbox.jsx
-    │   └── CustomRadio
-    │       └── CustomRadio.jsx
     ├── index.js
+    ├── assets
+    │   ├── css
+    │   ├── fonts
+    │   ├── img
+    │   │   └── faces
+    │   └── sass
+    │       ├── lbd
+    │       │   └── mixins
+    │       ├── light-bootstrap-dashboard.css
+    │       └── light-bootstrap-dashboard.scss
+    ├── components
+    │   ├── Card
+    │   │   └── Card.jsx
+    │   ├── CustomButton
+    │   │   └── CustomButton.jsx
+    │   ├── CustomCheckbox
+    │   │   └── CustomCheckbox.jsx
+    │   ├── CustomRadio
+    │   │   └── CustomRadio.jsx
+    │   ├── Footer
+    │   │   └── Footer.jsx
+    │   ├── FormInputs
+    │   │   └── FormInputs.jsx
+    │   ├── Header
+    │   │   ├── Header.jsx
+    │   │   └── HeaderLinks.jsx
+    │   ├── Sidebar
+    │   │   └── Sidebar.jsx
+    │   ├── StatsCard
+    │   │   └── StatsCard.jsx
+    │   ├── Tasks
+    │   │   └── Tasks.jsx
+    │   └── UserCard
+    │       └── UserCard.jsx
+    ├── layouts
+    │   └── Dashboard
+    │       └── Dashboard.jsx
+    ├── routes
+    │   ├── dashboard.jsx
+    │   └── index.jsx
     ├── variables
-    │   └── Variables.jsx
+    │   └── Variables.jsx
     └── views
         ├── Dashboard
-        │   └── Dashboard.jsx
+        │   └── Dashboard.jsx
         ├── Icons
-        │   └── Icons.jsx
+        │   └── Icons.jsx
         ├── Maps
-        │   └── Maps.jsx
+        │   └── Maps.jsx
         ├── Notifications
-        │   └── Notifications.jsx
+        │   └── Notifications.jsx
         ├── TableList
-        │   └── TableList.jsx
+        │   └── TableList.jsx
         ├── Typography
-        │   └── Typography.jsx
+        │   └── Typography.jsx
+        ├── Upgrade
+        │   └── Upgrade.jsx
         └── UserProfile
             └── UserProfile.jsx`;
 

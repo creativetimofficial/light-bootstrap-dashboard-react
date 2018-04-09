@@ -37,6 +37,13 @@ class Documentation extends Component {
             title.classList.add("hidden");
         }
     }
+    componentDidUpdate(e){
+      if (e.history.action === "PUSH") {
+        document.documentElement.scrollTop = 0;
+        document.scrollingElement.scrollTop = 0;
+        this.refs.mainPanel.scrollTop = 0;
+      }
+    }
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
     }
