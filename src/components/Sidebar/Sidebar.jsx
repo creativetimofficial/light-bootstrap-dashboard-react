@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import React, {Component} from 'react';
+import { NavLink } from 'react-router-dom';
 
-import HeaderLinks from "../Header/HeaderLinks.jsx";
+import HeaderLinks from '../Header/HeaderLinks.jsx';
 
 import logo from 'assets/img/reactlogo.png';
 
-import dashboardRoutes from "routes/dashboard.jsx";
+import appRoutes from 'routes/app.jsx';
 
 class Sidebar extends Component{
     constructor(props){
@@ -45,7 +45,7 @@ class Sidebar extends Component{
                     <ul className="nav">
                         { this.state.width <= 991 ? (<HeaderLinks />):null }
                         {
-                            dashboardRoutes.map((prop,key) => {
+                            appRoutes.map((prop,key) => {
                                 if(!prop.redirect)
                                     return (
                                         <li className={prop.upgrade ? "active active-pro":this.activeRoute(prop.path)} key={key}>
@@ -60,9 +60,9 @@ class Sidebar extends Component{
                         }
                     </ul>
                 </div>
-      </div>
-    );
-  }
+            </div>
+        );
+    }
 }
 
 export default Sidebar;

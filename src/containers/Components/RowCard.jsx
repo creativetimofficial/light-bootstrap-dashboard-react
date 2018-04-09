@@ -8,7 +8,7 @@ import {Card} from 'components/Card/Card.jsx';
 import {UserCard} from 'components/UserCard/UserCard.jsx';
 import {StatsCard} from 'components/StatsCard/StatsCard.jsx';
 
-import Button from 'components/CustomButton/CustomButton.jsx';
+import Button from 'elements/CustomButton/CustomButton.jsx';
 
 import avatar from "assets/img/faces/face-3.jpg";
 
