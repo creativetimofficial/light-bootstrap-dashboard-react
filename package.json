@@ -2,9 +2,11 @@
   "name": "light-bootstrap-dashboard-react",
   "version": "1.2.0",
   "private": true,
+  "homepage": "https://creativetimofficial.github.io/light-bootstrap-dashboard-react",
   "dependencies": {
     "bootstrap": "3.3.7",
     "chartist": "0.10.1",
+    "gh-pages": "^1.1.0",
     "node-sass": "4.6.1",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "4.1.2",
