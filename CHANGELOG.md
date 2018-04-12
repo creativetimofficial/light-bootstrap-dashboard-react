@@ -1,6 +1,6 @@
 # Change Log
 
-## [1.2.0] 2018-04-10
+## [1.2.0] 2018-04-12
 ### Bug fixing
 - Added `fluid` prop on `Grid` component in `Footer`
 - Moved all the contents of `elements` folder to `components` folder and delete it
