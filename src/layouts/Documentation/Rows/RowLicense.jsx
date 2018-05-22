@@ -10,8 +10,8 @@ class RowLicense extends Component {
           <b>MIT License</b>
         </p>
         <p>
-          Copyright (c) 2017 Creative Tim (<a href="http://creative-tim.com/">
-            http://creative-tim.com/
+          Copyright (c) 2017 Creative Tim (<a href="https://creative-tim.com/">
+            https://creative-tim.com/
           </a>)
         </p>
         <p>

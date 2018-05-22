@@ -112,7 +112,7 @@ class RowGettingStarted extends Component {
           </li>
           <li>
             Navigate to{" "}
-            <a href="http://localhost:3000">http://localhost:3000</a>
+            <code>http://localhost:3000</code>
           </li>
           <li>
             If you don't have cross-env installed globally then run in terminal

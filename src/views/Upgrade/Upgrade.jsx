@@ -101,7 +101,7 @@ class Icons extends Component {
                         <td>
                           <Button
                             target="_blank"
-                            href="http://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react/?ref=lbd-react-free"
+                            href="https://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react/?ref=lbd-react-free"
                             round
                             fill
                             bsStyle="info"

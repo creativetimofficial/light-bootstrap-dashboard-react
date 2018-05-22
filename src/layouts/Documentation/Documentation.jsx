@@ -65,7 +65,7 @@ class Documentation extends Component {
                   <span className="icon-bar bar3" />
                 </button>
                 <a
-                  href="http://www.creative-tim.com"
+                  href="https://www.creative-tim.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
