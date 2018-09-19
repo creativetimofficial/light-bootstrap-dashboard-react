@@ -8,6 +8,9 @@ class CustomCheckbox extends Component {
     };
     this.handleClick = this.handleClick.bind(this);
   }
+  componentWillReceiveProps(newProps){
+    this.setState({ is_checked: newProps.isChecked ? true : false })
+  }
   handleClick() {
     this.setState({ is_checked: !this.state.is_checked });
   }
