@@ -1,2 +1,10 @@
 package-lock.json
 node_modules/
+
+
+# WebdriverIO Specific Files
+errorShots/
+screenshots/
+.reg
+reg.json
+reportBDR.html
