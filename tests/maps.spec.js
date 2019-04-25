@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 describe("Google Map Page", function() {
   beforeEach(function() {
-    browser.url("./#/icons");
+    browser.url("./#/maps");
   });
   it("renders Google page", function() {
     var results = browser.checkDocument();
