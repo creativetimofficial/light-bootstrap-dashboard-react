@@ -18,6 +18,7 @@
 - Changed our buggy routing system, now it should work flawlessly, for more info, please refer to our [live docs here](https://demos.creative-tim.com/light-bootstrap-dashboard-react/#/documentation/routing-system)
 - Solved
   -
+- Removed `.env` file and replaced it with `jsconfig.json`
 - Small bug fixes
 ### Removed dependencies/components
 - Deleted `src/routes/*` folder
