@@ -55,7 +55,7 @@ class Admin extends Component {
         return (
           <Route
             path={prop.layout + prop.path}
-            component={prop.component}
+            render={props => <prop.component {...props} handleClick={this.handleNotificationClick}/>}
             key={key}
           />
         );
