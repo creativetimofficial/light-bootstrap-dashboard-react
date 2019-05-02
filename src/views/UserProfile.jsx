@@ -28,7 +28,7 @@ class UserProfile extends Component {
                   <form>
                     <FormInputs
                       ncols={["col-md-5", "col-md-3", "col-md-4"]}
-                      proprieties={[
+                      properties={[
                         {
                           label: "Company (disabled)",
                           type: "text",
