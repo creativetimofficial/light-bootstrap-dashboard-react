@@ -67,6 +67,11 @@ Within the download you'll find the following directories and files:
 light-bootstrap-dashboard-react
 .
 ├── CHANGELOG.md
+├── ISSUE_TEMPLATE.md
+├── LICENSE.md
+├── README.md
+├── jsconfig.json
+├── package.json
 ├── Documentation
 │   ├── css
 │   │   ├── demo.css
@@ -74,11 +79,6 @@ light-bootstrap-dashboard-react
 │   │   └── light-bootstrap-dashboard.css
 │   ├── img
 │   └── tutorial-components.html
-├── ISSUE_TEMPLATE.md
-├── LICENSE.md
-├── README.md
-├── jsconfig.json
-├── package.json
 ├── public
 │   ├── favicon.ico
 │   ├── index.html
