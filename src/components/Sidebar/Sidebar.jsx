@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 import AdminNavbarLinks from "../Navbars/AdminNavbarLinks.jsx";
 
-import imagine from "assets/img/sidebar-3.jpg";
 import logo from "assets/img/reactlogo.png";
 
 class Sidebar extends Component {
