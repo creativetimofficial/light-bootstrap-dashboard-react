@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Toggle from "react-toggle";
 
-import Button from "components/CustomButton/CustomButton.jsx";
-
 import imagine1 from "assets/img/sidebar-1.jpg";
 import imagine2 from "assets/img/sidebar-2.jpg";
 import imagine3 from "assets/img/sidebar-3.jpg";
@@ -187,7 +185,7 @@ class FixedPlugin extends Component {
             </li>
             <li className="button-container">
               <a
-                href="https://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react?ref=lbdpr-fixed-plugin"
+                href="https://demos.creative-tim.com/light-bootstrap-dashboard-react/#/documentation/getting-started"
                 target="_blank"
                 className="btn btn-fill btn-info"
               >
