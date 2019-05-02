@@ -20,8 +20,8 @@ class FixedPlugin extends Component {
     this.props.handleFixedClick();
   };
   onChangeClick = () => {
+    this.props.handleHasImage(!this.state.bg_checked);
     this.setState({ bg_checked: !this.state.bg_checked });
-    this.props.handleHasImage(this.state.bg_checked);
   };
   render() {
     return (

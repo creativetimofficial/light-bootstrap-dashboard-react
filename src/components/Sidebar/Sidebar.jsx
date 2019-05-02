@@ -25,16 +25,20 @@ class Sidebar extends Component {
   }
   render() {
     const sidebarBackground = {
-      backgroundImage: "url(" + imagine + ")"
+      backgroundImage: "url(" + this.props.image + ")"
     };
     return (
       <div
         id="sidebar"
         className="sidebar"
-        data-color="black"
-        data-image={imagine}
+        data-color={this.props.color}
+        data-image={this.props.image}
       >
-        <div className="sidebar-background" style={sidebarBackground} />
+          {this.props.hasImage ? (
+            <div className="sidebar-background" style={sidebarBackground} />
+          ) : (
+            null
+          )}
         <div className="logo">
           <a
             href="https://www.creative-tim.com?ref=lbd-sidebar"
