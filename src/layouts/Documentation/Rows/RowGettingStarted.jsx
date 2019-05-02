@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
 const fileStructure = `Light Bootstrap Dashboard React
 ├── CHANGELOG.md
@@ -111,8 +111,7 @@ class RowGettingStarted extends Component {
             </SyntaxHighlighter>
           </li>
           <li>
-            Navigate to{" "}
-            <code>http://localhost:3000</code>
+            Navigate to <code>http://localhost:3000</code>
           </li>
           <li>
             If you don't have cross-env installed globally then run in terminal
@@ -146,7 +145,8 @@ class RowGettingStarted extends Component {
             rel="noopener noreferrer"
           >
             Create React App documentation
-          </a>.
+          </a>
+          .
         </p>
         <h3>File structure</h3>
         <SyntaxHighlighter language="jsx" style={prism}>

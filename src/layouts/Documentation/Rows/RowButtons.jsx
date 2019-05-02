@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Table } from "react-bootstrap";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
 import Button from "components/CustomButton/CustomButton";
 
@@ -164,7 +164,8 @@ class RowButtons extends Component {
             rel="noopener noreferrer"
           >
             react-bootstrap documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );

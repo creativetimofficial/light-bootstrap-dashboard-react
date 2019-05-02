@@ -1,6 +1,6 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
 class RowRoutingSystem extends React.Component {
   render() {
@@ -95,13 +95,19 @@ class RowRoutingSystem extends React.Component {
             </ul>
           </li>
         </ul>
-        <h2><code>Notice</code></h2>
+        <h2>
+          <code>Notice</code>
+        </h2>
         <p>
-          Because our routes are arrays of objects, and each route is an object, you can add what props you want in our routes and do what you want with them.
+          Because our routes are arrays of objects, and each route is an object,
+          you can add what props you want in our routes and do what you want
+          with them.
         </p>
         <p>
-          For example, if you want to "hide" a route (you want it to not be displayed in sidebar),
-          you could add a prop like <code>invisible: true</code> and then in sidebar add an if statement inside the <code>map</code> function of ours and do like this:
+          For example, if you want to "hide" a route (you want it to not be
+          displayed in sidebar), you could add a prop like{" "}
+          <code>invisible: true</code> and then in sidebar add an if statement
+          inside the <code>map</code> function of ours and do like this:
           <SyntaxHighlighter language="jsx" style={prism}>
             {`if(prop.invisible) return null;`}
           </SyntaxHighlighter>

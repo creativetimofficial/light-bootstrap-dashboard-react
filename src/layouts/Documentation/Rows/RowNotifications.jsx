@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Alert, Table } from "react-bootstrap";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import NotificationSystem from "react-notification-system";
 
 import { style } from "variables/Variables.jsx";
@@ -381,7 +381,8 @@ class RowNotifications extends Component {
             rel="noopener noreferrer"
           >
             react-notification-system documentation
-          </a>.
+          </a>
+          .
         </p>
         <div className="alert alert-info">
           In this page, the <code>Show notification</code> button has a random

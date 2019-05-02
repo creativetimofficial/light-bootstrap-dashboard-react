@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Table } from "react-bootstrap";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
 import { FormInputs } from "components/FormInputs/FormInputs.jsx";
 
@@ -122,7 +122,8 @@ class RowInputs extends Component {
                   rel="noopener noreferrer"
                 >
                   react-bootstrap documentation
-                </a>.
+                </a>
+                .
               </td>
             </tr>
           </tbody>
@@ -141,7 +142,8 @@ class RowInputs extends Component {
             rel="noopener noreferrer"
           >
             react-bootstrap documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );

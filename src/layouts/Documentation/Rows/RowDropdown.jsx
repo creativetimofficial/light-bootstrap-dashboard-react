@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Navbar, NavItem, Nav, NavDropdown, MenuItem } from "react-bootstrap";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
 const codeExample = `<Navbar collapseOnSelect fluid>
     <Navbar.Header>
@@ -143,20 +143,23 @@ class RowDropdown extends Component {
             rel="noopener noreferrer"
           >
             react-bootstrap documentation
-          </a>.
+          </a>
+          .
         </p>
 
         <div className="alert alert-warning">
           <strong>Warning!</strong> These type of dropdowns are used within{" "}
           <code>Navbar</code> components from react-bootstrap.
-          <br />For usage of normal dropdowns please refer to{" "}
+          <br />
+          For usage of normal dropdowns please refer to{" "}
           <a
             href="https://react-bootstrap.github.io/components/dropdowns/#btn-dropdowns"
             target="_blank"
             rel="noopener noreferrer"
           >
             react-bootstrap documentation
-          </a>.
+          </a>
+          .
         </div>
       </div>
     );

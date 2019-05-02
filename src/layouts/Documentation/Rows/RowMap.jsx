@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
-import Maps from "views/Maps/Maps";
+import Maps from "views/Maps.jsx";
 
 const codeExample = `import React from "react";
 // react components used to create a google map
@@ -68,7 +68,8 @@ class RowMap extends Component {
               rel="noopener noreferrer"
             >
               Google API Console
-            </a>.
+            </a>
+            .
           </li>
           <li>Create or select a project.</li>
           <li>Click Continue to enable the API and any related services.</li>
@@ -110,7 +111,8 @@ class RowMap extends Component {
             rel="noopener noreferrer"
           >
             link
-          </a>.
+          </a>
+          .
         </p>
         <h4>Example code</h4>
         <Maps />
@@ -127,7 +129,8 @@ class RowMap extends Component {
             rel="noopener noreferrer"
           >
             react-google-maps documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {createBrowserHistory} from "history";
-import {HashRouter, Route, Switch, Redirect} from "react-router-dom";
+import { createBrowserHistory } from "history";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import ReactGA from "react-ga";
 import ReactPixel from "react-facebook-pixel";
 
@@ -37,12 +37,18 @@ history.listen(location => {
   ReactPixel.fbq("track", "PageView");
 });
 
-ReactDOM.render(<HashRouter>
-  <Switch>
+ReactDOM.render(
+  <HashRouter>
     <Switch>
-      <Route path="/admin" render={props => <AdminLayout {...props} />} />
-      <Route path="/documentation" render={props => <DocumentationLayout {...props} />} />
-      <Redirect from="/" to="/admin/dashboard" />
+      <Switch>
+        <Route path="/admin" render={props => <AdminLayout {...props} />} />
+        <Route
+          path="/documentation"
+          render={props => <DocumentationLayout {...props} />}
+        />
+        <Redirect from="/" to="/admin/dashboard" />
+      </Switch>
     </Switch>
-  </Switch>
-</HashRouter>, document.getElementById("root"));
+  </HashRouter>,
+  document.getElementById("root")
+);

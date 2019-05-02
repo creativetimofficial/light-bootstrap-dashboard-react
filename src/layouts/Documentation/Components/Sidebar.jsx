@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Affix } from "react-overlays";
 import { Link } from "react-router-dom";
 
-import documentationRoutes from "routes/documentation.jsx";
+import documentationRoutes from "documentation.js";
 
 class Sidebar extends Component {
   render() {

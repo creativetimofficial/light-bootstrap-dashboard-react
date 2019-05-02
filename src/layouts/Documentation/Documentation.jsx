@@ -5,7 +5,7 @@ import { Grid, Row, Col } from "react-bootstrap";
 
 import Sidebar from "./Components/Sidebar.jsx";
 
-import documentationRoutes from "routes/documentation.jsx";
+import documentationRoutes from "documentation.js";
 
 import ctLogo from "./assets/img/new_logo.png";
 import imagine from "./assets/img/full-image-1.jpg";

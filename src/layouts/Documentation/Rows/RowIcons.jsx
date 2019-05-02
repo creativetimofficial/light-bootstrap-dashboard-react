@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
 const codeExmaple = `<div className="row all-icons">
     <div className="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
@@ -25,7 +25,8 @@ class RowIcons extends Component {
             href="http://themes-pixeden.com/font-demos/7-stroke/index.html"
           >
             Pixeden
-          </a>.
+          </a>
+          .
         </p>
 
         <h4>Example code</h4>

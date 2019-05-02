@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Table } from "react-bootstrap";
 import Radio from "components/CustomRadio/CustomRadio";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
 const codeExample = `<Radio
     number="3"
@@ -164,7 +164,8 @@ class RowCheckbox extends Component {
             rel="noopener noreferrer"
           >
             react-bootstrap documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );

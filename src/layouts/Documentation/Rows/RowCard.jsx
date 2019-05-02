@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Table } from "react-bootstrap";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import ChartistGraph from "react-chartist";
 
 import { Card } from "components/Card/Card.jsx";
@@ -223,7 +223,8 @@ class RowCard extends Component {
               <td>string</td>
               <td>null</td>
               <td>
-                Use this flag to make the card plain (no <code>background</code>).
+                Use this flag to make the card plain (no <code>background</code>
+                ).
               </td>
             </tr>
             <tr>

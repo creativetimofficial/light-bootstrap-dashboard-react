@@ -177,7 +177,12 @@ class FixedPlugin extends Component {
               <div className="">
                 {
                   // eslint-disable-next-line
-                }<a href="https://www.creative-tim.com/product/light-bootstrap-dashboard-react" target="_blank" className="btn btn-info btn-block btn-fill">
+                }
+                <a
+                  href="https://www.creative-tim.com/product/light-bootstrap-dashboard-react"
+                  target="_blank"
+                  className="btn btn-info btn-block btn-fill"
+                >
                   Download, it's free!
                 </a>
               </div>
