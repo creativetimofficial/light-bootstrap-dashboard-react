@@ -109,7 +109,7 @@ class RowNotifications extends Component {
     return (
       <div id="charts-row" className="tim-row">
         <h2>
-          React Chartist v0.13.1, react wrapper component for Chartist v0.10.1
+          React Chartist v0.13.3, react wrapper component for Chartist v0.10.1
         </h2>
         <legend />
         <p>For the charts part we used a react component.</p>

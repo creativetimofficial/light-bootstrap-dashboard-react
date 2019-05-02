@@ -1,102 +1,114 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/styles/prism";
+import { Alert } from "react-bootstrap";
 
-class RowRoutingSystem extends React.Component {
+class RoutingSystem extends React.Component {
   render() {
     return (
       <div>
         <h1 className="bd-title" id="content">
           Routing System
         </h1>
-        <p className="bd-lead">
-          For a better and easier way we've decided to create dynamic routes.
-          You will find all our demo routes in:
-        </p>
-        <ul>
-          <li>
-            <code>src/routes/dashboad.jsx</code>{" "}
-            <i>
-              (these are the routes for the{" "}
-              <code>src/layouts/Dashboard/Dashboard.jsx</code> pages)
-            </i>
-          </li>
-          <li>
-            <code>src/routes/index.jsx</code>{" "}
-            <i>(these are the routes for the whole app)</i>
-          </li>
-        </ul>
-        <p>Let's take a look at each one of them</p>
-        <h2>
-          <code>src/routes/index.jsx</code>
-        </h2>
+        <br />
         <p>
-          In this file you will see one route for the <code>Dashboard</code>{" "}
-          layout.
+          We've created these dynamic routes, so we wouldn't have to write them
+          in two places. On place would have been inside our{" "}
+          <Link to="/documentation/sidebar">Sidebar</Link> and the onther one
+          would be either the{" "}<code className="highlighter-rouge">src/Admin/Admin.jsx</code>{" "}
+          layout. You will find all our demo routes in{" "}
+          <code className="highlighter-rouge">src/routes.js</code>
         </p>
-        <p>
-          In case you want to add more layouts for your app, you can do so by
-          adding here your route for your layout.
-        </p>
-        <h2>
-          <code>src/routes/dashboad.jsx</code>
-        </h2>
-        <p>
-          These are the routes used inside of{" "}
-          <code>src/layouts/Dashboard/Dashboard.jsx</code> layout.
-        </p>
-        <p>
-          These routes are also used to create the links that appear in the{" "}
-          <code>Sidebar</code> component of the <code>Dashboard</code> layout.
-        </p>
+        <Alert color="warning">
+          Please note that these are just demo routes. You can delete them and
+          create your own routing system, or you can easily replace them with
+          normal{" "}
+          <a
+            href="https://reacttraining.com/react-router/web/api/Route"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Routes
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://reacttraining.com/react-router/web/api/Link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Links
+          </a>{" "}
+          or{" "}
+          <a
+            href="https://reacttraining.com/react-router/web/api/NavLink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            NavLinks
+          </a>{" "}
+          from{" "}
+          <a
+            href="https://reacttraining.com/react-router/web/example/basic"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            react-router-dom
+          </a>.
+          <br />
+          If you do not understand them, please take in consideration replacing
+          them with normal routes and use the <b>src/routes.js</b> just for
+          rendering Links inside the{" "}
+          <Link to="/documentation/sidebar">Sidebar</Link> component.
+        </Alert>
         <h2>Legend</h2>
         <ul>
           <li>
             <SyntaxHighlighter language="jsx" style={prism}>
-              {`{ redirect: true, path: "/path/name", pathTo: "/path/to", name: "Name" }`}
+              {`{ path: "/path/name", name: "Name Of the View", icon: "icon name", component: ViewComponent, layout: "/layout-path" },`}
             </SyntaxHighlighter>
             <ul>
               <li>
-                <code>redirect</code> (used to tell our deom app components this
-                is a redirect)
+                <code className="highlighter-rouge">path</code> (path for your
+                route - this will be seen in the browser url input - example{" "}
+                <code className="highlighter-rouge">/dashboard</code>)
               </li>
               <li>
-                <code>path</code> (which pathname to be redirected)
+                <code className="highlighter-rouge">name</code> (name of your
+                route - this will appear in the{" "}
+                <code className="highlighter-rouge">Sidebar</code> and{" "}
+                <code className="highlighter-rouge">Header</code> components -
+                example <code className="highlighter-rouge">Dashboard</code>)
               </li>
               <li>
-                <code>pathTo</code> (where to be redirected)
+                <code className="highlighter-rouge">icon</code> (icon to be
+                displayed alongside with links in{" "}
+                <code className="highlighter-rouge">Sidebar</code> component -
+                example <code className="highlighter-rouge">fa fa-heart</code>)
               </li>
               <li>
-                <code>name</code> (name of your route - this will appear in the{" "}
-                <code>Header</code> component)
-              </li>
-            </ul>
-          </li>
-          <li>
-            <SyntaxHighlighter language="jsx" style={prism}>
-              {`{ path: "/path/name", name: "Page Name", icon: "icon name", component: ComponentName},`}
-            </SyntaxHighlighter>
-            <ul>
-              <li>
-                <code>path</code> (path for your route - this will be seen in
-                the browser url input)
+                <code className="highlighter-rouge">component</code> (this is
+                the View component that you want to be displayed on the
+                specified route - example{" "}
+                <code className="highlighter-rouge">Dashboard</code>)
               </li>
               <li>
-                <code>name</code> (name of your route - this will appear in the{" "}
-                <code>Sidebar</code> and <code>Header</code> components)
-              </li>
-              <li>
-                <code>icon</code> (icon to be displayed alongside with links in{" "}
-                <code>Sidebar</code> component)
-              </li>
-              <li>
-                <code>component</code> (this is the page to be rendered)
+                <code className="highlighter-rouge">layout</code> (path of the
+                layout in which the View component you want to be rendered - in
+                our template demo you only have to options:{" "}
+                <code className="highlighter-rouge">/admin</code>- but due to
+                this routing system you can add more, for example{" "}
+                <code className="highlighter-rouge">/new-layout</code>)
               </li>
             </ul>
           </li>
         </ul>
+        <p>
+          For a better understanding, please take a look inside the file at
+          hand, and also how the routes are rendered while the app si opened.
+        </p>
         <h2>
-          <code>Notice</code>
+          <code className="highlighter-rouge">Notice</code>
         </h2>
         <p>
           Because our routes are arrays of objects, and each route is an object,
@@ -106,8 +118,10 @@ class RowRoutingSystem extends React.Component {
         <p>
           For example, if you want to "hide" a route (you want it to not be
           displayed in sidebar), you could add a prop like{" "}
-          <code>invisible: true</code> and then in sidebar add an if statement
-          inside the <code>map</code> function of ours and do like this:
+          <code className="highlighter-rouge">invisible: true</code> and then in
+          sidebar add an if statement inside the{" "}
+          <code className="highlighter-rouge">map</code> function of ours and do
+          like this:
           <SyntaxHighlighter language="jsx" style={prism}>
             {`if(prop.invisible) return null;`}
           </SyntaxHighlighter>
@@ -117,4 +131,4 @@ class RowRoutingSystem extends React.Component {
   }
 }
 
-export default RowRoutingSystem;
+export default RoutingSystem;
