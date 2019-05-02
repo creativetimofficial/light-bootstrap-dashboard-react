@@ -31,6 +31,7 @@
 - @types/react@16.8.13 (to stop install warnings)
 - typescript@3.4.3 (to stop install warnings)
 - react-router@5.0.0 (react-router-dom auto-installs this package, but it is better to have them both inside package.json)
+- react-bootstrap-switch@15.5.3
 ### Update dependencies
 - node-sass           4.6.1   →   4.12.0
 - react              16.2.0   →   16.8.6

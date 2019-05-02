@@ -5,16 +5,23 @@ import NotificationSystem from "react-notification-system";
 import AdminNavbar from "components/Navbars/AdminNavbar";
 import Footer from "components/Footer/Footer";
 import Sidebar from "components/Sidebar/Sidebar";
+import FixedPlugin from "components/FixedPlugin/FixedPlugin.jsx";
 
 import { style } from "variables/Variables.jsx";
 
 import routes from "routes.js";
 
+import image from "assets/img/sidebar-3.jpg";
+
 class Admin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      _notificationSystem: null
+      _notificationSystem: null,
+      image: image,
+      color: "black",
+      hasImage: true,
+      fixedClasses: "dropdown show-dropdown open"
     };
   }
   handleNotificationClick = (position) => {
@@ -76,6 +83,22 @@ class Admin extends Component {
     }
     return "Brand";
   };
+  handleImageClick = image => {
+    this.setState({ image: image });
+  };
+  handleColorClick = color => {
+    this.setState({ color: color });
+  };
+  handleHasImage = hasImage => {
+    this.setState({ hasImage: hasImage });
+  };
+  handleFixedClick = () => {
+    if (this.state.fixedClasses === "dropdown") {
+      this.setState({ fixedClasses: "dropdown show-dropdown open" });
+    } else {
+      this.setState({ fixedClasses: "dropdown" });
+    }
+  };
   componentDidMount() {
     this.setState({ _notificationSystem: this.refs.notificationSystem });
     var _notificationSystem = this.refs.notificationSystem;
@@ -135,6 +158,16 @@ class Admin extends Component {
             {this.getRoutes(routes)}
           </Switch>
           <Footer />
+            <FixedPlugin
+              handleImageClick={this.handleImageClick}
+              handleColorClick={this.handleColorClick}
+              handleHasImage={this.handleHasImage}
+              bgColor={this.state["color"]}
+              bgImage={this.state["image"]}
+              mini={this.state["mini"]}
+              handleFixedClick={this.handleFixedClick}
+              fixedClasses={this.state.fixedClasses}
+            />
         </div>
       </div>
     );
