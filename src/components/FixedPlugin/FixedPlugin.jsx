@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Switch from "react-bootstrap-switch";
+import Toggle from "react-toggle";
 
 import Button from "components/CustomButton/CustomButton.jsx";
 
@@ -36,9 +36,9 @@ class FixedPlugin extends Component {
             <li className="adjustments-line">
               <p className="pull-left">Background Image</p>
               <div className="pull-right">
-                <Switch
+                <Toggle
+                  defaultChecked={this.state.bg_checked}
                   onChange={this.onChangeClick}
-                  defaultValue={this.state.bg_checked}
                 />
               </div>
               <div className="clearfix" />

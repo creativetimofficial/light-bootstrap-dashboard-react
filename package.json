@@ -8,14 +8,14 @@
     "node-sass": "4.12.0",
     "react": "16.8.6",
     "react-bootstrap": "0.32.4",
-    "react-bootstrap-switch": "15.5.3",
     "react-chartist": "0.13.3",
     "react-dom": "16.8.6",
     "react-google-maps": "9.4.5",
     "react-notification-system": "0.2.17",
     "react-router": "5.0.0",
     "react-router-dom": "5.0.0",
-    "react-scripts": "3.0.0"
+    "react-scripts": "3.0.0",
+    "react-toggle": "4.0.2"
   },
   "devDependencies": {
     "@types/googlemaps": "3.30.19",
