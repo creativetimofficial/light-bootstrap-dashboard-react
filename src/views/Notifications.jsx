@@ -19,7 +19,8 @@ class Notifications extends Component {
                   href="https://github.com/igorprado"
                 >
                   Igor Prado
-                </a>. Please checkout the{" "}
+                </a>
+                . Please checkout the{" "}
                 <a
                   href="https://github.com/igorprado/react-notification-system"
                   rel="noopener noreferrer"

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Navbar, NavItem, Nav, NavDropdown, MenuItem } from "react-bootstrap";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/styles/prism";
 
 const codeExample = `<Navbar collapseOnSelect fluid>

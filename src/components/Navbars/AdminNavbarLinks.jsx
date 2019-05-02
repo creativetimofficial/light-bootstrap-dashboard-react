@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavItem, Nav, NavDropdown, MenuItem } from "react-bootstrap";
 
-class HeaderLinks extends Component {
+class AdminNavbarLinks extends Component {
   render() {
     const notification = (
       <div>
@@ -61,4 +61,4 @@ class HeaderLinks extends Component {
   }
 }
 
-export default HeaderLinks;
+export default AdminNavbarLinks;

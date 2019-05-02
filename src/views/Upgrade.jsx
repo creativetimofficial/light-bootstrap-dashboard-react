@@ -45,24 +45,6 @@ class Icons extends Component {
                         <td>24</td>
                       </tr>
                       <tr>
-                        <td>Documentation</td>
-                        <td>
-                          <i className="fa fa-check text-success" />
-                        </td>
-                        <td>
-                          <i className="fa fa-check text-success" />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>SASS Files</td>
-                        <td>
-                          <i className="fa fa-check text-success" />
-                        </td>
-                        <td>
-                          <i className="fa fa-check text-success" />
-                        </td>
-                      </tr>
-                      <tr>
                         <td>Login/Register/Lock Pages</td>
                         <td>
                           <i className="fa fa-times text-danger" />
@@ -101,7 +83,7 @@ class Icons extends Component {
                         <td>
                           <Button
                             target="_blank"
-                            href="https://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react/?ref=lbd-react-free"
+                            href="http://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react/?ref=lbdr-upgrade-page"
                             round
                             fill
                             bsStyle="info"
