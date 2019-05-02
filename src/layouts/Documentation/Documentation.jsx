@@ -65,7 +65,7 @@ class Documentation extends Component {
                   <span className="icon-bar bar3" />
                 </button>
                 <a
-                  href="https://www.creative-tim.com?ref=lbdr-header-docs
+                  href="https://www.creative-tim.com?ref=lbdr-header-docs"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
