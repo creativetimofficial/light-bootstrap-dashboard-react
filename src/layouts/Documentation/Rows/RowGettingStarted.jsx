@@ -2,33 +2,44 @@ import React, { Component } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
-const fileStructure = `Light Bootstrap Dashboard React
+const fileStructure = `light-bootstrap-dashboard-react
+.
 ├── CHANGELOG.md
+├── ISSUE_TEMPLATE.md
 ├── LICENSE.md
 ├── README.md
+├── jsconfig.json
 ├── package.json
 ├── Documentation
 │   ├── css
+│   │   ├── demo.css
+│   │   ├── documentation.css
+│   │   └── light-bootstrap-dashboard.css
 │   ├── img
 │   └── tutorial-components.html
 ├── public
-│   ├── apple-icon.png
 │   ├── favicon.ico
 │   ├── index.html
-│   ├── manifest.json
-│   └── sidebar-5.jpg
+│   └── manifest.json
 └── src
     ├── index.js
+    ├── logo.svg
+    ├── routes.js
     ├── assets
     │   ├── css
+    │   │   ├── animate.min.css
+    │   │   ├── demo.css
+    │   │   ├── light-bootstrap-dashboard-react.css
+    │   │   ├── light-bootstrap-dashboard-react.css.map
+    │   │   ├── light-bootstrap-dashboard-react.min.css
+    │   │   └── pe-icon-7-stroke.css
     │   ├── fonts
     │   ├── img
-    │   │   └── faces
+    │   │   ├── faces
     │   └── sass
     │       ├── lbd
     │       │   └── mixins
-    │       ├── light-bootstrap-dashboard.css
-    │       └── light-bootstrap-dashboard.scss
+    │       └── light-bootstrap-dashboard-react.scss
     ├── components
     │   ├── Card
     │   │   └── Card.jsx
@@ -38,13 +49,15 @@ const fileStructure = `Light Bootstrap Dashboard React
     │   │   └── CustomCheckbox.jsx
     │   ├── CustomRadio
     │   │   └── CustomRadio.jsx
+    │   ├── FixedPlugin
+    │   │   └── FixedPlugin.jsx
     │   ├── Footer
     │   │   └── Footer.jsx
     │   ├── FormInputs
     │   │   └── FormInputs.jsx
-    │   ├── Header
-    │   │   ├── Header.jsx
-    │   │   └── HeaderLinks.jsx
+    │   ├── Navbars
+    │   │   ├── AdminNavbar.jsx
+    │   │   └── AdminNavbarLinks.jsx
     │   ├── Sidebar
     │   │   └── Sidebar.jsx
     │   ├── StatsCard
@@ -54,30 +67,18 @@ const fileStructure = `Light Bootstrap Dashboard React
     │   └── UserCard
     │       └── UserCard.jsx
     ├── layouts
-    │   └── Dashboard
-    │       └── Dashboard.jsx
-    ├── routes
-    │   ├── dashboard.jsx
-    │   └── index.jsx
+    │   └── Admin.jsx
     ├── variables
     │   └── Variables.jsx
     └── views
-        ├── Dashboard
-        │   └── Dashboard.jsx
-        ├── Icons
-        │   └── Icons.jsx
-        ├── Maps
-        │   └── Maps.jsx
-        ├── Notifications
-        │   └── Notifications.jsx
-        ├── TableList
-        │   └── TableList.jsx
-        ├── Typography
-        │   └── Typography.jsx
-        ├── Upgrade
-        │   └── Upgrade.jsx
-        └── UserProfile
-            └── UserProfile.jsx`;
+        ├── Dashboard.jsx
+        ├── Icons.jsx
+        ├── Maps.jsx
+        ├── Notifications.jsx
+        ├── TableList.jsx
+        ├── Typography.jsx
+        ├── Upgrade.jsx
+        └── UserProfile.jsx`;
 
 class RowGettingStarted extends Component {
   render() {
