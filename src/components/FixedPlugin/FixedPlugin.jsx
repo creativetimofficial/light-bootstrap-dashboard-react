@@ -17,11 +17,11 @@ class FixedPlugin extends Component {
   }
   handleClick = () => {
     this.props.handleFixedClick();
-  }
+  };
   onChangeClick = () => {
     this.setState({ bg_checked: !this.state.bg_checked });
     this.props.handleHasImage(this.state.bg_checked);
-  }
+  };
   render() {
     return (
       <div className="fixed-plugin">

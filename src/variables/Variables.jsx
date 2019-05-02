@@ -4,7 +4,9 @@
 // //
 //
 var defaultWidth =
-  window.screen.width > 768 ? window.screen.width * 1 / 3 : window.screen.width;
+  window.screen.width > 768
+    ? (window.screen.width * 1) / 3
+    : window.screen.width;
 
 var style = {
   Wrapper: {},

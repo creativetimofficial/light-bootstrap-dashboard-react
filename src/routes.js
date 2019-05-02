@@ -36,10 +36,20 @@ const dashboardRoutes = [
     component: Typography,
     layout: "/admin"
   },
-  { path: "/icons", name: "Icons", icon: "pe-7s-science", component: Icons,
-  layout: "/admin" },
-  { path: "/maps", name: "Maps", icon: "pe-7s-map-marker", component: Maps,
-  layout: "/admin" },
+  {
+    path: "/icons",
+    name: "Icons",
+    icon: "pe-7s-science",
+    component: Icons,
+    layout: "/admin"
+  },
+  {
+    path: "/maps",
+    name: "Maps",
+    icon: "pe-7s-map-marker",
+    component: Maps,
+    layout: "/admin"
+  },
   {
     path: "/notifications",
     name: "Notifications",

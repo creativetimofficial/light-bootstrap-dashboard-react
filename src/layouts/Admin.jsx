@@ -24,7 +24,7 @@ class Admin extends Component {
       fixedClasses: "dropdown show-dropdown open"
     };
   }
-  handleNotificationClick = (position) => {
+  handleNotificationClick = position => {
     var color = Math.floor(Math.random() * 4 + 1);
     var level;
     switch (color) {
@@ -55,14 +55,19 @@ class Admin extends Component {
       position: position,
       autoDismiss: 15
     });
-  }
+  };
   getRoutes = routes => {
     return routes.map((prop, key) => {
       if (prop.layout === "/admin") {
         return (
           <Route
             path={prop.layout + prop.path}
-            render={props => <prop.component {...props} handleClick={this.handleNotificationClick}/>}
+            render={props => (
+              <prop.component
+                {...props}
+                handleClick={this.handleNotificationClick}
+              />
+            )}
             key={key}
           />
         );
@@ -151,23 +156,24 @@ class Admin extends Component {
     return (
       <div className="wrapper">
         <NotificationSystem ref="notificationSystem" style={style} />
-        <Sidebar {...this.props} routes={routes}/>
+        <Sidebar {...this.props} routes={routes} />
         <div id="main-panel" className="main-panel" ref="mainPanel">
-          <AdminNavbar {...this.props} brandText={this.getBrandText(this.props.location.pathname)}/>
-          <Switch>
-            {this.getRoutes(routes)}
-          </Switch>
+          <AdminNavbar
+            {...this.props}
+            brandText={this.getBrandText(this.props.location.pathname)}
+          />
+          <Switch>{this.getRoutes(routes)}</Switch>
           <Footer />
-            <FixedPlugin
-              handleImageClick={this.handleImageClick}
-              handleColorClick={this.handleColorClick}
-              handleHasImage={this.handleHasImage}
-              bgColor={this.state["color"]}
-              bgImage={this.state["image"]}
-              mini={this.state["mini"]}
-              handleFixedClick={this.handleFixedClick}
-              fixedClasses={this.state.fixedClasses}
-            />
+          <FixedPlugin
+            handleImageClick={this.handleImageClick}
+            handleColorClick={this.handleColorClick}
+            handleHasImage={this.handleHasImage}
+            bgColor={this.state["color"]}
+            bgImage={this.state["image"]}
+            mini={this.state["mini"]}
+            handleFixedClick={this.handleFixedClick}
+            fixedClasses={this.state.fixedClasses}
+          />
         </div>
       </div>
     );
