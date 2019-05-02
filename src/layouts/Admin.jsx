@@ -2,24 +2,22 @@ import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import NotificationSystem from "react-notification-system";
 
-import Header from "components/Header/Header";
+import AdminNavbar from "components/Navbars/AdminNavbar";
 import Footer from "components/Footer/Footer";
 import Sidebar from "components/Sidebar/Sidebar";
 
 import { style } from "variables/Variables.jsx";
 
-import dashboardRoutes from "routes/dashboard.jsx";
+import routes from "routes.js";
 
-class Dashboard extends Component {
+class Admin extends Component {
   constructor(props) {
     super(props);
-    this.componentDidMount = this.componentDidMount.bind(this);
-    this.handleNotificationClick = this.handleNotificationClick.bind(this);
     this.state = {
       _notificationSystem: null
     };
   }
-  handleNotificationClick(position) {
+  handleNotificationClick = (position) => {
     var color = Math.floor(Math.random() * 4 + 1);
     var level;
     switch (color) {
@@ -51,6 +49,33 @@ class Dashboard extends Component {
       autoDismiss: 15
     });
   }
+  getRoutes = routes => {
+    return routes.map((prop, key) => {
+      if (prop.layout === "/admin") {
+        return (
+          <Route
+            path={prop.layout + prop.path}
+            component={prop.component}
+            key={key}
+          />
+        );
+      } else {
+        return null;
+      }
+    });
+  };
+  getBrandText = path => {
+    for (let i = 0; i < routes.length; i++) {
+      if (
+        this.props.location.pathname.indexOf(
+          routes[i].layout + routes[i].path
+        ) !== -1
+      ) {
+        return routes[i].name;
+      }
+    }
+    return "Brand";
+  };
   componentDidMount() {
     this.setState({ _notificationSystem: this.refs.notificationSystem });
     var _notificationSystem = this.refs.notificationSystem;
@@ -103,30 +128,11 @@ class Dashboard extends Component {
     return (
       <div className="wrapper">
         <NotificationSystem ref="notificationSystem" style={style} />
-        <Sidebar {...this.props} />
+        <Sidebar {...this.props} routes={routes}/>
         <div id="main-panel" className="main-panel" ref="mainPanel">
-          <Header {...this.props} />
+          <AdminNavbar {...this.props} brandText={this.getBrandText(this.props.location.pathname)}/>
           <Switch>
-            {dashboardRoutes.map((prop, key) => {
-              if (prop.name === "Notifications")
-                return (
-                  <Route
-                    path={prop.path}
-                    key={key}
-                    render={routeProps => (
-                      <prop.component
-                        {...routeProps}
-                        handleClick={this.handleNotificationClick}
-                      />
-                    )}
-                  />
-                );
-              if (prop.redirect)
-                return <Redirect from={prop.path} to={prop.to} key={key} />;
-              return (
-                <Route path={prop.path} component={prop.component} key={key} />
-              );
-            })}
+            {this.getRoutes(routes)}
           </Switch>
           <Footer />
         </div>
@@ -135,4 +141,4 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+export default Admin;

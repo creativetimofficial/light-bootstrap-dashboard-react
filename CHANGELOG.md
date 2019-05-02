@@ -1,5 +1,44 @@
 # Change Log
 
+## [1.3.0] 2019-04-23
+### Bug fixing
+- Renamed `src/layouts/Dashboard/Dashboard.jsx` to `src/layouts/Admin.jsx`
+- Renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/Dashboard.jsx`
+- Renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/Icons.jsx`
+- Renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/Maps.jsx`
+- Renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/Notifications.jsx`
+- Renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/TableList.jsx`
+- Renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/Typography.jsx`
+- Renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/Upgrade.jsx`
+- Renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/UserProfile.jsx`
+- Renamed `src/components/Header` to `src/components/Navbars`
+- Renamed `src/components/Navbars/Header.jsx` to `src/components/Navbars/AdminNavbar.jsx`
+- Renamed `src/components/Navbars/HeaderLinks.jsx` to `src/components/Navbars/AdminNavbarLinks.jsx`
+- Changes caused by running [the prettier command](https://prettier.io/docs/en/install.html) for *.jsx*, *.js*, *.html* and *.css* files
+- Changed our buggy routing system, now it should work flawlessly, for more info, please refer to our [live docs here](https://demos.creative-tim.com/light-bootstrap-dashboard-react/#/documentation/routing-system)
+- Solved
+  -
+- Small bug fixes
+### Removed dependencies/components
+- Deleted `src/routes/*` folder
+- node-sass-chokidar
+- npm-run-all
+### Added dependencies/components
+- Added `src/routes.js` file (instead of the three files from `src/routes/*`)
+- @types/markerclustererplus@2.1.33 (to stop install warnings)
+- @types/googlemaps@3.30.19 (to stop install warnings)
+- @types/react@16.8.13 (to stop install warnings)
+- typescript@3.4.3 (to stop install warnings)
+- react-router@5.0.0 (react-router-dom auto-installs this package, but it is better to have them both inside package.json)
+### Update dependencies
+- node-sass           4.6.1   →   4.12.0
+- react              16.2.0   →   16.8.6
+- react-bootstrap    0.32.1   →   0.32.4
+- react-chartist     0.13.1   →   0.13.3
+- react-dom          16.2.0   →   16.8.6
+- react-router-dom    4.2.2   →    5.0.0
+- react-scripts       1.1.1   →    3.0.0
+
 ## [1.2.0] 2018-04-12
 ### Bug fixing
 - Added `fluid` prop on `Grid` component in `Footer`
