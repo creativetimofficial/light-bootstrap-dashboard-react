@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 export class Card extends Component {
   render() {
+    console.log(this.props);
     return (
       <div className={"card" + (this.props.plain ? " card-plain" : "")}>
         <div className={"header" + (this.props.hCenter ? " text-center" : "")}>
