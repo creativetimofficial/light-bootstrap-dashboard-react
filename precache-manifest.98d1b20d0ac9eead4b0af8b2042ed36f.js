@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "49f828943924e3b0f01f7e7a27997cca",
+    "revision": "d8770ebc77be763b6db19e2200a406c2",
     "url": "/light-bootstrap-dashboard-react/index.html"
   },
   {
-    "revision": "e3883a9f76711b6bb8d7",
-    "url": "/light-bootstrap-dashboard-react/static/css/2.bce45138.chunk.css"
+    "revision": "265e697cf3b8567294c8",
+    "url": "/light-bootstrap-dashboard-react/static/css/2.11200a24.chunk.css"
   },
   {
-    "revision": "4d7cb580c4cd09344077",
-    "url": "/light-bootstrap-dashboard-react/static/css/main.6e97503c.chunk.css"
+    "revision": "d6c19e0cf725285c60c5",
+    "url": "/light-bootstrap-dashboard-react/static/css/main.13b39e6c.chunk.css"
   },
   {
-    "revision": "e3883a9f76711b6bb8d7",
-    "url": "/light-bootstrap-dashboard-react/static/js/2.a644ba5a.chunk.js"
+    "revision": "265e697cf3b8567294c8",
+    "url": "/light-bootstrap-dashboard-react/static/js/2.aee40f6f.chunk.js"
   },
   {
-    "revision": "4d7cb580c4cd09344077",
-    "url": "/light-bootstrap-dashboard-react/static/js/main.b62af183.chunk.js"
+    "revision": "d6c19e0cf725285c60c5",
+    "url": "/light-bootstrap-dashboard-react/static/js/main.72352f08.chunk.js"
   },
   {
     "revision": "0ce3b4941c0b8964810e",
