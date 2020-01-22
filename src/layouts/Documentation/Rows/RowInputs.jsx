@@ -24,7 +24,7 @@ import { FormInputs } from "components/FormInputs/FormInputs.jsx";
 
 const codeExample = `<FormInputs
     ncols = {["col-md-5" , "col-md-3" , "col-md-4"]}
-    proprieties = {[
+    properties = {[
         {
             label : "Company (disabled)",
             type : "text",
@@ -66,7 +66,7 @@ class RowInputs extends Component {
         <h4>Example code</h4>
         <FormInputs
           ncols={["col-md-5", "col-md-3", "col-md-4"]}
-          proprieties={[
+          properties={[
             {
               label: "Company (disabled)",
               type: "text",
@@ -98,7 +98,7 @@ class RowInputs extends Component {
         <p>
           In this example we've created 3 inputs occupying a 5 medium column, a
           3 medium column and a 4 medium column, each having it's own set of
-          proprieties.
+          properties.
         </p>
 
         <h4>Props</h4>
@@ -126,7 +126,7 @@ class RowInputs extends Component {
             </tr>
             <tr>
               <td>
-                <code>proprieties</code>
+                <code>properties</code>
               </td>
               <td>Array of properties</td>
               <td>null</td>
@@ -147,7 +147,7 @@ class RowInputs extends Component {
         </Table>
         <div className="alert alert-warning">
           <strong>Warning!</strong> The number of elements in{" "}
-          <code>proprieties</code> has to be equal to the number of elements in{" "}
+          <code>properties</code> has to be equal to the number of elements in{" "}
           <code>ncols</code> for this component to work properly.
         </div>
         <p>
