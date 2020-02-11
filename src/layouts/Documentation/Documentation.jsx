@@ -113,6 +113,11 @@ class Documentation extends Component {
                 </ul>
                 <ul className="nav navbar-nav navbar-right">
                   <li>
+                    <a href="https://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react?ref=lbdr-docs-navbar-upgrade-pro" className="btn btn-simple btn-default" target="_blank">
+                      <i className="fa fa-rocket" /> Upgrade to PRO
+                    </a>
+                  </li>
+                  <li>
                     <Link to="/" className="btn btn-simple btn-default">
                       <i className="fa fa-list" /> Back to dashboard
                     </Link>
