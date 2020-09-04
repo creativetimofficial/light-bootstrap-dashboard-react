@@ -5,7 +5,7 @@
   "dependencies": {
     "bootstrap": "3.3.7",
     "chartist": "0.10.1",
-    "node-sass": "4.12.0",
+    "node-sass": "4.14.1",
     "react": "16.8.6",
     "react-bootstrap": "0.32.4",
     "react-chartist": "0.13.3",
