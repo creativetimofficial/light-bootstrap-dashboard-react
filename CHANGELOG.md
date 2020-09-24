@@ -3,6 +3,7 @@
 ## [1.4.0] date
 ### Bug fixing
 - https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues/62
+- https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues/58
 ### Major style changes
 ### Deleted components
 ### Added components
