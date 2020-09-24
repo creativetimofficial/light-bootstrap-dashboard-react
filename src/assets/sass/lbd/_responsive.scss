@@ -426,6 +426,10 @@
             margin-right: 10px;
         }
     }
+    .sidebar .nav > li.active-pro {
+      position: relative !important;
+      bottom: unset !important;
+    }
 }
 
 //overwrite table responsive for 768px screens
