@@ -4,6 +4,8 @@
   "dependencies": {
     "bootstrap": "3.3.7",
     "chartist": "0.10.1",
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.8",
     "node-sass": "4.14.1",
     "react": "16.13.1",
     "react-bootstrap": "0.32.4",
@@ -24,7 +26,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && gulp licenses",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
