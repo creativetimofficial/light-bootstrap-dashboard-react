@@ -12,6 +12,8 @@
 ### Added components
 ### Deleted dependencies
 ### Added dependencies
++ gulp-append-prepend@1.0.8
++ gulp@4.0.2
 ### Updated dependencies
 ```
 node-sass                    4.12.0   →    4.14.1
