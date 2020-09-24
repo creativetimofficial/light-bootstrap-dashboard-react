@@ -1,7 +1,6 @@
 {
   "name": "light-bootstrap-dashboard-react",
-  "version": "1.3.0",
-  "private": true,
+  "version": "1.4.0",
   "dependencies": {
     "bootstrap": "3.3.7",
     "chartist": "0.10.1",
