@@ -6,6 +6,7 @@
 - https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues/58
 - https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues/52
 - https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues/50
+- https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues/28
 ### Major style changes
 ### Deleted components
 ### Added components
