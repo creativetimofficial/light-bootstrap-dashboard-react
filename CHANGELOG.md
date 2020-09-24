@@ -1,5 +1,32 @@
 # Change Log
 
+## [1.4.0] date
+### Bug fixing
+### Major style changes
+### Deleted components
+### Added components
+### Deleted dependencies
+### Added dependencies
+### Updated dependencies
+```
+node-sass                    4.12.0   →    4.14.1
+react                        16.8.6   →   16.13.1
+@types/react                16.8.13   →   16.9.49
+react-chartist               0.13.3   →    0.14.3
+react-dom                    16.8.6   →   16.13.1
+react-notification-system    0.2.17   →     0.4.0
+react-router                  5.0.0   →     5.2.0
+react-router-dom              5.0.0   →     5.2.0
+react-scripts                 3.0.0   →     3.4.3
+react-toggle                  4.0.2   →     4.1.1
+@types/googlemaps           3.30.19   →   3.39.13
+typescript                    3.4.3   →     4.0.3
+```
+### Warning
+_While in development some of the plugins that were used for this product will throw some warnings - note, this only happens in development, the UI or the functionality of the product is not affected, also, if the issues will persist in React 17, we'll drop usage of those plugins, and replace them with other ones._
+_Warnings might appear while doing an npm install - they do not affect the UI or the functionality of the product, and they appear because of NodeJS and not from the product itself._
+_Vulnerabilities: Since this product is Bootstrap 3 based, on installation (npm install), you will have the following warning: found 2 vulnerabilities (1 low, 1 moderate) (NOTE 1: the product works just fine. NOTE 2: we will solve this, when we will update this product to version 2.0.0, and we will replace the Bootstrap 3 support with Bootstrap 4 support one. At the moment we do not have a timeline for this.)_
+
 ## [1.3.0] 2019-05-03
 ### Bug fixing
 - Renamed `src/layouts/Dashboard/Dashboard.jsx` to `src/layouts/Admin.jsx`
