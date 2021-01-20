@@ -6,6 +6,8 @@
     "@fortawesome/fontawesome-free": "5.15.2",
     "bootstrap": "4.6.0",
     "chartist": "0.10.1",
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.8",
     "node-sass": "4.14.1",
     "react": "17.0.1",
     "react-bootstrap": "1.4.3",
@@ -23,7 +25,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && gulp licenses",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
