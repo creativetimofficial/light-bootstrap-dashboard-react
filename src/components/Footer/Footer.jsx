@@ -21,10 +21,10 @@ import { Container } from "react-bootstrap";
 class Footer extends Component {
   render() {
     return (
-      <footer className=" footer">
+      <footer className="footer">
         <Container fluid>
           <nav>
-            <ul className=" footer-menu">
+            <ul className="footer-menu">
               <li>
                 <a href="#pablo" onClick={(e) => e.preventDefault()}>
                   Home
@@ -46,7 +46,7 @@ class Footer extends Component {
                 </a>
               </li>
             </ul>
-            <p className=" copyright text-center">
+            <p className="copyright text-center">
               © {new Date().getFullYear()}{" "}
               <a href="http://www.creative-tim.com">Creative Tim</a>, made with
               love for a better web
