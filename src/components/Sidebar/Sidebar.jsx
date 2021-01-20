@@ -18,7 +18,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
-import AdminNavbarLinks from "../Navbars/AdminNavbarLinks.jsx";
+import { Nav } from "react-bootstrap";
 
 import logo from "assets/img/reactlogo.png";
 
@@ -26,7 +26,7 @@ class Sidebar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      width: window.innerWidth
+      width: window.innerWidth,
     };
   }
   activeRoute(routeName) {
@@ -41,63 +41,67 @@ class Sidebar extends Component {
   }
   render() {
     const sidebarBackground = {
-      backgroundImage: "url(" + this.props.image + ")"
+      backgroundImage: "url(" + this.props.image + ")",
     };
     return (
-      <div
-        id="sidebar"
-        className="sidebar"
-        data-color={this.props.color}
-        data-image={this.props.image}
-      >
-          {this.props.hasImage ? (
-            <div className="sidebar-background" style={sidebarBackground} />
-          ) : (
-            null
-          )}
-        <div className="logo">
-          <a
-            href="https://www.creative-tim.com?ref=lbd-sidebar"
-            className="simple-text logo-mini"
-          >
-            <div className="logo-img">
-              <img src={logo} alt="logo_image" />
-            </div>
-          </a>
-          <a
-            href="https://www.creative-tim.com?ref=lbd-sidebar"
-            className="simple-text logo-normal"
-          >
-            Creative Tim
-          </a>
-        </div>
-        <div className="sidebar-wrapper">
-          <ul className="nav">
-            {this.state.width <= 991 ? <AdminNavbarLinks /> : null}
-            {this.props.routes.map((prop, key) => {
-              if (!prop.redirect)
-                return (
-                  <li
-                    className={
-                      prop.upgrade
-                        ? "active active-pro"
-                        : this.activeRoute(prop.layout + prop.path)
-                    }
-                    key={key}
-                  >
-                    <NavLink
-                      to={prop.layout + prop.path}
-                      className="nav-link"
-                      activeClassName="active"
-                    >
-                      <i className={prop.icon} />
-                      <p>{prop.name}</p>
-                    </NavLink>
-                  </li>
-                );
-              return null;
-            })}
-          </ul>
+      <div className=" sidebar" data-image="../assets/img/sidebar-5.jpg">
+        {/* Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red" Tip 2: you can also add an image using data-image tag */}
+        <div className=" sidebar-wrapper">
+          <div className=" logo">
+            <a className=" simple-text" href="http://www.creative-tim.com">
+              Creative Tim
+            </a>
+          </div>
+          <Nav>
+            <Nav.Item className=" active">
+              <Nav.Link href="dashboard.html">
+                <i className=" nc-icon nc-chart-pie-35"></i>
+                <p>Dashboard</p>
+              </Nav.Link>
+            </Nav.Item>
+            <li>
+              <Nav.Link href="./user.html">
+                <i className=" nc-icon nc-circle-09"></i>
+                <p>User Profile</p>
+              </Nav.Link>
+            </li>
+            <li>
+              <Nav.Link href="./table.html">
+                <i className=" nc-icon nc-notes"></i>
+                <p>Table List</p>
+              </Nav.Link>
+            </li>
+            <li>
+              <Nav.Link href="./typography.html">
+                <i className=" nc-icon nc-paper-2"></i>
+                <p>Typography</p>
+              </Nav.Link>
+            </li>
+            <li>
+              <Nav.Link href="./icons.html">
+                <i className=" nc-icon nc-atom"></i>
+                <p>Icons</p>
+              </Nav.Link>
+            </li>
+            <li>
+              <Nav.Link href="./maps.html">
+                <i className=" nc-icon nc-pin-3"></i>
+                <p>Maps</p>
+              </Nav.Link>
+            </li>
+            <li>
+              <Nav.Link href="./notifications.html">
+                <i className=" nc-icon nc-bell-55"></i>
+                <p>Notifications</p>
+              </Nav.Link>
+            </li>
+            <Nav.Item className=" active active-pro">
+              <Nav.Link className=" active" href="upgrade.html">
+                <i className=" nc-icon nc-alien-33"></i>
+                <p>Upgrade to PRO</p>
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
         </div>
       </div>
     );
