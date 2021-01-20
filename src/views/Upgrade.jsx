@@ -18,11 +18,11 @@ function Upgrade() {
     <>
       <Container fluid>
         <Row>
-          <Col className=" ml-auto mr-auto" md="8">
+          <Col className="ml-auto mr-auto" md="8">
             <Card>
-              <div className=" header text-center">
-                <h4 className=" title">Light Bootstrap Dashboard PRO</h4>
-                <p className=" category">
+              <div className="header text-center">
+                <h4 className="title">Light Bootstrap Dashboard PRO</h4>
+                <p className="category">
                   Are you looking for more components? Please check our Premium
                   Version of Light Bootstrap Dashboard.
                 </p>
@@ -31,8 +31,8 @@ function Upgrade() {
               <Table responsive>
                 <thead>
                   <th></th>
-                  <th className=" text-center">Free</th>
-                  <th className=" text-center">PRO</th>
+                  <th className="text-center">Free</th>
+                  <th className="text-center">PRO</th>
                 </thead>
                 <tbody>
                   <tr>
@@ -53,37 +53,37 @@ function Upgrade() {
                   <tr>
                     <td>Documentation</td>
                     <td>
-                      <i className=" fa fa-times text-danger"></i>
+                      <i className="fa fa-times text-danger"></i>
                     </td>
                     <td>
-                      <i className=" fa fa-check text-success"></i>
+                      <i className="fa fa-check text-success"></i>
                     </td>
                   </tr>
                   <tr>
                     <td>SASS Files</td>
                     <td>
-                      <i className=" fa fa-times text-danger"></i>
+                      <i className="fa fa-times text-danger"></i>
                     </td>
                     <td>
-                      <i className=" fa fa-check text-success"></i>
+                      <i className="fa fa-check text-success"></i>
                     </td>
                   </tr>
                   <tr>
                     <td>Login/Register/Lock Pages</td>
                     <td>
-                      <i className=" fa fa-times text-danger"></i>
+                      <i className="fa fa-times text-danger"></i>
                     </td>
                     <td>
-                      <i className=" fa fa-check text-success"></i>
+                      <i className="fa fa-check text-success"></i>
                     </td>
                   </tr>
                   <tr>
                     <td>Premium Support</td>
                     <td>
-                      <i className=" fa fa-times text-danger"></i>
+                      <i className="fa fa-times text-danger"></i>
                     </td>
                     <td>
-                      <i className=" fa fa-check text-success"></i>
+                      <i className="fa fa-check text-success"></i>
                     </td>
                   </tr>
                   <tr>
@@ -91,11 +91,11 @@ function Upgrade() {
                     <td>Free</td>
                     <td>Just $39</td>
                   </tr>
-                  <tr className=" last-row">
+                  <tr className="last-row">
                     <td></td>
                     <td>
                       <Button
-                        className=" btn-round btn-fill disabled"
+                        className="btn-round btn-fill disabled"
                         href="#pablo"
                         onClick={(e) => e.preventDefault()}
                         variant="default"
@@ -105,7 +105,7 @@ function Upgrade() {
                     </td>
                     <td>
                       <Button
-                        className=" btn-round btn-fill"
+                        className="btn-round btn-fill"
                         href="http://www.creative-tim.com/product/light-bootstrap-dashboard-pro/?ref=lbdupgrade"
                         rel="noopener noreferrer"
                         target="_blank"
