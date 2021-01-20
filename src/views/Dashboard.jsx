@@ -213,7 +213,7 @@ function Dashboard() {
                     <tbody>
                       <tr>
                         <td>
-                          <Form.Check>
+                          <Form.Check className="mb-1 pl-0">
                             <Form.Check.Label>
                               <Form.Check.Input
                                 defaultValue=""
@@ -260,7 +260,7 @@ function Dashboard() {
                       </tr>
                       <tr>
                         <td>
-                          <Form.Check>
+                          <Form.Check className="mb-1 pl-0">
                             <Form.Check.Label>
                               <Form.Check.Input
                                 defaultChecked
@@ -308,7 +308,7 @@ function Dashboard() {
                       </tr>
                       <tr>
                         <td>
-                          <Form.Check>
+                          <Form.Check className="mb-1 pl-0">
                             <Form.Check.Label>
                               <Form.Check.Input
                                 defaultChecked
@@ -357,7 +357,7 @@ function Dashboard() {
                       </tr>
                       <tr>
                         <td>
-                          <Form.Check>
+                          <Form.Check className="mb-1 pl-0">
                             <Form.Check.Label>
                               <Form.Check.Input
                                 defaultChecked
@@ -404,7 +404,7 @@ function Dashboard() {
                       </tr>
                       <tr>
                         <td>
-                          <Form.Check>
+                          <Form.Check className="mb-1 pl-0">
                             <Form.Check.Label>
                               <Form.Check.Input
                                 defaultValue=""
@@ -448,7 +448,7 @@ function Dashboard() {
                       </tr>
                       <tr>
                         <td>
-                          <Form.Check>
+                          <Form.Check className="mb-1 pl-0">
                             <Form.Check.Label>
                               <Form.Check.Input
                                 defaultValue=""
