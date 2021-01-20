@@ -171,11 +171,11 @@ class Admin extends Component {
   render() {
     return (
       <>
-        <div className=" wrapper">
+        <div className="wrapper">
           <Sidebar />
-          <div className=" main-panel">
+          <div className="main-panel">
             <AdminNavbar />
-            <div className=" content">
+            <div className="content">
               <Switch>{this.getRoutes(routes)}</Switch>
             </div>
             <Footer />
