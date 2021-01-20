@@ -236,11 +236,11 @@ function Dashboard() {
                             }
                           >
                             <Button
-                              className="btn-simple btn-link"
+                              className="btn-simple btn-link p-1"
                               type="button"
                               variant="info"
                             >
-                              <i className="far fa-edit"></i>
+                              <i className="fas fa-edit"></i>
                             </Button>
                           </OverlayTrigger>
                           <OverlayTrigger
@@ -249,7 +249,7 @@ function Dashboard() {
                             }
                           >
                             <Button
-                              className="btn-simple btn-link"
+                              className="btn-simple btn-link p-1"
                               type="button"
                               variant="danger"
                             >
@@ -284,11 +284,11 @@ function Dashboard() {
                             }
                           >
                             <Button
-                              className="btn-simple btn-link"
+                              className="btn-simple btn-link p-1"
                               type="button"
                               variant="info"
                             >
-                              <i className="far fa-edit"></i>
+                              <i className="fas fa-edit"></i>
                             </Button>
                           </OverlayTrigger>
                           <OverlayTrigger
@@ -297,7 +297,7 @@ function Dashboard() {
                             }
                           >
                             <Button
-                              className="btn-simple btn-link"
+                              className="btn-simple btn-link p-1"
                               type="button"
                               variant="danger"
                             >
@@ -333,11 +333,11 @@ function Dashboard() {
                             }
                           >
                             <Button
-                              className="btn-simple btn-link"
+                              className="btn-simple btn-link p-1"
                               type="button"
                               variant="info"
                             >
-                              <i className="far fa-edit"></i>
+                              <i className="fas fa-edit"></i>
                             </Button>
                           </OverlayTrigger>
                           <OverlayTrigger
@@ -346,7 +346,7 @@ function Dashboard() {
                             }
                           >
                             <Button
-                              className="btn-simple btn-link"
+                              className="btn-simple btn-link p-1"
                               type="button"
                               variant="danger"
                             >
@@ -380,11 +380,11 @@ function Dashboard() {
                             }
                           >
                             <Button
-                              className="btn-simple btn-link"
+                              className="btn-simple btn-link p-1"
                               type="button"
                               variant="info"
                             >
-                              <i className="far fa-edit"></i>
+                              <i className="fas fa-edit"></i>
                             </Button>
                           </OverlayTrigger>
                           <OverlayTrigger
@@ -393,7 +393,7 @@ function Dashboard() {
                             }
                           >
                             <Button
-                              className="btn-simple btn-link"
+                              className="btn-simple btn-link p-1"
                               type="button"
                               variant="danger"
                             >
@@ -424,11 +424,11 @@ function Dashboard() {
                             }
                           >
                             <Button
-                              className="btn-simple btn-link"
+                              className="btn-simple btn-link p-1"
                               type="button"
                               variant="info"
                             >
-                              <i className="far fa-edit"></i>
+                              <i className="fas fa-edit"></i>
                             </Button>
                           </OverlayTrigger>
                           <OverlayTrigger
@@ -437,7 +437,7 @@ function Dashboard() {
                             }
                           >
                             <Button
-                              className="btn-simple btn-link"
+                              className="btn-simple btn-link p-1"
                               type="button"
                               variant="danger"
                             >
@@ -469,11 +469,11 @@ function Dashboard() {
                             }
                           >
                             <Button
-                              className="btn-simple btn-link"
+                              className="btn-simple btn-link p-1"
                               type="button"
                               variant="info"
                             >
-                              <i className="far fa-edit"></i>
+                              <i className="fas fa-edit"></i>
                             </Button>
                           </OverlayTrigger>
                           <OverlayTrigger
@@ -482,7 +482,7 @@ function Dashboard() {
                             }
                           >
                             <Button
-                              className="btn-simple btn-link"
+                              className="btn-simple btn-link p-1"
                               type="button"
                               variant="danger"
                             >
