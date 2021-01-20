@@ -21,7 +21,7 @@ function Notifications() {
         <Card>
           <Card.Header>
             <Card.Title as="h4">Notifications</Card.Title>
-            <p className=" card-category">
+            <p className="card-category">
               Handcrafted by our friend{" "}
               <a
                 href="https://github.com/mouse0270"
@@ -52,38 +52,38 @@ function Notifications() {
                 <Alert variant="info">
                   <button
                     aria-hidden={true}
-                    className=" close"
+                    className="close"
                     data-dismiss="alert"
                     type="button"
                   >
-                    <i className=" nc-icon nc-simple-remove"></i>
+                    <i className="nc-icon nc-simple-remove"></i>
                   </button>
                   <span>This is a notification with close button.</span>
                 </Alert>
-                <Alert className=" alert-with-icon" variant="info">
+                <Alert className="alert-with-icon" variant="info">
                   <button
                     aria-hidden={true}
-                    className=" close"
+                    className="close"
                     data-dismiss="alert"
                     type="button"
                   >
-                    <i className=" nc-icon nc-simple-remove"></i>
+                    <i className="nc-icon nc-simple-remove"></i>
                   </button>
-                  <span className=" nc-icon nc-bell-55"></span>
+                  <span className="nc-icon nc-bell-55"></span>
                   <span>
                     This is a notification with close button and icon.
                   </span>
                 </Alert>
-                <Alert className=" alert-with-icon" variant="info">
+                <Alert className="alert-with-icon" variant="info">
                   <button
                     aria-hidden={true}
-                    className=" close"
+                    className="close"
                     data-dismiss="alert"
                     type="button"
                   >
-                    <i className=" nc-icon nc-simple-remove"></i>
+                    <i className="nc-icon nc-simple-remove"></i>
                   </button>
-                  <span className=" nc-icon nc-bell-55"></span>
+                  <span className="nc-icon nc-bell-55"></span>
                   <span>
                     This is a notification with close button and icon and have
                     many lines. You can see that the icon and the close button
@@ -99,11 +99,11 @@ function Notifications() {
                 <Alert variant="primary">
                   <button
                     aria-hidden={true}
-                    className=" close"
+                    className="close"
                     data-dismiss="alert"
                     type="button"
                   >
-                    <i className=" nc-icon nc-simple-remove"></i>
+                    <i className="nc-icon nc-simple-remove"></i>
                   </button>
                   <span>
                     <b>Primary -</b>
@@ -113,11 +113,11 @@ function Notifications() {
                 <Alert variant="info">
                   <button
                     aria-hidden={true}
-                    className=" close"
+                    className="close"
                     data-dismiss="alert"
                     type="button"
                   >
-                    <i className=" nc-icon nc-simple-remove"></i>
+                    <i className="nc-icon nc-simple-remove"></i>
                   </button>
                   <span>
                     <b>Info -</b>
@@ -127,11 +127,11 @@ function Notifications() {
                 <Alert variant="success">
                   <button
                     aria-hidden={true}
-                    className=" close"
+                    className="close"
                     data-dismiss="alert"
                     type="button"
                   >
-                    <i className=" nc-icon nc-simple-remove"></i>
+                    <i className="nc-icon nc-simple-remove"></i>
                   </button>
                   <span>
                     <b>Success -</b>
@@ -141,11 +141,11 @@ function Notifications() {
                 <Alert variant="warning">
                   <button
                     aria-hidden={true}
-                    className=" close"
+                    className="close"
                     data-dismiss="alert"
                     type="button"
                   >
-                    <i className=" nc-icon nc-simple-remove"></i>
+                    <i className="nc-icon nc-simple-remove"></i>
                   </button>
                   <span>
                     <b>Warning -</b>
@@ -155,11 +155,11 @@ function Notifications() {
                 <Alert variant="danger">
                   <button
                     aria-hidden={true}
-                    className=" close"
+                    className="close"
                     data-dismiss="alert"
                     type="button"
                   >
-                    <i className=" nc-icon nc-simple-remove"></i>
+                    <i className="nc-icon nc-simple-remove"></i>
                   </button>
                   <span>
                     <b>Danger -</b>
@@ -170,16 +170,16 @@ function Notifications() {
             </Row>
             <br></br>
             <br></br>
-            <div className=" places-buttons">
+            <div className="places-buttons">
               <Row>
-                <Col className=" offset-md-3 text-center" md="6">
+                <Col className="offset-md-3 text-center" md="6">
                   <Card.Title as="h4">Notifications Places</Card.Title>
-                  <p className=" card-category">
+                  <p className="card-category">
                     <small>Click to view notifications</small>
                   </p>
                 </Col>
               </Row>
-              <Row className=" justify-content-center">
+              <Row className="justify-content-center">
                 <Col lg="3" md="3">
                   <Button
                     block
@@ -208,7 +208,7 @@ function Notifications() {
                   </Button>
                 </Col>
               </Row>
-              <Row className=" justify-content-center">
+              <Row className="justify-content-center">
                 <Col lg="3" md="3">
                   <Button
                     block
@@ -239,10 +239,10 @@ function Notifications() {
               </Row>
             </div>
             <Row>
-              <Col className=" text-center" md="12">
-                <h4 className=" title">Modal</h4>
+              <Col className="text-center" md="12">
+                <h4 className="title">Modal</h4>
                 <Button
-                  className=" btn-fill btn-wd"
+                  className="btn-fill btn-wd"
                   data-target="#myModal1"
                   data-toggle="modal"
                   href="#pablo"
@@ -256,21 +256,21 @@ function Notifications() {
           </Card.Body>
         </Card>
         {/* Mini Modal */}
-        <Modal className=" modal-mini modal-primary">
-          <Modal.Header className=" justify-content-center">
-            <div className=" modal-profile">
-              <i className=" nc-icon nc-bulb-63"></i>
+        <Modal className="modal-mini modal-primary">
+          <Modal.Header className="justify-content-center">
+            <div className="modal-profile">
+              <i className="nc-icon nc-bulb-63"></i>
             </div>
           </Modal.Header>
-          <Modal.Body className=" text-center">
+          <Modal.Body className="text-center">
             <p>Always have an access to your profile</p>
           </Modal.Body>
-          <div className=" modal-footer">
-            <Button className=" btn-simple" type="button" variant="link">
+          <div className="modal-footer">
+            <Button className="btn-simple" type="button" variant="link">
               Back
             </Button>
             <Button
-              className=" btn-simple"
+              className="btn-simple"
               data-dismiss="modal"
               type="button"
               variant="link"
