@@ -1,8 +1,13 @@
 # Change Log
 
 ## [2.0.0] date
+### IMPORTANT
+- We have updated this product from Bootstrap 3 to Bootstrap 4, so in essence, this is a new product
+- For this, we have followed the guidelines from [here](https://react-bootstrap.github.io/migrating/) and [here](https://getbootstrap.com/docs/4.0/migration/)
+- We also did not add Bootstrap variables as part of our styles (we will do so in one of our next updates, probably in version 3.0.0 when we'll add Bootstrap 5)
 ### Bug fixing
 ### Major style changes
+- Since the update from Bootstrap 3 to Bootstrap 4, all styles have been changed
 ### Deleted components
 - src/components/Card/Card.jsx (we'll use the simple React Bootstrap tags instead)
 - src/components/CustomButton/CustomButton.jsx (we'll use the simple React Bootstrap tags instead)
