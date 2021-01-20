@@ -19,15 +19,15 @@ function TableList() {
       <Container fluid>
         <Row>
           <Col md="12">
-            <Card className=" strpied-tabled-with-hover">
+            <Card className="strpied-tabled-with-hover">
               <Card.Header>
                 <Card.Title as="h4">Striped Table with Hover</Card.Title>
-                <p className=" card-category">
+                <p className="card-category">
                   Here is a subtitle for this table
                 </p>
               </Card.Header>
-              <Card.Body className=" table-full-width table-responsive">
-                <Table className=" table-hover table-striped">
+              <Card.Body className="table-full-width table-responsive">
+                <Table className="table-hover table-striped">
                   <thead>
                     <th>ID</th>
                     <th>Name</th>
@@ -84,15 +84,15 @@ function TableList() {
             </Card>
           </Col>
           <Col md="12">
-            <Card className=" card-plain table-plain-bg">
+            <Card className="card-plain table-plain-bg">
               <Card.Header>
                 <Card.Title as="h4">Table on Plain Background</Card.Title>
-                <p className=" card-category">
+                <p className="card-category">
                   Here is a subtitle for this table
                 </p>
               </Card.Header>
-              <Card.Body className=" table-full-width table-responsive">
-                <Table className=" table-hover">
+              <Card.Body className="table-full-width table-responsive">
+                <Table className="table-hover">
                   <thead>
                     <th>ID</th>
                     <th>Name</th>
