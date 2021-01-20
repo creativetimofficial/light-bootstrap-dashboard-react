@@ -53,37 +53,37 @@ function Upgrade() {
                   <tr>
                     <td>Documentation</td>
                     <td>
-                      <i className="fa fa-times text-danger"></i>
+                      <i className="fas fa-times text-danger"></i>
                     </td>
                     <td>
-                      <i className="fa fa-check text-success"></i>
+                      <i className="fas fa-check text-success"></i>
                     </td>
                   </tr>
                   <tr>
                     <td>SASS Files</td>
                     <td>
-                      <i className="fa fa-times text-danger"></i>
+                      <i className="fas fa-times text-danger"></i>
                     </td>
                     <td>
-                      <i className="fa fa-check text-success"></i>
+                      <i className="fas fa-check text-success"></i>
                     </td>
                   </tr>
                   <tr>
                     <td>Login/Register/Lock Pages</td>
                     <td>
-                      <i className="fa fa-times text-danger"></i>
+                      <i className="fas fa-times text-danger"></i>
                     </td>
                     <td>
-                      <i className="fa fa-check text-success"></i>
+                      <i className="fas fa-check text-success"></i>
                     </td>
                   </tr>
                   <tr>
                     <td>Premium Support</td>
                     <td>
-                      <i className="fa fa-times text-danger"></i>
+                      <i className="fas fa-times text-danger"></i>
                     </td>
                     <td>
-                      <i className="fa fa-check text-success"></i>
+                      <i className="fas fa-check text-success"></i>
                     </td>
                   </tr>
                   <tr>
