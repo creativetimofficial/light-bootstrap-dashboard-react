@@ -1,5 +1,25 @@
 # Change Log
 
+## [2.0.0] date
+### Bug fixing
+
+### Major style changes
+
+### Deleted components
+
+### Added components
+
+### Deleted dependencies
+
+### Added dependencies
+
+### Updated dependencies
+```
+
+```
+### Warning
+_If needed_
+
 ## [1.3.0] 2019-05-03
 ### Bug fixing
 - Renamed `src/layouts/Dashboard/Dashboard.jsx` to `src/layouts/Admin.jsx`
