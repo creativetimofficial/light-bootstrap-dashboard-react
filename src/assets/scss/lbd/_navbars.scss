@@ -12,7 +12,6 @@
     font-size: $font-size-navbar;
     border-radius: 0;
     min-height: 50px;
-    max-height: 61px;
     background-color: $white-navbar;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
@@ -27,8 +26,6 @@
         }
     }
     .navbar-toggler{
-        width: 37px;
-        height: 27px;
         vertical-align: middle;
         outline: 0;
         cursor: pointer;
