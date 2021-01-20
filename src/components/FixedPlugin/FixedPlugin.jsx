@@ -17,7 +17,8 @@
 */
 /*eslint-disable*/
 import React, { Component } from "react";
-import Toggle from "react-toggle";
+
+import { Dropdown, Badge, Button } from "react-bootstrap";
 
 import imagine1 from "assets/img/sidebar-1.jpg";
 import imagine2 from "assets/img/sidebar-2.jpg";
@@ -30,7 +31,7 @@ class FixedPlugin extends Component {
     this.state = {
       classes: "dropdown show-dropdown open",
       bg_checked: true,
-      bgImage: this.props.bgImage
+      bgImage: this.props.bgImage,
     };
   }
   handleClick = () => {
@@ -42,176 +43,150 @@ class FixedPlugin extends Component {
   };
   render() {
     return (
-      <div className="fixed-plugin">
-        <div id="fixedPluginClasses" className={this.props.fixedClasses}>
-          <div onClick={this.handleClick}>
-            <i className="fa fa-cog fa-2x" />
-          </div>
-          <ul className="dropdown-menu">
-            <li className="header-title">Configuration</li>
-            <li className="adjustments-line">
-              <p className="pull-left">Background Image</p>
-              <div className="pull-right">
-                <Toggle
-                  defaultChecked={this.state.bg_checked}
-                  onChange={this.onChangeClick}
-                />
-              </div>
-              <div className="clearfix" />
+      <div className=" fixed-plugin">
+        <Dropdown className=" show-dropdown">
+          <a
+            data-toggle="dropdown"
+            href="#pablo"
+            onClick={(e) => e.preventDefault()}
+          >
+            <i className=" fa fa-cog fa-2x"></i>
+          </a>
+          <Dropdown.Menu>
+            <li className=" header-title">Sidebar Style</li>
+            <li className=" adjustments-line">
+              <a className=" switch-trigger" href="javascript:void(0)">
+                <p>Background Image</p>
+                <label className=" switch">
+                  <input
+                    data-off-color="primary"
+                    data-on-color="primary"
+                    data-toggle="switch"
+                    defaultChecked
+                    type="checkbox"
+                  ></input>
+                  <span className=" toggle"></span>
+                </label>
+                <div className=" clearfix"></div>
+              </a>
             </li>
-            <li className="adjustments-line">
-              <a className="switch-trigger">
+            <li className=" adjustments-line">
+              <a
+                className=" switch-trigger background-color"
+                href="javascript:void(0)"
+              >
                 <p>Filters</p>
-                <div className="pull-right">
-                  <span
-                    className={
-                      this.props.bgColor === "black"
-                        ? "badge filter active"
-                        : "badge filter"
-                    }
+                <div className=" pull-right">
+                  <Badge
+                    className=" filter badge-black"
                     data-color="black"
-                    onClick={() => {
-                      this.props.handleColorClick("black");
-                    }}
-                  />
-                  <span
-                    className={
-                      this.props.bgColor === "azure"
-                        ? "badge filter badge-azure active"
-                        : "badge filter badge-azure"
-                    }
+                  ></Badge>
+                  <Badge
+                    className=" filter badge-azure"
                     data-color="azure"
-                    onClick={() => {
-                      this.props.handleColorClick("azure");
-                    }}
-                  />
-                  <span
-                    className={
-                      this.props.bgColor === "green"
-                        ? "badge filter badge-green active"
-                        : "badge filter badge-green"
-                    }
+                  ></Badge>
+                  <Badge
+                    className=" filter badge-green"
                     data-color="green"
-                    onClick={() => {
-                      this.props.handleColorClick("green");
-                    }}
-                  />
-                  <span
-                    className={
-                      this.props.bgColor === "orange"
-                        ? "badge filter badge-orange active"
-                        : "badge filter badge-orange"
-                    }
+                  ></Badge>
+                  <Badge
+                    className=" filter badge-orange"
                     data-color="orange"
-                    onClick={() => {
-                      this.props.handleColorClick("orange");
-                    }}
-                  />
-                  <span
-                    className={
-                      this.props.bgColor === "red"
-                        ? "badge filter badge-red active"
-                        : "badge filter badge-red"
-                    }
-                    data-color="red"
-                    onClick={() => {
-                      this.props.handleColorClick("red");
-                    }}
-                  />
-                  <span
-                    className={
-                      this.props.bgColor === "purple"
-                        ? "badge filter badge-purple active"
-                        : "badge filter badge-purple"
-                    }
+                  ></Badge>
+                  <Badge className=" filter badge-red" data-color="red"></Badge>
+                  <Badge
+                    className=" filter badge-purple active"
                     data-color="purple"
-                    onClick={() => {
-                      this.props.handleColorClick("purple");
-                    }}
-                  />
+                  ></Badge>
                 </div>
-                <div className="clearfix" />
+                <div className=" clearfix"></div>
               </a>
             </li>
-            <li className="header-title">Sidebar Images</li>
-            <li className={this.state["bgImage"] === imagine1 ? "active" : ""}>
+            <li className=" header-title">Sidebar Images</li>
+            <li className=" active">
               <a
-                className="img-holder switch-trigger"
-                onClick={() => {
-                  this.setState({ bgImage: imagine1 });
-                  this.props.handleImageClick(imagine1);
-                }}
+                className=" img-holder switch-trigger"
+                href="javascript:void(0)"
               >
-                <img src={imagine1} alt="..." />
+                <img alt="..." src={require("assets/img/sidebar-1.jpg")}></img>
               </a>
             </li>
-            <li className={this.state["bgImage"] === imagine2 ? "active" : ""}>
+            <li>
               <a
-                className="img-holder switch-trigger"
-                onClick={() => {
-                  this.setState({ bgImage: imagine2 });
-                  this.props.handleImageClick(imagine2);
-                }}
+                className=" img-holder switch-trigger"
+                href="javascript:void(0)"
               >
-                <img src={imagine2} alt="..." />
+                <img alt="..." src={require("assets/img/sidebar-3.jpg")}></img>
               </a>
             </li>
-            <li className={this.state["bgImage"] === imagine3 ? "active" : ""}>
+            <li>
               <a
-                className="img-holder switch-trigger"
-                onClick={() => {
-                  this.setState({ bgImage: imagine3 });
-                  this.props.handleImageClick(imagine3);
-                }}
+                className=" img-holder switch-trigger"
+                href="javascript:void(0)"
               >
-                <img src={imagine3} alt="..." />
+                <img alt="..." src={require("assets/img/sidebar-4.jpg")}></img>
               </a>
             </li>
-            <li className={this.state["bgImage"] === imagine4 ? "active" : ""}>
+            <li>
               <a
-                className="img-holder switch-trigger"
-                onClick={() => {
-                  this.setState({ bgImage: imagine4 });
-                  this.props.handleImageClick(imagine4);
-                }}
+                className=" img-holder switch-trigger"
+                href="javascript:void(0)"
               >
-                <img src={imagine4} alt="..." />
+                <img alt="..." src={require("assets/img/sidebar-5.jpg")}></img>
               </a>
             </li>
-
-            <li className="button-container">
-              <div className="">
-                <a
-                  href="https://www.creative-tim.com/product/light-bootstrap-dashboard-react?ref=lbdr-fixed-plugin"
+            <li className=" button-container">
+              <div>
+                <Button
+                  block
+                  className=" btn-fill"
+                  href="http://www.creative-tim.com/product/light-bootstrap-dashboard-react"
+                  rel="noopener noreferrer"
                   target="_blank"
-                  className="btn btn-success btn-block btn-fill"
+                  variant="info"
                 >
-                  Download free!
-                </a>
+                  Download, it's free!
+                </Button>
               </div>
             </li>
-            <li className="button-container">
-              <div className="">
-                <a
-                  href="https://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react?ref=lbdr-fixed-plugin"
+            <li className=" header-title pro-title text-center">
+              Want more components?
+            </li>
+            <li className=" button-container">
+              <div>
+                <Button
+                  block
+                  className=" btn-fill"
+                  href="http://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react"
+                  rel="noopener noreferrer"
                   target="_blank"
-                  className="btn btn-warning btn-block btn-fill"
+                  variant="warning"
                 >
-                  Buy Pro
-                </a>
+                  Get The PRO Version!
+                </Button>
               </div>
             </li>
-            <li className="button-container">
-              <a
-                href="https://demos.creative-tim.com/light-bootstrap-dashboard-react/#/documentation/getting-started?ref=lbdr-fixed-plugin"
-                target="_blank"
-                className="btn btn-fill btn-info"
-              >
-                Documentation
-              </a>
+            <li className=" header-title" id="sharrreTitle">
+              Thank you for sharing!
             </li>
-          </ul>
-        </div>
+            <li className=" button-container">
+              <Button
+                className=" btn-social btn-outline btn-round sharrre"
+                id="twitter"
+                variant="twitter"
+              >
+                <i className=" fa fa-twitter"></i>· 256
+              </Button>
+              <Button
+                className=" btn-social btn-outline btn-round sharrre"
+                id="facebook"
+                variant="facebook"
+              >
+                <i className=" fa fa-facebook-square"></i>· 426
+              </Button>
+            </li>
+          </Dropdown.Menu>
+        </Dropdown>
       </div>
     );
   }
