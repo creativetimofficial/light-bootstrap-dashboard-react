@@ -194,7 +194,7 @@ function User() {
                   onClick={(e) => e.preventDefault()}
                   variant="link"
                 >
-                  <i className="fa fa-twitter"></i>
+                  <i className="fab fa-twitter"></i>
                 </Button>
                 <Button
                   className="btn-simple btn-icon"
@@ -202,7 +202,7 @@ function User() {
                   onClick={(e) => e.preventDefault()}
                   variant="link"
                 >
-                  <i className="fa fa-google-plus-square"></i>
+                  <i class="fab fa-google-plus-square"></i>
                 </Button>
               </div>
             </Card>
