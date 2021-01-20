@@ -46,7 +46,7 @@ input:focus {
 .btn{
     @include transition($ultra-fast-transition-time, $transition-ease-in);
 }
-.fa{
+.fa,.fas,.far,.fal,.fad,.fab{
     width: 18px;
     text-align: center;
 }
