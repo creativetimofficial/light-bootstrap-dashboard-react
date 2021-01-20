@@ -16,37 +16,43 @@
 
 */
 import React, { Component } from "react";
-import { Grid } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 class Footer extends Component {
   render() {
     return (
-      <footer className="footer">
-        <Grid fluid>
-          <nav className="pull-left">
-            <ul>
+      <footer className=" footer">
+        <Container fluid>
+          <nav>
+            <ul className=" footer-menu">
               <li>
-                <a href="#pablo">Home</a>
+                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                  Home
+                </a>
               </li>
               <li>
-                <a href="#pablo">Company</a>
+                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                  Company
+                </a>
               </li>
               <li>
-                <a href="#pablo">Portfolio</a>
+                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                  Portfolio
+                </a>
               </li>
               <li>
-                <a href="#pablo">Blog</a>
+                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                  Blog
+                </a>
               </li>
             </ul>
+            <p className=" copyright text-center">
+              © {new Date().getFullYear()}{" "}
+              <a href="http://www.creative-tim.com">Creative Tim</a>, made with
+              love for a better web
+            </p>
           </nav>
-          <p className="copyright pull-right">
-            &copy; {new Date().getFullYear()}{" "}
-            <a href="http://www.creative-tim.com?ref=lbr-footer">
-              Creative Tim
-            </a>
-            , made with love for a better web
-          </p>
-        </Grid>
+        </Container>
       </footer>
     );
   }
