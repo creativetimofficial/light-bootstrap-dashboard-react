@@ -1,99 +1,157 @@
-/*!
+import React from "react";
 
-=========================================================
-* Light Bootstrap Dashboard React - v1.3.0
-=========================================================
+// react-bootstrap components
+import {
+  Badge,
+  Button,
+  Card,
+  Navbar,
+  Nav,
+  Table,
+  Container,
+  Row,
+  Col,
+} from "react-bootstrap";
 
-* Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React, { Component } from "react";
-import { Grid, Row, Col, Table } from "react-bootstrap";
-
-import Card from "components/Card/Card.jsx";
-import { thArray, tdArray } from "variables/Variables.jsx";
-
-class TableList extends Component {
-  render() {
-    return (
-      <div className="content">
-        <Grid fluid>
-          <Row>
-            <Col md={12}>
-              <Card
-                title="Striped Table with Hover"
-                category="Here is a subtitle for this table"
-                ctTableFullWidth
-                ctTableResponsive
-                content={
-                  <Table striped hover>
-                    <thead>
-                      <tr>
-                        {thArray.map((prop, key) => {
-                          return <th key={key}>{prop}</th>;
-                        })}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {tdArray.map((prop, key) => {
-                        return (
-                          <tr key={key}>
-                            {prop.map((prop, key) => {
-                              return <td key={key}>{prop}</td>;
-                            })}
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </Table>
-                }
-              />
-            </Col>
-
-            <Col md={12}>
-              <Card
-                plain
-                title="Striped Table with Hover"
-                category="Here is a subtitle for this table"
-                ctTableFullWidth
-                ctTableResponsive
-                content={
-                  <Table hover>
-                    <thead>
-                      <tr>
-                        {thArray.map((prop, key) => {
-                          return <th key={key}>{prop}</th>;
-                        })}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {tdArray.map((prop, key) => {
-                        return (
-                          <tr key={key}>
-                            {prop.map((prop, key) => {
-                              return <td key={key}>{prop}</td>;
-                            })}
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </Table>
-                }
-              />
-            </Col>
-          </Row>
-        </Grid>
-      </div>
-    );
-  }
+function TableList() {
+  return (
+    <>
+      <Container fluid>
+        <Row>
+          <Col md="12">
+            <Card className=" strpied-tabled-with-hover">
+              <Card.Header>
+                <Card.Title as="h4">Striped Table with Hover</Card.Title>
+                <p className=" card-category">
+                  Here is a subtitle for this table
+                </p>
+              </Card.Header>
+              <Card.Body className=" table-full-width table-responsive">
+                <Table className=" table-hover table-striped">
+                  <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Salary</th>
+                    <th>Country</th>
+                    <th>City</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Dakota Rice</td>
+                      <td>$36,738</td>
+                      <td>Niger</td>
+                      <td>Oud-Turnhout</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Minerva Hooper</td>
+                      <td>$23,789</td>
+                      <td>Curaçao</td>
+                      <td>Sinaai-Waas</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Sage Rodriguez</td>
+                      <td>$56,142</td>
+                      <td>Netherlands</td>
+                      <td>Baileux</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Philip Chaney</td>
+                      <td>$38,735</td>
+                      <td>Korea, South</td>
+                      <td>Overland Park</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Doris Greene</td>
+                      <td>$63,542</td>
+                      <td>Malawi</td>
+                      <td>Feldkirchen in Kärnten</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Mason Porter</td>
+                      <td>$78,615</td>
+                      <td>Chile</td>
+                      <td>Gloucester</td>
+                    </tr>
+                  </tbody>
+                </Table>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md="12">
+            <Card className=" card-plain table-plain-bg">
+              <Card.Header>
+                <Card.Title as="h4">Table on Plain Background</Card.Title>
+                <p className=" card-category">
+                  Here is a subtitle for this table
+                </p>
+              </Card.Header>
+              <Card.Body className=" table-full-width table-responsive">
+                <Table className=" table-hover">
+                  <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Salary</th>
+                    <th>Country</th>
+                    <th>City</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Dakota Rice</td>
+                      <td>$36,738</td>
+                      <td>Niger</td>
+                      <td>Oud-Turnhout</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Minerva Hooper</td>
+                      <td>$23,789</td>
+                      <td>Curaçao</td>
+                      <td>Sinaai-Waas</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Sage Rodriguez</td>
+                      <td>$56,142</td>
+                      <td>Netherlands</td>
+                      <td>Baileux</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Philip Chaney</td>
+                      <td>$38,735</td>
+                      <td>Korea, South</td>
+                      <td>Overland Park</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Doris Greene</td>
+                      <td>$63,542</td>
+                      <td>Malawi</td>
+                      <td>Feldkirchen in Kärnten</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Mason Porter</td>
+                      <td>$78,615</td>
+                      <td>Chile</td>
+                      <td>Gloucester</td>
+                    </tr>
+                  </tbody>
+                </Table>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </>
+  );
 }
 
 export default TableList;
