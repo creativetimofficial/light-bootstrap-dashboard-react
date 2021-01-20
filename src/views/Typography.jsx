@@ -1,146 +1,147 @@
-/*!
+import React from "react";
 
-=========================================================
-* Light Bootstrap Dashboard React - v1.3.0
-=========================================================
+// react-bootstrap components
+import {
+  Badge,
+  Button,
+  Card,
+  Navbar,
+  Nav,
+  Container,
+  Row,
+  Col,
+} from "react-bootstrap";
 
-* Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React, { Component } from "react";
-import { Grid, Row, Col } from "react-bootstrap";
-
-import Card from "components/Card/Card.jsx";
-
-class Typography extends Component {
-  render() {
-    return (
-      <div className="content">
-        <Grid fluid>
-          <Row>
-            <Col md={12}>
-              <Card
-                title="Light Bootstrap Table Heading"
-                category="Created using Roboto Font Family"
-                content={
-                  <div>
-                    <div className="typo-line">
-                      <h1>
-                        <p className="category">Header 1</p>Light Bootstrap
-                        Table Heading{" "}
-                      </h1>
-                    </div>
-
-                    <div className="typo-line">
-                      <h2>
-                        <p className="category">Header 2</p>Light Bootstrap
-                        Table Heading
-                      </h2>
-                    </div>
-                    <div className="typo-line">
-                      <h3>
-                        <p className="category">Header 3</p>Light Bootstrap
-                        Table Heading
-                      </h3>
-                    </div>
-                    <div className="typo-line">
-                      <h4>
-                        <p className="category">Header 4</p>Light Bootstrap
-                        Table Heading
-                      </h4>
-                    </div>
-                    <div className="typo-line">
-                      <h5>
-                        <p className="category">Header 5</p>Light Bootstrap
-                        Table Heading
-                      </h5>
-                    </div>
-                    <div className="typo-line">
-                      <h6>
-                        <p className="category">Header 6</p>Light Bootstrap
-                        Table Heading
-                      </h6>
-                    </div>
-                    <div className="typo-line">
-                      <p>
-                        <span className="category">Paragraph</span>Lorem ipsum
-                        dolor sit amet, consectetuer adipiscing elit, sed diam
-                        nonummy nibh euismod tincidunt ut laoreet dolore magna
-                        aliquam erat volutpat. Ut wisi enim ad minim veniam.
-                      </p>
-                    </div>
-                    <div className="typo-line">
-                      <p className="category">Quote</p>
-                      <blockquote>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit, sed diam nonummy nibh euismod tincidunt ut
-                          laoreet dolore magna aliquam erat volutpat. Ut wisi
-                          enim ad minim veniam.
-                        </p>
-                        <small>Steve Jobs, CEO Apple</small>
-                      </blockquote>
-                    </div>
-
-                    <div className="typo-line">
-                      <p className="category">Muted Text</p>
-                      <p className="text-muted">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing
-                        elit, sed diam nonummy nibh euismod tincidunt ut
-                        laoreet.
-                      </p>
-                    </div>
-                    <div className="typo-line">
-                      {/* <!--
-                                             there are also "text-info", "text-success", "text-warning", "text-danger" clases for the text
-                                             --> */}
-                      <p className="category">Coloured Text</p>
-                      <p className="text-primary">
-                        Text Primary - Light Bootstrap Table Heading and complex
-                        bootstrap dashboard you've ever seen on the internet.
-                      </p>
-                      <p className="text-info">
-                        Text Info - Light Bootstrap Table Heading and complex
-                        bootstrap dashboard you've ever seen on the internet.
-                      </p>
-                      <p className="text-success">
-                        Text Success - Light Bootstrap Table Heading and complex
-                        bootstrap dashboard you've ever seen on the internet.
-                      </p>
-                      <p className="text-warning">
-                        Text Warning - Light Bootstrap Table Heading and complex
-                        bootstrap dashboard you've ever seen on the internet.
-                      </p>
-                      <p className="text-danger">
-                        Text Danger - Light Bootstrap Table Heading and complex
-                        bootstrap dashboard you've ever seen on the internet.
-                      </p>
-                    </div>
-
-                    <div className="typo-line">
-                      <h2>
-                        <p className="category">Small Tag</p>Header with small
-                        subtitle <br />
-                        <small>".small" is a tag for the headers</small>{" "}
-                      </h2>
-                    </div>
-                  </div>
-                }
-              />
-            </Col>
-          </Row>
-        </Grid>
-      </div>
-    );
-  }
+function Typography() {
+  return (
+    <>
+      <Container fluid>
+        <Row>
+          <Col md="12">
+            <Card>
+              <Card.Header>
+                <Card.Title as="h4">Light Bootstrap Table Heading</Card.Title>
+                <p className=" card-category">
+                  Created using Montserrat Font Family
+                </p>
+              </Card.Header>
+              <Card.Body>
+                <div className=" typography-line">
+                  <h1>
+                    <span>Header 1</span>
+                    The Life of LB Dashboard
+                  </h1>
+                </div>
+                <div className=" typography-line">
+                  <h2>
+                    <span>Header 2</span>
+                    The Life of Light Bootstrap Dashboard
+                  </h2>
+                </div>
+                <div className=" typography-line">
+                  <h3>
+                    <span>Header 3</span>
+                    The Life of Light Bootstrap Dashboard
+                  </h3>
+                </div>
+                <div className=" typography-line">
+                  <h4>
+                    <span>Header 4</span>
+                    The Life of Light Bootstrap Dashboard
+                  </h4>
+                </div>
+                <div className=" typography-line">
+                  <h5>
+                    <span>Header 5</span>
+                    The Life of Light Bootstrap Dashboard
+                  </h5>
+                </div>
+                <div className=" typography-line">
+                  <h6>
+                    <span>Header 6</span>
+                    The Life of Light Bootstrap Dashboard
+                  </h6>
+                </div>
+                <div className=" typography-line">
+                  <p>
+                    <span>Paragraph</span>I will be the leader of a company that
+                    ends up being worth billions of dollars, because I got the
+                    answers. I understand culture. I am the nucleus. I think
+                    that’s a responsibility that I have, to push possibilities,
+                    to show people, this is the level that things could be at.
+                  </p>
+                </div>
+                <div className=" typography-line">
+                  <span>Quote</span>
+                  <blockquote>
+                    <p className=" blockquote blockquote-primary">
+                      "I will be the leader of a company that ends up being
+                      worth billions of dollars, because I got the answers. I
+                      understand culture. I am the nucleus. I think that’s a
+                      responsibility that I have, to push possibilities, to show
+                      people, this is the level that things could be at."{" "}
+                      <br></br>
+                      <br></br>
+                      <small>- Noaa</small>
+                    </p>
+                  </blockquote>
+                </div>
+                <div className=" typography-line">
+                  <span>Muted Text</span>
+                  <p className=" text-muted">
+                    I will be the leader of a company that ends up being worth
+                    billions of dollars, because I got the answers...
+                  </p>
+                </div>
+                <div className=" typography-line">
+                  <span>Primary Text</span>
+                  <p className=" text-primary">
+                    I will be the leader of a company that ends up being worth
+                    billions of dollars, because I got the answers...
+                  </p>
+                </div>
+                <div className=" typography-line">
+                  <span>Info Text</span>
+                  <p className=" text-info">
+                    I will be the leader of a company that ends up being worth
+                    billions of dollars, because I got the answers...
+                  </p>
+                </div>
+                <div className=" typography-line">
+                  <span>Success Text</span>
+                  <p className=" text-success">
+                    I will be the leader of a company that ends up being worth
+                    billions of dollars, because I got the answers...
+                  </p>
+                </div>
+                <div className=" typography-line">
+                  <span>Warning Text</span>
+                  <p className=" text-warning">
+                    I will be the leader of a company that ends up being worth
+                    billions of dollars, because I got the answers...
+                  </p>
+                </div>
+                <div className=" typography-line">
+                  <span>Danger Text</span>
+                  <p className=" text-danger">
+                    I will be the leader of a company that ends up being worth
+                    billions of dollars, because I got the answers...
+                  </p>
+                </div>
+                <div className=" typography-line">
+                  <h2>
+                    <span>Small Tag</span>
+                    Header with small subtitle <br></br>
+                    <small>Use "small" tag for the headers</small>
+                  </h2>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </>
+  );
 }
 
 export default Typography;
