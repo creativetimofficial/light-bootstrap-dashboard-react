@@ -53,28 +53,28 @@ class Header extends Component {
             aria-controls="navigation-index"
             aria-expanded={false}
             aria-label="Toggle navigation"
-            className=" navbar-toggler navbar-toggler-right"
+            className="navbar-toggler navbar-toggler-right"
             data-toggle="collapse"
             href=""
             type="button"
           >
-            <span className=" navbar-toggler-bar burger-lines"></span>
-            <span className=" navbar-toggler-bar burger-lines"></span>
-            <span className=" navbar-toggler-bar burger-lines"></span>
+            <span className="navbar-toggler-bar burger-lines"></span>
+            <span className="navbar-toggler-bar burger-lines"></span>
+            <span className="navbar-toggler-bar burger-lines"></span>
           </Navbar.Toggle>
           <Navbar.Collapse
-            className=" collapse justify-content-end"
+            className="collapse justify-content-end"
             id="navigation"
           >
-            <Nav className=" nav mr-auto" navbar>
+            <Nav className="nav mr-auto" navbar>
               <Nav.Item>
                 <Nav.Link
                   data-toggle="dropdown"
                   href="#pablo"
                   onClick={(e) => e.preventDefault()}
                 >
-                  <i className=" nc-icon nc-palette"></i>
-                  <span className=" d-lg-none">Dashboard</span>
+                  <i className="nc-icon nc-palette"></i>
+                  <span className="d-lg-none">Dashboard</span>
                 </Nav.Link>
               </Nav.Item>
               <Dropdown as={Nav.Item}>
@@ -86,9 +86,9 @@ class Header extends Component {
                   onClick={(e) => e.preventDefault()}
                   variant="default"
                 >
-                  <i className=" nc-icon nc-planet"></i>
-                  <span className=" notification">5</span>
-                  <span className=" d-lg-none">Notification</span>
+                  <i className="nc-icon nc-planet"></i>
+                  <span className="notification">5</span>
+                  <span className="d-lg-none">Notification</span>
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
                   <Dropdown.Item
@@ -125,15 +125,15 @@ class Header extends Component {
               </Dropdown>
               <Nav.Item>
                 <Nav.Link href="#pablo" onClick={(e) => e.preventDefault()}>
-                  <i className=" nc-icon nc-zoom-split"></i>
-                  <span className=" d-lg-block"> Search</span>
+                  <i className="nc-icon nc-zoom-split"></i>
+                  <span className="d-lg-block"> Search</span>
                 </Nav.Link>
               </Nav.Item>
             </Nav>
-            <Nav className=" ml-auto" navbar>
+            <Nav className="ml-auto" navbar>
               <Nav.Item>
                 <Nav.Link href="#pablo" onClick={(e) => e.preventDefault()}>
-                  <span className=" no-icon">Account</span>
+                  <span className="no-icon">Account</span>
                 </Nav.Link>
               </Nav.Item>
               <Dropdown as={Nav.Item}>
@@ -146,7 +146,7 @@ class Header extends Component {
                   id="navbarDropdownMenuLink"
                   variant="default"
                 >
-                  <span className=" no-icon">Dropdown</span>
+                  <span className="no-icon">Dropdown</span>
                 </Dropdown.Toggle>
                 <Dropdown.Menu aria-labelledby="navbarDropdownMenuLink">
                   <Dropdown.Item
@@ -173,7 +173,7 @@ class Header extends Component {
                   >
                     Something else here
                   </Dropdown.Item>
-                  <div className=" divider"></div>
+                  <div className="divider"></div>
                   <Dropdown.Item
                     href="#pablo"
                     onClick={(e) => e.preventDefault()}
@@ -184,7 +184,7 @@ class Header extends Component {
               </Dropdown>
               <Nav.Item>
                 <Nav.Link href="#pablo" onClick={(e) => e.preventDefault()}>
-                  <span className=" no-icon">Log out</span>
+                  <span className="no-icon">Log out</span>
                 </Nav.Link>
               </Nav.Item>
             </Nav>
