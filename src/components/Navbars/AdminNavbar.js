@@ -81,9 +81,7 @@ class Header extends Component {
                 <Dropdown.Toggle
                   as={Nav.Link}
                   data-toggle="dropdown"
-                  href="#pablo"
                   id="dropdown-67443507"
-                  onClick={(e) => e.preventDefault()}
                   variant="default"
                 >
                   <i className="nc-icon nc-planet"></i>
@@ -142,7 +140,6 @@ class Header extends Component {
                   aria-haspopup={true}
                   as={Nav.Link}
                   data-toggle="dropdown"
-                  href="http://example.com"
                   id="navbarDropdownMenuLink"
                   variant="default"
                 >
