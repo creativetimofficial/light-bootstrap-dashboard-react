@@ -26,10 +26,12 @@
 - react-google-maps (we'll use simple Google Maps API with Vanilla JS)
 - react-toggle (we'll use the simple React-Bootstrap Form.Check as a switch instead)
 ### Added dependencies
-+ react-notification-alert@0.0.13
++ react-notification-alert@0.0.13 (instead of the react-notification-system)
 + reactstrap@8.9.0 (as part of the react-notification-alert)
-+ jquery@3.5.1
-+ @fortawesome/fontawesome-free@5.15.2
++ jquery@3.5.1 (since Bootstrap requires it)
++ @fortawesome/fontawesome-free@5.15.2 (For easier update of the package - instead of a link inside public/index.html)
++ gulp-append-prepend@1.0.8 (For Creative Tim licenses)
++ gulp@4.0.2 (For Creative Tim licenses)
 ### Updated dependencies
 ```
 bootstrap           3.3.7   →    4.6.0
