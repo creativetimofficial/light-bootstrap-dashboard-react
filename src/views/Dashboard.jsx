@@ -13,7 +13,7 @@ import {
   Col,
   Form,
   OverlayTrigger,
-  Tooltip
+  Tooltip,
 } from "react-bootstrap";
 
 function Dashboard() {
@@ -234,8 +234,6 @@ function Dashboard() {
                                 Edit Task..
                               </Tooltip>
                             }
-                            placement=""
-                            trigger="hover"
                           >
                             <Button
                               className=" btn-simple btn-link"
@@ -249,8 +247,6 @@ function Dashboard() {
                             overlay={
                               <Tooltip id="tooltip-506045838">Remove..</Tooltip>
                             }
-                            placement=""
-                            trigger="hover"
                           >
                             <Button
                               className=" btn-simple btn-link"
@@ -286,8 +282,6 @@ function Dashboard() {
                                 Edit Task..
                               </Tooltip>
                             }
-                            placement=""
-                            trigger="hover"
                           >
                             <Button
                               className=" btn-simple btn-link"
@@ -301,8 +295,6 @@ function Dashboard() {
                             overlay={
                               <Tooltip id="tooltip-21130535">Remove..</Tooltip>
                             }
-                            placement=""
-                            trigger="hover"
                           >
                             <Button
                               className=" btn-simple btn-link"
@@ -339,8 +331,6 @@ function Dashboard() {
                                 Edit Task..
                               </Tooltip>
                             }
-                            placement=""
-                            trigger="hover"
                           >
                             <Button
                               className=" btn-simple btn-link"
@@ -354,8 +344,6 @@ function Dashboard() {
                             overlay={
                               <Tooltip id="tooltip-773861645">Remove..</Tooltip>
                             }
-                            placement=""
-                            trigger="hover"
                           >
                             <Button
                               className=" btn-simple btn-link"
@@ -390,8 +378,6 @@ function Dashboard() {
                                 Edit Task..
                               </Tooltip>
                             }
-                            placement=""
-                            trigger="hover"
                           >
                             <Button
                               className=" btn-simple btn-link"
@@ -405,8 +391,6 @@ function Dashboard() {
                             overlay={
                               <Tooltip id="tooltip-829164576">Remove..</Tooltip>
                             }
-                            placement=""
-                            trigger="hover"
                           >
                             <Button
                               className=" btn-simple btn-link"
@@ -438,8 +422,6 @@ function Dashboard() {
                                 Edit Task..
                               </Tooltip>
                             }
-                            placement=""
-                            trigger="hover"
                           >
                             <Button
                               className=" btn-simple btn-link"
@@ -453,8 +435,6 @@ function Dashboard() {
                             overlay={
                               <Tooltip id="tooltip-922981635">Remove..</Tooltip>
                             }
-                            placement=""
-                            trigger="hover"
                           >
                             <Button
                               className=" btn-simple btn-link"
@@ -487,8 +467,6 @@ function Dashboard() {
                                 Edit Task..
                               </Tooltip>
                             }
-                            placement=""
-                            trigger="hover"
                           >
                             <Button
                               className=" btn-simple btn-link"
@@ -502,8 +480,6 @@ function Dashboard() {
                             overlay={
                               <Tooltip id="tooltip-119603706">Remove..</Tooltip>
                             }
-                            placement=""
-                            trigger="hover"
                           >
                             <Button
                               className=" btn-simple btn-link"
