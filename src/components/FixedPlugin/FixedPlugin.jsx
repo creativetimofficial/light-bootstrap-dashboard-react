@@ -50,7 +50,7 @@ class FixedPlugin extends Component {
             href="#pablo"
             onClick={(e) => e.preventDefault()}
           >
-            <i className="fa fa-cog fa-2x"></i>
+            <i className="fas fa-cogs fa-2x"></i>
           </a>
           <Dropdown.Menu>
             <li className="header-title">Sidebar Style</li>
@@ -175,7 +175,7 @@ class FixedPlugin extends Component {
                 id="twitter"
                 variant="twitter"
               >
-                <i className="fa fa-twitter"></i>· 256
+                <i className="fab fa-twitter"></i>· 256
               </Button>
               <Button
                 className="btn-social btn-outline btn-round sharrre"
