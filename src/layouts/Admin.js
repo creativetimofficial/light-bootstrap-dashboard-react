@@ -23,8 +23,6 @@ import Footer from "components/Footer/Footer";
 import Sidebar from "components/Sidebar/Sidebar";
 import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
-import { style } from "variables/Variables.js";
-
 import routes from "routes.js";
 
 import image from "assets/img/sidebar-3.jpg";
