@@ -202,7 +202,7 @@ function User() {
                   onClick={(e) => e.preventDefault()}
                   variant="link"
                 >
-                  <i class="fab fa-google-plus-square"></i>
+                  <i className="fab fa-google-plus-square"></i>
                 </Button>
               </div>
             </Card>
