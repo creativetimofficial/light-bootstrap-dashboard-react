@@ -6,6 +6,8 @@
 - For this, we have followed the guidelines from [here](https://react-bootstrap.github.io/migrating/) and [here](https://getbootstrap.com/docs/4.0/migration/)
 - We also did not add Bootstrap variables as part of our styles (we will do so in one of our next updates, probably in version 3.0.0 when we'll add Bootstrap 5)
 ### Bug fixing
+- Renamed all files to `.js`, instead of `.jsx`
+- Refactor all files from class components to functional ones, so now, you can use React Hooks
 ### Major style changes
 - Since the update from Bootstrap 3 to Bootstrap 4, all styles have been changed
 ### Deleted components
