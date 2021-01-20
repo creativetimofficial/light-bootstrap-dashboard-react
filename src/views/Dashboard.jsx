@@ -139,14 +139,14 @@ function Dashboard() {
                   id="chartPreferences"
                 ></div>
                 <div className="legend">
-                  <i className="fa fa-circle text-info"></i>
-                  Open <i className="fa fa-circle text-danger"></i>
-                  Bounce <i className="fa fa-circle text-warning"></i>
+                  <i className="fas fa-circle text-info"></i>
+                  Open <i className="fas fa-circle text-danger"></i>
+                  Bounce <i className="fas fa-circle text-warning"></i>
                   Unsubscribe
                 </div>
                 <hr></hr>
                 <div className="stats">
-                  <i className="fa fa-clock-o"></i>
+                  <i className="far fa-clock"></i>
                   Campaign sent 2 days ago
                 </div>
               </Card.Body>
@@ -163,14 +163,14 @@ function Dashboard() {
               </Card.Body>
               <Card.Footer>
                 <div className="legend">
-                  <i className="fa fa-circle text-info"></i>
-                  Open <i className="fa fa-circle text-danger"></i>
-                  Click <i className="fa fa-circle text-warning"></i>
+                  <i className="fas fa-circle text-info"></i>
+                  Open <i className="fas fa-circle text-danger"></i>
+                  Click <i className="fas fa-circle text-warning"></i>
                   Click Second Time
                 </div>
                 <hr></hr>
                 <div className="stats">
-                  <i className="fa fa-history"></i>
+                  <i className="fas fa-history"></i>
                   Updated 3 minutes ago
                 </div>
               </Card.Footer>
@@ -189,13 +189,13 @@ function Dashboard() {
               </Card.Body>
               <Card.Footer>
                 <div className="legend">
-                  <i className="fa fa-circle text-info"></i>
-                  Tesla Model S <i className="fa fa-circle text-danger"></i>
+                  <i className="fas fa-circle text-info"></i>
+                  Tesla Model S <i className="fas fa-circle text-danger"></i>
                   BMW 5 Series
                 </div>
                 <hr></hr>
                 <div className="stats">
-                  <i className="fa fa-check"></i>
+                  <i className="fas fa-check"></i>
                   Data information certified
                 </div>
               </Card.Footer>
@@ -240,7 +240,7 @@ function Dashboard() {
                               type="button"
                               variant="info"
                             >
-                              <i className="fa fa-edit"></i>
+                              <i className="far fa-edit"></i>
                             </Button>
                           </OverlayTrigger>
                           <OverlayTrigger
@@ -253,7 +253,7 @@ function Dashboard() {
                               type="button"
                               variant="danger"
                             >
-                              <i className="fa fa-times"></i>
+                              <i className="fas fa-times"></i>
                             </Button>
                           </OverlayTrigger>
                         </td>
@@ -288,7 +288,7 @@ function Dashboard() {
                               type="button"
                               variant="info"
                             >
-                              <i className="fa fa-edit"></i>
+                              <i className="far fa-edit"></i>
                             </Button>
                           </OverlayTrigger>
                           <OverlayTrigger
@@ -301,7 +301,7 @@ function Dashboard() {
                               type="button"
                               variant="danger"
                             >
-                              <i className="fa fa-times"></i>
+                              <i className="fas fa-times"></i>
                             </Button>
                           </OverlayTrigger>
                         </td>
@@ -337,7 +337,7 @@ function Dashboard() {
                               type="button"
                               variant="info"
                             >
-                              <i className="fa fa-edit"></i>
+                              <i className="far fa-edit"></i>
                             </Button>
                           </OverlayTrigger>
                           <OverlayTrigger
@@ -350,7 +350,7 @@ function Dashboard() {
                               type="button"
                               variant="danger"
                             >
-                              <i className="fa fa-times"></i>
+                              <i className="fas fa-times"></i>
                             </Button>
                           </OverlayTrigger>
                         </td>
@@ -384,7 +384,7 @@ function Dashboard() {
                               type="button"
                               variant="info"
                             >
-                              <i className="fa fa-edit"></i>
+                              <i className="far fa-edit"></i>
                             </Button>
                           </OverlayTrigger>
                           <OverlayTrigger
@@ -397,7 +397,7 @@ function Dashboard() {
                               type="button"
                               variant="danger"
                             >
-                              <i className="fa fa-times"></i>
+                              <i className="fas fa-times"></i>
                             </Button>
                           </OverlayTrigger>
                         </td>
@@ -428,7 +428,7 @@ function Dashboard() {
                               type="button"
                               variant="info"
                             >
-                              <i className="fa fa-edit"></i>
+                              <i className="far fa-edit"></i>
                             </Button>
                           </OverlayTrigger>
                           <OverlayTrigger
@@ -441,7 +441,7 @@ function Dashboard() {
                               type="button"
                               variant="danger"
                             >
-                              <i className="fa fa-times"></i>
+                              <i className="fas fa-times"></i>
                             </Button>
                           </OverlayTrigger>
                         </td>
@@ -473,7 +473,7 @@ function Dashboard() {
                               type="button"
                               variant="info"
                             >
-                              <i className="fa fa-edit"></i>
+                              <i className="far fa-edit"></i>
                             </Button>
                           </OverlayTrigger>
                           <OverlayTrigger
@@ -486,7 +486,7 @@ function Dashboard() {
                               type="button"
                               variant="danger"
                             >
-                              <i className="fa fa-times"></i>
+                              <i className="fas fa-times"></i>
                             </Button>
                           </OverlayTrigger>
                         </td>
