@@ -2,13 +2,17 @@
 
 ## [2.0.0] date
 ### Bug fixing
-
 ### Major style changes
-
 ### Deleted components
-
+- src/components/Card/Card.jsx (we'll use the simple React Bootstrap tags instead)
+- src/components/CustomButton/CustomButton.jsx (we'll use the simple React Bootstrap tags instead)
+- src/components/CustomCheckbox/CustomCheckbox.jsx (we'll use the simple React Bootstrap tags instead)
+- src/components/CustomRadio/CustomRadio.jsx (we'll use the simple React Bootstrap tags instead)
+- src/components/FormInputs/FormInputs.jsx (we'll use the simple React Bootstrap tags instead)
+- src/components/StatsCard/StatsCard.jsx (we'll use the simple React Bootstrap tags instead)
+- src/components/Tasks/Tasks.jsx (we'll use the simple React Bootstrap tags instead)
+- src/components/UserCard/UserCard.jsx (we'll use the simple React Bootstrap tags instead)
 ### Added components
-
 ### Deleted dependencies
 - react-notification-system (we'll use react-notification-alert from now on)
 - @types/googlemaps
