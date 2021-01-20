@@ -1,181 +1,431 @@
-/*!
+import React from "react";
 
-=========================================================
-* Light Bootstrap Dashboard React - v1.3.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React, { Component } from "react";
-import ChartistGraph from "react-chartist";
-import { Grid, Row, Col } from "react-bootstrap";
-
-import { Card } from "components/Card/Card.jsx";
-import { StatsCard } from "components/StatsCard/StatsCard.jsx";
-import { Tasks } from "components/Tasks/Tasks.jsx";
+// react-bootstrap components
 import {
-  dataPie,
-  legendPie,
-  dataSales,
-  optionsSales,
-  responsiveSales,
-  legendSales,
-  dataBar,
-  optionsBar,
-  responsiveBar,
-  legendBar
-} from "variables/Variables.jsx";
+  Badge,
+  Button,
+  Card,
+  Navbar,
+  Nav,
+  Table,
+  Container,
+  Row,
+  Col,
+  Form,
+  OverlayTrigger,
+  Tooltip
+} from "react-bootstrap";
 
-class Dashboard extends Component {
-  createLegend(json) {
-    var legend = [];
-    for (var i = 0; i < json["names"].length; i++) {
-      var type = "fa fa-circle text-" + json["types"][i];
-      legend.push(<i className={type} key={i} />);
-      legend.push(" ");
-      legend.push(json["names"][i]);
-    }
-    return legend;
-  }
-  render() {
-    return (
-      <div className="content">
-        <Grid fluid>
-          <Row>
-            <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="pe-7s-server text-warning" />}
-                statsText="Capacity"
-                statsValue="105GB"
-                statsIcon={<i className="fa fa-refresh" />}
-                statsIconText="Updated now"
-              />
-            </Col>
-            <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="pe-7s-wallet text-success" />}
-                statsText="Revenue"
-                statsValue="$1,345"
-                statsIcon={<i className="fa fa-calendar-o" />}
-                statsIconText="Last day"
-              />
-            </Col>
-            <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="pe-7s-graph1 text-danger" />}
-                statsText="Errors"
-                statsValue="23"
-                statsIcon={<i className="fa fa-clock-o" />}
-                statsIconText="In the last hour"
-              />
-            </Col>
-            <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="fa fa-twitter text-info" />}
-                statsText="Followers"
-                statsValue="+45"
-                statsIcon={<i className="fa fa-refresh" />}
-                statsIconText="Updated now"
-              />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={8}>
-              <Card
-                statsIcon="fa fa-history"
-                id="chartHours"
-                title="Users Behavior"
-                category="24 Hours performance"
-                stats="Updated 3 minutes ago"
-                content={
-                  <div className="ct-chart">
-                    <ChartistGraph
-                      data={dataSales}
-                      type="Line"
-                      options={optionsSales}
-                      responsiveOptions={responsiveSales}
-                    />
-                  </div>
-                }
-                legend={
-                  <div className="legend">{this.createLegend(legendSales)}</div>
-                }
-              />
-            </Col>
-            <Col md={4}>
-              <Card
-                statsIcon="fa fa-clock-o"
-                title="Email Statistics"
-                category="Last Campaign Performance"
-                stats="Campaign sent 2 days ago"
-                content={
-                  <div
-                    id="chartPreferences"
-                    className="ct-chart ct-perfect-fourth"
-                  >
-                    <ChartistGraph data={dataPie} type="Pie" />
-                  </div>
-                }
-                legend={
-                  <div className="legend">{this.createLegend(legendPie)}</div>
-                }
-              />
-            </Col>
-          </Row>
-
-          <Row>
-            <Col md={6}>
-              <Card
-                id="chartActivity"
-                title="2014 Sales"
-                category="All products including Taxes"
-                stats="Data information certified"
-                statsIcon="fa fa-check"
-                content={
-                  <div className="ct-chart">
-                    <ChartistGraph
-                      data={dataBar}
-                      type="Bar"
-                      options={optionsBar}
-                      responsiveOptions={responsiveBar}
-                    />
-                  </div>
-                }
-                legend={
-                  <div className="legend">{this.createLegend(legendBar)}</div>
-                }
-              />
-            </Col>
-
-            <Col md={6}>
-              <Card
-                title="Tasks"
-                category="Backend development"
-                stats="Updated 3 minutes ago"
-                statsIcon="fa fa-history"
-                content={
-                  <div className="table-full-width">
-                    <table className="table">
-                      <Tasks />
-                    </table>
-                  </div>
-                }
-              />
-            </Col>
-          </Row>
-        </Grid>
-      </div>
-    );
-  }
+function Dashboard() {
+  return (
+    <>
+      <Container fluid>
+        <Row>
+          <Col md="4">
+            <Card>
+              <Card.Header>
+                <Card.Title as="h4">Email Statistics</Card.Title>
+                <p className=" card-category">Last Campaign Performance</p>
+              </Card.Header>
+              <Card.Body>
+                <div
+                  className=" ct-chart ct-perfect-fourth"
+                  id="chartPreferences"
+                ></div>
+                <div className=" legend">
+                  <i className=" fa fa-circle text-info"></i>
+                  Open <i className=" fa fa-circle text-danger"></i>
+                  Bounce <i className=" fa fa-circle text-warning"></i>
+                  Unsubscribe
+                </div>
+                <hr></hr>
+                <div className=" stats">
+                  <i className=" fa fa-clock-o"></i>
+                  Campaign sent 2 days ago
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md="8">
+            <Card>
+              <Card.Header>
+                <Card.Title as="h4">Users Behavior</Card.Title>
+                <p className=" card-category">24 Hours performance</p>
+              </Card.Header>
+              <Card.Body>
+                <div className=" ct-chart" id="chartHours"></div>
+              </Card.Body>
+              <Card.Footer>
+                <div className=" legend">
+                  <i className=" fa fa-circle text-info"></i>
+                  Open <i className=" fa fa-circle text-danger"></i>
+                  Click <i className=" fa fa-circle text-warning"></i>
+                  Click Second Time
+                </div>
+                <hr></hr>
+                <div className=" stats">
+                  <i className=" fa fa-history"></i>
+                  Updated 3 minutes ago
+                </div>
+              </Card.Footer>
+            </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col md="6">
+            <Card>
+              <Card.Header>
+                <Card.Title as="h4">2017 Sales</Card.Title>
+                <p className=" card-category">All products including Taxes</p>
+              </Card.Header>
+              <Card.Body>
+                <div className=" ct-chart" id="chartActivity"></div>
+              </Card.Body>
+              <Card.Footer>
+                <div className=" legend">
+                  <i className=" fa fa-circle text-info"></i>
+                  Tesla Model S <i className=" fa fa-circle text-danger"></i>
+                  BMW 5 Series
+                </div>
+                <hr></hr>
+                <div className=" stats">
+                  <i className=" fa fa-check"></i>
+                  Data information certified
+                </div>
+              </Card.Footer>
+            </Card>
+          </Col>
+          <Col md="6">
+            <Card className=" card-tasks">
+              <Card.Header>
+                <Card.Title as="h4">Tasks</Card.Title>
+                <p className=" card-category">Backend development</p>
+              </Card.Header>
+              <Card.Body>
+                <div className=" table-full-width">
+                  <Table>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <Form.Check>
+                            <Form.Check.Label>
+                              <Form.Check.Input
+                                defaultValue=""
+                                type="checkbox"
+                              ></Form.Check.Input>
+                              <span className=" form-check-sign"></span>
+                            </Form.Check.Label>
+                          </Form.Check>
+                        </td>
+                        <td>
+                          Sign contract for "What are conference organizers
+                          afraid of?"
+                        </td>
+                        <td className=" td-actions text-right">
+                          <OverlayTrigger
+                            overlay={
+                              <Tooltip id="tooltip-488980961">
+                                Edit Task..
+                              </Tooltip>
+                            }
+                            placement=""
+                            trigger="hover"
+                          >
+                            <Button
+                              className=" btn-simple btn-link"
+                              type="button"
+                              variant="info"
+                            >
+                              <i className=" fa fa-edit"></i>
+                            </Button>
+                          </OverlayTrigger>
+                          <OverlayTrigger
+                            overlay={
+                              <Tooltip id="tooltip-506045838">Remove..</Tooltip>
+                            }
+                            placement=""
+                            trigger="hover"
+                          >
+                            <Button
+                              className=" btn-simple btn-link"
+                              type="button"
+                              variant="danger"
+                            >
+                              <i className=" fa fa-times"></i>
+                            </Button>
+                          </OverlayTrigger>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <Form.Check>
+                            <Form.Check.Label>
+                              <Form.Check.Input
+                                defaultChecked
+                                defaultValue=""
+                                type="checkbox"
+                              ></Form.Check.Input>
+                              <span className=" form-check-sign"></span>
+                            </Form.Check.Label>
+                          </Form.Check>
+                        </td>
+                        <td>
+                          Lines From Great Russian Literature? Or E-mails From
+                          My Boss?
+                        </td>
+                        <td className=" td-actions text-right">
+                          <OverlayTrigger
+                            overlay={
+                              <Tooltip id="tooltip-537440761">
+                                Edit Task..
+                              </Tooltip>
+                            }
+                            placement=""
+                            trigger="hover"
+                          >
+                            <Button
+                              className=" btn-simple btn-link"
+                              type="button"
+                              variant="info"
+                            >
+                              <i className=" fa fa-edit"></i>
+                            </Button>
+                          </OverlayTrigger>
+                          <OverlayTrigger
+                            overlay={
+                              <Tooltip id="tooltip-21130535">Remove..</Tooltip>
+                            }
+                            placement=""
+                            trigger="hover"
+                          >
+                            <Button
+                              className=" btn-simple btn-link"
+                              type="button"
+                              variant="danger"
+                            >
+                              <i className=" fa fa-times"></i>
+                            </Button>
+                          </OverlayTrigger>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <Form.Check>
+                            <Form.Check.Label>
+                              <Form.Check.Input
+                                defaultChecked
+                                defaultValue=""
+                                type="checkbox"
+                              ></Form.Check.Input>
+                              <span className=" form-check-sign"></span>
+                            </Form.Check.Label>
+                          </Form.Check>
+                        </td>
+                        <td>
+                          Flooded: One year later, assessing what was lost and
+                          what was found when a ravaging rain swept through
+                          metro Detroit
+                        </td>
+                        <td className=" td-actions text-right">
+                          <OverlayTrigger
+                            overlay={
+                              <Tooltip id="tooltip-577232198">
+                                Edit Task..
+                              </Tooltip>
+                            }
+                            placement=""
+                            trigger="hover"
+                          >
+                            <Button
+                              className=" btn-simple btn-link"
+                              type="button"
+                              variant="info"
+                            >
+                              <i className=" fa fa-edit"></i>
+                            </Button>
+                          </OverlayTrigger>
+                          <OverlayTrigger
+                            overlay={
+                              <Tooltip id="tooltip-773861645">Remove..</Tooltip>
+                            }
+                            placement=""
+                            trigger="hover"
+                          >
+                            <Button
+                              className=" btn-simple btn-link"
+                              type="button"
+                              variant="danger"
+                            >
+                              <i className=" fa fa-times"></i>
+                            </Button>
+                          </OverlayTrigger>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <Form.Check>
+                            <Form.Check.Label>
+                              <Form.Check.Input
+                                defaultChecked
+                                type="checkbox"
+                              ></Form.Check.Input>
+                              <span className=" form-check-sign"></span>
+                            </Form.Check.Label>
+                          </Form.Check>
+                        </td>
+                        <td>
+                          Create 4 Invisible User Experiences you Never Knew
+                          About
+                        </td>
+                        <td className=" td-actions text-right">
+                          <OverlayTrigger
+                            overlay={
+                              <Tooltip id="tooltip-422471719">
+                                Edit Task..
+                              </Tooltip>
+                            }
+                            placement=""
+                            trigger="hover"
+                          >
+                            <Button
+                              className=" btn-simple btn-link"
+                              type="button"
+                              variant="info"
+                            >
+                              <i className=" fa fa-edit"></i>
+                            </Button>
+                          </OverlayTrigger>
+                          <OverlayTrigger
+                            overlay={
+                              <Tooltip id="tooltip-829164576">Remove..</Tooltip>
+                            }
+                            placement=""
+                            trigger="hover"
+                          >
+                            <Button
+                              className=" btn-simple btn-link"
+                              type="button"
+                              variant="danger"
+                            >
+                              <i className=" fa fa-times"></i>
+                            </Button>
+                          </OverlayTrigger>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <Form.Check>
+                            <Form.Check.Label>
+                              <Form.Check.Input
+                                defaultValue=""
+                                type="checkbox"
+                              ></Form.Check.Input>
+                              <span className=" form-check-sign"></span>
+                            </Form.Check.Label>
+                          </Form.Check>
+                        </td>
+                        <td>Read "Following makes Medium better"</td>
+                        <td className=" td-actions text-right">
+                          <OverlayTrigger
+                            overlay={
+                              <Tooltip id="tooltip-160575228">
+                                Edit Task..
+                              </Tooltip>
+                            }
+                            placement=""
+                            trigger="hover"
+                          >
+                            <Button
+                              className=" btn-simple btn-link"
+                              type="button"
+                              variant="info"
+                            >
+                              <i className=" fa fa-edit"></i>
+                            </Button>
+                          </OverlayTrigger>
+                          <OverlayTrigger
+                            overlay={
+                              <Tooltip id="tooltip-922981635">Remove..</Tooltip>
+                            }
+                            placement=""
+                            trigger="hover"
+                          >
+                            <Button
+                              className=" btn-simple btn-link"
+                              type="button"
+                              variant="danger"
+                            >
+                              <i className=" fa fa-times"></i>
+                            </Button>
+                          </OverlayTrigger>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <Form.Check>
+                            <Form.Check.Label>
+                              <Form.Check.Input
+                                defaultValue=""
+                                disabled
+                                type="checkbox"
+                              ></Form.Check.Input>
+                              <span className=" form-check-sign"></span>
+                            </Form.Check.Label>
+                          </Form.Check>
+                        </td>
+                        <td>Unfollow 5 enemies from twitter</td>
+                        <td className=" td-actions text-right">
+                          <OverlayTrigger
+                            overlay={
+                              <Tooltip id="tooltip-938342127">
+                                Edit Task..
+                              </Tooltip>
+                            }
+                            placement=""
+                            trigger="hover"
+                          >
+                            <Button
+                              className=" btn-simple btn-link"
+                              type="button"
+                              variant="info"
+                            >
+                              <i className=" fa fa-edit"></i>
+                            </Button>
+                          </OverlayTrigger>
+                          <OverlayTrigger
+                            overlay={
+                              <Tooltip id="tooltip-119603706">Remove..</Tooltip>
+                            }
+                            placement=""
+                            trigger="hover"
+                          >
+                            <Button
+                              className=" btn-simple btn-link"
+                              type="button"
+                              variant="danger"
+                            >
+                              <i className=" fa fa-times"></i>
+                            </Button>
+                          </OverlayTrigger>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </div>
+              </Card.Body>
+              <Card.Footer>
+                <hr></hr>
+                <div className=" stats">
+                  <i className=" now-ui-icons loader_refresh spin"></i>
+                  Updated 3 minutes ago
+                </div>
+              </Card.Footer>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </>
+  );
 }
 
 export default Dashboard;
