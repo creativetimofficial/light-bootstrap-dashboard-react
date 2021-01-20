@@ -182,7 +182,7 @@ class FixedPlugin extends Component {
                 id="facebook"
                 variant="facebook"
               >
-                <i className=" fa fa-facebook-square"></i>· 426
+                <i className=" fab fa-facebook-square"></i>· 426
               </Button>
             </li>
           </Dropdown.Menu>
