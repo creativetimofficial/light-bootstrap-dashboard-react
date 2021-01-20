@@ -120,7 +120,13 @@
              font-size: 24px;
              width: 46px;
         }
-        &[class^="fa"]{
+        &[class^="fa"],
+        &[class^="fas"],
+        &[class^="far"],
+        &[class^="fal"],
+        &[class^="fad"],
+        &[class^="fab"]
+        {
             font-size: 14px;
             width: 38px;
         }
