@@ -6,7 +6,7 @@ import { Badge, Button, Navbar, Nav, Container } from "react-bootstrap";
 function Maps() {
   return (
     <>
-      <div className=" map-container">
+      <div className="map-container">
         <div id="map"></div>
       </div>
     </>
