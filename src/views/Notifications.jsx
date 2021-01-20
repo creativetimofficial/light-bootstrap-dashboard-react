@@ -1,203 +1,288 @@
-/*!
+import React from "react";
 
-=========================================================
-* Light Bootstrap Dashboard React - v1.3.0
-=========================================================
+// react-bootstrap components
+import {
+  Alert,
+  Badge,
+  Button,
+  Card,
+  Modal,
+  Navbar,
+  Nav,
+  Container,
+  Row,
+  Col,
+} from "react-bootstrap";
 
-* Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React, { Component } from "react";
-import { Grid, Row, Col, Alert } from "react-bootstrap";
-
-import Button from "components/CustomButton/CustomButton.jsx";
-
-class Notifications extends Component {
-  render() {
-    return (
-      <div className="content">
-        <Grid fluid>
-          <div className="card">
-            <div className="header">
-              <h4 className="title">Notifications</h4>
-              <p className="category">
-                Handcrafted by{" "}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://github.com/igorprado"
-                >
-                  Igor Prado
-                </a>
-                . Please checkout the{" "}
-                <a
-                  href="http://igorprado.com/react-notification-system/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  full documentation.
-                </a>
-              </p>
-            </div>
-            <div className="content">
+function Notifications() {
+  return (
+    <>
+      <Container fluid>
+        <Card>
+          <Card.Header>
+            <Card.Title as="h4">Notifications</Card.Title>
+            <p className=" card-category">
+              Handcrafted by our friend{" "}
+              <a
+                href="https://github.com/mouse0270"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Robert McIntosh
+              </a>
+              . Please checkout the{" "}
+              <a
+                href="http://bootstrap-notify.remabledesigns.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                full documentation.
+              </a>
+            </p>
+          </Card.Header>
+          <Card.Body>
+            <Row>
+              <Col md="6">
+                <h5>
+                  <small>Notifications Style</small>
+                </h5>
+                <Alert variant="info">
+                  <span>This is a plain notification</span>
+                </Alert>
+                <Alert variant="info">
+                  <button
+                    aria-hidden={true}
+                    className=" close"
+                    data-dismiss="alert"
+                    type="button"
+                  >
+                    <i className=" nc-icon nc-simple-remove"></i>
+                  </button>
+                  <span>This is a notification with close button.</span>
+                </Alert>
+                <Alert className=" alert-with-icon" variant="info">
+                  <button
+                    aria-hidden={true}
+                    className=" close"
+                    data-dismiss="alert"
+                    type="button"
+                  >
+                    <i className=" nc-icon nc-simple-remove"></i>
+                  </button>
+                  <span className=" nc-icon nc-bell-55"></span>
+                  <span>
+                    This is a notification with close button and icon.
+                  </span>
+                </Alert>
+                <Alert className=" alert-with-icon" variant="info">
+                  <button
+                    aria-hidden={true}
+                    className=" close"
+                    data-dismiss="alert"
+                    type="button"
+                  >
+                    <i className=" nc-icon nc-simple-remove"></i>
+                  </button>
+                  <span className=" nc-icon nc-bell-55"></span>
+                  <span>
+                    This is a notification with close button and icon and have
+                    many lines. You can see that the icon and the close button
+                    are always vertically aligned. This is a beautiful
+                    notification. So you don't have to worry about the style.
+                  </span>
+                </Alert>
+              </Col>
+              <Col md="6">
+                <h5>
+                  <small>Notification States</small>
+                </h5>
+                <Alert variant="primary">
+                  <button
+                    aria-hidden={true}
+                    className=" close"
+                    data-dismiss="alert"
+                    type="button"
+                  >
+                    <i className=" nc-icon nc-simple-remove"></i>
+                  </button>
+                  <span>
+                    <b>Primary -</b>
+                    This is a regular notification made with ".alert-primary"
+                  </span>
+                </Alert>
+                <Alert variant="info">
+                  <button
+                    aria-hidden={true}
+                    className=" close"
+                    data-dismiss="alert"
+                    type="button"
+                  >
+                    <i className=" nc-icon nc-simple-remove"></i>
+                  </button>
+                  <span>
+                    <b>Info -</b>
+                    This is a regular notification made with ".alert-info"
+                  </span>
+                </Alert>
+                <Alert variant="success">
+                  <button
+                    aria-hidden={true}
+                    className=" close"
+                    data-dismiss="alert"
+                    type="button"
+                  >
+                    <i className=" nc-icon nc-simple-remove"></i>
+                  </button>
+                  <span>
+                    <b>Success -</b>
+                    This is a regular notification made with ".alert-success"
+                  </span>
+                </Alert>
+                <Alert variant="warning">
+                  <button
+                    aria-hidden={true}
+                    className=" close"
+                    data-dismiss="alert"
+                    type="button"
+                  >
+                    <i className=" nc-icon nc-simple-remove"></i>
+                  </button>
+                  <span>
+                    <b>Warning -</b>
+                    This is a regular notification made with ".alert-warning"
+                  </span>
+                </Alert>
+                <Alert variant="danger">
+                  <button
+                    aria-hidden={true}
+                    className=" close"
+                    data-dismiss="alert"
+                    type="button"
+                  >
+                    <i className=" nc-icon nc-simple-remove"></i>
+                  </button>
+                  <span>
+                    <b>Danger -</b>
+                    This is a regular notification made with ".alert-danger"
+                  </span>
+                </Alert>
+              </Col>
+            </Row>
+            <br></br>
+            <br></br>
+            <div className=" places-buttons">
               <Row>
-                <Col md={6}>
-                  <h5>Notifications Style</h5>
-                  <Alert bsStyle="info">
-                    <span>This is a plain notification</span>
-                  </Alert>
-                  <Alert bsStyle="info">
-                    <button type="button" aria-hidden="true" className="close">
-                      &#x2715;
-                    </button>
-                    <span>This is a notification with close button.</span>
-                  </Alert>
-                  <Alert bsStyle="info" className="alert-with-icon">
-                    <button type="button" aria-hidden="true" className="close">
-                      &#x2715;
-                    </button>
-                    <span data-notify="icon" className="pe-7s-bell" />
-                    <span data-notify="message">
-                      This is a notification with close button and icon.
-                    </span>
-                  </Alert>
-                  <Alert bsStyle="info" className="alert-with-icon">
-                    <button type="button" aria-hidden="true" className="close">
-                      &#x2715;
-                    </button>
-                    <span data-notify="icon" className="pe-7s-bell" />
-                    <span data-notify="message">
-                      This is a notification with close button and icon and have
-                      many lines. You can see that the icon and the close button
-                      are always vertically aligned. This is a beautiful
-                      notification. So you don't have to worry about the style.
-                    </span>
-                  </Alert>
-                </Col>
-                <Col md={6}>
-                  <h5>Notification states</h5>
-                  <Alert bsStyle="info">
-                    <button type="button" aria-hidden="true" className="close">
-                      &#x2715;
-                    </button>
-                    <span>
-                      <b> Info - </b> This is a regular notification made with
-                      bsStyle="info"
-                    </span>
-                  </Alert>
-                  <Alert bsStyle="success">
-                    <button type="button" aria-hidden="true" className="close">
-                      &#x2715;
-                    </button>
-                    <span>
-                      <b> Success - </b> This is a regular notification made
-                      with bsStyle="success"
-                    </span>
-                  </Alert>
-                  <Alert bsStyle="warning">
-                    <button type="button" aria-hidden="true" className="close">
-                      &#x2715;
-                    </button>
-                    <span>
-                      <b> Warning - </b> This is a regular notification made
-                      with bsStyle="warning"
-                    </span>
-                  </Alert>
-                  <Alert bsStyle="danger">
-                    <button type="button" aria-hidden="true" className="close">
-                      &#x2715;
-                    </button>
-                    <span>
-                      <b> Danger - </b> This is a regular notification made with
-                      bsStyle="danger"
-                    </span>
-                  </Alert>
+                <Col className=" offset-md-3 text-center" md="6">
+                  <Card.Title as="h4">Notifications Places</Card.Title>
+                  <p className=" card-category">
+                    <small>Click to view notifications</small>
+                  </p>
                 </Col>
               </Row>
-              <br />
-              <br />
-              <div className="places-buttons">
-                <Row>
-                  <Col md={6} mdOffset={3} className="text-center">
-                    <h5>
-                      Notifications Places
-                      <p className="category">Click to view notifications</p>
-                    </h5>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col md={2} mdOffset={3}>
-                    <Button
-                      bsStyle="default"
-                      block
-                      onClick={() => this.props.handleClick("tl")}
-                    >
-                      Top Left
-                    </Button>
-                  </Col>
-                  <Col md={2}>
-                    <Button
-                      bsStyle="default"
-                      block
-                      onClick={() => this.props.handleClick("tc")}
-                    >
-                      Top Center
-                    </Button>
-                  </Col>
-                  <Col md={2}>
-                    <Button
-                      bsStyle="default"
-                      block
-                      onClick={() => this.props.handleClick("tr")}
-                    >
-                      Top Right
-                    </Button>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col md={2} mdOffset={3}>
-                    <Button
-                      bsStyle="default"
-                      block
-                      onClick={() => this.props.handleClick("bl")}
-                    >
-                      Bottom Left
-                    </Button>
-                  </Col>
-                  <Col md={2}>
-                    <Button
-                      bsStyle="default"
-                      block
-                      onClick={() => this.props.handleClick("bc")}
-                    >
-                      Bottom Center
-                    </Button>
-                  </Col>
-                  <Col md={2}>
-                    <Button
-                      bsStyle="default"
-                      block
-                      onClick={() => this.props.handleClick("br")}
-                    >
-                      Bottom Right
-                    </Button>
-                  </Col>
-                </Row>
-              </div>
+              <Row className=" justify-content-center">
+                <Col lg="3" md="3">
+                  <Button
+                    block
+                    onClick="demo.showNotification('top','left')"
+                    variant="default"
+                  >
+                    Top Left
+                  </Button>
+                </Col>
+                <Col lg="3" md="3">
+                  <Button
+                    block
+                    onClick="demo.showNotification('top','center')"
+                    variant="default"
+                  >
+                    Top Center
+                  </Button>
+                </Col>
+                <Col lg="3" md="3">
+                  <Button
+                    block
+                    onClick="demo.showNotification('top','right')"
+                    variant="default"
+                  >
+                    Top Right
+                  </Button>
+                </Col>
+              </Row>
+              <Row className=" justify-content-center">
+                <Col lg="3" md="3">
+                  <Button
+                    block
+                    onClick="demo.showNotification('bottom','left')"
+                    variant="default"
+                  >
+                    Bottom Left
+                  </Button>
+                </Col>
+                <Col lg="3" md="3">
+                  <Button
+                    block
+                    onClick="demo.showNotification('bottom','center')"
+                    variant="default"
+                  >
+                    Bottom Center
+                  </Button>
+                </Col>
+                <Col lg="3" md="3">
+                  <Button
+                    block
+                    onClick="demo.showNotification('bottom','right')"
+                    variant="default"
+                  >
+                    Bottom Right
+                  </Button>
+                </Col>
+              </Row>
             </div>
+            <Row>
+              <Col className=" text-center" md="12">
+                <h4 className=" title">Modal</h4>
+                <Button
+                  className=" btn-fill btn-wd"
+                  data-target="#myModal1"
+                  data-toggle="modal"
+                  href="#pablo"
+                  onClick={(e) => e.preventDefault()}
+                  variant="info"
+                >
+                  Launch Modal Mini
+                </Button>
+              </Col>
+            </Row>
+          </Card.Body>
+        </Card>
+        {/* Mini Modal */}
+        <Modal className=" modal-mini modal-primary">
+          <Modal.Header className=" justify-content-center">
+            <div className=" modal-profile">
+              <i className=" nc-icon nc-bulb-63"></i>
+            </div>
+          </Modal.Header>
+          <Modal.Body className=" text-center">
+            <p>Always have an access to your profile</p>
+          </Modal.Body>
+          <div className=" modal-footer">
+            <Button className=" btn-simple" type="button" variant="link">
+              Back
+            </Button>
+            <Button
+              className=" btn-simple"
+              data-dismiss="modal"
+              type="button"
+              variant="link"
+            >
+              Close
+            </Button>
           </div>
-        </Grid>
-      </div>
-    );
-  }
+        </Modal>
+        {/* End Modal */}
+      </Container>
+    </>
+  );
 }
 
 export default Notifications;
