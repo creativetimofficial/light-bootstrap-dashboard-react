@@ -186,7 +186,7 @@ function User() {
                   onClick={(e) => e.preventDefault()}
                   variant="link"
                 >
-                  <i className=" fa fa-facebook-square"></i>
+                  <i className=" fab fa-facebook-square"></i>
                 </Button>
                 <Button
                   className=" btn-simple btn-icon"
