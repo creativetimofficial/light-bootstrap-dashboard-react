@@ -16,7 +16,7 @@
 
 */
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { useLocation, Route, Switch } from "react-router-dom";
 
 import AdminNavbar from "components/Navbars/AdminNavbar";
 import Footer from "components/Footer/Footer";
@@ -25,20 +25,18 @@ import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
 
-import image from "assets/img/sidebar-3.jpg";
+import sidebarImage from "assets/img/sidebar-3.jpg";
 
-class Admin extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      _notificationSystem: null,
-      image: image,
-      color: "black",
-      hasImage: true,
-      fixedClasses: "dropdown show-dropdown open",
-    };
-  }
-  handleNotificationClick = (position) => {
+function Admin() {
+  const [image, setImage] = React.useState(sidebarImage);
+  const [color, setColor] = React.useState("black");
+  const [hasImage, setHasImage] = React.useState(true);
+  const [fixedClasses, setFixedClasses] = React.useState(
+    "dropdown show-dropdown open"
+  );
+  const location = useLocation();
+  const mainPanel = React.useRef(null);
+  const handleNotificationClick = (position) => {
     var color = Math.floor(Math.random() * 4 + 1);
     var level;
     switch (color) {
@@ -70,7 +68,7 @@ class Admin extends Component {
       autoDismiss: 15,
     });
   };
-  getRoutes = (routes) => {
+  const getRoutes = (routes) => {
     return routes.map((prop, key) => {
       if (prop.layout === "/admin") {
         return (
@@ -79,7 +77,7 @@ class Admin extends Component {
             render={(props) => (
               <prop.component
                 {...props}
-                handleClick={this.handleNotificationClick}
+                handleClick={handleNotificationClick}
               />
             )}
             key={key}
@@ -90,69 +88,49 @@ class Admin extends Component {
       }
     });
   };
-  getBrandText = (path) => {
+  const getBrandText = (path) => {
     for (let i = 0; i < routes.length; i++) {
-      if (
-        this.props.location.pathname.indexOf(
-          routes[i].layout + routes[i].path
-        ) !== -1
-      ) {
+      if (location.pathname.indexOf(routes[i].layout + routes[i].path) !== -1) {
         return routes[i].name;
       }
     }
     return "Brand";
   };
-  handleImageClick = (image) => {
-    this.setState({ image: image });
-  };
-  handleColorClick = (color) => {
-    this.setState({ color: color });
-  };
-  handleHasImage = (hasImage) => {
-    this.setState({ hasImage: hasImage });
-  };
-  handleFixedClick = () => {
-    if (this.state.fixedClasses === "dropdown") {
-      this.setState({ fixedClasses: "dropdown show-dropdown open" });
-    } else {
-      this.setState({ fixedClasses: "dropdown" });
-    }
-  };
-  componentDidMount() {
-    // this.setState({ _notificationSystem: this.refs.notificationSystem });
-    // var _notificationSystem = this.refs.notificationSystem;
-    // var color = Math.floor(Math.random() * 4 + 1);
-    // var level;
-    // switch (color) {
-    //   case 1:
-    //     level = "success";
-    //     break;
-    //   case 2:
-    //     level = "warning";
-    //     break;
-    //   case 3:
-    //     level = "error";
-    //     break;
-    //   case 4:
-    //     level = "info";
-    //     break;
-    //   default:
-    //     break;
-    // }
-    // _notificationSystem.addNotification({
-    //   title: <span data-notify="icon" className="pe-7s-gift" />,
-    //   message: (
-    //     <div>
-    //       Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for
-    //       every web developer.
-    //     </div>
-    //   ),
-    //   level: level,
-    //   position: "tr",
-    //   autoDismiss: 15,
-    // });
-  }
-  componentDidUpdate(e) {
+  // componentDidMount() {
+  // this.setState({ _notificationSystem: this.refs.notificationSystem });
+  // var _notificationSystem = this.refs.notificationSystem;
+  // var color = Math.floor(Math.random() * 4 + 1);
+  // var level;
+  // switch (color) {
+  //   case 1:
+  //     level = "success";
+  //     break;
+  //   case 2:
+  //     level = "warning";
+  //     break;
+  //   case 3:
+  //     level = "error";
+  //     break;
+  //   case 4:
+  //     level = "info";
+  //     break;
+  //   default:
+  //     break;
+  // }
+  // _notificationSystem.addNotification({
+  //   title: <span data-notify="icon" className="pe-7s-gift" />,
+  //   message: (
+  //     <div>
+  //       Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for
+  //       every web developer.
+  //     </div>
+  //   ),
+  //   level: level,
+  //   position: "tr",
+  //   autoDismiss: 15,
+  // });
+  // }
+  React.useEffect(() => {
     if (
       window.innerWidth < 993 &&
       e.history.location.pathname !== e.location.pathname &&
@@ -160,29 +138,34 @@ class Admin extends Component {
     ) {
       document.documentElement.classList.toggle("nav-open");
     }
-    if (e.history.action === "PUSH") {
-      document.documentElement.scrollTop = 0;
-      document.scrollingElement.scrollTop = 0;
-      this.refs.mainPanel.scrollTop = 0;
-    }
-  }
-  render() {
-    return (
-      <>
-        <div className="wrapper">
-          <Sidebar />
-          <div className="main-panel">
-            <AdminNavbar />
-            <div className="content">
-              <Switch>{this.getRoutes(routes)}</Switch>
-            </div>
-            <Footer />
+  }, []);
+  React.useEffect(() => {
+    document.documentElement.scrollTop = 0;
+    document.scrollingElement.scrollTop = 0;
+    mainPanel.current.scrollTop = 0;
+  }, [location]);
+  return (
+    <>
+      <div className="wrapper">
+        <Sidebar color={color} image={hasImage ? image : ""} routes={routes} />
+        <div className="main-panel" ref={mainPanel}>
+          <AdminNavbar />
+          <div className="content">
+            <Switch>{getRoutes(routes)}</Switch>
           </div>
+          <Footer />
         </div>
-        <FixedPlugin />
-      </>
-    );
-  }
+      </div>
+      <FixedPlugin
+        hasImage={hasImage}
+        setHasImage={() => setHasImage(!hasImage)}
+        color={color}
+        setColor={(color) => setColor(color)}
+        image={image}
+        setImage={(image) => setImage(image)}
+      />
+    </>
+  );
 }
 
 export default Admin;
