@@ -20,6 +20,7 @@
 + react-notification-alert@0.0.13
 + reactstrap@8.9.0 (as part of the react-notification-alert)
 + jquery@3.5.1
++ @fortawesome/fontawesome-free@5.15.2
 ### Updated dependencies
 ```
 bootstrap           3.3.7   →    4.6.0
