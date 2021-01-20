@@ -10,15 +10,79 @@
 ### Added components
 
 ### Deleted dependencies
-
+- react-notification-system (we'll use react-notification-alert from now on)
+- @types/googlemaps
+- @types/markerclustererplus
+- @types/react
+- react-google-maps (we'll use simple Google Maps API with Vanilla JS)
+- react-toggle (we'll use the simple React-Bootstrap Form.Check as a switch instead)
 ### Added dependencies
-
++ react-notification-alert@0.0.13
++ reactstrap@8.9.0 (as part of the react-notification-alert)
++ jquery@3.5.1
 ### Updated dependencies
 ```
-
+bootstrap           3.3.7   →    4.6.0
+node-sass          4.12.0   →   4.14.1
+react              16.8.6   →   17.0.1
+react-bootstrap    0.32.4   →    1.4.3
+react-chartist     0.13.3   →   0.14.3
+react-dom          16.8.6   →   17.0.1
+react-router        5.0.0   →    5.2.0
+react-router-dom    5.0.0   →    5.2.0
+react-scripts       3.0.0   →    4.0.1
+typescript          3.4.3   →    4.1.3
 ```
 ### Warning
-_If needed_
+**The TypeScript and jQuery dependencies are installed only to stop console warnings on install. They are not actually used in our product. So the product is not based on TypeScript or jQuery!**
+_The following warnings will appear when running the installation command, but they do not affect the UI or the functionality of the product (they will be solved in our next update):_
+```
+npm WARN react-chartist@0.14.3 requires a peer of react@^0.14.9 || ^15.0.0 || ^16.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN react-popper@1.3.7 requires a peer of react@0.14.x || ^15.0.0 || ^16.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN create-react-context@0.3.0 requires a peer of react@^0.14.0 || ^15.0.0 || ^16.0.0 but none is installed. You must install peer dependencies yourself.
+```
+_If they will persist in our 2.4.* version, we will drop their usages and replace them with other plugins._
+_In development mode, some of the above plugins will throw a warning because they still use React v16 syntax. If the error will persist in our 2.4.* version, we will drop their usage and replace them with other plugins._
+### Upgrade details
+* Updated all packages from `package.json` using `npm-upgrade`, link here: https://www.npmjs.com/package/npm-upgrade
+* Renamed all `ControlLabel` components to `FormLabel` (this refers to the react-bootstrap components)
+* Renamed all `Grid` components to `Container` (this refers to the react-bootstrap components)
+* Rename all `HelpBlock` components to `FormText`
+* Rename all `MenuItem` components to `Dropdown.Item` and `NavDropdown.Item`
+* Rename all Panel components to Card
+* Deleted variables folder
+* Change the usage of `React Big Calendar` to the new API, so instead of
+```
+import BigCalendar from "react-big-calendar";
+```
+* And
+```
+const localizer = BigCalendar.momentLocalizer(moment);
+```
+* We will have:
+```
+import { Calendar as BigCalendar, momentLocalizer } from "react-big-calendar";
+```
+* And
+```
+const localizer = momentLocalizer(moment);
+```
+* Change Panels with new react-bootstrap components
+* For Col componets, replaced `size={number1} sizeOffest={number2}` with `size={{span: number1, offset: number2}}` where size can be `xs`, `sm`, `md`, `lg`
+* Changed `bsStyle` to `variant`
+* Changed `bsSize` to `size`
+* Replace `<Navbar.Header>` with `<div className=“navbar-header”>`
+* Replace `<Navbar.Form>` with `<div className="navbar-search-form navbar-form navbar-left">`
+* Replace `<FormGroup>` with `<Form.Group>`
+* Replace `<InputGroup.Addon>` with `<InputGroup.Prepend><InputGroup.Text>` and `<InputGroup.Append><InputGroup.Text>`
+* All required images have a default prop at the end now, example: `const us_flag = require("../assets/img/flags/US.png");` was changed to `const us_flag = require("../assets/img/flags/US.png").default;`
+* Rename all .jsx files to .js
+* Added Row and Col inside StatsCard
+* Delete eventKey from NavDropdown components
+* Deleted noCaret from NavDropdown components
+* Replace Navbar fluid with Navbar → Container fluid
+* Add fontawesome as dependencie instead of font link insde public/index.html, it is now imported insde src/index.js
+* In addition to these changes, we’ve chaned the structure of the pages and components as well to match those from the HTML version of the product: https://www.creative-tim.com/product/light-bootstrap-dashboard
 
 ## [1.3.0] 2019-05-03
 ### Bug fixing
