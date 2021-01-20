@@ -43,21 +43,21 @@ class FixedPlugin extends Component {
   };
   render() {
     return (
-      <div className=" fixed-plugin">
-        <Dropdown className=" show-dropdown">
+      <div className="fixed-plugin">
+        <Dropdown className="show-dropdown">
           <a
             data-toggle="dropdown"
             href="#pablo"
             onClick={(e) => e.preventDefault()}
           >
-            <i className=" fa fa-cog fa-2x"></i>
+            <i className="fa fa-cog fa-2x"></i>
           </a>
           <Dropdown.Menu>
-            <li className=" header-title">Sidebar Style</li>
-            <li className=" adjustments-line">
-              <a className=" switch-trigger" href="javascript:void(0)">
+            <li className="header-title">Sidebar Style</li>
+            <li className="adjustments-line">
+              <a className="switch-trigger" href="javascript:void(0)">
                 <p>Background Image</p>
-                <label className=" switch">
+                <label className="switch">
                   <input
                     data-off-color="primary"
                     data-on-color="primary"
@@ -65,47 +65,47 @@ class FixedPlugin extends Component {
                     defaultChecked
                     type="checkbox"
                   ></input>
-                  <span className=" toggle"></span>
+                  <span className="toggle"></span>
                 </label>
-                <div className=" clearfix"></div>
+                <div className="clearfix"></div>
               </a>
             </li>
-            <li className=" adjustments-line">
+            <li className="adjustments-line">
               <a
-                className=" switch-trigger background-color"
+                className="switch-trigger background-color"
                 href="javascript:void(0)"
               >
                 <p>Filters</p>
-                <div className=" pull-right">
+                <div className="pull-right">
                   <Badge
-                    className=" filter badge-black"
+                    className="filter badge-black"
                     data-color="black"
                   ></Badge>
                   <Badge
-                    className=" filter badge-azure"
+                    className="filter badge-azure"
                     data-color="azure"
                   ></Badge>
                   <Badge
-                    className=" filter badge-green"
+                    className="filter badge-green"
                     data-color="green"
                   ></Badge>
                   <Badge
-                    className=" filter badge-orange"
+                    className="filter badge-orange"
                     data-color="orange"
                   ></Badge>
-                  <Badge className=" filter badge-red" data-color="red"></Badge>
+                  <Badge className="filter badge-red" data-color="red"></Badge>
                   <Badge
-                    className=" filter badge-purple active"
+                    className="filter badge-purple active"
                     data-color="purple"
                   ></Badge>
                 </div>
-                <div className=" clearfix"></div>
+                <div className="clearfix"></div>
               </a>
             </li>
-            <li className=" header-title">Sidebar Images</li>
-            <li className=" active">
+            <li className="header-title">Sidebar Images</li>
+            <li className="active">
               <a
-                className=" img-holder switch-trigger"
+                className="img-holder switch-trigger"
                 href="javascript:void(0)"
               >
                 <img alt="..." src={require("assets/img/sidebar-1.jpg")}></img>
@@ -113,7 +113,7 @@ class FixedPlugin extends Component {
             </li>
             <li>
               <a
-                className=" img-holder switch-trigger"
+                className="img-holder switch-trigger"
                 href="javascript:void(0)"
               >
                 <img alt="..." src={require("assets/img/sidebar-3.jpg")}></img>
@@ -121,7 +121,7 @@ class FixedPlugin extends Component {
             </li>
             <li>
               <a
-                className=" img-holder switch-trigger"
+                className="img-holder switch-trigger"
                 href="javascript:void(0)"
               >
                 <img alt="..." src={require("assets/img/sidebar-4.jpg")}></img>
@@ -129,17 +129,17 @@ class FixedPlugin extends Component {
             </li>
             <li>
               <a
-                className=" img-holder switch-trigger"
+                className="img-holder switch-trigger"
                 href="javascript:void(0)"
               >
                 <img alt="..." src={require("assets/img/sidebar-5.jpg")}></img>
               </a>
             </li>
-            <li className=" button-container">
+            <li className="button-container">
               <div>
                 <Button
                   block
-                  className=" btn-fill"
+                  className="btn-fill"
                   href="http://www.creative-tim.com/product/light-bootstrap-dashboard-react"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -149,14 +149,14 @@ class FixedPlugin extends Component {
                 </Button>
               </div>
             </li>
-            <li className=" header-title pro-title text-center">
+            <li className="header-title pro-title text-center">
               Want more components?
             </li>
-            <li className=" button-container">
+            <li className="button-container">
               <div>
                 <Button
                   block
-                  className=" btn-fill"
+                  className="btn-fill"
                   href="http://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -166,23 +166,23 @@ class FixedPlugin extends Component {
                 </Button>
               </div>
             </li>
-            <li className=" header-title" id="sharrreTitle">
+            <li className="header-title" id="sharrreTitle">
               Thank you for sharing!
             </li>
-            <li className=" button-container">
+            <li className="button-container">
               <Button
-                className=" btn-social btn-outline btn-round sharrre"
+                className="btn-social btn-outline btn-round sharrre"
                 id="twitter"
                 variant="twitter"
               >
-                <i className=" fa fa-twitter"></i>· 256
+                <i className="fa fa-twitter"></i>· 256
               </Button>
               <Button
-                className=" btn-social btn-outline btn-round sharrre"
+                className="btn-social btn-outline btn-round sharrre"
                 id="facebook"
                 variant="facebook"
               >
-                <i className=" fab fa-facebook-square"></i>· 426
+                <i className="fab fa-facebook-square"></i>· 426
               </Button>
             </li>
           </Dropdown.Menu>
