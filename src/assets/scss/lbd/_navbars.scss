@@ -81,7 +81,12 @@
                     margin: $navbar-margin-a-btn-round;
                 }
 
-                [class^="fa"]{
+                &[class^="fa"],
+                &[class^="fas"],
+                &[class^="far"],
+                &[class^="fal"],
+                &[class^="fad"],
+                &[class^="fab"]{
                     font-size: $font-size-large + 1;
                     position: relative;
                     line-height: 40px;
