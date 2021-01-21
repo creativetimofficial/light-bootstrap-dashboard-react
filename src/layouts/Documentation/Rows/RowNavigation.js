@@ -53,9 +53,9 @@ class RowNavigation extends Component {
           find it in <code>src/components/Sidebar/Sidebar.js</code>. This is the
           component from the <code>Sidebar</code> component itself. We{"'"}ve
           decided to create a variable for the routes, these are found in{" "}
-          <code>src/routes.js</code>. We import them in this
-          componente (<code>Sidebar</code>) and create a navigation link to each
-          one. These navigation links took like this:
+          <code>src/routes.js</code>. We import them in this componente (
+          <code>Sidebar</code>) and create a navigation link to each one. These
+          navigation links took like this:
         </p>
         <SyntaxHighlighter language="jsx" style={prism}>
           {codeSidebar}
