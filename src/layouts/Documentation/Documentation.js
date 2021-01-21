@@ -17,8 +17,8 @@
 */
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { Link, Route, Switch, Redirect } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
+import { NavLink, Route, Switch, Redirect } from "react-router-dom";
+import { Container, Row, Col, Navbar, Nav, NavItem } from "react-bootstrap";
 
 import Sidebar from "./Components/Sidebar.js";
 
@@ -28,105 +28,81 @@ import ctLogo from "./assets/img/new_logo.png";
 import imagine from "./assets/img/full-image-1.jpg";
 import reactLogo from "./assets/img/reactlogo.png";
 const headerBackground = {
-  backgroundImage: "url(" + imagine + ")",
+  backgroundImage: "url(" + imagine + ")"
 };
 
 function Documentation() {
   return (
     <div className="components">
       <div className="header-wrapper">
-        <nav
-          className="navbar navbar-default navbar-transparent navbar-fixed-top navbar-color-on-scroll"
-          ref="navbarColorOnScroll"
-        >
-          <div className="container">
-            <div className="navbar-header">
-              <button id="menu-toggle" type="button" className="navbar-toggle">
-                <span className="sr-only">Toggle navigation</span>
-                <span className="icon-bar bar1" />
-                <span className="icon-bar bar2" />
-                <span className="icon-bar bar3" />
-              </button>
-              <a
-                href="https://www.creative-tim.com?ref=lbdr-header-docs"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="logo-container">
-                  <div className="logo">
-                    <img src={ctLogo} alt="Creative Tim Logo" />
-                  </div>
-                  <div className="brand">Creative Tim</div>
-                </div>
-              </a>
-            </div>
-
-            <div className="collapse navbar-collapse text-center">
-              <ul className="nav navbar-nav navbar-center">
-                <li>
+        <Navbar className="navbar-transparent navbar-components position-absolute bg-transparent w-100 p-4" style={{zIndex: 9999}}>
+          <Container className="d-flex justify-content-between">
+            <Navbar.Brand as="div" className="p-0">
+              <div className="navbar-title text-center p-0">
+                <h4 className="m-0 d-flex justify-content-center align-items-center">
                   <div
-                    className="navbar-title hidden text-center"
-                    ref="navbarTitle"
+                    className="image-container h-auto"
+                    style={{ width: "45px" }}
                   >
-                    <h4>
-                      <div className="image-container">
-                        <img src={reactLogo} alt="React Logo" />
-                      </div>
-                      LBD React Free
-                    </h4>
+                    <img
+                      alt="React Logo"
+                      src={reactLogo}
+                      className="w-100 h-auto"
+                    />
                   </div>
-                </li>
-              </ul>
+                  LBD PRO React
+                </h4>
+              </div>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+            <Navbar.Collapse className="justify-content-end">
               <ul className="nav navbar-nav navbar-right">
                 <li>
                   <a
-                    href="https://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react?ref=lbdr-docs-navbar-upgrade-pro"
-                    className="btn btn-simple btn-default"
+                    className="nav-link text-white btn btn-primary btn-fill m-0"
+                    href="https://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react?ref=lbr-docs-navbar"
                     target="_blank"
                   >
-                    <i className="fa fa-rocket" /> Upgrade to PRO
+                    Upgrade to PRO
                   </a>
                 </li>
                 <li>
-                  <Link to="/" className="btn btn-simple btn-default">
-                    <i className="fa fa-list" /> Back to dashboard
-                  </Link>
-                </li>
-                <li>
                   <a
+                    className="nav-link text-white"
                     href="https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues"
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-simple btn-default"
                   >
-                    <i className="fa fa-bug" /> Report bug
+                    Have an issue?
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://github.com/creativetimofficial/light-bootstrap-dashboard-react"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-default btn-simple"
+                  <NavLink
+                    to="/"
+                    className="nav-link text-white"
+                    activeClassName="active"
                   >
-                    <i className="fa fa-github" /> Contribute
-                  </a>
+                    Go back to dashboard
+                  </NavLink>
                 </li>
               </ul>
-            </div>
-          </div>
-        </nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
 
         <div className="header" style={headerBackground}>
           <div className="filter" />
           <div className="title-container text-center">
-            <img src={reactLogo} alt="React Logo" />
+            <img
+              src={reactLogo}
+              alt="React Logo"
+              style={{ width: "100px", height: "auto" }}
+            />
             <h1>Light Bootstrap Dashboard React</h1>
             <h3>Elements description</h3>
           </div>
         </div>
       </div>
-      <div className="main" ref="documentationPanel">
+      <div className="main">
         <div className="section">
           <div className="container">
             <div className="row">
