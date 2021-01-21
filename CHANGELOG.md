@@ -1,6 +1,6 @@
 # Change Log
 
-## [2.0.0] date
+## [2.0.0] 2021-01-21
 ### IMPORTANT
 - We have updated this product from Bootstrap 3 to Bootstrap 4, so in essence, this is a new product
 - For this, we have followed the guidelines from [here](https://react-bootstrap.github.io/migrating/) and [here](https://getbootstrap.com/docs/4.0/migration/)
