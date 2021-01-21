@@ -21,18 +21,20 @@ function Upgrade() {
           <Col className="ml-auto mr-auto" md="8">
             <Card>
               <div className="header text-center">
-                <h4 className="title">Light Bootstrap Dashboard PRO</h4>
+                <h4 className="title">Light Bootstrap Dashboard PRO React</h4>
                 <p className="category">
                   Are you looking for more components? Please check our Premium
-                  Version of Light Bootstrap Dashboard.
+                  Version of Light Bootstrap Dashboard React.
                 </p>
                 <br></br>
               </div>
               <Table responsive>
                 <thead>
+                  <tr>
                   <th></th>
                   <th className="text-center">Free</th>
                   <th className="text-center">PRO</th>
+                  </tr>
                 </thead>
                 <tbody>
                   <tr>
@@ -89,7 +91,7 @@ function Upgrade() {
                   <tr>
                     <td></td>
                     <td>Free</td>
-                    <td>Just $39</td>
+                    <td>Just $49</td>
                   </tr>
                   <tr className="last-row">
                     <td></td>
@@ -106,8 +108,7 @@ function Upgrade() {
                     <td>
                       <Button
                         className="btn-round btn-fill"
-                        href="http://www.creative-tim.com/product/light-bootstrap-dashboard-pro/?ref=lbdupgrade"
-                        rel="noopener noreferrer"
+                        href="http://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react/?ref=lbdrupgrade"
                         target="_blank"
                         variant="info"
                       >
