@@ -28,14 +28,17 @@ import ctLogo from "./assets/img/new_logo.png";
 import imagine from "./assets/img/full-image-1.jpg";
 import reactLogo from "./assets/img/reactlogo.png";
 const headerBackground = {
-  backgroundImage: "url(" + imagine + ")"
+  backgroundImage: "url(" + imagine + ")",
 };
 
 function Documentation() {
   return (
     <div className="components">
       <div className="header-wrapper">
-        <Navbar className="navbar-transparent navbar-components position-absolute bg-transparent w-100 p-4" style={{zIndex: 9999}}>
+        <Navbar
+          className="navbar-transparent navbar-components position-absolute bg-transparent w-100 p-4"
+          style={{ zIndex: 9999 }}
+        >
           <Container className="d-flex justify-content-between">
             <Navbar.Brand as="div" className="p-0">
               <div className="navbar-title text-center p-0">
