@@ -21,7 +21,7 @@ import {
   FacebookShareButton,
   TwitterShareButton,
   FacebookIcon,
-  TwitterIcon
+  TwitterIcon,
 } from "react-share";
 import GitHubButton from "react-github-button";
 import { Dropdown, Badge, Button, Form } from "react-bootstrap";
@@ -219,7 +219,7 @@ function FixedPlugin({
                 "bootstrap",
                 "react-bootstrap",
                 "creativetim",
-                "creative-tim"
+                "creative-tim",
               ]}
               via="creativetim"
             >
