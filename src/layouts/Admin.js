@@ -39,11 +39,7 @@ function Admin() {
         return (
           <Route
             path={prop.layout + prop.path}
-            render={(props) => (
-              <prop.component
-                {...props}
-              />
-            )}
+            render={(props) => <prop.component {...props} />}
             key={key}
           />
         );
@@ -51,14 +47,6 @@ function Admin() {
         return null;
       }
     });
-  };
-  const getBrandText = (path) => {
-    for (let i = 0; i < routes.length; i++) {
-      if (location.pathname.indexOf(routes[i].layout + routes[i].path) !== -1) {
-        return routes[i].name;
-      }
-    }
-    return "Brand";
   };
   React.useEffect(() => {
     document.documentElement.scrollTop = 0;
