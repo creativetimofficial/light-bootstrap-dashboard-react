@@ -55,14 +55,14 @@ class RowCheckbox extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      radio: "1"
+      radio: "1",
     };
   }
 
-  handleRadio = event => {
+  handleRadio = (event) => {
     const target = event.target;
     this.setState({
-      [target.name]: target.value
+      [target.name]: target.value,
     });
   };
   render() {
