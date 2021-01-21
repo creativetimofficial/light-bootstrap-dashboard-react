@@ -50,8 +50,8 @@ class RowNavigation extends Component {
         <p>This component is the left menu.</p>
         <p>
           For it to work, it has two main components. The first one you will
-          find it in <code>src/components/Sidebar/Sidebar.js</code>. This is
-          the component from the <code>Sidebar</code> component itself. We've
+          find it in <code>src/components/Sidebar/Sidebar.js</code>. This is the
+          component from the <code>Sidebar</code> component itself. We've
           decided to create a variable for the routes, these are found in{" "}
           <code>src/routes/dashboard.js</code>. We import them in this
           componente (<code>Sidebar</code>) and create a navigation link to each
