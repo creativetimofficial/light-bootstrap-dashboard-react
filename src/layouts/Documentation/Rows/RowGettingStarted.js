@@ -121,29 +121,6 @@ class RowGettingStarted extends Component {
           <li>
             Navigate to <code>http://localhost:3000</code>
           </li>
-          <li>
-            If you don't have cross-env installed globally then run in terminal
-            <SyntaxHighlighter language="jsx" style={prism}>
-              {`npm i -g cross-env`}
-            </SyntaxHighlighter>
-          </li>
-        </ul>
-        <p>You can additionaly use these commands:</p>
-        <ul>
-          <li>
-            in terminal
-            <SyntaxHighlighter language="jsx" style={prism}>
-              {`npm test`}
-            </SyntaxHighlighter>
-            (runs the test watcher in an interactive mode)
-          </li>
-          <li>
-            in terminal
-            <SyntaxHighlighter language="jsx" style={prism}>
-              {`npm run build`}
-            </SyntaxHighlighter>
-            (builds the app for production to the <code>build</code> folder)
-          </li>
         </ul>
         <p>
           Also, for additional information you can refer to{" "}
