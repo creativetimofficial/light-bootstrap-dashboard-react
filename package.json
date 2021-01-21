@@ -21,7 +21,7 @@
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.1",
     "react-share": "2.4.0",
-    "react-syntax-highlighter": "10.2.1",
+    "react-syntax-highlighter": "10.2.1"
   },
   "optionalDependencies": {
     "jquery": "3.5.1",
