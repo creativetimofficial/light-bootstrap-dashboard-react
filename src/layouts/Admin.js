@@ -57,6 +57,8 @@ function Admin() {
       document.documentElement.className.indexOf("nav-open") !== -1
     ) {
       document.documentElement.classList.toggle("nav-open");
+      var element = document.getElementById("bodyClick");
+      element.parentNode.removeChild(element);
     }
   }, [location]);
   return (
