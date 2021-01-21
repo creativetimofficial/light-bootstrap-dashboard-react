@@ -15,22 +15,22 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import RowButtons from "layouts/Documentation/Rows/RowButtons.jsx";
-import RowCard from "layouts/Documentation/Rows/RowCard.jsx";
-import RowCharts from "layouts/Documentation/Rows/RowCharts.jsx";
-import RowCheckbox from "layouts/Documentation/Rows/RowCheckbox.jsx";
-import RowDropdown from "layouts/Documentation/Rows/RowDropdown.jsx";
-import RowGettingStarted from "layouts/Documentation/Rows/RowGettingStarted.jsx";
-import RowIcons from "layouts/Documentation/Rows/RowIcons.jsx";
-import RowInputs from "layouts/Documentation/Rows/RowInputs.jsx";
-import RowLicense from "layouts/Documentation/Rows/RowLicense.jsx";
-import RowMap from "layouts/Documentation/Rows/RowMap.jsx";
-import RowNavigation from "layouts/Documentation/Rows/RowNavigation.jsx";
-import RowNotifications from "layouts/Documentation/Rows/RowNotifications.jsx";
-import RowRadio from "layouts/Documentation/Rows/RowRadio.jsx";
-import RowRoutingSystem from "layouts/Documentation/Rows/RowRoutingSystem.jsx";
-import RowTable from "layouts/Documentation/Rows/RowTable.jsx";
-import RowTooltip from "layouts/Documentation/Rows/RowTooltip.jsx";
+import RowButtons from "layouts/Documentation/Rows/RowButtons.js";
+import RowCard from "layouts/Documentation/Rows/RowCard.js";
+import RowCharts from "layouts/Documentation/Rows/RowCharts.js";
+import RowCheckbox from "layouts/Documentation/Rows/RowCheckbox.js";
+import RowDropdown from "layouts/Documentation/Rows/RowDropdown.js";
+import RowGettingStarted from "layouts/Documentation/Rows/RowGettingStarted.js";
+import RowIcons from "layouts/Documentation/Rows/RowIcons.js";
+import RowInputs from "layouts/Documentation/Rows/RowInputs.js";
+import RowLicense from "layouts/Documentation/Rows/RowLicense.js";
+import RowMap from "layouts/Documentation/Rows/RowMap.js";
+import RowNavigation from "layouts/Documentation/Rows/RowNavigation.js";
+import RowNotifications from "layouts/Documentation/Rows/RowNotifications.js";
+import RowRadio from "layouts/Documentation/Rows/RowRadio.js";
+import RowRoutingSystem from "layouts/Documentation/Rows/RowRoutingSystem.js";
+import RowTable from "layouts/Documentation/Rows/RowTable.js";
+import RowTooltip from "layouts/Documentation/Rows/RowTooltip.js";
 
 const documentationRoutes = [
   {
