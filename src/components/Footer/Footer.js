@@ -21,7 +21,7 @@ import { Container } from "react-bootstrap";
 class Footer extends Component {
   render() {
     return (
-      <footer className="footer">
+      <footer className="footer px-0 px-lg-3">
         <Container fluid>
           <nav>
             <ul className="footer-menu">
