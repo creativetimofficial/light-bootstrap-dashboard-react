@@ -20,7 +20,7 @@
 // import RowCharts from "layouts/Documentation/Rows/RowCharts.js";
 // import RowCheckbox from "layouts/Documentation/Rows/RowCheckbox.js";
 // import RowDropdown from "layouts/Documentation/Rows/RowDropdown.js";
-// import RowGettingStarted from "layouts/Documentation/Rows/RowGettingStarted.js";
+import RowGettingStarted from "layouts/Documentation/Rows/RowGettingStarted.js";
 // import RowIcons from "layouts/Documentation/Rows/RowIcons.js";
 // import RowInputs from "layouts/Documentation/Rows/RowInputs.js";
 // import RowLicense from "layouts/Documentation/Rows/RowLicense.js";
@@ -33,11 +33,11 @@
 // import RowTooltip from "layouts/Documentation/Rows/RowTooltip.js";
 
 const documentationRoutes = [
-  // {
-  //   path: "/documentation/getting-started",
-  //   name: "Getting Started",
-  //   component: RowGettingStarted
-  // },
+  {
+    path: "/documentation/getting-started",
+    name: "Getting Started",
+    component: RowGettingStarted
+  },
   // { path: "/documentation/license", name: "License", component: RowLicense },
   // {
   //   path: "/documentation/routing-system",
