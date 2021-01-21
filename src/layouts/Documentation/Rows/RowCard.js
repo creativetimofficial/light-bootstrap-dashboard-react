@@ -46,19 +46,19 @@ var dataBar = {
     "Sep",
     "Oct",
     "Nov",
-    "Dec"
+    "Dec",
   ],
   series: [
     [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
-    [412, 243, 280, 580, 453, 353, 300, 364, 368, 410, 636, 695]
-  ]
+    [412, 243, 280, 580, 453, 353, 300, 364, 368, 410, 636, 695],
+  ],
 };
 var optionsBar = {
   seriesBarDistance: 10,
   axisX: {
-    showGrid: false
+    showGrid: false,
   },
-  height: "245px"
+  height: "245px",
 };
 var responsiveBar = [
   [
@@ -66,12 +66,12 @@ var responsiveBar = [
     {
       seriesBarDistance: 5,
       axisX: {
-        labelInterpolationFnc: function(value) {
+        labelInterpolationFnc: function (value) {
           return value[0];
-        }
-      }
-    }
-  ]
+        },
+      },
+    },
+  ],
 ];
 
 const codeExamplePlainCardChart = `var dataBar = {
