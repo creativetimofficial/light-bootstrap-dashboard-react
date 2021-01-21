@@ -26,6 +26,14 @@ import Upgrade from "views/Upgrade.js";
 
 const dashboardRoutes = [
   {
+    upgrade: true,
+    path: "/upgrade",
+    name: "Upgrade to PRO",
+    icon: "nc-icon nc-alien-33",
+    component: Upgrade,
+    layout: "/admin",
+  },
+  {
     path: "/dashboard",
     name: "Dashboard",
     icon: "nc-icon nc-chart-pie-35",
@@ -72,14 +80,6 @@ const dashboardRoutes = [
     name: "Notifications",
     icon: "nc-icon nc-bell-55",
     component: Notifications,
-    layout: "/admin",
-  },
-  {
-    upgrade: true,
-    path: "/upgrade",
-    name: "Upgrade to PRO",
-    icon: "nc-icon nc-alien-33",
-    component: Upgrade,
     layout: "/admin",
   },
 ];
