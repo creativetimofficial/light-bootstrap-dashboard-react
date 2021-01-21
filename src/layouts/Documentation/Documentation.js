@@ -31,37 +31,7 @@ const headerBackground = {
   backgroundImage: "url(" + imagine + ")"
 };
 
-class Documentation extends Component {
-  constructor(props) {
-    super(props);
-    this.handleScroll = this.handleScroll.bind(this);
-  }
-  handleScroll() {
-    const windowsScrollTop = window.pageYOffset;
-    var navbar = ReactDOM.findDOMNode(this.refs.navbarColorOnScroll);
-    var title = ReactDOM.findDOMNode(this.refs.navbarTitle);
-    if (windowsScrollTop > 381) {
-      navbar.classList.remove("navbar-transparent");
-      title.classList.remove("hidden");
-    } else {
-      navbar.classList.add("navbar-transparent");
-      title.classList.add("hidden");
-    }
-  }
-  componentDidUpdate(e) {
-    if (e.history.action === "PUSH") {
-      document.documentElement.scrollTop = 0;
-      document.scrollingElement.scrollTop = 0;
-      this.refs.documentationPanel.scrollTop = 0;
-    }
-  }
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-  render() {
+function Documentation(){
     return (
       <div className="components">
         <div className="header-wrapper">
