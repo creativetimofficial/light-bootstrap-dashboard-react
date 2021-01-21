@@ -16,22 +16,12 @@
 
 */
 import React, { Component } from "react";
-import { Table } from "react-bootstrap";
+import { Table, Card, Button, Row, Col } from "react-bootstrap";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import ChartistGraph from "react-chartist";
 
-import { Card } from "components/Card/Card.js";
-import { UserCard } from "components/UserCard/UserCard.js";
-import { StatsCard } from "components/StatsCard/StatsCard.js";
-
-import Button from "components/CustomButton/CustomButton.js";
-
 import avatar from "assets/img/faces/face-3.jpg";
-
-const codeExampleImport = `import {Card} from 'components/Card/Card.js';
-import {UserCard} from 'components/UserCard/UserCard.js';
-import {StatsCard} from 'components/StatsCard/StatsCard.js';`;
 
 var dataBar = {
   labels: [
@@ -74,106 +64,244 @@ var responsiveBar = [
   ],
 ];
 
-const codeExamplePlainCardChart = `var dataBar = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    series: [
-        [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
-        [412, 243, 280, 580, 453, 353, 300, 364, 368, 410, 636, 695]
-    ]
-};
-var optionsBar = {
-    seriesBarDistance: 10,
-    axisX: {
-        showGrid: false
-    },
-    height: "245px"
-};
-var responsiveBar = [
-    ['screen and (max-width: 640px)', {
-        seriesBarDistance: 5,
-        axisX: {
-            labelInterpolationFnc: function (value) {
-                return value[0];
-            }
-        }
-    }]
-];`;
+const codeExampleChartCard = `import React from "react";
+import ChartistGraph from "react-chartist";
+// react-bootstrap components
+import {
+  Card,
+  Row,
+  Col
+} from "react-bootstrap";
 
-const codeExamplePlainCard = `<div className="row">
-    <div className="col-md-6">
-        <Card
-            title="2014 Sales"
-            category="All products including Taxes"
-            stats="Data information certified"
-            statsIcon="fa fa-check"
-            content={
-                <div id="chartActivity" className="ct-chart">
-                    <ChartistGraph
-                        data={dataBar}
-                        type="Bar"
-                        options={optionsBar}
-                        responsiveOptions={responsiveBar}
-                    />
-                </div>
-            }
-            legend={
-                <div className="legend">
-                    <i className="fa fa-circle text-info"></i> Tesla Model S
-                    <i className="fa fa-circle text-danger"></i> BMW 5 Series
-                </div>
-            }
-        />
-    </div>
-</div>`;
+function Example() {
+  return (
+    <>
+      <Row>
+        <Col>
+          <Card>
+            <Card.Header>
+              <Card.Title as="h4">2017 Sales</Card.Title>
+              <p className="card-category">All products including Taxes</p>
+            </Card.Header>
+            <Card.Body>
+              <div className="ct-chart" id="chartActivity">
+                <ChartistGraph
+                  data={{
+                    labels: [
+                      "Jan",
+                      "Feb",
+                      "Mar",
+                      "Apr",
+                      "Mai",
+                      "Jun",
+                      "Jul",
+                      "Aug",
+                      "Sep",
+                      "Oct",
+                      "Nov",
+                      "Dec",
+                    ],
+                    series: [
+                      [
+                        542,
+                        443,
+                        320,
+                        780,
+                        553,
+                        453,
+                        326,
+                        434,
+                        568,
+                        610,
+                        756,
+                        895,
+                      ],
+                      [
+                        412,
+                        243,
+                        280,
+                        580,
+                        453,
+                        353,
+                        300,
+                        364,
+                        368,
+                        410,
+                        636,
+                        695,
+                      ],
+                    ],
+                  }}
+                  type="Bar"
+                  options={{
+                    seriesBarDistance: 10,
+                    axisX: {
+                      showGrid: false,
+                    },
+                    height: "245px",
+                  }}
+                  responsiveOptions={[
+                    [
+                      "screen and (max-width: 640px)",
+                      {
+                        seriesBarDistance: 5,
+                        axisX: {
+                          labelInterpolationFnc: function (value) {
+                            return value[0];
+                          },
+                        },
+                      },
+                    ],
+                  ]}
+                />
+              </div>
+            </Card.Body>
+            <Card.Footer>
+              <div className="legend">
+                <i className="fas fa-circle text-info"></i>
+                Tesla Model S <i className="fas fa-circle text-danger"></i>
+                BMW 5 Series
+              </div>
+              <hr></hr>
+              <div className="stats">
+                <i className="fas fa-check"></i>
+                Data information certified
+              </div>
+            </Card.Footer>
+          </Card>
+        </Col>
+      </Row>
+    </>
+  );
+}
 
-const codeExampleUserCardAvatar = `import avatar from "assets/img/faces/face-3.jpg";`;
+export default Example;`;
 
-const codeExampleUserCard = `<div className="row">
-    <div className="col-md-4">
-        <UserCard
-            bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
-            avatar={avatar}
-            name="Mike Andrew"
-            userName="michael24"
-            description={
-                <span>
-                    "Lamborghini Mercy
-                    <br />
-                    Your chick she so thirsty
-                    <br />
-                    I'm in that two seat Lambo"
-                </span>
-            }
-            socials={
-                <div>
-                    <Button simple>
-                        <i className="fa fa-facebook-square"></i>
-                    </Button>
-                    <Button simple>
-                        <i className="fa fa-twitter"></i>
-                    </Button>
-                    <Button simple>
-                        <i className="fa fa-google-plus-square"></i>
-                    </Button>
-                </div>
-            }
-        />
-    </div>
-</div>`;
+const codeExampleUserCard = `import React from "react";
 
-const statsCardExample = `<div className="container-fluid">
-    <div className="row">
-        <div className="col-lg-4 col-sm-8">
-            <StatsCard
-                bigIcon={<i className="pe-7s-wallet text-success"></i>}
-                statsText="Revenue"
-                statsValue="$1,345"
-                statsIcon={<i className="fa fa-calendar-o"></i>}
-                statsIconText="Last day"
-            />
-        </div>
-    </div>
-</div>`;
+// react-bootstrap components
+import {
+  Button,
+  Card,
+  Row,
+  Col,
+} from "react-bootstrap";
+
+function Example() {
+  return (
+    <>
+      <Row>
+        <Col md="8">
+          <Card className="card-user">
+            <div className="card-image">
+              <img
+                alt="..."
+                src={
+                  require("assets/img/photo-1431578500526-4d9613015464.jpeg")
+                    .default
+                }
+              ></img>
+            </div>
+            <Card.Body>
+              <div className="author">
+                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                  <img
+                    alt="..."
+                    className="avatar border-gray"
+                    src={require("assets/img/faces/face-3.jpg").default}
+                  ></img>
+                  <h5 className="title">Mike Andrew</h5>
+                </a>
+                <p className="description">michael24</p>
+              </div>
+              <p className="description text-center">
+                "Lamborghini Mercy <br></br>
+                Your chick she so thirsty <br></br>
+                I'm in that two seat Lambo"
+              </p>
+            </Card.Body>
+            <hr></hr>
+            <div className="button-container mr-auto ml-auto">
+              <Button
+                className="btn-simple btn-icon"
+                href="#pablo"
+                onClick={(e) => e.preventDefault()}
+                variant="link"
+              >
+                <i className="fab fa-facebook-square"></i>
+              </Button>
+              <Button
+                className="btn-simple btn-icon"
+                href="#pablo"
+                onClick={(e) => e.preventDefault()}
+                variant="link"
+              >
+                <i className="fab fa-twitter"></i>
+              </Button>
+              <Button
+                className="btn-simple btn-icon"
+                href="#pablo"
+                onClick={(e) => e.preventDefault()}
+                variant="link"
+              >
+                <i className="fab fa-google-plus-square"></i>
+              </Button>
+            </div>
+          </Card>
+        </Col>
+      </Row>
+    </>
+  );
+}
+
+export default Example;
+`;
+
+const statsCardExample = `import React from "react";
+// react-bootstrap components
+import {
+  Card,
+  Row,
+  Col
+} from "react-bootstrap";
+
+function Dashboard() {
+  return (
+    <>
+      <Row>
+        <Col md="6">
+          <Card className="card-stats">
+            <Card.Body>
+              <Row>
+                <Col xs="5">
+                  <div className="icon-big text-center icon-warning">
+                    <i className="nc-icon nc-chart text-warning"></i>
+                  </div>
+                </Col>
+                <Col xs="7">
+                  <div className="numbers">
+                    <p className="card-category">Number</p>
+                    <Card.Title as="h4">150GB</Card.Title>
+                  </div>
+                </Col>
+              </Row>
+            </Card.Body>
+            <Card.Footer>
+              <hr></hr>
+              <div className="stats">
+                <i className="fas fa-redo mr-1"></i>
+                Update Now
+              </div>
+            </Card.Footer>
+          </Card>
+        </Col>
+      </Row>
+    </>
+  );
+}
+
+export default Dashboard;
+`;
 
 class RowCard extends Component {
   render() {
@@ -181,348 +309,215 @@ class RowCard extends Component {
       <div id="card-row" className="tim-row">
         <h2>Cards</h2>
         <legend />
-        <p>
-          We've created three types of cards, one is for simple use, one is for
-          creating user cards and the last one is for creating stats cards. They
-          have to be imported where you use them like this:
-        </p>
-        <SyntaxHighlighter language="jsx" style={prism}>
-          {codeExampleImport}
-        </SyntaxHighlighter>
-        <h3>Plain Card example</h3>
-        <div className="row">
-          <div className="col-md-6">
-            <Card
-              title="2014 Sales"
-              category="All products including Taxes"
-              stats="Data information certified"
-              statsIcon="fa fa-check"
-              content={
-                <div id="chartActivity" className="ct-chart">
+        <h3>Chart Card example</h3>
+        <Row>
+          <Col>
+            <Card>
+              <Card.Header>
+                <Card.Title as="h4">2017 Sales</Card.Title>
+                <p className="card-category">All products including Taxes</p>
+              </Card.Header>
+              <Card.Body>
+                <div className="ct-chart" id="chartActivity">
                   <ChartistGraph
-                    data={dataBar}
+                    data={{
+                      labels: [
+                        "Jan",
+                        "Feb",
+                        "Mar",
+                        "Apr",
+                        "Mai",
+                        "Jun",
+                        "Jul",
+                        "Aug",
+                        "Sep",
+                        "Oct",
+                        "Nov",
+                        "Dec",
+                      ],
+                      series: [
+                        [
+                          542,
+                          443,
+                          320,
+                          780,
+                          553,
+                          453,
+                          326,
+                          434,
+                          568,
+                          610,
+                          756,
+                          895,
+                        ],
+                        [
+                          412,
+                          243,
+                          280,
+                          580,
+                          453,
+                          353,
+                          300,
+                          364,
+                          368,
+                          410,
+                          636,
+                          695,
+                        ],
+                      ],
+                    }}
                     type="Bar"
-                    options={optionsBar}
-                    responsiveOptions={responsiveBar}
+                    options={{
+                      seriesBarDistance: 10,
+                      axisX: {
+                        showGrid: false,
+                      },
+                      height: "245px",
+                    }}
+                    responsiveOptions={[
+                      [
+                        "screen and (max-width: 640px)",
+                        {
+                          seriesBarDistance: 5,
+                          axisX: {
+                            labelInterpolationFnc: function (value) {
+                              return value[0];
+                            },
+                          },
+                        },
+                      ],
+                    ]}
                   />
                 </div>
-              }
-              legend={
+              </Card.Body>
+              <Card.Footer>
                 <div className="legend">
-                  <i className="fa fa-circle text-info" /> Tesla Model S
-                  <i className="fa fa-circle text-danger" /> BMW 5 Series
+                  <i className="fas fa-circle text-info"></i>
+                  Tesla Model S <i className="fas fa-circle text-danger"></i>
+                  BMW 5 Series
                 </div>
-              }
-            />
-          </div>
-        </div>
+                <hr></hr>
+                <div className="stats">
+                  <i className="fas fa-check"></i>
+                  Data information certified
+                </div>
+              </Card.Footer>
+            </Card>
+          </Col>
+        </Row>
         <SyntaxHighlighter language="jsx" style={prism}>
-          {codeExamplePlainCard}
+          {codeExampleChartCard}
         </SyntaxHighlighter>
-        <SyntaxHighlighter language="jsx" style={prism}>
-          {codeExamplePlainCardChart}
-        </SyntaxHighlighter>
-        <h4>Props</h4>
-        <Table striped bordered condensed hover>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Default</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code>plain</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>
-                Use this flag to make the card plain (no <code>background</code>
-                ).
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>title</code>
-              </td>
-              <td>string / node</td>
-              <td>null</td>
-              <td>Use this flag to set the title of the card.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>category</code>
-              </td>
-              <td>string / node</td>
-              <td>null</td>
-              <td>Use this flag to set the category of the card.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>ctAllIcons</code>
-              </td>
-              <td>boolean</td>
-              <td>false</td>
-              <td>
-                Use this flag to add <code>className</code>{" "}
-                <code>all-icons</code> to the content of the card.
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>ctTableFullWidth</code>
-              </td>
-              <td>boolean</td>
-              <td>false</td>
-              <td>
-                Use this flag to add <code>className</code>{" "}
-                <code>table-full-width</code> to the content of the card.
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>ctTableResponsive</code>
-              </td>
-              <td>boolean</td>
-              <td>false</td>
-              <td>
-                Use this flag to add <code>className</code>{" "}
-                <code>table-responsive</code> to the content of the card.
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>ctTableUpgrade</code>
-              </td>
-              <td>boolean</td>
-              <td>false</td>
-              <td>
-                Use this flag to add <code>className</code>{" "}
-                <code>table-upgrade</code> to the content of the card.
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>hCenter</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>
-                Use this flag to add <code>className</code>{" "}
-                <code>text-center</code> to the header of the card.
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>content</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>Use this flag to set the content of the card.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>legend</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>Use this flag to set the legend of the card.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>statsIcon</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>Use this flag to set one stats icon to the card.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>stats</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>Use this flag to set the text to the stats icon.</td>
-            </tr>
-          </tbody>
-        </Table>
         <h3>User Card example</h3>
-        <div className="row">
-          <div className="col-md-4">
-            <UserCard
-              bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
-              avatar={avatar}
-              name="Mike Andrew"
-              userName="michael24"
-              description={
-                <span>
-                  "Lamborghini Mercy
-                  <br />
-                  Your chick she so thirsty
-                  <br />
-                  I'm in that two seat Lambo"
-                </span>
-              }
-              socials={
-                <div>
-                  <Button simple>
-                    <i className="fa fa-facebook-square" />
-                  </Button>
-                  <Button simple>
-                    <i className="fa fa-twitter" />
-                  </Button>
-                  <Button simple>
-                    <i className="fa fa-google-plus-square" />
-                  </Button>
+        <Row>
+          <Col md="8">
+            <Card className="card-user">
+              <div className="card-image">
+                <img
+                  alt="..."
+                  src={
+                    require("assets/img/photo-1431578500526-4d9613015464.jpeg")
+                      .default
+                  }
+                ></img>
+              </div>
+              <Card.Body>
+                <div className="author">
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <img
+                      alt="..."
+                      className="avatar border-gray"
+                      src={require("assets/img/faces/face-3.jpg").default}
+                    ></img>
+                    <h5 className="title">Mike Andrew</h5>
+                  </a>
+                  <p className="description">michael24</p>
                 </div>
-              }
-            />
-          </div>
-        </div>
-        <SyntaxHighlighter language="jsx" style={prism}>
-          {codeExampleUserCardAvatar}
-        </SyntaxHighlighter>
+                <p className="description text-center">
+                  "Lamborghini Mercy <br></br>
+                  Your chick she so thirsty <br></br>
+                  I'm in that two seat Lambo"
+                </p>
+              </Card.Body>
+              <hr></hr>
+              <div className="button-container mr-auto ml-auto">
+                <Button
+                  className="btn-simple btn-icon"
+                  href="#pablo"
+                  onClick={(e) => e.preventDefault()}
+                  variant="link"
+                >
+                  <i className="fab fa-facebook-square"></i>
+                </Button>
+                <Button
+                  className="btn-simple btn-icon"
+                  href="#pablo"
+                  onClick={(e) => e.preventDefault()}
+                  variant="link"
+                >
+                  <i className="fab fa-twitter"></i>
+                </Button>
+                <Button
+                  className="btn-simple btn-icon"
+                  href="#pablo"
+                  onClick={(e) => e.preventDefault()}
+                  variant="link"
+                >
+                  <i className="fab fa-google-plus-square"></i>
+                </Button>
+              </div>
+            </Card>
+          </Col>
+        </Row>
         <SyntaxHighlighter language="jsx" style={prism}>
           {codeExampleUserCard}
         </SyntaxHighlighter>
-        <h4>Props</h4>
-        <Table striped bordered condensed hover>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Default</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code>bgImage</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>Use this flag to set the background image for the card.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>avatar</code>
-              </td>
-              <td>string / react element</td>
-              <td>null</td>
-              <td>
-                Use this flag to set the avatar of the card. (if you use the
-                string method, the image has to be in public folder, if you use
-                the react import method, the image has to be in src folder)
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>name</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>Use this flag to set the name of the user.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>userName</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>Use this flag to set the username of the user.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>description</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>Use this flag to set the user description.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>socials</code>
-              </td>
-              <td>html components</td>
-              <td>null</td>
-              <td>Use this flag to set user's socials.</td>
-            </tr>
-          </tbody>
-        </Table>
         <h3>Stats Card example</h3>
         <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-4 col-sm-8">
-              <StatsCard
-                bigIcon={<i className="pe-7s-wallet text-success" />}
-                statsText="Revenue"
-                statsValue="$1,345"
-                statsIcon={<i className="fa fa-calendar-o" />}
-                statsIconText="Last day"
-              />
-            </div>
-          </div>
+          <Row>
+            <Col md="6">
+              <Card className="card-stats">
+                <Card.Body>
+                  <Row>
+                    <Col xs="5">
+                      <div className="icon-big text-center icon-warning">
+                        <i className="nc-icon nc-chart text-warning"></i>
+                      </div>
+                    </Col>
+                    <Col xs="7">
+                      <div className="numbers">
+                        <p className="card-category">Number</p>
+                        <Card.Title as="h4">150GB</Card.Title>
+                      </div>
+                    </Col>
+                  </Row>
+                </Card.Body>
+                <Card.Footer>
+                  <hr></hr>
+                  <div className="stats">
+                    <i className="fas fa-redo mr-1"></i>
+                    Update Now
+                  </div>
+                </Card.Footer>
+              </Card>
+            </Col>
+          </Row>
         </div>
         <SyntaxHighlighter language="jsx" style={prism}>
           {statsCardExample}
         </SyntaxHighlighter>
         <h4>Props</h4>
-        <Table striped bordered condensed hover>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Default</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code>bigIcon</code>
-              </td>
-              <td>html component</td>
-              <td>null</td>
-              <td>Use this flag to set the main stats card image.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>statsText</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>Use this flag to set the main stats card text.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>statsValue</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>Use this flag to set the main stats card value.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>statsIcon</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>Use this flag to set the footers card icon.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>statsIconText</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>Use this flag to set the footers card text.</td>
-            </tr>
-          </tbody>
-        </Table>
+        <p>
+          Beside these props you can also reffer to{" "}
+          <a
+            href="https://react-bootstrap.github.io/components/cards/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            react-bootstrap documentation
+          </a>
+          .
+        </p>
       </div>
     );
   }
