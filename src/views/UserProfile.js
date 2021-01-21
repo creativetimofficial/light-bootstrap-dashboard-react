@@ -130,12 +130,12 @@ function User() {
                         <label>About Me</label>
                         <Form.Control
                           cols="80"
-                          defaultValue="Mike"
+                          defaultValue="Lamborghini Mercy, Your chick she so thirsty, I'm in
+                          that two seat Lambo."
                           placeholder="Here can be your description"
                           rows="4"
+                          as="textarea"
                         >
-                          Lamborghini Mercy, Your chick she so thirsty, I'm in
-                          that two seat Lambo.
                         </Form.Control>
                       </Form.Group>
                     </Col>
@@ -157,7 +157,7 @@ function User() {
               <div className="card-image">
                 <img
                   alt="..."
-                  src={require("assets/img/photo-1431578500526-4d9613015464.jpeg")}
+                  src={require("assets/img/photo-1431578500526-4d9613015464.jpeg").default}
                 ></img>
               </div>
               <Card.Body>
@@ -166,7 +166,7 @@ function User() {
                     <img
                       alt="..."
                       className="avatar border-gray"
-                      src={require("assets/img/faces/face-3.jpg")}
+                      src={require("assets/img/faces/face-3.jpg").default}
                     ></img>
                     <h5 className="title">Mike Andrew</h5>
                   </a>
