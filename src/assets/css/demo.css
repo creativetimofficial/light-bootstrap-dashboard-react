@@ -59,7 +59,13 @@
 #map{
     position:relative;
     width:100%;
-    height: calc(100% - 60px);
+    height: 100%;
+}
+
+.map-container {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
 }
 
 .places-buttons .btn{
@@ -506,12 +512,6 @@
     display: block;
     color: #aaa;
     font-size: 13px;
-}
-
-#map{
-    position:relative;
-    width:100%;
-    height: calc(100% - 60px);
 }
 
 .places-buttons .btn{
