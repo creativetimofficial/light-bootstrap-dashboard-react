@@ -26,14 +26,14 @@ function TableList() {
                   Here is a subtitle for this table
                 </p>
               </Card.Header>
-              <Card.Body className="table-full-width table-responsive">
+              <Card.Body className="table-full-width table-responsive px-0">
                 <Table className="table-hover table-striped">
                   <thead>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Salary</th>
-                    <th>Country</th>
-                    <th>City</th>
+                    <th className="border-0">ID</th>
+                    <th className="border-0">Name</th>
+                    <th className="border-0">Salary</th>
+                    <th className="border-0">Country</th>
+                    <th className="border-0">City</th>
                   </thead>
                   <tbody>
                     <tr>
@@ -91,14 +91,14 @@ function TableList() {
                   Here is a subtitle for this table
                 </p>
               </Card.Header>
-              <Card.Body className="table-full-width table-responsive">
+              <Card.Body className="table-full-width table-responsive px-0">
                 <Table className="table-hover">
                   <thead>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Salary</th>
-                    <th>Country</th>
-                    <th>City</th>
+                    <th className="border-0">ID</th>
+                    <th className="border-0">Name</th>
+                    <th className="border-0">Salary</th>
+                    <th className="border-0">Country</th>
+                    <th className="border-0">City</th>
                   </thead>
                   <tbody>
                     <tr>
