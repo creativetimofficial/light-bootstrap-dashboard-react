@@ -73,21 +73,21 @@ class RowInputs extends Component {
               bsClass: "form-control",
               placeholder: "Company",
               defaultValue: "Creative Code Inc.",
-              disabled: true
+              disabled: true,
             },
             {
               label: "Username",
               type: "text",
               bsClass: "form-control",
               placeholder: "Username",
-              defaultValue: "michael23"
+              defaultValue: "michael23",
             },
             {
               label: "Email address",
               type: "email",
               bsClass: "form-control",
-              placeholder: "Email"
-            }
+              placeholder: "Email",
+            },
           ]}
         />
 
