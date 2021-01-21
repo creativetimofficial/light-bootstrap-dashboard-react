@@ -16,22 +16,28 @@
 
 */
 import React, { Component } from "react";
-import { Table } from "react-bootstrap";
-import Checkbox from "components/CustomCheckbox/CustomCheckbox";
+import { Form } from "react-bootstrap";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
 const codeColors = `<div>
-    <Checkbox
-        number="1"
-        isChecked={true}
-        label="Checked"
-    />
-    <Checkbox
-        number="2"
-        isChecked={false}
-        label="Unchecked"
-    />
+  <Form.Check className="mb-1 pl-0">
+    <Form.Check.Label>
+      <Form.Check.Input
+        defaultChecked
+        type="checkbox"
+      ></Form.Check.Input>
+      <span className="form-check-sign"></span>
+      Checked
+    </Form.Check.Label>
+  </Form.Check>
+  <Form.Check className="mb-1 pl-0">
+    <Form.Check.Label>
+      <Form.Check.Input type="checkbox"></Form.Check.Input>
+      <span className="form-check-sign"></span>
+      Unchecked
+    </Form.Check.Label>
+  </Form.Check>
 </div>`;
 
 class RowCheckbox extends Component {
@@ -45,59 +51,32 @@ class RowCheckbox extends Component {
           component:
         </p>
         <SyntaxHighlighter language="jsx" style={prism}>
-          {`import Checkbox from 'components/CustomCheckbox/CustomCheckbox';`}
+          {`import Form from 'react-bootstrap';`}
         </SyntaxHighlighter>
         <div>
-          <Checkbox number="1" isChecked={true} label="Checked" />
-          <Checkbox number="2" isChecked={false} label="Unchecked" />
+          <Form.Check className="mb-1 pl-0">
+            <Form.Check.Label>
+              <Form.Check.Input
+                defaultChecked
+                type="checkbox"
+              ></Form.Check.Input>
+              <span className="form-check-sign"></span>
+              Checked
+            </Form.Check.Label>
+          </Form.Check>
+          <Form.Check className="mb-1 pl-0">
+            <Form.Check.Label>
+              <Form.Check.Input type="checkbox"></Form.Check.Input>
+              <span className="form-check-sign"></span>
+              Unchecked
+            </Form.Check.Label>
+          </Form.Check>
         </div>
-
         <SyntaxHighlighter language="jsx" style={prism}>
           {codeColors}
         </SyntaxHighlighter>
 
         <h4>Props</h4>
-        <Table striped bordered condensed hover>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Default</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code>number</code>
-              </td>
-              <td>string</td>
-              <td>null</td>
-              <td>
-                This is the unique id of each checkbox. You need to set this for
-                checkboxes to work properly.
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>isChecked</code>
-              </td>
-              <td>boolean</td>
-              <td>false</td>
-              <td>Use this flag to create a checked / unchecked checkbox.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>label</code>
-              </td>
-              <td>string / node</td>
-              <td>null</td>
-              <td>
-                Use this flag to add text or a node as a label to the checkbox.
-              </td>
-            </tr>
-          </tbody>
-        </Table>
         <p>
           Beside these props you can also reffer to{" "}
           <a
