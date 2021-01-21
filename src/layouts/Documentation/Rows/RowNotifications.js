@@ -15,399 +15,458 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React, { Component } from "react";
-import { Alert, Table } from "react-bootstrap";
+import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/styles/prism";
-import NotificationSystem from "react-notification-system";
+import { Alert, Row, Col, Button } from "reactstrap";
+import Notify from "react-notification-alert";
 
-import { style } from "variables/Variables.js";
-
-const codeExmapleNotificationStyle = `<div className="container-fluid">
-    <div className="card">
-        <div className="content">
-            <Alert bsStyle="info">
-                <span>This is a plain notification</span>
-            </Alert>
-            <Alert bsStyle="info">
-                <button type="button" aria-hidden="true" className="close">×</button>
-                <span>This is a notification with close button.</span>
-            </Alert>
-            <Alert bsStyle="info" className="alert-with-icon">
-                <button type="button" aria-hidden="true" className="close">×</button>
-                <span data-notify="icon" className="pe-7s-bell"></span>
-                <span data-notify="message">This is a notification with close button and icon.</span>
-            </Alert>
-            <Alert bsStyle="info" className="alert-with-icon">
-                <button type="button" aria-hidden="true" className="close">×</button>
-                <span data-notify="icon" className="pe-7s-bell"></span>
-                <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
-            </Alert>
-        </div>
-    </div>
-</div>`;
-
-const codeExmapleNotificationState = `<div className="container-fluid">
-    <div className="card">
-        <div className="content">
-            <Alert bsStyle="info">
-                <button type="button" aria-hidden="true" className="close">×</button>
-                <span><b> Info - </b> This is a regular notification made with ".alert-info"</span>
-            </Alert>
-            <Alert bsStyle="success">
-                <button type="button" aria-hidden="true" className="close">×</button>
-                <span><b> Success - </b> This is a regular notification made with ".alert-success"</span>
-            </Alert>
-            <Alert bsStyle="warning">
-                <button type="button" aria-hidden="true" className="close">×</button>
-                <span><b> Warning - </b> This is a regular notification made with ".alert-warning"</span>
-            </Alert>
-            <Alert bsStyle="danger">
-                <button type="button" aria-hidden="true" className="close">×</button>
-                <span><b> Danger - </b> This is a regular notification made with ".alert-danger"</span>
-            </Alert>
-        </div>
-    </div>
-</div>`;
-
-const codeExmapleNotificationPlace = `<div className="row">
-    <div className="col-md-2">
-        <button className="btn btn-default btn-block" onClick={this.handleClick.bind(this,'tl')}>Show notification</button>
-    </div>
-</div>`;
-
-const codeComponentDidMount = `componentDidMount(){
-    this.setState({_notificationSystem: this.refs.notificationSystem})
+const codeExampleImport = `import { Alert } from 'reactstrap';`;
+const codeExampleConstruct = `constructor(props) {
+    super(props);
+    this.state = {
+        visible: true
+    };
+    this.onDismiss = this.onDismiss.bind(this);
+}
+onDismiss(){
+    this.setState({visible: !this.state.visible})
 }`;
 
-const codeHandleClickConstructor = `this.handleClick = this.handleClick.bind(this);
-this.componentDidMount = this.componentDidMount.bind(this);
-this.state = {
-    _notificationSystem: null
-};`;
+const codeExampleStyles = `<Alert color="info"><span>This is a plain notification</span></Alert>
 
-const codeHandleClick = `handleClick(position){
-    var level = 'success'; // 'success', 'warning', 'error' or 'info'
-    this.state._notificationSystem.addNotification({
-        title: (<span data-notify="icon" className="pe-7s-gift"></span>),
-        message: (
-            <div>
-                Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer.
-            </div>
-        ),
-        level: level,
-        position: position,
-        autoDismiss: 15,
-    });
-}`;
+<Alert
+    color="info"
 
-class RowNotifications extends Component {
+    isOpen={this.state.visible}
+    toggle={this.onDismiss}
+>
+    <span>This is a notification with close button.</span>
+</Alert>
+
+<Alert
+    color="info"
+    className="alert-with-icon"
+
+    isOpen={this.state.visible}
+    toggle={this.onDismiss}
+>
+    <span data-notify="icon" className="nc-icon nc-alien-33"></span>
+    <span data-notify="message">This is a notification with close button and icon.</span>
+</Alert>
+
+<Alert
+    color="info"
+    className="alert-with-icon"
+    isOpen={this.state.visible}
+    toggle={this.onDismiss}
+>
+    <span data-notify="icon" className="nc-icon nc-alien-33"></span>
+    <span data-notify="message">
+        This is a notification with close button and icon and have many lines.
+        You can see that the icon and the close button are always vertically aligned.
+        This is a beautiful notification. So you don't have to worry about the style.
+    </span>
+</Alert>`;
+
+const codeExampleStates = `<Alert
+    color="primary"
+
+    isOpen={this.state.visible}
+    toggle={this.onDismiss}
+>
+    <span>
+        <b> Primary - </b> This is a regular notification made with
+        <code className="highlighter-rouge">color="primary"</code>
+    </span>
+</Alert>
+<Alert
+    color="primary"
+
+    isOpen={this.state.visible}
+    toggle={this.onDismiss}
+>
+    <span>
+        <b> Secondary - </b> This is a regular notification made with
+        <code className="highlighter-rouge">color="secondary"</code>
+    </span>
+</Alert>
+<Alert
+    color="primary"
+
+    isOpen={this.state.visible}
+    toggle={this.onDismiss}
+>
+    <span>
+        <b> Success - </b> This is a regular notification made with
+        <code className="highlighter-rouge">color="success"</code>
+    </span>
+</Alert>
+<Alert
+    color="primary"
+
+    isOpen={this.state.visible}
+    toggle={this.onDismiss}
+>
+    <span>
+        <b> Danger - </b> This is a regular notification made with
+        <code className="highlighter-rouge">color="danger"</code>
+    </span>
+</Alert>
+<Alert
+    color="primary"
+
+    isOpen={this.state.visible}
+    toggle={this.onDismiss}
+>
+    <span>
+        <b> Warning - </b> This is a regular notification made with
+         <code className="highlighter-rouge">color="warning"</code>
+    </span>
+</Alert>
+<Alert
+    color="primary"
+
+    isOpen={this.state.visible}
+    toggle={this.onDismiss}
+>
+    <span>
+        <b> Info - </b> This is a regular notification made with
+        <code className="highlighter-rouge">color="info"</code>
+    </span>
+</Alert>
+<Alert
+    color="primary"
+
+    isOpen={this.state.visible}
+    toggle={this.onDismiss}
+>
+    <span>
+        <b> Light - </b> This is a regular notification made with
+        <code className="highlighter-rouge">color="light"</code>
+    </span>
+</Alert>
+<Alert
+    color="primary"
+
+    isOpen={this.state.visible}
+    toggle={this.onDismiss}
+>
+    <span>
+        <b> Dark - </b> This is a regular notification made with
+        <code className="highlighter-rouge">color="dark"</code>
+    </span>
+</Alert>`;
+
+const codeExamplePlacesOptions = `var options = {
+    place: place,
+    message: message,
+    type: type,
+    autoDismiss: seconds,
+    icon: icon
+};
+this.refs.notify.notificationAlert(options);`;
+
+class Notifications extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
-    this.componentDidMount = this.componentDidMount.bind(this);
     this.state = {
-      _notificationSystem: null,
+      visible: true,
     };
+    this.onDismiss = this.onDismiss.bind(this);
+    this.notify = this.notify.bind(this);
   }
-  handleClick(position) {
-    position = Math.floor(Math.random() * 6 + 1);
-    var level;
-    switch (position) {
-      case 1:
-        level = "tl";
-        break;
-      case 2:
-        level = "tc";
-        break;
-      case 3:
-        level = "tr";
-        break;
-      case 4:
-        level = "bl";
-        break;
-      case 5:
-        level = "bc";
-        break;
-      case 6:
-        level = "br";
-        break;
-      default:
-        break;
-    }
-    position = level;
-    var color = Math.floor(Math.random() * 4 + 1);
+  onDismiss() {}
+  notify() {
+    var color = Math.floor(Math.random() * 8 + 1);
+    var type;
     switch (color) {
       case 1:
-        level = "success";
+        type = "primary";
         break;
       case 2:
-        level = "warning";
+        type = "secondary";
         break;
       case 3:
-        level = "error";
+        type = "success";
         break;
       case 4:
-        level = "info";
+        type = "danger";
+        break;
+      case 5:
+        type = "warning";
+        break;
+      case 6:
+        type = "info";
+        break;
+      case 7:
+        type = "light";
+        break;
+      case 8:
+        type = "dark";
         break;
       default:
         break;
     }
-    this.state._notificationSystem.addNotification({
-      title: <span data-notify="icon" className="pe-7s-gift" />,
+    color = Math.floor(Math.random() * 6 + 1);
+    var place;
+    switch (color) {
+      case 1:
+        place = "tl";
+        break;
+      case 2:
+        place = "tc";
+        break;
+      case 3:
+        place = "tr";
+        break;
+      case 4:
+        place = "bl";
+        break;
+      case 5:
+        place = "bc";
+        break;
+      case 6:
+        place = "br";
+        break;
+      default:
+        break;
+    }
+    var options = {
+      place: place,
       message: (
         <div>
-          Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for
-          every web developer.
+          <div>
+            Welcome to <b>Light Bootstrap Dashboard PRO React</b> - a beautiful
+            premium product for every web developer.
+          </div>
         </div>
       ),
-      level: level,
-      position: position,
-      autoDismiss: 15,
-    });
-  }
-
-  componentDidMount() {
-    this.setState({ _notificationSystem: this.refs.notificationSystem });
+      type: type,
+      autoDismiss: 7,
+      icon: "nc-icon nc-alien-33",
+    };
+    this.refs.notify.notificationAlert(options);
   }
   render() {
     return (
-      <div id="notification-row" className="tim-row">
-        <NotificationSystem ref="notificationSystem" style={style} />
-        <h2>React Notification System v0.2.17</h2>
-        <legend />
-        <p>
-          We restyled the classic Bootstrap Alert and gave it a more attractive
-          look.
+      <div>
+        <Notify ref="notify" />
+        <h1 className="bd-title" id="content">
+          React Notification Alert v0.0.12
+        </h1>
+        <p className="bd-lead">
+          We are very proud to present you our new{" "}
+          <code className="highlighter-rouge">notification system</code>. It was
+          coded by us from scratch, so you won't have to install any third
+          libraries.
         </p>
-
-        <h4>Notification Style</h4>
-        <div className="container-fluid">
-          <div className="card">
-            <div className="content">
-              <Alert bsStyle="info">
-                <span>This is a plain notification</span>
-              </Alert>
-              <Alert bsStyle="info">
-                <button type="button" aria-hidden="true" className="close">
-                  ×
-                </button>
-                <span>This is a notification with close button.</span>
-              </Alert>
-              <Alert bsStyle="info" className="alert-with-icon">
-                <button type="button" aria-hidden="true" className="close">
-                  ×
-                </button>
-                <span data-notify="icon" className="pe-7s-bell" />
-                <span data-notify="message">
-                  This is a notification with close button and icon.
-                </span>
-              </Alert>
-              <Alert bsStyle="info" className="alert-with-icon">
-                <button type="button" aria-hidden="true" className="close">
-                  ×
-                </button>
-                <span data-notify="icon" className="pe-7s-bell" />
-                <span data-notify="message">
-                  This is a notification with close button and icon and have
-                  many lines. You can see that the icon and the close button are
-                  always vertically aligned. This is a beautiful notification.
-                  So you don't have to worry about the style.
-                </span>
-              </Alert>
-            </div>
-          </div>
-        </div>
-        <br />
-        <SyntaxHighlighter language="jsx" style={prism}>
-          {codeExmapleNotificationStyle}
-        </SyntaxHighlighter>
-        <h4>Notification states</h4>
-        <div className="container-fluid">
-          <div className="card">
-            <div className="content">
-              <Alert bsStyle="info">
-                <button type="button" aria-hidden="true" className="close">
-                  ×
-                </button>
-                <span>
-                  <b> Info - </b> This is a regular notification made with
-                  ".alert-info"
-                </span>
-              </Alert>
-              <Alert bsStyle="success">
-                <button type="button" aria-hidden="true" className="close">
-                  ×
-                </button>
-                <span>
-                  <b> Success - </b> This is a regular notification made with
-                  ".alert-success"
-                </span>
-              </Alert>
-              <Alert bsStyle="warning">
-                <button type="button" aria-hidden="true" className="close">
-                  ×
-                </button>
-                <span>
-                  <b> Warning - </b> This is a regular notification made with
-                  ".alert-warning"
-                </span>
-              </Alert>
-              <Alert bsStyle="danger">
-                <button type="button" aria-hidden="true" className="close">
-                  ×
-                </button>
-                <span>
-                  <b> Danger - </b> This is a regular notification made with
-                  ".alert-danger"
-                </span>
-              </Alert>
-            </div>
-          </div>
+        <h2 id="content">Styles</h2>
+        <div className="bd-example">
+          <Alert color="info">
+            <span>This is a plain notification</span>
+          </Alert>
+          <Alert
+            color="info"
+            isOpen={this.state.visible}
+            toggle={this.onDismiss}
+          >
+            <span>This is a notification with close button.</span>
+          </Alert>
+          <Alert
+            color="info"
+            className="alert-with-icon"
+            isOpen={this.state.visible}
+            toggle={this.onDismiss}
+          >
+            <span data-notify="icon" className="nc-icon nc-alien-33" />
+            <span data-notify="message">
+              This is a notification with close button and icon.
+            </span>
+          </Alert>
+          <Alert
+            color="info"
+            className="alert-with-icon"
+            isOpen={this.state.visible}
+            toggle={this.onDismiss}
+          >
+            <span data-notify="icon" className="nc-icon nc-alien-33" />
+            <span data-notify="message">
+              This is a notification with close button and icon and have many
+              lines. You can see that the icon and the close button are always
+              vertically aligned. This is a beautiful notification. So you don't
+              have to worry about the style.
+            </span>
+          </Alert>
         </div>
         <SyntaxHighlighter language="jsx" style={prism}>
-          {codeExmapleNotificationState}
-        </SyntaxHighlighter>
-        <h4>Notification places</h4>
-        <p>For this to work you will have to import some components:</p>
-
-        <SyntaxHighlighter language="jsx" style={prism}>
-          {`import NotificationSystem from 'react-notification-system';`}
+          {codeExampleImport}
         </SyntaxHighlighter>
         <SyntaxHighlighter language="jsx" style={prism}>
-          {`import {style} from "variables/Variables.js";`}
+          {codeExampleConstruct}
         </SyntaxHighlighter>
-        <p>
-          <code>style</code> is used for the style of the notification. This is
-          found in <code>src/variables/Variables.js</code>.
-        </p>
-        <p>
-          You will have to add the following function in your class component:
-        </p>
         <SyntaxHighlighter language="jsx" style={prism}>
-          {codeComponentDidMount}
+          {codeExampleStyles}
         </SyntaxHighlighter>
-        <p>And the following code in your constructor class component:</p>
+        <h2 id="content">States</h2>
+        <div className="bd-example">
+          <Alert
+            color="primary"
+            isOpen={this.state.visible}
+            toggle={this.onDismiss}
+          >
+            <span>
+              <b> Primary - </b> This is a regular notification made with{" "}
+              <code className="highlighter-rouge">color="primary"</code>
+            </span>
+          </Alert>
+          <Alert
+            color="secondary"
+            isOpen={this.state.visible}
+            toggle={this.onDismiss}
+          >
+            <span>
+              <b> Secondary - </b> This is a regular notification made with{" "}
+              <code className="highlighter-rouge">color="secondary"</code>
+            </span>
+          </Alert>
+          <Alert
+            color="success"
+            isOpen={this.state.visible}
+            toggle={this.onDismiss}
+          >
+            <span>
+              <b> Success - </b> This is a regular notification made with{" "}
+              <code className="highlighter-rouge">color="success"</code>
+            </span>
+          </Alert>
+          <Alert
+            color="danger"
+            isOpen={this.state.visible}
+            toggle={this.onDismiss}
+          >
+            <span>
+              <b> Danger - </b> This is a regular notification made with{" "}
+              <code className="highlighter-rouge">color="danger"</code>
+            </span>
+          </Alert>
+          <Alert
+            color="warning"
+            isOpen={this.state.visible}
+            toggle={this.onDismiss}
+          >
+            <span>
+              <b> Warning - </b> This is a regular notification made with{" "}
+              <code className="highlighter-rouge">color="warning"</code>
+            </span>
+          </Alert>
+          <Alert
+            color="info"
+            isOpen={this.state.visible}
+            toggle={this.onDismiss}
+          >
+            <span>
+              <b> Info - </b> This is a regular notification made with{" "}
+              <code className="highlighter-rouge">color="info"</code>
+            </span>
+          </Alert>
+          <Alert
+            color="light"
+            isOpen={this.state.visible}
+            toggle={this.onDismiss}
+          >
+            <span>
+              <b> Light - </b> This is a regular notification made with{" "}
+              <code className="highlighter-rouge">color="light"</code>
+            </span>
+          </Alert>
+          <Alert
+            color="dark"
+            isOpen={this.state.visible}
+            toggle={this.onDismiss}
+          >
+            <span>
+              <b> Dark - </b> This is a regular notification made with{" "}
+              <code className="highlighter-rouge">color="dark"</code>
+            </span>
+          </Alert>
+        </div>
         <SyntaxHighlighter language="jsx" style={prism}>
-          {codeHandleClickConstructor}
+          {codeExampleImport}
         </SyntaxHighlighter>
-        <p>After this, you have to add the following function:</p>
         <SyntaxHighlighter language="jsx" style={prism}>
-          {codeHandleClick}
+          {codeExampleConstruct}
         </SyntaxHighlighter>
-        <p>
-          You have add a <code>NotificationSystem</code> component like this:
-        </p>
         <SyntaxHighlighter language="jsx" style={prism}>
-          {`<NotificationSystem ref="notificationSystem" style={style}/>`}
+          {codeExampleStates}
         </SyntaxHighlighter>
-        <p>And finally you have the button that creates the notification:</p>
-        <div className="row">
-          <div className="col-md-3">
-            <button
-              className="btn btn-default btn-block"
-              onClick={this.handleClick.bind(this, "tl")}
-            >
-              Show notification
-            </button>
+        <h2 id="content">Places</h2>
+        <div className="bd-example">
+          <div className="places-button">
+            <Row>
+              <Col md={6} lg={6}>
+                <Button block onClick={() => this.notify()}>
+                  Random Position and Color
+                </Button>
+              </Col>
+            </Row>
           </div>
         </div>
-        <br />
+        <h3 id="content">Usage</h3>
+        <p>First of all, you need to import it:</p>
         <SyntaxHighlighter language="jsx" style={prism}>
-          {codeExmapleNotificationPlace}
+          {`import Notify from 'react-notification-alert';`}
         </SyntaxHighlighter>
         <p>
-          To change where the notification renders, you replace{" "}
-          <code>'tl'</code> from <code>this.handleClick.bind(this,'tl')</code>{" "}
-          in the <code>onClick</code> propriety:
+          Then, you have to put this component somewhere in your render method
+          like so:
         </p>
-        <Table striped bordered condensed hover>
-          <thead>
-            <tr>
-              <th>Code</th>
-              <th>Meaning</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code>'tl'</code>
-              </td>
-              <td>top-left</td>
-              <td>Notification will appear in the top-left of the screen.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>'tc'</code>
-              </td>
-              <td>top-center</td>
-              <td>Notification will appear in the top-center of the screen.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>'tr'</code>
-              </td>
-              <td>top-right</td>
-              <td>Notification will appear in the top-right of the screen.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>'bl'</code>
-              </td>
-              <td>bottom-left</td>
-              <td>
-                Notification will appear in the bottom-left of the screen.
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>'bc'</code>
-              </td>
-              <td>bottom-center</td>
-              <td>
-                Notification will appear in the bottom-center of the screen.
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>'br'</code>
-              </td>
-              <td>bottom-right</td>
-              <td>
-                Notification will appear in the bottom-right of the screen.
-              </td>
-            </tr>
-          </tbody>
-        </Table>
-        <h4>Details</h4>
+        <SyntaxHighlighter language="jsx" style={prism}>
+          {`<Notify ref="notify"/>`}
+        </SyntaxHighlighter>
         <p>
-          For more details on <code>Alert</code> please refer to{" "}
+          We've chose to get this component by using{" "}
+          <code className="highlighter-rouge">refs</code> as you can see.
+        </p>
+        <p>
+          After that, you have to call the{" "}
+          <code className="highlighter-rouge">notificationAlert function</code>{" "}
+          from this component with some{" "}
+          <code className="highlighter-rouge">options</code>:
+        </p>
+        <SyntaxHighlighter language="jsx" style={prism}>
+          {codeExamplePlacesOptions}
+        </SyntaxHighlighter>
+        <h2 id="content">
+          Props passed in{" "}
+          <code className="highlighter-rouge">notificationAlert function</code>
+        </h2>
+        <p>
+          Please refer to{" "}
           <a
-            href="https://react-bootstrap.github.io/components.html#alerts"
+            href="https://github.com/creativetimofficial/react-notification-alert"
             target="_blank"
             rel="noopener noreferrer"
           >
-            react-bootstrap documentation
-          </a>{" "}
-          and for more information about <code>NotificationSystem</code> please
-          refer to{" "}
-          <a
-            href="https://github.com/igorprado/react-notification-system"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            react-notification-system documentation
+            react-notification-alert documentation
           </a>
           .
         </p>
-        <div className="alert alert-info">
-          In this page, the <code>Show notification</code> button has a random
-          generated <code>position</code> and <code>level</code>.
-        </div>
+        <h2 id="content">Props for Alerts</h2>
+        <p>
+          Please refer to{" "}
+          <a
+            href="https://react-bootstrap.netlify.app/components/alerts/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            reactstrap alerts documentation
+          </a>
+          .
+        </p>
       </div>
     );
   }
 }
 
-export default RowNotifications;
+export default Notifications;
