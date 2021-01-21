@@ -176,11 +176,7 @@ function FixedPlugin({
           </li>
           <li className="button-container">
             <Link to="/documentation/getting-started">
-              <Button
-                block
-                className="btn-fill"
-                variant="default"
-              >
+              <Button block className="btn-fill" variant="default">
                 Checkout docs.
               </Button>
             </Link>
