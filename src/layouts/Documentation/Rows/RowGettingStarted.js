@@ -25,6 +25,7 @@ const fileStructure = `light-bootstrap-dashboard-react
 ├── ISSUE_TEMPLATE.md
 ├── LICENSE.md
 ├── README.md
+├── gulpfile.js
 ├── jsconfig.json
 ├── package.json
 ├── Documentation
@@ -48,45 +49,34 @@ const fileStructure = `light-bootstrap-dashboard-react
     │   │   ├── demo.css
     │   │   ├── light-bootstrap-dashboard-react.css
     │   │   ├── light-bootstrap-dashboard-react.css.map
-    │   │   ├── light-bootstrap-dashboard-react.min.css
-    │   │   └── pe-icon-7-stroke.css
+    │   │   └── light-bootstrap-dashboard-react.min.css
     │   ├── fonts
+    │   │   ├── nucleo-icons.eot
+    │   │   ├── nucleo-icons.svg
+    │   │   ├── nucleo-icons.ttf
+    │   │   ├── nucleo-icons.woff
+    │   │   └── nucleo-icons.woff2
     │   ├── img
-    │   │   ├── faces
-    │   └── sass
+    │   │   └── faces
+    │   └── scss
     │       ├── lbd
-    │       │   └── mixins
+    │       │   ├── mixins
+    │       │   └── plugins
+    │       ├── lbdr
+    │       │   ├── plugins
+    │       │   └── react-differences.scss
     │       └── light-bootstrap-dashboard-react.scss
+    ├── layouts
+    │   └── Admin.js
     ├── components
-    │   ├── Card
-    │   │   └── Card.js
-    │   ├── CustomButton
-    │   │   └── CustomButton.js
-    │   ├── CustomCheckbox
-    │   │   └── CustomCheckbox.js
-    │   ├── CustomRadio
-    │   │   └── CustomRadio.js
     │   ├── FixedPlugin
     │   │   └── FixedPlugin.js
     │   ├── Footer
     │   │   └── Footer.js
-    │   ├── FormInputs
-    │   │   └── FormInputs.js
     │   ├── Navbars
-    │   │   ├── AdminNavbar.js
-    │   │   └── AdminNavbarLinks.js
-    │   ├── Sidebar
-    │   │   └── Sidebar.js
-    │   ├── StatsCard
-    │   │   └── StatsCard.js
-    │   ├── Tasks
-    │   │   └── Tasks.js
-    │   └── UserCard
-    │       └── UserCard.js
-    ├── layouts
-    │   └── Admin.js
-    ├── variables
-    │   └── Variables.js
+    │   │   └── AdminNavbar.js
+    │   └── Sidebar
+    │       └── Sidebar.js
     └── views
         ├── Dashboard.js
         ├── Icons.js
