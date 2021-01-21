@@ -27,7 +27,7 @@ import {
   responsiveSales,
   dataBar,
   optionsBar,
-  responsiveBar
+  responsiveBar,
 } from "variables/Variables.js";
 
 const codeExampleData = `var dataPie = {
