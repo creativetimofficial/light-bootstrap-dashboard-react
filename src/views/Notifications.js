@@ -16,6 +16,7 @@ import {
 } from "react-bootstrap";
 
 function Notifications() {
+  const [showModal,setShowModal] = React.useState(false);
   const notificationAlertRef = React.useRef(null);
 const notify = (place) => {
   var color = Math.floor(Math.random() * 5 + 1);
@@ -287,11 +288,8 @@ const notify = (place) => {
                 <h4 className="title">Modal</h4>
                 <Button
                   className="btn-fill btn-wd"
-                  data-target="#myModal1"
-                  data-toggle="modal"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
                   variant="info"
+                  onClick={() => setShowModal(true)}
                 >
                   Launch Modal Mini
                 </Button>
@@ -300,7 +298,7 @@ const notify = (place) => {
           </Card.Body>
         </Card>
         {/* Mini Modal */}
-        <Modal className="modal-mini modal-primary">
+        <Modal className="modal-mini modal-primary" show={showModal} onHide={() => setShowModal(false)}>
           <Modal.Header className="justify-content-center">
             <div className="modal-profile">
               <i className="nc-icon nc-bulb-63"></i>
@@ -310,14 +308,14 @@ const notify = (place) => {
             <p>Always have an access to your profile</p>
           </Modal.Body>
           <div className="modal-footer">
-            <Button className="btn-simple" type="button" variant="link">
+            <Button className="btn-simple" type="button" variant="link"  onClick={() => setShowModal(false)}>
               Back
             </Button>
             <Button
               className="btn-simple"
-              data-dismiss="modal"
               type="button"
               variant="link"
+             onClick={() => setShowModal(false)}
             >
               Close
             </Button>
