@@ -77,8 +77,8 @@ const documentationRoutes = [
     redirect: true,
     path: "/documentation",
     to: "/documentation/getting-started",
-    name: "Documentation"
-  }
+    name: "Documentation",
+  },
 ];
 
 export default documentationRoutes;
