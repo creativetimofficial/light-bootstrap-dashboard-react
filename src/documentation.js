@@ -36,7 +36,7 @@ const documentationRoutes = [
   {
     path: "/documentation/getting-started",
     name: "Getting Started",
-    component: RowGettingStarted
+    component: RowGettingStarted,
   },
   // { path: "/documentation/license", name: "License", component: RowLicense },
   // {
