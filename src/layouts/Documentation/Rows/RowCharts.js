@@ -20,16 +20,6 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import ChartistGraph from "react-chartist";
 
-import {
-  dataPie,
-  dataSales,
-  optionsSales,
-  responsiveSales,
-  dataBar,
-  optionsBar,
-  responsiveBar,
-} from "variables/Variables.js";
-
 const codeExampleData = `var dataPie = {
     labels: ['62%','32%','6%'],
     series: [62, 32, 6]
@@ -97,12 +87,12 @@ var responsiveBar = [
 ];`;
 
 const codeExample = `<div className="row">
-    <div className="col-md-4" style={{maxHeight:"320px"}}>
+    <div className="col" style={{maxHeight:"320px"}}>
         <ChartistGraph data={dataPie} type="Pie"/>
     </div>
 </div>
 <div className="row">
-    <div className="col-md-8" style={{maxHeight:"320px"}}>
+    <div className="col" style={{maxHeight:"320px"}}>
         <ChartistGraph
             data={dataSales}
             type="Line"
@@ -111,7 +101,7 @@ const codeExample = `<div className="row">
     </div>
 </div>
 <div className="row">
-    <div className="col-md-8" style={{maxHeight:"320px"}}>
+    <div className="col" style={{maxHeight:"320px"}}>
         <ChartistGraph
             data={dataBar}
             type="Bar"
@@ -135,27 +125,112 @@ class RowNotifications extends Component {
         </SyntaxHighlighter>
         <h4>Code example</h4>
         <div className="row">
-          <div className="col-md-4" style={{ maxHeight: "320px" }}>
-            <ChartistGraph data={dataPie} type="Pie" />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-8" style={{ maxHeight: "320px" }}>
+          <div className="col" style={{ maxHeight: "320px" }}>
             <ChartistGraph
-              data={dataSales}
-              type="Line"
-              options={optionsSales}
-              responsiveOptions={responsiveSales}
+              data={{
+                labels: ["62%", "32%", "6%"],
+                series: [62, 32, 6],
+              }}
+              type="Pie"
             />
           </div>
         </div>
         <div className="row">
-          <div className="col-md-8" style={{ maxHeight: "320px" }}>
+          <div className="col" style={{ maxHeight: "320px" }}>
             <ChartistGraph
-              data={dataBar}
+              data={{
+                labels: [
+                  "9:00AM",
+                  "12:00AM",
+                  "3:00PM",
+                  "6:00PM",
+                  "9:00PM",
+                  "12:00PM",
+                  "3:00AM",
+                  "6:00AM",
+                ],
+                series: [
+                  [287, 385, 490, 492, 554, 586, 698, 695],
+                  [67, 152, 143, 240, 287, 335, 435, 437],
+                  [23, 113, 67, 108, 190, 239, 307, 308],
+                ],
+              }}
+              type="Line"
+              options={{
+                low: 0,
+                high: 800,
+                showArea: false,
+                height: "245px",
+                axisX: {
+                  showGrid: false,
+                },
+                lineSmooth: true,
+                showLine: true,
+                showPoint: true,
+                fullWidth: true,
+                chartPadding: {
+                  right: 50,
+                },
+              }}
+              responsiveOptions={[
+                [
+                  "screen and (max-width: 640px)",
+                  {
+                    axisX: {
+                      labelInterpolationFnc: function (value) {
+                        return value[0];
+                      },
+                    },
+                  },
+                ],
+              ]}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col" style={{ maxHeight: "320px" }}>
+            <ChartistGraph
+              data={{
+                labels: [
+                  "Jan",
+                  "Feb",
+                  "Mar",
+                  "Apr",
+                  "Mai",
+                  "Jun",
+                  "Jul",
+                  "Aug",
+                  "Sep",
+                  "Oct",
+                  "Nov",
+                  "Dec",
+                ],
+                series: [
+                  [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
+                  [412, 243, 280, 580, 453, 353, 300, 364, 368, 410, 636, 695],
+                ],
+              }}
               type="Bar"
-              options={optionsBar}
-              responsiveOptions={responsiveBar}
+              options={{
+                seriesBarDistance: 10,
+                axisX: {
+                  showGrid: false,
+                },
+                height: "245px",
+              }}
+              responsiveOptions={[
+                [
+                  "screen and (max-width: 640px)",
+                  {
+                    seriesBarDistance: 5,
+                    axisX: {
+                      labelInterpolationFnc: function (value) {
+                        return value[0];
+                      },
+                    },
+                  },
+                ],
+              ]}
             />
           </div>
         </div>
