@@ -17,7 +17,13 @@
 */
 /*eslint-disable*/
 import React, { Component } from "react";
-
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  FacebookIcon,
+  TwitterIcon
+} from "react-share";
+import GitHubButton from "react-github-button";
 import { Dropdown, Badge, Button, Form } from "react-bootstrap";
 
 import sideBarImage1 from "assets/img/sidebar-1.jpg";
@@ -201,21 +207,37 @@ function FixedPlugin({
           <li className="header-title" id="sharrreTitle">
             Thank you for sharing!
           </li>
-          <li className="button-container mb-4">
-            <Button
-              className="btn-social btn-outline btn-round sharrre"
-              id="twitter"
-              variant="twitter"
+          <li className="button-container">
+            <FacebookShareButton url="https://creativetimofficial.github.io/light-bootstrap-dashboard-react">
+              <FacebookIcon size={32} round={true} />
+            </FacebookShareButton>
+            <TwitterShareButton
+              url="https://creativetimofficial.github.io/light-bootstrap-dashboard-react"
+              title="Light Bootstrap Dashboard React - Free Bootstrap Admin Template"
+              hashtags={[
+                "react",
+                "bootstrap",
+                "react-bootstrap",
+                "creativetim",
+                "creative-tim"
+              ]}
+              via="creativetim"
             >
-              <i className="fab fa-twitter"></i>· 256
-            </Button>
-            <Button
-              className="btn-social btn-outline btn-round sharrre"
-              id="facebook"
-              variant="facebook"
-            >
-              <i className="fab fa-facebook-square"></i>· 426
-            </Button>
+              <TwitterIcon size={32} round={true} />
+            </TwitterShareButton>
+          </li>
+          <li className="button-container">
+            {/* <div classNam */}
+            <GitHubButton
+              type="stargazers"
+              namespace="creativetimofficial"
+              repo="light-bootstrap-dashboard-react"
+            />
+            <GitHubButton
+              type="forks"
+              namespace="creativetimofficial"
+              repo="light-bootstrap-dashboard-react"
+            />
           </li>
         </Dropdown.Menu>
       </Dropdown>
