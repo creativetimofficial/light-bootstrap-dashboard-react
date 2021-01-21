@@ -58,7 +58,8 @@ class RowRadio extends Component {
             <Form.Check.Label>
               <Form.Check.Input
                 defaultChecked
-                type="radio" name="radio-1"
+                type="radio"
+                name="radio-1"
               ></Form.Check.Input>
               <span className="form-check-sign"></span>
               Checked
