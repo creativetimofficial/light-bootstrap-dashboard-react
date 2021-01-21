@@ -11,6 +11,7 @@
 - https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues/62
 - https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues/58
 - https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues/52
+- https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues/50
 ### Major style changes
 - Since the update from Bootstrap 3 to Bootstrap 4, all styles have been changed
 ### Deleted components
