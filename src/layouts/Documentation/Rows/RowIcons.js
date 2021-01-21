@@ -15,54 +15,75 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React, { Component } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/styles/prism";
+import { Row, Col, Card } from "react-bootstrap";
 
-const codeExmaple = `<div className="row all-icons">
-    <div className="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-        <div className="font-icon-detail">
-            <i className="pe-7s-next-2"></i>
-            <input type="text" defaultValue="pe-7s-next-2" />
-        </div>
-    </div>
-</div>`;
+const codeImport = `import icons from 'variables/icons';`;
 
-class RowIcons extends Component {
+const codeExample = `<Col lg={3} md={4} sm={5} xs={7} className="font-icon-list">
+  <Card>
+    <Card.Body className="all-icons">
+      <Row>
+        <Col className="font-icon-list">
+            <i className="nc-icon nc-backpack" />
+        </Col>
+      </Row>
+    </Card.Body>
+  </Card>
+</Col>`;
+
+class Icons extends React.Component {
   render() {
     return (
-      <div id="icons-row" className="tim-row">
-        <h2>Icons</h2>
-        <legend />
-        <p>
-          We used the default icons from{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="http://themes-pixeden.com/font-demos/7-stroke/index.html"
-          >
-            Pixeden
+      <div>
+        <h1 className="bd-title" id="content">
+          Icons
+        </h1>
+        <p className="bd-lead">
+          For this dashboard we've used 100 awesome nucleo icons handcrafted by
+          our friends from{" "}
+          <a href="https://nucleoapp.com/?ref=1712" target="_blank">
+            NucleoApp
           </a>
           .
         </p>
-
-        <h4>Example code</h4>
-        <div className="row all-icons">
-          <div className="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-            <div className="font-icon-detail">
-              <i className="pe-7s-next-2" />
-              <input type="text" defaultValue="pe-7s-next-2" />
-            </div>
-          </div>
+        <h3 id="content">Examples</h3>
+        <div className="bd-example">
+          <Col lg={3} md={4} sm={5} xs={7} className="font-icon-list">
+            <Card>
+              <Card.Body className="all-icons">
+                <Row>
+                  <Col className="font-icon-list">
+                    <i className="nc-icon nc-backpack" />
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>
         </div>
-
-        <br />
         <SyntaxHighlighter language="jsx" style={prism}>
-          {codeExmaple}
+          {codeExample}
         </SyntaxHighlighter>
+        <p>
+          Check all available icons <Link to="/admin/icons">here</Link>.
+        </p>
+        <p>
+          Beside these, you can also use all of the{" "}
+          <a
+            href="https://fontawesome.com/?ref=creativetim"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            free font awesome ones
+          </a>
+          .
+        </p>
       </div>
     );
   }
 }
 
-export default RowIcons;
+export default Icons;
