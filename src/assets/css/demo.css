@@ -59,7 +59,13 @@
 #map{
     position:relative;
     width:100%;
-    height: calc(100% - 60px);
+    height: 100%;
+}
+
+.map-container {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
 }
 
 .places-buttons .btn{
@@ -508,12 +514,6 @@
     font-size: 13px;
 }
 
-#map{
-    position:relative;
-    width:100%;
-    height: calc(100% - 60px);
-}
-
 .places-buttons .btn{
     margin-bottom: 30px
 }
@@ -784,4 +784,23 @@
   left: -6px;
   margin-top: -7px;
   border-width: 7px 7px 7px 0;
+}
+.typography-line span {
+    bottom: 10px;
+    color: #9A9A9A;
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 13px;
+    left: 5px;
+    position: absolute;
+    width: 260px;
+    text-transform: none;
+}
+.typography-line {
+    padding-left: 15%;
+    margin-bottom: 35px;
+    position: relative;
+    display: block;
+    width: 100%;
 }

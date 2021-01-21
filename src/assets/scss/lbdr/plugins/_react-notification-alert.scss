@@ -1,0 +1,14 @@
+.rna-container{
+  .alert {
+    border-radius: 4px;
+    button.close{
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        margin-top: -4px;
+      }
+    }
+  }
+}
