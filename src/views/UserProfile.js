@@ -135,8 +135,7 @@ function User() {
                           placeholder="Here can be your description"
                           rows="4"
                           as="textarea"
-                        >
-                        </Form.Control>
+                        ></Form.Control>
                       </Form.Group>
                     </Col>
                   </Row>
@@ -157,7 +156,10 @@ function User() {
               <div className="card-image">
                 <img
                   alt="..."
-                  src={require("assets/img/photo-1431578500526-4d9613015464.jpeg").default}
+                  src={
+                    require("assets/img/photo-1431578500526-4d9613015464.jpeg")
+                      .default
+                  }
                 ></img>
               </div>
               <Card.Body>
