@@ -28,7 +28,10 @@ class RowLicense extends Component {
         </p>
         <p>
           Copyright (c) 2017 Creative Tim (
-          <a href="https://creative-tim.com/?ref=lbdr-docs-license">https://creative-tim.com/</a>)
+          <a href="https://creative-tim.com/?ref=lbdr-docs-license">
+            https://creative-tim.com/
+          </a>
+          )
         </p>
         <p>
           Permission is hereby granted, free of charge, to any person obtaining
