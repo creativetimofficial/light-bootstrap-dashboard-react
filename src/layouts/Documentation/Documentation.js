@@ -18,7 +18,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { Link, Route, Switch, Redirect } from "react-router-dom";
-import { Grid, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import Sidebar from "./Components/Sidebar.js";
 
@@ -130,7 +130,7 @@ function Documentation() {
         <div className="section">
           <div className="container">
             <div className="row">
-              <Grid fluid style={{ marginBottom: "50px" }}>
+              <Container fluid style={{ marginBottom: "50px" }}>
                 <Row>
                   <Col md={2}>
                     <Sidebar />
@@ -153,7 +153,7 @@ function Documentation() {
                     </Switch>
                   </Col>
                 </Row>
-              </Grid>
+              </Container>
             </div>
           </div>
         </div>
