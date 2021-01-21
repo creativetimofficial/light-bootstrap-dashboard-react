@@ -22,7 +22,6 @@ import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
 import { Form, InputGroup } from "react-bootstrap";
 
-
 const code = `import React, { Component } from "react";
 
 import { Form, InputGroup } from "react-bootstrap";
@@ -80,9 +79,9 @@ function InputsSection() {
           </InputGroup.Append>
         </InputGroup>
         <br />
-          <SyntaxHighlighter language="jsx" style={prism}>
-            {code}
-          </SyntaxHighlighter>
+        <SyntaxHighlighter language="jsx" style={prism}>
+          {code}
+        </SyntaxHighlighter>
         <h4>Props</h4>
         <p>
           For this please refer to{" "}
