@@ -10,6 +10,7 @@
 - Refactor all files from class components to functional ones, so now, you can use React Hooks
 - https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues/62
 - https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues/58
+- https://github.com/creativetimofficial/light-bootstrap-dashboard-react/issues/52
 ### Major style changes
 - Since the update from Bootstrap 3 to Bootstrap 4, all styles have been changed
 ### Deleted components
