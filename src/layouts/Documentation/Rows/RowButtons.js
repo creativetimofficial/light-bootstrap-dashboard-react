@@ -16,30 +16,28 @@
 
 */
 import React, { Component } from "react";
-import { Table } from "react-bootstrap";
+import { Table, Button } from "react-bootstrap";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
-import Button from "components/CustomButton/CustomButton";
-
 const codeColors = `<Button>Default</Button>
-<Button bsStyle="primary">Primary</Button>
-<Button bsStyle="info">Info</Button>
-<Button bsStyle="success">Success</Button>
-<Button bsStyle="warning">Warning</Button>
-<Button bsStyle="danger">Danger</Button>`;
+<Button variant="primary">Primary</Button>
+<Button variant="info">Info</Button>
+<Button variant="success">Success</Button>
+<Button variant="warning">Warning</Button>
+<Button variant="danger">Danger</Button>`;
 
-const codeSizes = `<Button bsStyle="primary" bsSize="lg">Large</Button>
-<Button bsStyle="primary">Normal</Button>
-<Button bsStyle="primary" bsSize="sm">Small</Button>
-<Button bsStyle="primary" bsSize="xs">Extra Small</Button>`;
+const codeSizes = `<Button variant="primary" size="lg">Large</Button>
+<Button variant="primary">Normal</Button>
+<Button variant="primary" size="sm">Small</Button>`;
 
-const codeStyles = `<Button bsStyle="primary">Default</Button>
-<Button bsStyle="primary" fill>Fill</Button>
-<Button bsStyle="primary" round>Rounded</Button>
-<Button bsStyle="primary" simple>Simple</Button>
-<Button bsStyle="primary" pullRight>Pull Right</Button>
-<Button bsStyle="primary" block>Block</Button>`;
+const codeStyles = `<Button variant="primary">Default</Button>
+<Button variant="primary" className="btn-fill">
+  Fill
+</Button>
+<Button variant="primary" block>
+  Block
+</Button>`;
 
 class RowButtons extends Component {
   render() {
@@ -52,7 +50,7 @@ class RowButtons extends Component {
           component:
         </p>
         <SyntaxHighlighter language="jsx" style={prism}>
-          {`import Button from 'components/CustomButton/CustomButton';`}
+          {`import { Button } from 'react-bootstrap';`}
         </SyntaxHighlighter>
         <h4>Colors</h4>
         <p>
@@ -61,11 +59,11 @@ class RowButtons extends Component {
         </p>
         <p>
           <Button>Default</Button>
-          <Button bsStyle="primary">Primary</Button>
-          <Button bsStyle="info">Info</Button>
-          <Button bsStyle="success">Success</Button>
-          <Button bsStyle="warning">Warning</Button>
-          <Button bsStyle="danger">Danger</Button>
+          <Button variant="primary">Primary</Button>
+          <Button variant="info">Info</Button>
+          <Button variant="success">Success</Button>
+          <Button variant="warning">Warning</Button>
+          <Button variant="danger">Danger</Button>
         </p>
         <SyntaxHighlighter language="jsx" style={prism}>
           {codeColors}
@@ -73,15 +71,12 @@ class RowButtons extends Component {
         <h4>Sizes</h4>
         <p>Buttons come in all needed sizes:</p>
         <p>
-          <Button bsStyle="primary" bsSize="lg">
+          <Button variant="primary" size="lg">
             Large
           </Button>
-          <Button bsStyle="primary">Normal</Button>
-          <Button bsStyle="primary" bsSize="sm">
+          <Button variant="primary">Normal</Button>
+          <Button variant="primary" size="sm">
             Small
-          </Button>
-          <Button bsStyle="primary" bsSize="xs">
-            Extra Small
           </Button>
         </p>
 
@@ -94,23 +89,14 @@ class RowButtons extends Component {
           We added extra classes that can help you better customise the look.
           You can use regular buttons, filled buttons, right-pulled buttons,
           buttons that span over the entire given space or plain simple link
-          like buttons. Let's see some examples:
+          like buttons. Let{"'"}s see some examples:
         </p>
         <p>
-          <Button bsStyle="primary">Default</Button>
-          <Button bsStyle="primary" fill>
+          <Button variant="primary">Default</Button>
+          <Button variant="primary" className="btn-fill">
             Fill
           </Button>
-          <Button bsStyle="primary" round>
-            Rounded
-          </Button>
-          <Button bsStyle="primary" simple>
-            Simple
-          </Button>
-          <Button bsStyle="primary" pullRight>
-            Pull Right
-          </Button>
-          <Button bsStyle="primary" block>
+          <Button variant="primary" block>
             Block
           </Button>
         </p>
@@ -118,61 +104,6 @@ class RowButtons extends Component {
           {codeStyles}
         </SyntaxHighlighter>
         <h4>Props</h4>
-        <Table striped bordered condensed hover>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Default</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code>fill</code>
-              </td>
-              <td>boolean</td>
-              <td>false</td>
-              <td>Use this flag to create filled buttons.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>simple</code>
-              </td>
-              <td>boolean</td>
-              <td>false</td>
-              <td>Use this flag to create simple / link buttons.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>block</code>
-              </td>
-              <td>boolean</td>
-              <td>false</td>
-              <td>
-                Use this flag to create a button that spans the whole given
-                space.{" "}
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <code>pullRight</code>
-              </td>
-              <td>boolean</td>
-              <td>false</td>
-              <td>Use this to pull right the button.</td>
-            </tr>
-            <tr>
-              <td>
-                <code>round</code>
-              </td>
-              <td>boolean</td>
-              <td>false</td>
-              <td>Use this to make the buttons corners rounded.</td>
-            </tr>
-          </tbody>
-        </Table>
         <p>
           Beside these props you can also reffer to{" "}
           <a
