@@ -31,9 +31,9 @@ function Upgrade() {
               <Table responsive>
                 <thead>
                   <tr>
-                  <th></th>
-                  <th className="text-center">Free</th>
-                  <th className="text-center">PRO</th>
+                    <th></th>
+                    <th className="text-center">Free</th>
+                    <th className="text-center">PRO</th>
                   </tr>
                 </thead>
                 <tbody>
