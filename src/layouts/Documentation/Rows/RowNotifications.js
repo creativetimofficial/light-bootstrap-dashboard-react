@@ -107,7 +107,7 @@ class RowNotifications extends Component {
     this.handleClick = this.handleClick.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
     this.state = {
-      _notificationSystem: null
+      _notificationSystem: null,
     };
   }
   handleClick(position) {
@@ -163,7 +163,7 @@ class RowNotifications extends Component {
       ),
       level: level,
       position: position,
-      autoDismiss: 15
+      autoDismiss: 15,
     });
   }
 
