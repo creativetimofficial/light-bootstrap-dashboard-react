@@ -17,6 +17,7 @@
 */
 /*eslint-disable*/
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -174,18 +175,15 @@ function FixedPlugin({
             </div>
           </li>
           <li className="button-container">
-            <div>
+            <Link to="/documentation/getting-started">
               <Button
                 block
                 className="btn-fill"
-                href="http://www.creative-tim.com/product/light-bootstrap-dashboard-react"
-                rel="noopener noreferrer"
-                target="_blank"
                 variant="default"
               >
                 Checkout docs.
               </Button>
-            </div>
+            </Link>
           </li>
           <li className="header-title pro-title text-center">
             Want more components?
