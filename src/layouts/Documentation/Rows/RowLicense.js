@@ -27,7 +27,7 @@ class RowLicense extends Component {
           <b>MIT License</b>
         </p>
         <p>
-          Copyright (c) 2017 Creative Tim (
+          Copyright (c) {new Date().getFullYear()} Creative Tim (
           <a href="https://creative-tim.com/?ref=lbdr-docs-license">
             https://creative-tim.com/
           </a>
