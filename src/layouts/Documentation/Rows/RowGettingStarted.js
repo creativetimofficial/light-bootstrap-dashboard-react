@@ -95,8 +95,8 @@ class RowGettingStarted extends Component {
         <legend />
         <p>
           <b>The Light Bootstrap Dashboard with React</b> is built on top of
-          Bootstrap 3, so you can safely use it on your existing or new
-          Bootstrap project. No line of code from Bootstrap 3 was changed, so
+          Bootstrap 4, so you can safely use it on your existing or new
+          Bootstrap project. No line of code from Bootstrap 4 was changed, so
           you don't have to worry about undesired effects in your work.
         </p>
         <ul>
