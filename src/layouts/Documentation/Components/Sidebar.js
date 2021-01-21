@@ -25,7 +25,7 @@ class Sidebar extends Component {
   render() {
     return (
       <Affixed>
-        <ul className="nav nav-pills nav-stacked fixed-section">
+        <ul className="nav nav-pills nav-stacked fixed-section d-flex flex-column">
           {documentationRoutes.map((prop, key) => {
             if (prop.redirect) {
               return null;
