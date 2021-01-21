@@ -27,15 +27,13 @@ const codeColors = `<div>
         defaultChecked
         type="radio" name="radio-1"
       ></Form.Check.Input>
-      <span className="form-check-sign"></span>
-      Checked
+            Checked
     </Form.Check.Label>
   </Form.Check>
   <Form.Check className="mb-1 pl-0">
     <Form.Check.Label>
       <Form.Check.Input type="radio" name="radio-1"></Form.Check.Input>
-      <span className="form-check-sign"></span>
-      Unchecked
+            Unchecked
     </Form.Check.Label>
   </Form.Check>
 </div>`;
@@ -61,15 +59,13 @@ class RowRadio extends Component {
                 type="radio"
                 name="radio-1"
               ></Form.Check.Input>
-              <span className="form-check-sign"></span>
-              Checked
+                            Checked
             </Form.Check.Label>
           </Form.Check>
           <Form.Check className="mb-1 pl-0">
             <Form.Check.Label>
               <Form.Check.Input type="radio" name="radio-1"></Form.Check.Input>
-              <span className="form-check-sign"></span>
-              Unchecked
+                            Unchecked
             </Form.Check.Label>
           </Form.Check>
         </div>
