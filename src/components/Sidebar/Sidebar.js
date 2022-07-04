@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Light Bootstrap Dashboard React - v2.0.0
+* Light Bootstrap Dashboard React - v2.0.1
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -32,7 +32,7 @@ function Sidebar({ color, image, routes }) {
       <div
         className="sidebar-background"
         style={{
-          backgroundImage: "url(" + image + ")",
+          backgroundImage: "url(" + image + ")"
         }}
       />
       <div className="sidebar-wrapper">
@@ -42,10 +42,7 @@ function Sidebar({ color, image, routes }) {
             className="simple-text logo-mini mx-1"
           >
             <div className="logo-img">
-              <img
-                src={require("assets/img/reactlogo.png").default}
-                alt="..."
-              />
+              <img src={require("assets/img/reactlogo.png")} alt="..." />
             </div>
           </a>
           <a className="simple-text" href="http://www.creative-tim.com">
