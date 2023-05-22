@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Light Bootstrap Dashboard React - v2.0.1
+* Light Bootstrap Dashboard React - v2.0.2
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -16,7 +16,7 @@
 
 */
 import React, { Component } from "react";
-import { useLocation, Route, Switch } from "react-router-dom";
+import { useLocation, Route, Routes } from "react-router-dom";
 
 import AdminNavbar from "components/Navbars/AdminNavbar";
 import Footer from "components/Footer/Footer";
@@ -35,13 +35,12 @@ function Admin() {
   const mainPanel = React.useRef(null);
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
+      if (prop.collapse) {
+        return getRoutes(prop.views);
+      }
       if (prop.layout === "/admin") {
         return (
-          <Route
-            path={prop.layout + prop.path}
-            render={(props) => <prop.component {...props} />}
-            key={key}
-          />
+          <Route key={key} exact path={prop.path} element={prop.component} />
         );
       } else {
         return null;
@@ -68,7 +67,7 @@ function Admin() {
         <div className="main-panel" ref={mainPanel}>
           <AdminNavbar />
           <div className="content">
-            <Switch>{getRoutes(routes)}</Switch>
+            <Routes>{getRoutes(routes)}</Routes>
           </div>
           <Footer />
         </div>

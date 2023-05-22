@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Light Bootstrap Dashboard React - v2.0.1
+* Light Bootstrap Dashboard React - v2.0.2
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -18,7 +18,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/animate.min.css";
@@ -32,9 +32,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <BrowserRouter>
-    <Switch>
-      <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-      <Redirect from="/" to="/admin/dashboard" />
-    </Switch>
+    <Routes>
+      <Route path="/admin/*" element={<AdminLayout />} />
+      <Route path="/" element={<Navigate to="/admin/dashboard" replace />} />
+    </Routes>
   </BrowserRouter>
 );
