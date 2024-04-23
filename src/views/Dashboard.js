@@ -1,5 +1,6 @@
 import React from "react";
 import ChartistGraph from "react-chartist";
+import { useState, useEffect } from "react";
 // react-bootstrap components
 import {
   Badge,
@@ -17,6 +18,59 @@ import {
 } from "react-bootstrap";
 
 function Dashboard() {
+  const [dashboardData, setDashboardData] = useState({
+    roomNumber: "Loading...",
+    revenue: "Loading...",
+    errors: "Loading...",
+    followers: "Loading...",
+    userTrend: { labels: [], series: [] },
+    attitudeStats: { labels: [], series: [] },
+    giftRanking: { labels: [], series: [] }
+  });
+
+  useEffect(() => {
+    fetch('http://localhost:5000/data')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);  // Logging the data received from the API
+        
+        // Destructuring for easier access
+        const { keys, values } = data.gift_ranking;
+  
+        // Create an array of key-value pairs and sort by value
+        let combined = keys.map((key, index) => ({ key, value: values[index] }));
+        combined.sort((a, b) => a.value - b.value); // Sort from largest to smallest value
+  
+        // Separate keys and values after sorting
+        const sortedKeys = combined.map(item => item.key);
+        const sortedValues = combined.map(item => item.value);
+  
+        setDashboardData({
+          roomNumber: data.room_number,
+          revenue: data.revenue,
+          followers: data.followers,
+          userTrend: {
+            labels: data.user_trend.labels,
+            series: data.user_trend.series
+          },
+          attitudeStats: {
+            labels: data.attitude_stats.labels,
+            series: [data.attitude_stats.series]  // Assuming series is an array
+          },
+          giftRanking: {
+            labels: sortedKeys,
+            series: [sortedValues]  // Now sorted
+          }
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching data: ', error);
+      });
+  }, []);
+  
+
+  console.log(dashboardData.giftRanking)
+
   return (
     <>
       <Container fluid>
@@ -32,8 +86,8 @@ function Dashboard() {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Number</p>
-                      <Card.Title as="h4">150GB</Card.Title>
+                      <p className="card-category">Room Number</p>
+                      <Card.Title as="h4">{dashboardData.roomNumber}</Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -59,7 +113,7 @@ function Dashboard() {
                   <Col xs="7">
                     <div className="numbers">
                       <p className="card-category">Revenue</p>
-                      <Card.Title as="h4">$ 1,345</Card.Title>
+                      <Card.Title as="h4">$ {dashboardData.revenue}</Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -110,8 +164,8 @@ function Dashboard() {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Followers</p>
-                      <Card.Title as="h4">+45K</Card.Title>
+                      <p className="card-category">New Followers</p>
+                      <Card.Title as="h4">+{dashboardData.followers}</Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -130,29 +184,13 @@ function Dashboard() {
           <Col md="8">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Users Behavior</Card.Title>
+                <Card.Title as="h4">Users Trend</Card.Title>
                 <p className="card-category">24 Hours performance</p>
               </Card.Header>
               <Card.Body>
                 <div className="ct-chart" id="chartHours">
                   <ChartistGraph
-                    data={{
-                      labels: [
-                        "9:00AM",
-                        "12:00AM",
-                        "3:00PM",
-                        "6:00PM",
-                        "9:00PM",
-                        "12:00PM",
-                        "3:00AM",
-                        "6:00AM",
-                      ],
-                      series: [
-                        [287, 385, 490, 492, 554, 586, 698, 695],
-                        [67, 152, 143, 240, 287, 335, 435, 437],
-                        [23, 113, 67, 108, 190, 239, 307, 308],
-                      ],
-                    }}
+                    data={dashboardData.userTrend}
                     type="Line"
                     options={{
                       low: 0,
@@ -203,7 +241,7 @@ function Dashboard() {
           <Col md="4">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Email Statistics</Card.Title>
+                <Card.Title as="h4">Attitute Statistics</Card.Title>
                 <p className="card-category">Last Campaign Performance</p>
               </Card.Header>
               <Card.Body>
@@ -212,23 +250,23 @@ function Dashboard() {
                   id="chartPreferences"
                 >
                   <ChartistGraph
-                    data={{
-                      labels: ["40%", "20%", "40%"],
-                      series: [40, 20, 40],
+                  data={{
+                      labels: dashboardData.attitudeStats.labels,
+                      series: dashboardData.attitudeStats.series[0],
                     }}
                     type="Pie"
                   />
                 </div>
                 <div className="legend">
                   <i className="fas fa-circle text-info"></i>
-                  Open <i className="fas fa-circle text-danger"></i>
-                  Bounce <i className="fas fa-circle text-warning"></i>
-                  Unsubscribe
+                  {dashboardData.attitudeStats.labels[0]} <i className="fas fa-circle text-danger"></i>
+                  {dashboardData.attitudeStats.labels[1]} <i className="fas fa-circle text-warning"></i>
+                 {dashboardData.attitudeStats.labels[2]}
                 </div>
                 <hr></hr>
                 <div className="stats">
                   <i className="far fa-clock"></i>
-                  Campaign sent 2 days ago
+                  Refreshed 3 minutes ago
                 </div>
               </Card.Body>
             </Card>
@@ -238,57 +276,15 @@ function Dashboard() {
           <Col md="6">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">2017 Sales</Card.Title>
+                <Card.Title as="h4">Gift Ranking</Card.Title>
                 <p className="card-category">All products including Taxes</p>
               </Card.Header>
               <Card.Body>
                 <div className="ct-chart" id="chartActivity">
                   <ChartistGraph
                     data={{
-                      labels: [
-                        "Jan",
-                        "Feb",
-                        "Mar",
-                        "Apr",
-                        "Mai",
-                        "Jun",
-                        "Jul",
-                        "Aug",
-                        "Sep",
-                        "Oct",
-                        "Nov",
-                        "Dec",
-                      ],
-                      series: [
-                        [
-                          542,
-                          443,
-                          320,
-                          780,
-                          553,
-                          453,
-                          326,
-                          434,
-                          568,
-                          610,
-                          756,
-                          895,
-                        ],
-                        [
-                          412,
-                          243,
-                          280,
-                          580,
-                          453,
-                          353,
-                          300,
-                          364,
-                          368,
-                          410,
-                          636,
-                          695,
-                        ],
-                      ],
+                      labels: dashboardData.giftRanking.labels,
+                      series: dashboardData.giftRanking.series,
                     }}
                     type="Bar"
                     options={{
@@ -297,6 +293,7 @@ function Dashboard() {
                         showGrid: false,
                       },
                       height: "245px",
+                      horizontalBars: true
                     }}
                     responsiveOptions={[
                       [
@@ -317,13 +314,13 @@ function Dashboard() {
               <Card.Footer>
                 <div className="legend">
                   <i className="fas fa-circle text-info"></i>
-                  Tesla Model S <i className="fas fa-circle text-danger"></i>
-                  BMW 5 Series
+                  Gift amount 
+                  
                 </div>
                 <hr></hr>
                 <div className="stats">
                   <i className="fas fa-check"></i>
-                  Data information certified
+                  Refreshed 3 minutes
                 </div>
               </Card.Footer>
             </Card>
