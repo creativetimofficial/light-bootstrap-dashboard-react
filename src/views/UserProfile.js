@@ -1,4 +1,6 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import avatar from 'assets/img/blacklist.jpg';
 
 // react-bootstrap components
 import {
@@ -13,7 +15,22 @@ import {
   Col
 } from "react-bootstrap";
 
+
 function User() {
+  const [blackList,setBlackList] = useState([]);
+  useEffect(() => {
+    fetch('http://localhost:5000/data')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);  // Logging the data received from the API
+        setBlackList(data.blacklist)
+      })
+      .catch(error => {
+        console.error('Error fetching data: ', error);
+      });
+  }, []);
+
+
   return (
     <>
       <Container fluid>
@@ -153,57 +170,27 @@ function User() {
           </Col>
           <Col md="4">
             <Card className="card-user">
-              <div className="card-image">
-                <img
-                  alt="..."
-                  src={require("assets/img/photo-1431578500526-4d9613015464.jpeg")}
-                ></img>
-              </div>
               <Card.Body>
-                <div className="author">
-                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                    <img
-                      alt="..."
-                      className="avatar border-gray"
-                      src={require("assets/img/faces/face-3.jpg")}
-                    ></img>
-                    <h5 className="title">Mike Andrew</h5>
-                  </a>
-                  <p className="description">michael24</p>
+                <div className="blacklists">
+                <Card.Title as="h4">Black List</Card.Title>
+                  <ul style={{ listStyleType: "none" }}>
+                    {blackList.map((item, index) => (
+                      <li key={index} style={{padding:"10px"}}>
+                      <img src={avatar} alt="avatar" 
+                        style={{
+                          borderRadius: '50%', 
+                          width: '50px',     
+                          height: '50px',
+                          marginRight:"15px"     
+                        }} 
+                      />{item}</li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="description text-center">
-                  "Lamborghini Mercy <br></br>
-                  Your chick she so thirsty <br></br>
-                  I'm in that two seat Lambo"
-                </p>
+             
               </Card.Body>
               <hr></hr>
-              <div className="button-container mr-auto ml-auto">
-                <Button
-                  className="btn-simple btn-icon"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  variant="link"
-                >
-                  <i className="fab fa-facebook-square"></i>
-                </Button>
-                <Button
-                  className="btn-simple btn-icon"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  variant="link"
-                >
-                  <i className="fab fa-twitter"></i>
-                </Button>
-                <Button
-                  className="btn-simple btn-icon"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  variant="link"
-                >
-                  <i className="fab fa-google-plus-square"></i>
-                </Button>
-              </div>
+              
             </Card>
           </Col>
         </Row>

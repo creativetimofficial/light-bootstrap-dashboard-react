@@ -29,7 +29,7 @@ import sidebarImage from "assets/img/sidebar-new.jpg";
 function Admin() {
   const [image, setImage] = React.useState(sidebarImage);
   const [color, setColor] = React.useState("white");
-  const [hasImage, setHasImage] = React.useState(true);
+  const [hasImage, setHasImage] = React.useState(false);
   const location = useLocation();
   const mainPanel = React.useRef(null);
   const getRoutes = (routes) => {

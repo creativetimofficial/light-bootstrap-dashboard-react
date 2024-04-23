@@ -19,8 +19,7 @@ import React, { Component } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 
 import { Nav } from "react-bootstrap";
-
-import logo from "assets/img/reactlogo.png";
+import './Sidebar.css'
 
 function Sidebar({ color, image, routes }) {
   const location = useLocation();
@@ -28,24 +27,27 @@ function Sidebar({ color, image, routes }) {
     return location.pathname.indexOf(routeName) > -1 ? "active" : "";
   };
   return (
-    <div className="sidebar" data-image={image} data-color={color}>
+    <div className="sidebar"  data-color={color}>
+    {/* data-image={image} */}
       <div
-        className="sidebar-background"
+        className="sidebar-background important-white-background"
         style={{
-          backgroundImage: "url(" + image + ")"
+          // backgroundImage: "url(" + image + ")"
+          
         }}
       />
       <div className="sidebar-wrapper">
-        <div className="logo d-flex align-items-center justify-content-start">
+        <div className="logo d-flex align-items-center justify-content-start"
+        style={{display:"flex",gap:"15px"}}>
           <a
-            href="https://www.creative-tim.com?ref=lbd-sidebar"
+            href="https://livepulse.xyz" 
             className="simple-text logo-mini mx-1"
           >
             <div className="logo-img">
               <img src={require("assets/img/logo.png")} alt="..." />
             </div>
           </a>
-          <a className="simple-text" href="http://www.creative-tim.com">
+          <a className="simple-text" href="http://www.creative-tim.com" style={{fontWeight:"bold",fontSize:"25px"}}>
             LivePulse
           </a>
         </div>
