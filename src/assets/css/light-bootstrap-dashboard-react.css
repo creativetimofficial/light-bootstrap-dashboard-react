@@ -3876,4 +3876,10 @@ License - nucleoapp.com/license/
 #bodyClick {
   position: absolute; }
 
+
+.user-protofolio {
+  max-width: 40px;
+  max-height: 40px; 
+}
+
 /*# sourceMappingURL=light-bootstrap-dashboard-react.css.map */
