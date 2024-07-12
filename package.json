@@ -3,19 +3,20 @@
   "version": "2.0.1",
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.15.2",
+    "ajv": "^8.16.0",
     "bootstrap": "4.6.0",
     "chartist": "0.11.4",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.9",
-    "react": "18.2.0",
-    "reactstrap": "8.8.1",
+    "react": ">=16.8.0",
     "react-bootstrap": "2.4.0",
     "react-chartist": "0.14.4",
-    "react-dom": "18.2.0",
+    "react-dom": ">=16.8.0",
     "react-notification-alert": "0.0.13",
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "5.0.1",
+    "reactstrap": "8.8.1",
     "sass": "1.53.0"
   },
   "optionalDependencies": {
@@ -24,7 +25,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
@@ -47,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
